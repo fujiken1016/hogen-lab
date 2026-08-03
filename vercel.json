@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/:path*", "destination": "https://hogen.mainichi-lab.com/:path*", "permanent": true }
+  ]
+}
