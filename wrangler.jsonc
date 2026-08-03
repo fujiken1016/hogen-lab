@@ -9,6 +9,8 @@
   ],
   "assets": {
     "directory": ".open-next/assets",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    // Search Console検証ファイル等の .html をリダイレクトさせずそのまま配信
+    "html_handling": "none"
   }
 }
