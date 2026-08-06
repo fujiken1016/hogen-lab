@@ -48,6 +48,9 @@ export default function PrivacyPage() {
           </a>
           をご覧ください。
         </p>
+        <p>
+          Amazonのアソシエイトとして、方言ラボは適格販売により収入を得ています。
+        </p>
       </section>
 
       <section className="space-y-2">
