@@ -129,14 +129,20 @@ export function PrBox({
   keyword,
   body,
   linkLabel = "楽天市場で探す",
+  slot,
 }: {
   title: string;
   keyword: string;
   body: string;
   linkLabel?: string;
+  /** アフィリ差し替え用スロット名（AFF_SLOTS.md 参照） */
+  slot?: string;
 }) {
   return (
-    <aside className="my-7 rounded-2xl border-2 border-dashed border-gold/60 bg-gold/[0.07] p-4 sm:p-5">
+    <aside
+      data-aff={slot}
+      className="my-7 rounded-2xl border-2 border-dashed border-gold/60 bg-gold/[0.07] p-4 sm:p-5"
+    >
       <div className="flex items-center gap-2 mb-2">
         <span className="chip bg-gold/80 text-white text-[10px] tracking-widest">PR</span>
         <span className="text-[11px] text-sub">広告（アフィリエイトリンク）を含みます</span>
@@ -199,6 +205,7 @@ export function ArticleShell({ article, children }: { article: Article; children
       </nav>
 
       <header className="mb-7">
+        <p className="text-[11px] text-sub mb-3">※本ページはプロモーションが含まれています</p>
         <div className="text-5xl mb-3" aria-hidden>
           {article.emoji}
         </div>

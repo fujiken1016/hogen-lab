@@ -97,6 +97,7 @@ export default function Page() {
         keyword="方言 辞典"
         body="全国方言辞典や地域別の方言集は、この記事で紹介しきれない言い回しの宝庫です。旅先の会話が急に聞き取れるようになる一冊を、まずは眺めてみてください。"
         linkLabel="方言辞典を楽天市場で見る"
+        slot="RAKUTEN_HOGEN_1"
       />
 
       <RankItem
