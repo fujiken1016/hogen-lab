@@ -6,6 +6,7 @@ import { Bush, Cloud, Moon, Stars, Sun, Tree, WaveEdge } from "@/components/Scen
 import SecretAvatar from "@/components/SecretAvatar";
 import { SECRETS, unlockedSecrets } from "@/lib/secret";
 import TypeAvatar from "@/components/TypeAvatar";
+import { ARTICLES } from "@/lib/articles";
 import { DIALECTS, QUIZZES, TodayWord, allBadges, allWords, getBadges, todayWord } from "@/lib/data";
 import { MASCOT_NAMES, TYPES } from "@/lib/types";
 
@@ -34,6 +35,7 @@ const FEATURES = [
   { href: "/quiz", title: "クイズ検定", desc: "合格してバッジを集める", emoji: "🏅" },
   { href: "/today", title: "今日の方言", desc: "1日1語、新しい出会い", emoji: "📅" },
   { href: "/dict", title: "みんなの辞書", desc: "地元の言い回しを投稿", emoji: "📖" },
+  { href: "/blog", title: "読みもの", desc: "ランキング・言語学コラム", emoji: "📰" },
 ];
 
 const STEPS = [
@@ -309,7 +311,7 @@ export default function Home() {
                 key={f.href}
                 href={f.href}
                 className="!rounded-xl border border-line shadow-[0_2px_10px_rgba(34,48,63,0.07)] p-3.5 flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all"
-                style={{ background: ["#FFF3F0", "#EFF6F1", "#FFF8E6", "#F0F4FA"][i] }}
+                style={{ background: ["#FFF3F0", "#EFF6F1", "#FFF8E6", "#F0F4FA", "#F6F0FA", "#FFF1F6"][i] }}
               >
                 <span className="text-3xl shrink-0">{f.emoji}</span>
                 <span>
@@ -363,6 +365,39 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 読みもの（記事一覧への導線） */}
+      <section className="space-y-3">
+        <div className="section-head">
+          <span className="hanko-sq">読</span>
+          <div>
+            <span className="sub">ARTICLES</span>
+            <h2 className="ttl">読みもの</h2>
+          </div>
+          <Link href="/blog" className="ml-auto btn-ghost text-xs shrink-0">
+            一覧へ →
+          </Link>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-2">
+          {ARTICLES.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/blog/${a.slug}`}
+              className="card !rounded-xl p-3.5 flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all"
+            >
+              <span className="text-3xl shrink-0" aria-hidden>
+                {a.emoji}
+              </span>
+              <span className="min-w-0">
+                <span className="block font-bold text-[13px] leading-snug line-clamp-2">{a.title}</span>
+                <span className="block text-[11px] text-sub mt-1">
+                  {a.category}・約{a.readMin}分
+                </span>
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 

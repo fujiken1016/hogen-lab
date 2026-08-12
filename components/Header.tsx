@@ -10,6 +10,7 @@ const NAV = [
   { href: "/quiz", label: "クイズ検定" },
   { href: "/today", label: "今日の方言" },
   { href: "/dict", label: "みんなの辞書" },
+  { href: "/blog", label: "読みもの" },
 ];
 
 export default function Header() {
