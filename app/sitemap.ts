@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
 import { ARTICLES } from "@/lib/articles";
-import { TYPES } from "@/lib/types";
-import { SECRETS } from "@/lib/secret";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -28,14 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const characters: MetadataRoute.Sitemap = [
-    ...TYPES.map((t) => t.slug),
-    ...SECRETS.map((s) => s.slug),
-  ].map((slug) => ({
-    url: `${BASE}/c/${slug}`,
-    changeFrequency: "monthly" as const,
-    priority: 0.5,
-  }));
-
-  return [...staticPages, ...articles, ...characters];
+  // キャラ個別ページ（/c/[slug]）は noindex にしたため sitemap には載せない。
+  // → app/c/[slug]/layout.tsx の metadata.robots を参照。
+  return [...staticPages, ...articles];
 }
