@@ -71,13 +71,67 @@ export const ARTICLES: Article[] = [
     date: "2026-08-12",
     readMin: 6,
   },
+  {
+    slug: "arigatou-zenkoku",
+    title: "「ありがとう」の方言めぐり｜おおきに・だんだん・もっけだの語源",
+    description:
+      "おおきに（関西）、だんだん（出雲）、きのどくな（北陸）、もっけだ（庄内）、にふぇーでーびる（沖縄）。全国の感謝のことばを語源から読み解きます。",
+    lead: "「ありがとう」の言い方は、地域によってまったく違う言葉になります。しかも語源をたどると、感謝の表し方そのものが3つの型に分かれていました。",
+    emoji: "🙏",
+    category: "語源",
+    date: "2026-08-13",
+    readMin: 7,
+  },
+  {
+    slug: "hogen-accent-chizu",
+    title: "「橋」と「箸」が逆になる県境｜方言アクセントの日本地図",
+    description:
+      "東京式・京阪式・無アクセント・一型・二型。同じ単語なのに高低が変わる理由と、アクセントが日本地図の上でどう分布しているのかを解説します。",
+    lead: "単語も文法も標準語なのに「なまってる」と言われる。その正体はたいてい、語彙ではなくアクセントです。",
+    emoji: "🎼",
+    category: "言語学入門",
+    date: "2026-08-13",
+    readMin: 8,
+  },
+  {
+    slug: "yobina-chiiki-sa",
+    title: "呼び名が地域で変わるもの図鑑｜ばんそうこう・今川焼き・ものもらい",
+    description:
+      "カットバンかリバテープか、今川焼きか回転焼きか、ものもらいかめばちこか。調査データをもとに分布を整理し、方言と商品名の境目を考えます。",
+    lead: "「サビオ持ってる？」が通じなかった経験はありませんか。実は方言ではなく、地元メーカーの商品名だったというケースがあります。",
+    emoji: "🩹",
+    category: "コラム",
+    date: "2026-08-13",
+    readMin: 7,
+  },
+  {
+    slug: "okinawa-ryukyu-kotoba",
+    title: "沖縄のことばは「方言」なのか｜うちなーぐちと琉球諸語の入門",
+    description:
+      "めんそーれ・ちゅら・にふぇーでーびるの語源から、母音の対応法則、ユネスコが指定した8つの危機言語まで。南の島のことばを言語学の目線で見ていきます。",
+    lead: "「ちゅら」はもともと平安時代の日本語でした。うちなーぐちは、崩れた日本語どころか、古い日本語をよく保存していることばです。",
+    emoji: "🌺",
+    category: "解説",
+    date: "2026-08-13",
+    readMin: 8,
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug === slug);
 }
 
-/** 自分以外の記事を古い順に n 件 */
+/**
+ * 自分以外の記事を n 件。自分の次の記事から巡回して選ぶので、
+ * 記事が増えても関連リンクが特定の数本に偏らない。
+ */
 export function otherArticles(slug: string, n = 3): Article[] {
-  return ARTICLES.filter((a) => a.slug !== slug).slice(0, n);
+  const i = ARTICLES.findIndex((a) => a.slug === slug);
+  const start = i < 0 ? 0 : i + 1;
+  const out: Article[] = [];
+  for (let k = 0; k < ARTICLES.length && out.length < n; k++) {
+    const a = ARTICLES[(start + k) % ARTICLES.length];
+    if (a.slug !== slug) out.push(a);
+  }
+  return out;
 }

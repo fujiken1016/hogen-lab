@@ -381,7 +381,8 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid sm:grid-cols-2 gap-2">
-          {ARTICLES.map((a) => (
+          {/* 記事が増えたのでトップは最新6本まで。残りは /blog へ */}
+          {[...ARTICLES].reverse().slice(0, 6).map((a) => (
             <Link
               key={a.slug}
               href={`/blog/${a.slug}`}

@@ -152,12 +152,51 @@ export function PrBox({
       <a
         href={rakutenSearch(keyword)}
         target="_blank"
-        rel="sponsored noopener noreferrer"
+        rel="nofollow sponsored noopener noreferrer"
         className="btn-secondary !border-gold/70 text-sm"
       >
         {linkLabel} <span aria-hidden>↗</span>
       </a>
     </aside>
+  );
+}
+
+/** 参考文献・出典の一覧（記事末に置く） */
+export function Sources({ items }: { items: { label: string; url?: string }[] }) {
+  return (
+    <section className="mt-10 rounded-xl border border-line bg-paper/60 px-4 py-4">
+      <h2 className="text-xs font-bold tracking-wide text-sub mb-2.5">参考・出典</h2>
+      <ul className="space-y-1.5 text-[12px] leading-[1.85] text-sub">
+        {items.map((s) => (
+          <li key={s.label} className="flex gap-2">
+            <span aria-hidden className="text-sub/60">
+              ・
+            </span>
+            <span className="min-w-0 break-words">
+              {s.url ? (
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  {s.label}
+                </a>
+              ) : (
+                s.label
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p className="text-[11px] text-sub/70 mt-3 leading-[1.8]">
+        方言は同じ県内でも地域・世代によって差があります。掲載内容と異なる言い方をご存じの場合は
+        <Link href="/contact" className="text-primary hover:underline">
+          お問い合わせ
+        </Link>
+        からお知らせください。
+      </p>
+    </section>
   );
 }
 
