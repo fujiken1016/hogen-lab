@@ -30,6 +30,9 @@ const TICKER = [
 ];
 
 const FEATURES = [
+  { href: "/doko", title: "この方言どこ？", desc: "全8問・約1分の方言あて", emoji: "🗾" },
+  { href: "/kawaii", title: "かわいい方言対決", desc: "8語のトーナメントで推しを決める", emoji: "💗" },
+  { href: "/kurabe", title: "全国方言くらべ", desc: "同じひとことの全国35通り", emoji: "🔤" },
   { href: "/aishou", title: "相性チェッカー", desc: "コード2つで即・相性鑑定", emoji: "💞" },
   { href: "/translate", title: "方言翻訳", desc: "AIが35方言を相互翻訳", emoji: "🗣️" },
   { href: "/quiz", title: "クイズ検定", desc: "合格してバッジを集める", emoji: "🏅" },
@@ -311,7 +314,7 @@ export default function Home() {
                 key={f.href}
                 href={f.href}
                 className="!rounded-xl border border-line shadow-[0_2px_10px_rgba(34,48,63,0.07)] p-3.5 flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all"
-                style={{ background: ["#FFF3F0", "#EFF6F1", "#FFF8E6", "#F0F4FA", "#F6F0FA", "#FFF1F6"][i] }}
+                style={{ background: ["#FFF3F0", "#EFF6F1", "#FFF8E6", "#F0F4FA", "#F6F0FA", "#FFF1F6"][i % 6] }}
               >
                 <span className="text-3xl shrink-0">{f.emoji}</span>
                 <span>
