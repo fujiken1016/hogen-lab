@@ -5118,11 +5118,6 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "わがまま言うと、みんなにあまされるよ。"
     },
     {
-      "word": "おっかない",
-      "meaning": "怖い・恐ろしい",
-      "example": "夜道は暗くておっかないべや。"
-    },
-    {
       "word": "ぼける",
       "meaning": "（果物の）鮮度が落ちる",
       "example": "このりんご、ちょっとぼけてるわ。"
@@ -5326,11 +5321,6 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "ほっちゃれ",
       "meaning": "産卵後で身が痩せた鮭、転じて役立たず",
       "example": "あの鮭もうほっちゃれだべ。"
-    },
-    {
-      "word": "むくれる",
-      "meaning": "すねる、不機嫌になる",
-      "example": "そんなにむくれないで機嫌直しなさい。"
     },
     {
       "word": "るいべ",
@@ -9603,6 +9593,11 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "あーさ汁は磯の香りがしてまーさんよー。"
     },
     {
+      "word": "ないち",
+      "meaning": "沖縄から見た本土（沖縄県以外の都道府県）",
+      "example": "ないちから親戚が遊びに来たさー。"
+    },
+    {
       "word": "あじまー",
       "meaning": "交差点・十字路",
       "example": "そのあじまーを右に曲がったら学校さー。"
@@ -10660,11 +10655,6 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "どどめいろ",
       "meaning": "赤紫から黒紫にかけての濃い色",
       "example": "ぶつけたどごが、どどめいろになってっぺ。"
-    },
-    {
-      "word": "おっかない",
-      "meaning": "怖い",
-      "example": "夜道一人で歩ぐのはおっかねぇない。"
     },
     {
       "word": "おっこちる",
