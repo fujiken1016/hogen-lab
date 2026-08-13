@@ -27,6 +27,9 @@ function buildIndex(): Map<string, Indexed[]> {
   const byWord = new Map<string, Indexed[]>();
   for (const d of REAL_DIALECTS) {
     for (const entry of wordsOf(d)) {
+      // 「〜っちゃ」のような語尾は隣接地域と重なりやすく、1方言に限定できない。
+      // 辞典の収録が1件でも“どこの言葉か”の出題には向かないので外す。
+      if (entry.word.startsWith("〜") || entry.word.length <= 1) continue;
       const list = byWord.get(entry.word);
       if (list) list.push({ entry, dialect: d });
       else byWord.set(entry.word, [{ entry, dialect: d }]);
