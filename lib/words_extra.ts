@@ -2946,7 +2946,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "かけっこでどべになってしもた。"
     },
     {
-      "word": "メゲル",
+      "word": "めげる",
       "meaning": "壊れる",
       "example": "このおもちゃ、すぐメゲるわ。"
     },
@@ -6816,11 +6816,6 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "ちっちぇ子におがわ買ってきた。"
     },
     {
-      "word": "おっきい",
-      "meaning": "大きい",
-      "example": "このスイカ、おっきいなっす。"
-    },
-    {
       "word": "おどご",
       "meaning": "男",
       "example": "あそこさいるおどご、誰だっちゃ。"
@@ -6849,11 +6844,6 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "からびる",
       "meaning": "乾燥して水分がなくなる",
       "example": "パンからびてまったな。"
-    },
-    {
-      "word": "くされる",
-      "meaning": "腐る",
-      "example": "この魚くされでるんでねが。"
     },
     {
       "word": "ざいご",
@@ -9216,9 +9206,9 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "遅う帰って、おっかんにがられたが。"
     },
     {
-      "word": "やっとかぶい",
+      "word": "ひさしかぶい",
       "meaning": "久しぶり",
-      "example": "やっとかぶいじゃなあ、元気にしちょったな？"
+      "example": "ひさしかぶいじゃなあ、元気にしちょったな？"
     },
     {
       "word": "そつ",
@@ -13214,19 +13204,9 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "初めてでもあんばようやっときゃあよ。"
     },
     {
-      "word": "デラ",
-      "meaning": "とても、すごく",
-      "example": "今日はデラ暑いがや。"
-    },
-    {
-      "word": "チンチン",
+      "word": "ちんちん",
       "meaning": "非常に熱い様子",
       "example": "風呂がチンチンで入れんわ。"
-    },
-    {
-      "word": "トキントキン",
-      "meaning": "（鉛筆などが）鋭く尖っている様子",
-      "example": "鉛筆トキントキンに削ってきた。"
     },
     {
       "word": "お値打ち",
@@ -14360,17 +14340,12 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "千円コッキリしかありまへんのや。"
     },
     {
-      "word": "イケズ",
-      "meaning": "意地悪、意地悪な人",
-      "example": "あの人ほんまイケズやわあ。"
-    },
-    {
-      "word": "イチビル",
+      "word": "いちびる",
       "meaning": "調子に乗ってふざける",
       "example": "そないイチビっとったら怒られますえ。"
     },
     {
-      "word": "イラウ",
+      "word": "いらう",
       "meaning": "触る、いじる",
       "example": "大事なもんやさかいイラわんといて。"
     },
@@ -14380,17 +14355,12 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "このお布団ザングリしてて気持ちよろしいなあ。"
     },
     {
-      "word": "カナン",
-      "meaning": "困る、たまらない",
-      "example": "暑うてカナンわあ。"
-    },
-    {
-      "word": "キズイ",
+      "word": "きずい",
       "meaning": "わがまま、気ままな",
       "example": "あの子はキズイとこあるさかいなあ。"
     },
     {
-      "word": "ケッタイナ",
+      "word": "けったいな",
       "meaning": "変な、奇妙な",
       "example": "ケッタイナ話やなあ。"
     },
@@ -14400,22 +14370,17 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "コートナ着物どすなあ。"
     },
     {
-      "word": "サブイボ",
+      "word": "さぶいぼ",
       "meaning": "鳥肌",
       "example": "怖い話聞いてサブイボ立ったわ。"
     },
     {
-      "word": "シブチン",
-      "meaning": "けちな人",
-      "example": "あの人ほんまシブチンやなあ。"
-    },
-    {
-      "word": "ショーモナイ",
+      "word": "しょーもない",
       "meaning": "くだらない、つまらない",
       "example": "そないショーモナイこと言わんといて。"
     },
     {
-      "word": "スカタン",
+      "word": "すかたん",
       "meaning": "見当違い、とんちんかん",
       "example": "またスカタンなこと言うてからに。"
     },
@@ -14430,34 +14395,14 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "うまいことタラして頼んでみ。"
     },
     {
-      "word": "チョロコイ",
-      "meaning": "簡単だ、たやすい",
-      "example": "こんなんチョロコイもんや。"
-    },
-    {
-      "word": "デボチン",
+      "word": "でぼちん",
       "meaning": "おでこ",
       "example": "デボチンぶつけて痛いわあ。"
     },
     {
-      "word": "ドンツキ",
-      "meaning": "行き止まり",
-      "example": "この道のドンツキを右に曲がってな。"
-    },
-    {
-      "word": "ナオス",
-      "meaning": "片付ける、しまう",
-      "example": "食器ナオしといてな。"
-    },
-    {
-      "word": "ネブル",
+      "word": "ねぶる",
       "meaning": "なめる",
       "example": "あめちゃんネブっとき。"
-    },
-    {
-      "word": "ノク",
-      "meaning": "どく、避ける",
-      "example": "危ないさかいノいときや。"
     },
     {
       "word": "ハバカリ",
@@ -14470,17 +14415,12 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "この話ほんまヤヤコシイなあ。"
     },
     {
-      "word": "ヨンベ",
+      "word": "よんべ",
       "meaning": "昨夜",
       "example": "ヨンベはよう眠れんかったわ。"
     },
     {
-      "word": "マッタリ",
-      "meaning": "のんびりした、まろやかな",
-      "example": "今日はマッタリ過ごしますわ。"
-    },
-    {
-      "word": "ヘタル",
+      "word": "へたる",
       "meaning": "疲れて座り込む、へこたれる",
       "example": "歩き疲れてヘタってしもたわ。"
     },

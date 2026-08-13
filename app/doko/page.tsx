@@ -88,8 +88,10 @@ export default function DokoPage() {
             クイズをはじめる
           </button>
           <p className="text-[11px] text-sub leading-relaxed text-left">
-            出題語は方言ラボ辞典で<strong>1つの方言にだけ収録されている語</strong>を使い、選択肢は必ず別の地方から選んでいます。
-            ただし方言には地域差・世代差があり、同じ言葉が隣接地域で使われることもあります。ここでの「正解」は辞典の収録地域です。
+            出題語は<strong>出典を1語ずつ照合したリスト</strong>だけを使い、
+            ダミーの選択肢は<strong>正解の地方と隣り合わない地方</strong>から選んでいます。
+            それでも方言には地域差・世代差があり、同じ言葉を別の土地で使うことはあります。
+            ここでの「答え」は<strong>方言ラボ辞典の収録地域</strong>であって、あなたの言葉が間違いという意味ではありません。
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-2 text-xs">
@@ -104,8 +106,7 @@ export default function DokoPage() {
   if (phase === "result") {
     const rank = dokoRank(correct, questions.length);
     const score = Math.round((correct / questions.length) * 100);
-    const misses = logs.filter((l) => !l.ok);
-    const shareText = `【方言ラボ】「この方言どこの言葉？」${questions.length}問中${correct}問正解（${score}点）／称号「${rank.title}」${rank.emoji} あなたの方言耳は何点？ #方言ラボ`;
+    const shareText = `【方言ラボ】「この方言どこの言葉？」${questions.length}問中${correct}問的中（${score}点）／称号「${rank.title}」${rank.emoji} あなたの方言耳は何点？ #方言ラボ`;
     const url = typeof window !== "undefined" ? `${window.location.origin}/doko` : "https://hogen.mainichi-lab.com/doko";
 
     return (
@@ -118,7 +119,7 @@ export default function DokoPage() {
             <h2 className="text-2xl font-bold font-display mt-1">{rank.title}</h2>
           </div>
           <p className="text-lg font-bold">
-            {correct} / {questions.length}問正解
+            {questions.length}問中 {correct}問が辞典と一致
             <span className="text-sub text-sm font-normal">（{score}点）</span>
           </p>
           <p className="text-sm text-sub leading-relaxed">{rank.comment}</p>
@@ -132,21 +133,23 @@ export default function DokoPage() {
             {logs.map((l, i) => (
               <li
                 key={i}
-                className={`rounded-xl border p-3 text-sm ${l.ok ? "border-green-500/50 bg-green-50" : "border-red-300 bg-red-50"}`}
+                className={`rounded-xl border p-3 text-sm ${l.ok ? "border-green-500/50 bg-green-50" : "border-indigo/40 bg-indigo/5"}`}
               >
                 <div className="font-bold">
-                  {l.ok ? "⭕" : "❌"}「{l.q.word}」= {l.q.meaning}
+                  {l.ok ? "⭕" : "📖"}「{l.q.word}」= {l.q.meaning}
                 </div>
                 <div className="text-xs text-sub mt-1">
-                  正解：{l.q.answer}（{REGION_OF[l.q.answer]}）
-                  {!l.ok && <span className="text-red-600">／あなたの回答：{l.picked}</span>}
+                  辞典の収録：{l.q.answer}（{REGION_OF[l.q.answer]}）
+                  {l.q.sameRegionAlso.length > 0 && <span>・{l.q.sameRegionAlso.join("・")}</span>}
+                  {!l.ok && <span className="text-indigo">／あなたの回答：{l.picked}</span>}
                 </div>
                 <div className="text-xs mt-1">例：{l.q.example}</div>
               </li>
             ))}
           </ul>
           <p className="text-[11px] text-sub">
-            ※ 収録地域は方言ラボ辞典の分類です。同じ語が近隣の地域で使われることもあります。
+            ※ 「収録」は方言ラボ辞典の分類です（出題語は出典を1語ずつ照合しています）。同じ語を別の土地で使うこともあり、
+            あなたの言葉が誤りという意味ではありません。違いに気づいたら「みんなの辞書」からお知らせください。
           </p>
         </div>
 
@@ -175,7 +178,7 @@ export default function DokoPage() {
         <div className="flex justify-between text-xs text-sub">
           <span>この方言どこの言葉？</span>
           <span>
-            Q{index + 1} / {questions.length}・正解 {correct}
+            Q{index + 1} / {questions.length}・一致 {correct}
           </span>
         </div>
         <div className="h-2 bg-line rounded-full overflow-hidden">
@@ -197,7 +200,7 @@ export default function DokoPage() {
             let cls = "border-line hover:border-primary hover:bg-primary/5";
             if (answered) {
               if (c === q.answer) cls = "border-green-500 bg-green-50";
-              else if (c === picked) cls = "border-red-400 bg-red-50";
+              else if (c === picked) cls = "border-indigo/50 bg-indigo/5";
               else cls = "border-line text-sub/60";
             }
             return (
@@ -209,6 +212,10 @@ export default function DokoPage() {
               >
                 <span className="font-bold">{c}</span>
                 <span className="text-xs text-sub ml-2">{REGION_OF[c]}</span>
+                {answered && c === q.answer && <span className="text-[11px] text-green-700 ml-2">辞典の収録地域</span>}
+                {answered && c === picked && c !== q.answer && (
+                  <span className="text-[11px] text-indigo ml-2">あなたの回答</span>
+                )}
               </button>
             );
           })}
@@ -216,11 +223,21 @@ export default function DokoPage() {
 
         {answered && (
           <div className="space-y-3 anim-pop">
+            {/* 「不正解」と断定しない。辞典がどこの語として収録しているかを示す形にする */}
             <div className="text-sm bg-paper border border-line rounded-xl p-3 space-y-1">
               <p className="font-bold">
-                {picked === q.answer ? "⭕ 正解！" : "❌ 不正解…"} 答えは「{q.answer}」（{REGION_OF[q.answer]}）
+                {picked === q.answer ? "⭕ 辞典と一致！" : "📖 辞典では"}「{q.word}」は
+                <span className="text-indigo">{q.answer}</span>（{REGION_OF[q.answer]}）の語として収録しています
               </p>
               <p className="text-xs">例文：{q.example}</p>
+              {q.sameRegionAlso.length > 0 && (
+                <p className="text-[11px] text-sub">※ 同じ{REGION_OF[q.answer]}の{q.sameRegionAlso.join("・")}にも収録があります。</p>
+              )}
+              {picked !== q.answer && (
+                <p className="text-[11px] text-sub">
+                  ※ {picked}でも使う、というご指摘は「みんなの辞書」からお寄せください。辞典に反映します。
+                </p>
+              )}
             </div>
             {/* 自動では進めない。読み終えてから自分で次へ */}
             <button onClick={next} className="btn-primary w-full min-h-[52px]">
