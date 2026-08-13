@@ -262,6 +262,36 @@ export function ArticleShell({ article, children }: { article: Article; children
       <div>{children}</div>
 
       <footer className="mt-12 pt-7 border-t border-line">
+        {/* 記事を読み終えた人が、そのまま1分で遊べるツールへ行けるようにする */}
+        <div className="section-head mb-4">
+          <span className="hanko-sq">遊</span>
+          <span className="ttl">
+            1分で遊べる方言ツール
+            <span className="sub">PLAY IN A MINUTE</span>
+          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-2.5 mb-9">
+          {[
+            { href: "/doko", emoji: "🗾", title: "この方言どこ？", desc: "全8問の方言あて" },
+            { href: "/kawaii", emoji: "💗", title: "かわいい方言対決", desc: "8語のトーナメント" },
+            { href: "/kurabe", emoji: "🔤", title: "全国方言くらべ", desc: "同じ一言の35通り" },
+            { href: "/shindan", emoji: "🔮", title: "方言タイプ診断", desc: "14問であなたの相棒" },
+          ].map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="card p-3.5 min-h-[64px] flex items-center gap-2.5 hover:-translate-y-0.5 transition-transform"
+            >
+              <span className="text-2xl shrink-0" aria-hidden>
+                {t.emoji}
+              </span>
+              <span className="min-w-0">
+                <span className="block text-[13px] font-bold leading-snug">{t.title}</span>
+                <span className="block text-[11px] text-sub mt-0.5">{t.desc}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
         <div className="section-head mb-4">
           <span className="hanko-sq">続</span>
           <span className="ttl">

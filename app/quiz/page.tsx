@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Confetti from "@/components/Confetti";
 import ShareBar from "@/components/ShareBar";
@@ -109,6 +110,11 @@ export default function QuizPage() {
           <button onClick={() => setDialect(null)} className="btn-secondary">
             検定を選ぶ
           </button>
+        </div>
+        <div className="flex justify-center gap-2 flex-wrap text-xs pt-1">
+          <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
+          <Link href="/kawaii" className="btn-ghost">💗 かわいい方言トーナメント</Link>
+          <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
         </div>
       </div>
     );
