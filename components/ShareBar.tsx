@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { track } from "@/lib/ga";
+import { useCopy } from "@/lib/clipboard";
 import { shareUrls } from "@/lib/types";
 
 export default function ShareBar({ text, url }: { text: string; url: string }) {
-  const [copied, setCopied] = useState(false);
+  const { status, copy: runCopy } = useCopy();
   const links = shareUrls(text, url);
   const canNativeShare = typeof navigator !== "undefined" && !!navigator.share;
 
@@ -16,16 +16,12 @@ export default function ShareBar({ text, url }: { text: string; url: string }) {
 
   async function copy() {
     trackShare("copy");
-    try {
-      await navigator.clipboard.writeText(`${text}\n${url}`);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
-    } catch {
-      /* clipboard未対応環境では無視 */
-    }
+    // 失敗しても例外は投げない。結果は下のメッセージで必ずユーザーに見せる
+    await runCopy(`${text}\n${url}`);
   }
 
   return (
+    <div className="flex flex-col items-center gap-2">
     <div className="flex flex-wrap justify-center gap-2">
       <a
         href={links.x}
@@ -49,7 +45,11 @@ export default function ShareBar({ text, url }: { text: string; url: string }) {
         onClick={copy}
         className="inline-flex items-center gap-1.5 bg-white border border-line text-sm font-bold rounded-full px-4 py-2 hover:border-indigo transition-colors"
       >
-        {copied ? "✓ コピーしました" : "🔗 リンクをコピー"}
+        {status === "ok"
+          ? "✓ コピーしました"
+          : status === "fail"
+            ? "⚠️ コピーできませんでした"
+            : "🔗 リンクをコピー"}
       </button>
       {canNativeShare && (
         <button
@@ -62,6 +62,18 @@ export default function ShareBar({ text, url }: { text: string; url: string }) {
           📤 その他
         </button>
       )}
+    </div>
+    {/* コピーの結果は、読める長さだけ必ず表示する */}
+    <p aria-live="polite" className="text-xs font-bold text-center min-h-[1.25rem]">
+      {status === "ok" && <span className="text-indigo">リンクをコピーしました</span>}
+      {status === "fail" && (
+        <span className="text-indigo">
+          コピーできませんでした。下のURLを長押し（右クリック）して手動でコピーしてください：
+          <br />
+          <span className="font-normal break-all select-all">{url}</span>
+        </span>
+      )}
+    </p>
     </div>
   );
 }

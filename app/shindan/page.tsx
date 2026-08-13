@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ShareBar from "@/components/ShareBar";
+import { useCopy } from "@/lib/clipboard";
 import Link from "next/link";
 import {
   ARCHETYPES,
@@ -176,7 +177,7 @@ export default function ShindanPage() {
   const [friendCode, setFriendCode] = useState("");
   const [friendCodeError, setFriendCodeError] = useState("");
   const [friendDecoded, setFriendDecoded] = useState<DecodedCode | null>(null);
-  const [codeCopied, setCodeCopied] = useState(false);
+  const { status: codeStatus, copy: copyCode, reset: resetCodeCopy } = useCopy();
   const [vsParam, setVsParam] = useState<string | null>(null);
   // 連打対策: 1問1回答ロック。新しい問題が表示されたら解除
   const answerLock = useRef(false);
@@ -230,7 +231,7 @@ export default function ShindanPage() {
     setFriendCode("");
     setFriendCodeError("");
     setFriendDecoded(null);
-    setCodeCopied(false);
+    resetCodeCopy();
     setIndex(0);
     setPicks({});
     setPersonaScores({});
@@ -900,14 +901,29 @@ export default function ShindanPage() {
         </p>
         <button
           onClick={() => {
-            navigator.clipboard.writeText(myCode);
-            setCodeCopied(true);
-            setTimeout(() => setCodeCopied(false), 1500);
+            void copyCode(myCode);
           }}
           className="btn-secondary text-sm"
         >
-          {codeCopied ? "✓ コピーしました！" : "コードをコピー"}
+          {codeStatus === "ok"
+            ? "✓ コピーしました！"
+            : codeStatus === "fail"
+              ? "⚠️ コピーできませんでした"
+              : "コードをコピー"}
         </button>
+        {/* コピーの結果は必ず目に見える形で、読める長さだけ出す */}
+        <p aria-live="polite" className="text-xs font-bold min-h-[1.25rem]">
+          {codeStatus === "ok" && (
+            <span className="text-primary">
+              相性コード「{myCode}」をコピーしました。友達に送ってください。
+            </span>
+          )}
+          {codeStatus === "fail" && (
+            <span className="text-primary">
+              コピーできませんでした。お使いのブラウザの設定でコピーが許可されていない可能性があります。上の4文字「{myCode}」を手動で控えてください。
+            </span>
+          )}
+        </p>
         <div className="pt-3 border-t border-line space-y-2">
           <p className="text-xs font-bold">友達のコードを入力して、その場で鑑定</p>
           <div className="flex gap-2 max-w-xs mx-auto">
