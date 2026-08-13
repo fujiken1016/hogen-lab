@@ -39,6 +39,14 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-XRJ40EFR6C');
         `}</Script>
+        {/* Google AdSense（ca-pub-8289616283786904・mainichi-lab共通）
+            next/script(afterInteractive)だとSSRのHTMLに出ないため、
+            React 19のhead自動ホイストを使う素の<script>で入れる */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8289616283786904"
+          crossOrigin="anonymous"
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={FONTS_URL} />
         <Header />
