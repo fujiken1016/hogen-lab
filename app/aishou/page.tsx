@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import CompatCard, { CompatPerson } from "@/components/CompatCard";
 import { decodeCode, loadMyResult } from "@/lib/compat";
+import { track } from "@/lib/ga";
 import { MASCOT_NAMES } from "@/lib/types";
 
 export default function AishouPage() {
@@ -23,10 +24,12 @@ export default function AishouPage() {
     const a = decodeCode(codeA);
     const b = decodeCode(codeB);
     if (!a || !b) {
+      track("aishou_error", { reason: !a ? "code_a" : "code_b" });
       setError(!a ? "1人目のコードが正しくありません" : "2人目のコードが正しくありません");
       setPair(null);
       return;
     }
+    track("aishou_check", { type_a: a.type.slug, type_b: b.type.slug });
     setError("");
     setPair({
       a: { type: a.type, cluster: a.cluster, level: a.level, label: MASCOT_NAMES[a.type.slug] },

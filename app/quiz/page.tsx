@@ -5,6 +5,7 @@ import Confetti from "@/components/Confetti";
 import ShareBar from "@/components/ShareBar";
 import TypeAvatar from "@/components/TypeAvatar";
 import { QUIZZES, QuizQ, shuffle, unlockBadge } from "@/lib/data";
+import { track } from "@/lib/ga";
 import { typeByDialect } from "@/lib/types";
 
 type ShuffledQ = QuizQ & { order: number[] };
@@ -20,6 +21,7 @@ export default function QuizPage() {
   const q = questions[index];
 
   function start(d: string) {
+    track("quiz_start", { dialect: d });
     // 選択肢の並びを毎回シャッフル（クリック時に実行するのでSSRとの不一致なし）
     setQuestions(QUIZZES[d].map((qq) => ({ ...qq, order: shuffle(qq.choices.map((_, i) => i)) })));
     setDialect(d);
@@ -39,6 +41,11 @@ export default function QuizPage() {
     if (index + 1 >= questions.length) {
       const score = correct / questions.length;
       if (score >= 0.8 && dialect) unlockBadge(`quiz_${dialect}`);
+      track("quiz_complete", {
+        dialect: dialect ?? "unknown",
+        score: Math.round(score * 100),
+        passed: score >= 0.8,
+      });
       setDone(true);
     } else {
       setIndex((i) => i + 1);
