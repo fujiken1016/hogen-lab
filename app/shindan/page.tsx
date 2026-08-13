@@ -32,6 +32,7 @@ import SecretAvatar from "@/components/SecretAvatar";
 import { SECRETS, rollSecret, secretRand, unlockSecret } from "@/lib/secret";
 import TypeAvatar, { avatarColors } from "@/components/TypeAvatar";
 import { DialectType, MASCOT_NAMES, TYPES, affinity, typeByDialect, typeBySlug } from "@/lib/types";
+import { track } from "@/lib/ga";
 
 type Choice = { dialect: string; phrase: string };
 type PChoice = { label: string; dialects: string[]; cluster: string };
@@ -52,6 +53,32 @@ function jitterFor(seed: string, d: string): number {
   let h = 0;
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
   return (h % 1000) / 1000; // 0〜0.999（決定論的: 同じ回答なら同じ値）
+}
+
+// 成分ランキングの算出。結果表示とGA4イベント（完了時のタイプ送信）の両方から使うので、
+// レンダー本体から関数に切り出して「表示している結果」と「計測している結果」を必ず一致させる。
+function rankDialects(
+  picks: Record<string, number>,
+  seed: string,
+  regionDialects: string[],
+): { d: string; pct: number }[] {
+  const entries = Object.entries(picks)
+    .filter(([d]) => d !== STANDARD)
+    .map(([d, n]) => [d, n + jitterFor(seed, d) * 0.4] as const);
+  const total = entries.reduce((a, [, n]) => a + n, 0) || 1;
+  return entries
+    .map(([d, n]) => ({ d, pct: Number(((n / total) * 100).toFixed(1)) }))
+    .sort((a, b) => {
+      if (b.pct !== a.pct) return b.pct - a.pct;
+      // 同率なら出身地方の方言を優先
+      const ar = regionDialects.includes(a.d) ? 0 : 1;
+      const br = regionDialects.includes(b.d) ? 0 : 1;
+      return ar - br;
+    });
+}
+
+function topDialectOf(ranked: { d: string }[], regionDialects: string[]): string {
+  return ranked[0]?.d ?? regionDialects[0] ?? "大阪弁";
 }
 
 // 各質問ごとに「標準語＋出身地方の方言2＋よその方言1」の4択を生成。
@@ -184,7 +211,21 @@ export default function ShindanPage() {
     if (s) unlockSecret(s.slug);
   }, [phase, answerLog, forcedSecret]);
 
+  // GA4: 診断が最後まで完了したときに1回だけ送る（結果表示と同じ算出関数を使う）
+  useEffect(() => {
+    if (phase !== "result") return;
+    const top = topDialectOf(rankDialects(picks, answerLog.join("|"), regionDialects), regionDialects);
+    track("shindan_complete", {
+      dialect: top,
+      type: typeByDialect(top)?.slug ?? "unknown",
+      free_inputs: freeInputs.length,
+    });
+    // 結果が確定した瞬間の値だけを送る（同じ結果画面で再送しない）
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
+
   function start() {
+    track("shindan_start");
     // 再診断: 前回の友達コード鑑定やコピー状態も含めて全リセット
     setFriendCode("");
     setFriendCodeError("");
@@ -601,20 +642,8 @@ export default function ShindanPage() {
   // picksには重み付け済みスコアが入っている（標準語は加点されないので混ざらない）。
   // 回答の組み合わせを指紋として微小値を加算 → 同じタイプでも成分%が人ごとに変わる
   const seed = answerLog.join("|");
-  const entries = Object.entries(picks)
-    .filter(([d]) => d !== STANDARD)
-    .map(([d, n]) => [d, n + jitterFor(seed, d) * 0.4] as const);
-  const total = entries.reduce((a, [, n]) => a + n, 0) || 1;
-  const ranked = entries
-    .map(([d, n]) => ({ d, pct: Number(((n / total) * 100).toFixed(1)) }))
-    .sort((a, b) => {
-      if (b.pct !== a.pct) return b.pct - a.pct;
-      // 同率なら出身地方の方言を優先
-      const ar = regionDialects.includes(a.d) ? 0 : 1;
-      const br = regionDialects.includes(b.d) ? 0 : 1;
-      return ar - br;
-    });
-  const topDialect = ranked[0]?.d ?? regionDialects[0] ?? "大阪弁";
+  const ranked = rankDialects(picks, seed, regionDialects);
+  const topDialect = topDialectOf(ranked, regionDialects);
   const myType = typeByDialect(topDialect) ?? TYPES[0];
   const heroColor = avatarColors(myType.slug);
   // 性格アーキタイプ（同点は回答指紋で決着）→ キャラとの掛け算で結果タイトルが決まる
