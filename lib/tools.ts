@@ -1,12 +1,16 @@
 // 1画面完結ツール（/doko・/kawaii）用の出題ロジック。
 //
-// 事実の扱いについて:
+// 事実の扱いについて（2026-08 見直し / DICT_AUDIT.md）:
 // - 出題に使う語は lib/data.ts / lib/words_extra.ts に収録済みのものだけ。新しく方言を創作しない。
-// - 「どこの言葉か」の正解は、方言ラボ辞典で“その方言にだけ”収録されている語に限定する
-//   （複数方言に収録がある語は出題しない）。方言は地域差・世代差があり隣接地域でも
-//   使われることがあるため、選択肢は必ず別の地方から取り、画面でもその旨を注記する。
+// - 以前は「辞典で1方言にしか載っていない語」を自動で出題プールにしていたが、
+//   辞典側の収録漏れがそのまま“正解”になってしまい、実際には複数地方で使う語
+//   （なおす／ねぶる／たまげる など）が出題されていた。ユーザーの答えを外すクイズで
+//   これは致命的なので、出題プールは lib/doko_pool.ts の出典照合済みリストに限定する。
+// - さらに、隣接する地方は言葉が連続していて“どちらでも使う”ことが多いため、
+//   ダミー選択肢には正解の地方と隣接しない地方だけを使う。
 
 import { DIALECTS, REGIONS, STANDARD, WordEntry, shuffle, wordsOf } from "./data";
+import { DOKO_SEEDS } from "./doko_pool";
 
 /** 方言名 → 地方名（「近畿」「九州・沖縄」など） */
 export const REGION_OF: Record<string, string> = (() => {
@@ -17,61 +21,80 @@ export const REGION_OF: Record<string, string> = (() => {
 
 export const REAL_DIALECTS = DIALECTS.filter((d) => d !== STANDARD);
 
-type Indexed = { entry: WordEntry; dialect: string };
-
-/** 語 → その語を収録している方言。重い処理なのでモジュール内で1度だけ作る。 */
-let uniqueIndex: Map<string, Indexed[]> | null = null;
-
-function buildIndex(): Map<string, Indexed[]> {
-  if (uniqueIndex) return uniqueIndex;
-  const byWord = new Map<string, Indexed[]>();
-  for (const d of REAL_DIALECTS) {
-    for (const entry of wordsOf(d)) {
-      // 「〜っちゃ」のような語尾は隣接地域と重なりやすく、1方言に限定できない。
-      // 辞典の収録が1件でも“どこの言葉か”の出題には向かないので外す。
-      if (entry.word.startsWith("〜") || entry.word.length <= 1) continue;
-      const list = byWord.get(entry.word);
-      if (list) list.push({ entry, dialect: d });
-      else byWord.set(entry.word, [{ entry, dialect: d }]);
-    }
-  }
-  // 1方言にしか出てこない語だけ残す
-  const only = new Map<string, Indexed[]>();
-  for (const [w, list] of byWord) if (list.length === 1) only.set(w, list);
-  uniqueIndex = only;
-  return only;
-}
-
-/** 方言名 → その方言だけに収録されている語 */
-function uniqueWordsByDialect(): Record<string, Indexed[]> {
-  const out: Record<string, Indexed[]> = {};
-  for (const [, list] of buildIndex()) {
-    const it = list[0];
-    (out[it.dialect] ??= []).push(it);
-  }
-  return out;
-}
+/**
+ * 隣り合う地方。方言は県境でぷつりと切れないので、隣接地方はダミー選択肢に使わない。
+ * （例：「はぶてる」は広島の語だが山口・北九州でも通じる。九州をダミーに出すと
+ *   実際に使っている人が“外れ”になってしまう）
+ */
+const ADJACENT_REGIONS: Record<string, string[]> = {
+  "北海道・東北": ["関東", "甲信越・北陸"],
+  関東: ["北海道・東北", "甲信越・北陸", "東海"],
+  "甲信越・北陸": ["北海道・東北", "関東", "東海", "近畿"],
+  東海: ["関東", "甲信越・北陸", "近畿"],
+  近畿: ["甲信越・北陸", "東海", "中国", "四国"],
+  中国: ["近畿", "四国", "九州・沖縄"],
+  四国: ["近畿", "中国", "九州・沖縄"],
+  "九州・沖縄": ["中国", "四国"],
+};
 
 export type DokoQ = {
   word: string;
   meaning: string;
   example: string;
   answer: string; // 方言名
-  choices: string[]; // 方言名 × 4（answerを含む・地方は全て別）
+  /** 同じ地方の中で、辞典が同じ語を収録している他の方言（あれば画面で補足する） */
+  sameRegionAlso: string[];
+  choices: string[]; // 方言名 × 4（answerを含む・地方は全て別かつ隣接なし）
 };
 
 function pick<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+type PoolItem = { entry: WordEntry; dialect: string; sameRegionAlso: string[] };
+
+let curatedPool: Record<string, PoolItem[]> | null = null;
+
+/** 出典照合済みリスト（lib/doko_pool.ts）を辞典と突き合わせて出題プールを作る */
+function buildCuratedPool(): Record<string, PoolItem[]> {
+  if (curatedPool) return curatedPool;
+  const out: Record<string, PoolItem[]> = {};
+  for (const seed of DOKO_SEEDS) {
+    // 辞典に無い語は出さない（辞典を直したときに勝手に食い違わないようにする）
+    const entry = wordsOf(seed.dialect).find((w) => w.word === seed.word);
+    if (!entry) continue;
+    const region = REGION_OF[seed.dialect];
+    const sameRegionAlso = REAL_DIALECTS.filter(
+      (d) => d !== seed.dialect && REGION_OF[d] === region && wordsOf(d).some((w) => w.word === seed.word),
+    );
+    (out[seed.dialect] ??= []).push({ entry, dialect: seed.dialect, sameRegionAlso });
+  }
+  curatedPool = out;
+  return out;
+}
+
+/** 出題プールに実際に残っている語数（監査・開発用） */
+export function dokoPoolStats(): { total: number; byRegion: Record<string, number> } {
+  const pool = buildCuratedPool();
+  const byRegion: Record<string, number> = {};
+  let total = 0;
+  for (const d of Object.keys(pool)) {
+    const r = REGION_OF[d] ?? "その他";
+    byRegion[r] = (byRegion[r] ?? 0) + pool[d].length;
+    total += pool[d].length;
+  }
+  return { total, byRegion };
+}
+
 /**
  * 「この方言どこの言葉？」の出題を作る。
+ * - 出題語は出典照合済みプールのみ
  * - 同じ地方に偏らないよう、1地方あたり最大2問まで
- * - 選択肢4つは全て別の地方から取る（隣県で同じ語を使う可能性を避けるため）
+ * - ダミー選択肢は「正解の地方と隣接しない地方」から1つずつ取る
  */
 export function buildDokoQuestions(n = 8): DokoQ[] {
-  const pool = uniqueWordsByDialect();
-  const candidates = shuffle(REAL_DIALECTS.filter((d) => (pool[d]?.length ?? 0) > 0));
+  const pool = buildCuratedPool();
+  const candidates = shuffle(Object.keys(pool));
 
   const chosen: string[] = [];
   const perRegion: Record<string, number> = {};
@@ -94,11 +117,13 @@ export function buildDokoQuestions(n = 8): DokoQ[] {
     const list = (pool[d] ?? []).filter((x) => !usedWords.has(x.entry.word));
     if (list.length === 0) continue;
     const item = pick(list);
-    usedWords.add(item.entry.word);
 
     const answerRegion = REGION_OF[d] ?? "その他";
-    const otherRegions = shuffle(REGIONS.map((r) => r.name).filter((r) => r !== answerRegion)).slice(0, 3);
-    const distractors = otherRegions
+    const near = ADJACENT_REGIONS[answerRegion] ?? [];
+    const farRegions = shuffle(
+      REGIONS.map((r) => r.name).filter((r) => r !== answerRegion && !near.includes(r)),
+    ).slice(0, 3);
+    const distractors = farRegions
       .map((rn) => {
         const rd = REGIONS.find((r) => r.name === rn)?.dialects ?? [];
         return rd.length ? pick(rd) : null;
@@ -106,11 +131,13 @@ export function buildDokoQuestions(n = 8): DokoQ[] {
       .filter((x): x is string => !!x);
     if (distractors.length < 3) continue;
 
+    usedWords.add(item.entry.word);
     qs.push({
       word: item.entry.word,
       meaning: item.entry.meaning,
       example: item.entry.example,
       answer: d,
+      sameRegionAlso: item.sameRegionAlso,
       choices: shuffle([d, ...distractors]),
     });
   }

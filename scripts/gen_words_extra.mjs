@@ -9,7 +9,13 @@ const files = fs
   .filter((f) => f.startsWith("words_") && f.endsWith(".json"))
   .sort();
 
-const norm = (s) => String(s).replace(/[〜ー、。!?？！\s・（）()]/g, "").replace(/^〜/, "");
+// 重複判定用の正規化。カタカナ表記の同じ語（イケズ / いけず）が別語として
+// 二重登録されていたので、カナも平仮名にそろえてから比べる。
+const norm = (s) =>
+  String(s)
+    .replace(/[〜ー、。!?？！\s・（）()]/g, "")
+    .replace(/^〜/, "")
+    .replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
 
 const extra = {};
 let added = 0;
