@@ -5,7 +5,7 @@ import { ARTICLES } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "読みもの一覧 | 方言ラボ",
   description:
-    "全国の方言をもっと知るための読みもの。かわいい方言ランキング、標準語だと思ってた方言、三大方言の比較、方言が生まれる理由、診断の使い方ガイドまで。",
+    "全国の方言をもっと知るための読みもの。かわいい方言ランキング、標準語だと思ってた方言、三大方言の比較、方言が生まれる理由、「ありがとう」の語源めぐり、アクセントの日本地図、うちなーぐち入門まで。",
 };
 
 export default function BlogIndex() {
@@ -24,7 +24,7 @@ export default function BlogIndex() {
       </header>
 
       <div className="grid gap-3.5">
-        {ARTICLES.map((a) => (
+        {[...ARTICLES].reverse().map((a) => (
           <Link
             key={a.slug}
             href={`/blog/${a.slug}`}
