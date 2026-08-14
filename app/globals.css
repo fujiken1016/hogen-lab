@@ -687,7 +687,8 @@ h2,
     @apply inline-flex items-center justify-center gap-2 bg-white text-ink border border-line font-bold rounded-full px-5 py-2.5 hover:border-indigo hover:text-indigo transition-all active:scale-95;
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 text-sm text-sub hover:text-indigo transition-colors;
+    /* 文字だけのリンクでも指で押せる大きさを確保する（40px以上） */
+    @apply inline-flex items-center justify-center gap-2 min-h-[40px] px-2 text-sm text-sub hover:text-indigo transition-colors;
   }
   .chip {
     @apply inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wide;
