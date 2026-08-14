@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
       { source: "/articles/hogen-naze", destination: "/blog/naze-hogen-umareru", permanent: true },
       { source: "/articles/shindan-guide", destination: "/blog/shindan-guide", permanent: true },
       { source: "/articles/:slug", destination: "/blog/:slug", permanent: true },
+      // 検定ページのslugはキャラ図鑑（/c/:slug）と共通。方言名と綴りがずれる2件だけ別名を寄せる
+      { source: "/quiz/osaka", destination: "/quiz/kansai", permanent: true },
+      { source: "/quiz/nanbu", destination: "/quiz/iwate", permanent: true },
     ];
   },
 };

@@ -1,0 +1,136 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import QuizRunner from "@/components/QuizRunner";
+import TypeAvatar from "@/components/TypeAvatar";
+import { DIALECT_NOTES, wordsOf } from "@/lib/data";
+import {
+  AREA_OF,
+  QUIZ_DIALECTS,
+  quizDialectOf,
+  quizSampleWords,
+  quizSlug,
+  siblingDialects,
+  verifiedCount,
+} from "@/lib/quiz_meta";
+import { REGION_OF } from "@/lib/tools";
+import { typeByDialect } from "@/lib/types";
+
+const BASE = "https://hogen.mainichi-lab.com";
+
+// 方言ごとに1URL。「○○弁検定」という検索クエリで個別に拾えるようにするため、
+// 単一ページ（/quiz）の中で状態を切り替える方式から分割した。/quiz は一覧として残している。
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return QUIZ_DIALECTS.map((d) => ({ slug: quizSlug(d)! }));
+}
+
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const dialect = quizDialectOf(slug);
+  if (!dialect) return {};
+  const area = AREA_OF[dialect] ?? "";
+  const samples = quizSampleWords(dialect, 3);
+  const title = `${dialect}検定｜全8問・1分の${dialect}クイズ（${area}） | 方言ラボ`;
+  const description = `「${samples.join("」「")}」…${dialect}（${area}）の言葉、意味がわかる？ 全8問の4択クイズで${dialect}検定に挑戦。8割正解で合格バッジ。登録不要・スマホで約1分。`;
+  const url = `${BASE}/quiz/${slug}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "方言ラボ", locale: "ja_JP", type: "website" },
+    twitter: { card: "summary_large_image", title, description },
+  };
+}
+
+export default async function QuizDialectPage({ params }: Props) {
+  const { slug } = await params;
+  const dialect = quizDialectOf(slug);
+  if (!dialect) notFound();
+
+  const area = AREA_OF[dialect] ?? "";
+  const region = REGION_OF[dialect] ?? "";
+  const type = typeByDialect(dialect);
+  const samples = quizSampleWords(dialect, 5);
+  const verified = verifiedCount(dialect);
+  const siblings = siblingDialects(dialect);
+  const wordCount = wordsOf(dialect).length;
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "方言ラボ", item: BASE },
+      { "@type": "ListItem", position: 2, name: "方言クイズ検定", item: `${BASE}/quiz` },
+      { "@type": "ListItem", position: 3, name: `${dialect}検定`, item: `${BASE}/quiz/${slug}` },
+    ],
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto space-y-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+
+      <div className="text-center space-y-2">
+        <Link href="/quiz" className="text-xs font-bold text-primary hover:underline">
+          ← 方言クイズ検定の一覧
+        </Link>
+        {type && (
+          <div className="flex justify-center">
+            <TypeAvatar type={type} size={72} />
+          </div>
+        )}
+        <h1 className="section-title">🏅 {dialect}検定</h1>
+        <p className="text-sub text-sm leading-relaxed">
+          {area}のことば「{dialect}」から全8問。意味を4択で選ぶだけの検定です。
+          8問中6問以上（80%）が辞典と一致すると「{dialect} 検定合格」バッジがもらえます。
+        </p>
+      </div>
+
+      <QuizRunner dialect={dialect} />
+
+      <section className="card p-5 space-y-2">
+        <h2 className="font-bold text-sm">📚 {dialect}とは（{area}）</h2>
+        <p className="text-sm leading-relaxed">{DIALECT_NOTES[dialect]}</p>
+        <p className="text-xs text-sub leading-relaxed">
+          方言ラボの辞典には{dialect}の語を{wordCount}語収録しています。
+          この検定の8問のうち{verified}問は、出典を1語ずつ照合したリスト（
+          <Link href="/doko" className="text-primary underline underline-offset-2">
+            この方言どこの言葉？
+          </Link>
+          と同じリスト）から出しています。
+        </p>
+        <p className="text-xs text-sub leading-relaxed">
+          出題語の例：{samples.join("・")}
+        </p>
+      </section>
+
+      {siblings.length > 0 && (
+        <section className="space-y-2">
+          <h2 className="font-bold text-sm text-center">同じ{region}の検定にも挑戦</h2>
+          <div className="flex flex-wrap justify-center gap-2">
+            {siblings.map((d) => (
+              <Link
+                key={d}
+                href={`/quiz/${quizSlug(d)}`}
+                className="btn-secondary text-sm min-h-[44px] inline-flex items-center"
+              >
+                {d}検定
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="flex flex-wrap justify-center gap-2 text-xs">
+        <Link href="/quiz" className="btn-ghost">🏅 検定の一覧（全{QUIZ_DIALECTS.length}方言）</Link>
+        <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
+        <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
+        <Link href="/shindan" className="btn-ghost">🎭 方言タイプ診断</Link>
+        <Link href="/dict" className="btn-ghost">📖 方言辞典</Link>
+      </div>
+    </div>
+  );
+}
