@@ -42,12 +42,12 @@ export default function QuizIndexPage() {
                   <Link
                     key={d}
                     href={`/quiz/${quizSlug(d)}`}
-                    className="card p-4 text-left hover:-translate-y-0.5 hover:shadow-lg transition-all flex items-center gap-3 min-h-[72px]"
+                    className="card p-4 text-left hover:-translate-y-0.5 hover:shadow-lg transition-all flex items-center gap-3 min-h-[72px] min-w-0"
                   >
                     {t && <TypeAvatar type={t} size={52} />}
                     <div className="min-w-0">
                       <div className="font-bold">{d} 検定</div>
-                      <div className="text-xs text-sub mt-0.5 truncate">
+                      <div className="text-xs text-sub mt-0.5 leading-relaxed">
                         {AREA_OF[d]}・全8問（{quizSampleWords(d, 2).join("・")} など）
                       </div>
                     </div>
