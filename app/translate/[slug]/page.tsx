@@ -83,6 +83,10 @@ export default async function TranslateDialectPage({ params }: Props) {
           標準語の文を入力すると、{area}のことば「{dialect}」に変換します。
           ⇄ を押せば {dialect} → 標準語の向きにも変えられます。
         </p>
+        <p className="text-xs text-sub leading-relaxed">
+          方言ラボの辞典に収録された{dialect}の語（{wordCount}語）を置き換えるしくみです。
+          語尾や活用は変えないので、置き換えられなかった部分はそのまま残ります。
+        </p>
       </div>
 
       <TranslateTool dialect={dialect} slug={slug} />

@@ -32,6 +32,10 @@ export default function TranslatePage() {
         <p className="text-sub text-sm">
           全{TRANSLATE_DIALECTS.length}方言に対応。方言同士の変換もできます
         </p>
+        <p className="text-xs text-sub leading-relaxed">
+          方言ラボの辞典（35方言・3,362語）に収録されている語を置き換えるしくみです。
+          語尾や活用は変えず、置き換えられなかった部分はそのまま残します。
+        </p>
       </div>
 
       <TranslateTool />
