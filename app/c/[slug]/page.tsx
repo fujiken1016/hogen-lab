@@ -239,6 +239,9 @@ export default function CharPage() {
           <Link href={`/quiz/${type.slug}`} className="btn-secondary">
             {type.dialect}検定に挑戦
           </Link>
+          <Link href={`/translate/${type.slug}`} className="btn-secondary">
+            {type.dialect}に変換する
+          </Link>
         </div>
       </div>
     </div>
