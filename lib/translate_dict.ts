@@ -30,6 +30,8 @@ export type Hit = {
   example: string;
   /** 出典データの種別 */
   origin: "辞典" | "定型句";
+  /** その語が載っている辞典の方言名（出典表示用） */
+  dict: string;
   /** 同じ意味で辞典に載っている別の言い方 */
   alts: string[];
 };
@@ -51,6 +53,7 @@ type IndexEntry = {
   meaning: string;
   example: string;
   origin: "辞典" | "定型句";
+  dict: string;
   alts: string[];
 };
 
@@ -141,7 +144,7 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
       const d = fromPhrases[q.key];
       const s = stdPhrases[q.key] ?? q.key;
       if (d && s) {
-        addKey(map, d, { target: s, meaning: s, example: "", origin: "定型句", alts: [] });
+        addKey(map, d, { target: s, meaning: s, example: "", origin: "定型句", dict: from, alts: [] });
       }
     }
     for (const w of wordsOf(from)) {
@@ -153,6 +156,7 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
         meaning: w.meaning,
         example: w.example ?? "",
         origin: "辞典",
+        dict: from,
         alts: g.slice(1, 3),
       });
     }
@@ -165,9 +169,9 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
     const d = toPhrases[q.key];
     if (!d) continue;
     const s = stdPhrases[q.key] ?? q.key;
-    addKey(map, s, { target: d, meaning: `「${s}」にあたる言い方`, example: "", origin: "定型句", alts: [] });
+    addKey(map, s, { target: d, meaning: `「${s}」にあたる言い方`, example: "", origin: "定型句", dict: to, alts: [] });
     if (s !== q.key) {
-      addKey(map, q.key, { target: d, meaning: `「${q.key}」にあたる言い方`, example: "", origin: "定型句", alts: [] });
+      addKey(map, q.key, { target: d, meaning: `「${q.key}」にあたる言い方`, example: "", origin: "定型句", dict: to, alts: [] });
     }
   }
 
@@ -180,6 +184,7 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
         meaning: w.meaning,
         example: w.example ?? "",
         origin: "辞典",
+        dict: to,
         alts: [],
       };
       addKey(map, g, entry);
@@ -194,7 +199,7 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
       const fd = fromPhrases[q.key];
       const td = toPhrases[q.key];
       if (fd && td) {
-        addKey(map, fd, { target: td, meaning: `「${stdPhrases[q.key] ?? q.key}」にあたる言い方`, example: "", origin: "定型句", alts: [] });
+        addKey(map, fd, { target: td, meaning: `「${stdPhrases[q.key] ?? q.key}」にあたる言い方`, example: "", origin: "定型句", dict: to, alts: [] });
       }
     }
     for (const w of wordsOf(from)) {
@@ -276,6 +281,7 @@ export function convert(text: string, from: string, to: string): ConvertResult {
         meaning: matched.entry.meaning,
         example: matched.entry.example,
         origin: matched.entry.origin,
+        dict: matched.entry.dict,
         alts: matched.entry.alts,
       };
       segments.push({ text: matched.entry.target, hit });

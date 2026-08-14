@@ -149,7 +149,7 @@ export default function TranslateTool({ dialect, slug }: { dialect?: string; slu
                   </div>
                   {h.example && <div className="text-xs text-sub break-words mt-0.5">用例：{h.example}</div>}
                   <div className="text-[10px] text-sub mt-0.5">
-                    出典：方言ラボの{h.origin}データ（{shownPair.to}）
+                    出典：方言ラボの{h.origin}データ（{h.dict}）
                   </div>
                 </li>
               ))}
