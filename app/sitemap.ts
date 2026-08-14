@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { ARTICLES } from "@/lib/articles";
+import { QUIZ_DIALECTS, quizSlug } from "@/lib/quiz_meta";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -10,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/aishou`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/translate`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/quiz`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/quiz`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/doko`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/kawaii`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/kurabe`, changeFrequency: "monthly", priority: 0.8 },
@@ -29,7 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // 方言別の検定（/quiz/[slug]）。「○○弁検定」の検索で個別に拾われるページなので全て載せる。
+  const quizzes: MetadataRoute.Sitemap = QUIZ_DIALECTS.map((d) => ({
+    url: `${BASE}/quiz/${quizSlug(d)}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   // キャラ個別ページ（/c/[slug]）は noindex にしたため sitemap には載せない。
   // → app/c/[slug]/layout.tsx の metadata.robots を参照。
-  return [...staticPages, ...articles];
+  return [...staticPages, ...articles, ...quizzes];
 }
