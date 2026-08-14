@@ -11,6 +11,7 @@ import { QUIZZES, QuizQ, wordsOf } from "./data";
 import { DOKO_SEEDS } from "./doko_pool";
 import { REAL_DIALECTS, REGION_OF } from "./tools";
 import { TYPES } from "./types";
+import { isVerifiedQuizWord } from "./verified_quiz_words";
 
 /** 検定を用意している方言（＝QUIZZES に8問そろっているもの） */
 export const QUIZ_DIALECTS: string[] = REAL_DIALECTS.filter((d) => (QUIZZES[d]?.length ?? 0) > 0);
@@ -70,8 +71,18 @@ export const AREA_OF: Record<string, string> = {
   沖縄方言: "沖縄県",
 };
 
-/** 出典を1語ずつ照合した語（/doko の出題プールと同じリスト） */
-const VERIFIED_WORDS = new Set(DOKO_SEEDS.map((s) => s.word));
+/**
+ * 出典を1語ずつ照合した語。/doko の出題プール（DOKO_SEEDS）と、検定用に照合した
+ * リスト（VERIFIED_QUIZ_WORDS）の和集合。
+ *
+ * 「語」だけでなく「方言との組」で見る。同じ語でも、照合したのは A弁 についてであって
+ * B弁 で使うかは別問題だから。以前は語だけで判定していたため、他方言の照合結果を
+ * 借りて「照合済み」と表示される取りこぼしがあった（2026-08-15 修正）。
+ */
+const VERIFIED_PAIRS = new Set(DOKO_SEEDS.map((s) => `${s.dialect} ${s.word}`));
+function isVerified(dialect: string, word: string): boolean {
+  return VERIFIED_PAIRS.has(`${dialect} ${word}`) || isVerifiedQuizWord(dialect, word);
+}
 
 /** 語 → その語を収録している方言の一覧（辞典全体から作る。初回だけ構築） */
 let wordIndex: Map<string, string[]> | null = null;
@@ -133,7 +144,7 @@ export function annotatedQuiz(dialect: string): AnnotatedQ[] {
     return {
       ...q,
       word,
-      verified: word ? VERIFIED_WORDS.has(word) : false,
+      verified: word ? isVerified(dialect, word) : false,
       also: alsoRecordedIn(dialect, word),
     };
   });

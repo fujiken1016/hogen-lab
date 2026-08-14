@@ -7316,6 +7316,11 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "あんべ",
       "meaning": "具合、様子",
       "example": "あんべわりぐてしゃんとしねっす。"
+    },
+    {
+      "word": "こわい",
+      "meaning": "疲れた・体がだるい",
+      "example": "一日畑さ出てだがら、なんぼがこわい。"
     }
   ],
   "大分弁": [
@@ -14860,6 +14865,21 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "どついたる",
       "meaning": "殴ってやる（脅し文句）",
       "example": "次やったらどついたるぞ。"
+    },
+    {
+      "word": "なおす",
+      "meaning": "片付ける・元の場所にしまう",
+      "example": "その皿、棚になおしといて。"
+    },
+    {
+      "word": "ぐねる",
+      "meaning": "足首をひねる・くじく",
+      "example": "階段でこけて足ぐねてん。"
+    },
+    {
+      "word": "モータープール",
+      "meaning": "駐車場（主に月極・有料の駐車場）",
+      "example": "そこのモータープールに車停めてきたわ。"
     }
   ]
 };
