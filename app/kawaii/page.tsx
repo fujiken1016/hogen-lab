@@ -6,6 +6,7 @@ import Confetti from "@/components/Confetti";
 import ShareBar from "@/components/ShareBar";
 import TypeAvatar from "@/components/TypeAvatar";
 import { track } from "@/lib/ga";
+import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { KawaiiEntry, buildKawaiiBracket, kawaiiCandidates } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
 
@@ -175,6 +176,14 @@ export default function KawaiiPage() {
     const shareText = champ
       ? `【方言ラボ】かわいい方言トーナメント優勝は「${champ.word}」（${champ.dialect}／${champ.meaning}）！ あなたの推し方言は？ #方言ラボ`
       : "【方言ラボ】かわいい方言トーナメント #方言ラボ";
+    // Wordle型: 優勝した語は伏せ字。文字数と地方だけ出して「何それ」と思わせる
+    const shareBlockText = champ
+      ? shareBlock([
+          `かわいい方言トーナメント（全8語）`,
+          `🏆 わたしの優勝は「${maskWord(champ.word)}」（${charLen(champ.word)}文字・${champ.region}）`,
+          `あなたの推し方言は？ #方言ラボ`,
+        ])
+      : undefined;
 
     return (
       <div className="max-w-2xl mx-auto space-y-4">
@@ -204,7 +213,7 @@ export default function KawaiiPage() {
               準優勝：「{finalist.word}」（{finalist.dialect}／{finalist.meaning}）
             </p>
           )}
-          <ShareBar text={shareText} url={url} />
+          <ShareBar text={shareText} url={url} block={shareBlockText} />
         </div>
 
         <div className="card p-5 space-y-2">

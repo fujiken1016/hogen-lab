@@ -6,6 +6,7 @@ import Confetti from "@/components/Confetti";
 import ShareBar from "@/components/ShareBar";
 import TypeAvatar from "@/components/TypeAvatar";
 import { track } from "@/lib/ga";
+import { marks, shareBlock } from "@/lib/share_text";
 import { DokoQ, REGION_OF, buildDokoQuestions, dokoRank } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
 
@@ -108,6 +109,12 @@ export default function DokoPage() {
     const score = Math.round((correct / questions.length) * 100);
     const shareText = `【方言ラボ】「この方言どこの言葉？」${questions.length}問中${correct}問的中（${score}点）／称号「${rank.title}」${rank.emoji} あなたの方言耳は何点？ #方言ラボ`;
     const url = typeof window !== "undefined" ? `${window.location.origin}/doko` : "https://hogen.mainichi-lab.com/doko";
+    // Wordle型: 出題語も正解の地方も出さず、当たり外れの形と称号だけ
+    const shareBlockText = shareBlock([
+      `この方言どこの言葉？ ${questions.length}問中${correct}問的中`,
+      marks(logs.map((l) => l.ok)),
+      `称号「${rank.title}」${rank.emoji} #方言ラボ`,
+    ]);
 
     return (
       <div className="max-w-2xl mx-auto space-y-4">
@@ -123,7 +130,7 @@ export default function DokoPage() {
             <span className="text-sub text-sm font-normal">（{score}点）</span>
           </p>
           <p className="text-sm text-sub leading-relaxed">{rank.comment}</p>
-          <ShareBar text={shareText} url={url} />
+          <ShareBar text={shareText} url={url} block={shareBlockText} />
         </div>
 
         {/* 間違えた問題は消さずに残す。結果画面で自分のペースで読み返せるようにする */}

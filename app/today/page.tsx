@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import ShareBar from "@/components/ShareBar";
 import { TodayWord, allWords, speak, todayWord } from "@/lib/data";
+import { charLen, maskWord, shareBlock } from "@/lib/share_text";
+import { REGION_OF } from "@/lib/tools";
 
 export default function TodayPage() {
   const [today, setToday] = useState<TodayWord | null>(null);
@@ -19,6 +21,12 @@ export default function TodayPage() {
   const shown = filter === "すべて" ? words : words.filter((w) => w.dialect === filter);
   const shareText = `【今日の方言】${today.dialect}「${today.word}」＝${today.meaning}。例:「${today.example}」 #方言ラボ`;
   const url = typeof window !== "undefined" ? `${window.location.origin}/today` : "";
+  // Wordle型: 語も意味も伏せ字。文字数と地方だけ出して「何それ」と思わせる
+  const shareBlockText = shareBlock([
+    `今日の方言（${new Date().getMonth() + 1}/${new Date().getDate()}）`,
+    `📖「${maskWord(today.word)}」（${charLen(today.word)}文字・${REGION_OF[today.dialect] ?? "日本"}のことば）意味わかる？`,
+    `毎日ひとつ変わります #方言ラボ`,
+  ]);
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
@@ -39,7 +47,7 @@ export default function TodayPage() {
             🔊 例文を読み上げる
           </button>
         </div>
-        <ShareBar text={shareText} url={url} />
+        <ShareBar text={shareText} url={url} block={shareBlockText} />
       </div>
 
       <div className="flex items-center justify-between">
