@@ -1,102 +1,66 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import TranslateTool from "@/components/TranslateTool";
+import { TRANSLATE_DIALECTS, translateByRegion, translateSlug } from "@/lib/translate_meta";
 
-import { useState } from "react";
-import { DIALECTS, speak, unlockBadge } from "@/lib/data";
+const BASE = "https://hogen.mainichi-lab.com";
 
-type Result = { translation: string; reading: string; note: string };
+// 全方言をここで選べる形は残したまま（既にインデックスされている可能性があるため）、
+// 方言別ページ（/translate/[slug]）への索引を兼ねる。
+export const metadata: Metadata = {
+  title: `方言変換｜標準語を全${TRANSLATE_DIALECTS.length}方言に変換 | 方言ラボ`,
+  description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換します。大阪弁・博多弁・津軽弁など、方言同士の変換もできます。方言ごとの変換ページ（「○○弁 変換」）へもここから移動できます。登録不要・スマホで数秒。`,
+  alternates: { canonical: `${BASE}/translate` },
+  openGraph: {
+    title: `方言変換｜標準語を全${TRANSLATE_DIALECTS.length}方言に変換 | 方言ラボ`,
+    description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換。方言同士の変換もできます。`,
+    url: `${BASE}/translate`,
+    siteName: "方言ラボ",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
+};
 
 export default function TranslatePage() {
-  const [text, setText] = useState("");
-  const [from, setFrom] = useState("標準語");
-  const [to, setTo] = useState("大阪弁");
-  const [result, setResult] = useState<Result | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-
-  async function translate() {
-    if (!text.trim() || loading) return;
-    setLoading(true);
-    setError("");
-    setResult(null);
-    try {
-      const res = await fetch("/api/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, from, to }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setError(data.error ?? "翻訳に失敗しました");
-      } else {
-        setResult(data);
-        unlockBadge("translate_first");
-      }
-    } catch {
-      setError("通信エラーが発生しました");
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  function swap() {
-    setFrom(to);
-    setTo(from);
-    if (result) setText(result.translation);
-    setResult(null);
-  }
+  const groups = translateByRegion();
 
   return (
     <div className="space-y-6 max-w-2xl mx-auto">
       <div className="text-center space-y-2">
-        <h1 className="section-title">🗣️ 方言翻訳</h1>
-        <p className="text-sub text-sm">全国{DIALECTS.length - 1}方言に対応。方言同士の翻訳もできます</p>
+        <h1 className="section-title">🗣️ 方言変換</h1>
+        <p className="text-sub text-sm">
+          全{TRANSLATE_DIALECTS.length}方言に対応。方言同士の変換もできます
+        </p>
       </div>
 
-      <div className="card p-5 space-y-4">
-        <div className="flex items-center gap-2">
-          <select value={from} onChange={(e) => setFrom(e.target.value)} className="select-base flex-1">
-            {DIALECTS.map((d) => (
-              <option key={d}>{d}</option>
-            ))}
-          </select>
-          <button onClick={swap} className="btn-secondary px-3" title="入れ替え">
-            ⇄
-          </button>
-          <select value={to} onChange={(e) => setTo(e.target.value)} className="select-base flex-1">
-            {DIALECTS.map((d) => (
-              <option key={d}>{d}</option>
-            ))}
-          </select>
-        </div>
+      <TranslateTool />
 
-        <textarea
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder={`${from}の文を入力（500文字まで）`}
-          rows={4}
-          maxLength={500}
-          className="input-base resize-none"
-        />
+      <section className="space-y-3">
+        <h2 className="font-bold text-sm text-center">方言を選んで変換する（「○○弁 変換」の個別ページ）</h2>
+        {groups.map((g) => (
+          <div key={g.region} className="card p-4 space-y-2">
+            <h3 className="text-xs font-bold text-sub">{g.region}</h3>
+            <div className="flex flex-wrap gap-2">
+              {g.dialects.map((d) => (
+                <Link
+                  key={d}
+                  href={`/translate/${translateSlug(d)}`}
+                  className="btn-secondary text-sm min-h-[44px] inline-flex items-center"
+                >
+                  {d} 変換
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
 
-        <button onClick={translate} disabled={loading || !text.trim() || from === to} className="btn-primary w-full">
-          {loading ? "翻訳中…" : `${to}に翻訳する`}
-        </button>
-        {from === to && <p className="text-sm text-sub">翻訳元と翻訳先が同じです</p>}
+      <div className="flex flex-wrap justify-center gap-2 text-xs">
+        <Link href="/quiz" className="btn-ghost">🏅 方言クイズ検定</Link>
+        <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
+        <Link href="/dict" className="btn-ghost">📖 方言辞典</Link>
       </div>
-
-      {error && <div className="bg-red-50 border border-red-300 text-red-700 rounded-xl p-4 text-sm">{error}</div>}
-
-      {result && (
-        <div className="card p-5 space-y-3">
-          <div className="chip bg-indigo/10 text-indigo">{to}</div>
-          <div className="text-xl font-bold">{result.translation}</div>
-          <div className="text-sm text-sub">{result.reading}</div>
-          <div className="text-sm bg-paper border border-line rounded-xl p-3">💡 {result.note}</div>
-          <button onClick={() => speak(result.translation)} className="btn-secondary text-sm">
-            🔊 読み上げる
-          </button>
-        </div>
-      )}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { ARTICLES } from "@/lib/articles";
 import { QUIZ_DIALECTS, quizSlug } from "@/lib/quiz_meta";
+import { TRANSLATE_DIALECTS, translateSlug } from "@/lib/translate_meta";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -37,7 +38,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // 方言別の変換（/translate/[slug]）。「○○弁 変換」「○○弁 翻訳」の検索で個別に拾うページ。
+  const translates: MetadataRoute.Sitemap = TRANSLATE_DIALECTS.map((d) => ({
+    url: `${BASE}/translate/${translateSlug(d)}`,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   // キャラ個別ページ（/c/[slug]）は noindex にしたため sitemap には載せない。
   // → app/c/[slug]/layout.tsx の metadata.robots を参照。
-  return [...staticPages, ...articles, ...quizzes];
+  return [...staticPages, ...articles, ...quizzes, ...translates];
 }

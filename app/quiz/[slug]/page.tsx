@@ -14,6 +14,7 @@ import {
   verifiedCount,
 } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
+import { translateDialectOf, translateSlug } from "@/lib/translate_meta";
 import { typeByDialect } from "@/lib/types";
 
 const BASE = "https://hogen.mainichi-lab.com";
@@ -58,6 +59,8 @@ export default async function QuizDialectPage({ params }: Props) {
   const verified = verifiedCount(dialect);
   const siblings = siblingDialects(dialect);
   const wordCount = wordsOf(dialect).length;
+  // 変換ページを用意している方言なら相互リンクする（「○○弁 変換」への回遊）
+  const tSlug = translateDialectOf(slug) ? translateSlug(dialect) : undefined;
 
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -125,6 +128,9 @@ export default async function QuizDialectPage({ params }: Props) {
       )}
 
       <div className="flex flex-wrap justify-center gap-2 text-xs">
+        {tSlug && (
+          <Link href={`/translate/${tSlug}`} className="btn-ghost">🗣️ {dialect}に変換してみる</Link>
+        )}
         <Link href="/quiz" className="btn-ghost">🏅 検定の一覧（全{QUIZ_DIALECTS.length}方言）</Link>
         <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
         <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
