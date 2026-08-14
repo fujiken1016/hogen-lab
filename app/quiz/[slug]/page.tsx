@@ -99,11 +99,12 @@ export default async function QuizDialectPage({ params }: Props) {
         <p className="text-sm leading-relaxed">{DIALECT_NOTES[dialect]}</p>
         <p className="text-xs text-sub leading-relaxed">
           方言ラボの辞典には{dialect}の語を{wordCount}語収録しています。
-          この検定の8問のうち{verified}問は、出典を1語ずつ照合したリスト（
+          この検定の8問のうち{verified}問は、辞典・自治体資料・地方紙などの出典と1語ずつ突き合わせて
+          確認した語です（
           <Link href="/doko" className="text-primary underline underline-offset-2">
             この方言どこの言葉？
           </Link>
-          と同じリスト）から出しています。
+          の出題プールと、検定用に照合したリストの両方から出しています）。
         </p>
         <p className="text-xs text-sub leading-relaxed">
           出題語の例：{samples.join("・")}
