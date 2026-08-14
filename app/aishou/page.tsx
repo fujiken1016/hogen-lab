@@ -85,7 +85,13 @@ export default function AishouPage() {
         </p>
       </div>
 
-      {pair && <CompatCard a={pair.a} b={pair.b} />}
+      {pair && (
+        <CompatCard
+          a={pair.a}
+          b={pair.b}
+          shareUrl={typeof window !== "undefined" ? `${window.location.origin}/aishou` : "https://hogen.mainichi-lab.com/aishou"}
+        />
+      )}
     </div>
   );
 }

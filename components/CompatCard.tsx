@@ -4,6 +4,8 @@
 // スコア＋5軸チャート＋五行＋性格の噛み合わせ＋ラッキー方言＋ケンカ予報＋開運アクション
 import { useEffect, useState } from "react";
 import SecretAvatar from "@/components/SecretAvatar";
+import ShareBar from "@/components/ShareBar";
+import { meter, shareBlock } from "@/lib/share_text";
 import TypeAvatar from "@/components/TypeAvatar";
 import { buildCompat } from "@/lib/compat";
 import { SHINDAN_PHRASES, wordsOf } from "@/lib/data";
@@ -17,7 +19,11 @@ function hashOf(s: string): number {
 
 export type CompatPerson = { type: DialectType; cluster?: string; level?: number; label: string };
 
-export default function CompatCard({ a, b }: { a: CompatPerson; b: CompatPerson }) {
+/**
+ * shareUrl を渡した画面（/aishou）だけ、カードの末尾にシェア導線を出す。
+ * 診断結果ページ（/shindan・/r）は下に専用のシェア枠があるので渡さない＝二重表示にしない。
+ */
+export default function CompatCard({ a, b, shareUrl }: { a: CompatPerson; b: CompatPerson; shareUrl?: string }) {
   const [grown, setGrown] = useState(false);
   useEffect(() => {
     const t = setTimeout(() => setGrown(true), 150);
@@ -130,6 +136,21 @@ export default function CompatCard({ a, b }: { a: CompatPerson; b: CompatPerson 
             <p className="mt-1 text-sub leading-relaxed">{c.action}</p>
           </div>
         </div>
+
+        {shareUrl && (
+          <div className="border-t border-line pt-4">
+            {/* Wordle型: タイプ名も鑑定文も出さず、スコアの「形」だけ渡す */}
+            <ShareBar
+              text={`【方言ラボ】相性チェッカーで鑑定したら${c.score}%でした #方言ラボ`}
+              url={shareUrl}
+              block={shareBlock([
+                `方言タイプ相性チェッカー`,
+                `${meter(c.score, 8, "💗", "🤍")} ${c.score}%`,
+                `あなたたちは何%？ コード2つ入れるだけ #方言ラボ`,
+              ])}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -27,6 +27,7 @@ import {
 import Confetti from "@/components/Confetti";
 import { Bush, Cloud, Sun, Tree } from "@/components/Scenery";
 import { kanteiOf } from "@/lib/fortune";
+import { maskWord, meter, shareBlock } from "@/lib/share_text";
 import CompatCard from "@/components/CompatCard";
 import { decodeCode, encodeCode, saveMyResult, type DecodedCode } from "@/lib/compat";
 import SecretAvatar from "@/components/SecretAvatar";
@@ -676,6 +677,12 @@ export default function ShindanPage() {
   // シェアは「自分の結果がそのまま見られる」閲覧ページへ（受け取った側は自動で相性も出る）
   const inviteUrl = `${origin}/r/${myCode}`;
   const shareText = `【方言タイプ診断】${secret ? `🌟シークレット「${secret.name}」降臨！！ ` : ""}わたしは ${myType.emoji}「${resultName}」（${myType.dialect} ${Math.round(ranked[0]?.pct ?? 0)}%）でした！私の結果と相性はこちら→ #方言ラボ`;
+  // Wordle型: タイプ名も方言名も伏せる。「文字数」と「一致度の形」だけ見せて、リンクで答え合わせさせる
+  const shareBlockText = shareBlock([
+    `方言タイプ診断 わたしは「${maskWord(resultName)}」でした`,
+    `${meter(Math.round(ranked[0]?.pct ?? 0))} 一致度${Math.round(ranked[0]?.pct ?? 0)}%`,
+    `${secret ? "🌟シークレット降臨 " : ""}リンクで答え合わせ＋相性診断 #方言ラボ`,
+  ]);
   const compat = friendType ? affinity(myType, friendType) : null;
 
   // ことだま鑑定（回答指紋×日付で決まる本格占い: 数秘×五行×タロット×月相×運気の波）
@@ -1186,7 +1193,7 @@ export default function ShindanPage() {
         <p className="text-xs text-sub">
           このリンクから友達が診断すると、あなたとの相性が自動で表示されます
         </p>
-        <ShareBar text={shareText} url={inviteUrl} />
+        <ShareBar text={shareText} url={inviteUrl} block={shareBlockText} />
         <button onClick={() => setPhase("intro")} className="btn-ghost">
           ↻ もう一度診断する
         </button>

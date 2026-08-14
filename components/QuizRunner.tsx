@@ -15,6 +15,7 @@ import ShareBar from "@/components/ShareBar";
 import { shuffle, unlockBadge } from "@/lib/data";
 import { track } from "@/lib/ga";
 import { AnnotatedQ, annotatedQuiz, quizSlug } from "@/lib/quiz_meta";
+import { marks, shareBlock } from "@/lib/share_text";
 
 type PlayQ = AnnotatedQ & { order: number[] };
 type Log = { q: PlayQ; picked: number };
@@ -99,6 +100,12 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
     const score = Math.round((correct / questions.length) * 100);
     const passed = score >= 80;
     const shareText = `【方言ラボ】${dialect}検定 ${passed ? "合格🎉" : "挑戦"}！ ${questions.length}問中${correct}問が辞典と一致（${score}点）あなたも挑戦してみて！ #方言ラボ #${dialect}検定`;
+    // Wordle型: 正誤の「形」だけを見せ、設問も答えも出さない
+    const shareBlockText = shareBlock([
+      `${dialect}検定 ${questions.length}問中${correct}問が辞典と一致`,
+      marks(logs.map((l) => l.picked === l.q.answer)),
+      `${passed ? "🏅合格" : "📚再挑戦中"} #方言ラボ #${dialect}検定`,
+    ]);
     const url =
       typeof window !== "undefined"
         ? `${window.location.origin}/quiz/${slug}`
@@ -119,7 +126,7 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
               🏅 「{dialect} 検定合格」バッジを獲得しました
             </p>
           )}
-          <ShareBar text={shareText} url={url} />
+          <ShareBar text={shareText} url={url} block={shareBlockText} />
         </div>
 
         {/* 結果は自動で流さず、自分のペースで読み返せるように全問残す */}

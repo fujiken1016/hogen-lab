@@ -6,6 +6,7 @@ import ShareBar from "@/components/ShareBar";
 import TypeAvatar from "@/components/TypeAvatar";
 import { REGIONS, SHINDAN_PHRASES, SHINDAN_QUESTIONS, STANDARD } from "@/lib/data";
 import { track } from "@/lib/ga";
+import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { REGION_OF } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
 
@@ -89,6 +90,12 @@ export default function KurabePage() {
     const url =
       typeof window !== "undefined" ? `${window.location.origin}/kurabe` : "https://hogen.mainichi-lab.com/kurabe";
     const shareText = `【方言ラボ】「${phraseKey}」を私は「${pick.text}」って言う。${pick.dialect}の言い方でした。あなたはどう言う？ #方言ラボ`;
+    // Wordle型: 自分が選んだ言い方は伏せ字。何弁だったかも出さない
+    const shareBlockText = shareBlock([
+      `全国方言くらべ「${phraseKey}」`,
+      `🗣️ 私の言い方は「${maskWord(pick.text)}」（${charLen(pick.text)}文字）`,
+      `同じ言い方を収録している地域は${same.length} あなたはどう言う？ #方言ラボ`,
+    ]);
 
     return (
       <div className="max-w-2xl mx-auto space-y-4">
@@ -118,7 +125,7 @@ export default function KurabePage() {
               </div>
             </div>
           )}
-          <ShareBar text={shareText} url={url} />
+          <ShareBar text={shareText} url={url} block={shareBlockText} />
           {t && (
             <Link href={`/c/${t.slug}`} className="btn-secondary text-sm inline-block">
               {pick.dialect}のキャラを見る
