@@ -20,11 +20,11 @@ const BASE = "https://hogen.mainichi-lab.com";
 
 // 方言ごとに1URL。「○○弁検定」という検索クエリで個別に拾えるようにするため、
 // 単一ページ（/quiz）の中で状態を切り替える方式から分割した。/quiz は一覧として残している。
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return QUIZ_DIALECTS.map((d) => ({ slug: quizSlug(d)! }));
-}
+//
+// generateStaticParams は使わない（＝リクエスト時にサーバーで描画する）。
+// Cloudflare Workers（OpenNext）ではSSGした動的ルートのHTMLはインクリメンタルキャッシュに
+// 入るため、キャッシュ未設定のこの環境では 404 になる（2026-08 実測）。
+// データは全てローカルの静的データなので、既存の /c/[slug] と同じくオンデマンド描画で足りる。
 
 type Props = { params: Promise<{ slug: string }> };
 
