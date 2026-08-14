@@ -236,7 +236,7 @@ export default function CharPage() {
           <Link href="/shindan" className="btn-primary px-8 py-3">
             {myDecoded ? "友達に診断を送る" : "2分で診断する（無料）"}
           </Link>
-          <Link href={`/quiz`} className="btn-secondary">
+          <Link href={`/quiz/${type.slug}`} className="btn-secondary">
             {type.dialect}検定に挑戦
           </Link>
         </div>
