@@ -3,6 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "お問い合わせ | 方言ラボ",
+  description:
+    "方言ラボへのお問い合わせ窓口です。方言データの誤りのご指摘、掲載内容に関するご連絡はこちらからお願いします。",
+  alternates: { canonical: "https://hogen.mainichi-lab.com/contact" },
 };
 
 export default function ContactPage() {

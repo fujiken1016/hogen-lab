@@ -8,6 +8,7 @@ const article = getArticle("hogen-fuda-kiki")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/hogen-fuda-kiki" },
 };
 
 export default function Page() {

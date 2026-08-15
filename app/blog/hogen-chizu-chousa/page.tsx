@@ -8,6 +8,7 @@ const article = getArticle("hogen-chizu-chousa")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/hogen-chizu-chousa" },
 };
 
 export default function Page() {

@@ -3,6 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "運営者情報 | 方言ラボ",
+  description:
+    "方言ラボの運営者情報です。サイトの目的、方言データの出典の扱い、連絡先を記載しています。",
+  alternates: { canonical: "https://hogen.mainichi-lab.com/about" },
 };
 
 export default function AboutPage() {
