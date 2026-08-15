@@ -12,6 +12,7 @@ const article = getArticle("shindan-guide")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/shindan-guide" },
 };
 
 export default function Page() {

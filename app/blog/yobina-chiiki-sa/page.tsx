@@ -7,6 +7,7 @@ const article = getArticle("yobina-chiiki-sa")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/yobina-chiiki-sa" },
 };
 
 /** 呼び名と地域の対応を並べる（375px でも折り返して崩れない） */

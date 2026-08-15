@@ -7,6 +7,7 @@ const article = getArticle("hogen-accent-chizu")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/hogen-accent-chizu" },
 };
 
 /** 高低パターンを見せる小さな図 */

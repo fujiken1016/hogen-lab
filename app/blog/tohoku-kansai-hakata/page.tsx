@@ -7,6 +7,7 @@ const article = getArticle("tohoku-kansai-hakata")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/tohoku-kansai-hakata" },
 };
 
 const COMPARE = [

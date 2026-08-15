@@ -8,6 +8,7 @@ const article = getArticle("media-to-hogen")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/media-to-hogen" },
 };
 
 export default function Page() {

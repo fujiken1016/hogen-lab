@@ -8,6 +8,7 @@ const article = getArticle("higashi-nishi-kyoukai")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/higashi-nishi-kyoukai" },
 };
 
 export default function Page() {

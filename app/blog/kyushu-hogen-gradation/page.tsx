@@ -8,6 +8,7 @@ const article = getArticle("kyushu-hogen-gradation")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/kyushu-hogen-gradation" },
 };
 
 export default function Page() {

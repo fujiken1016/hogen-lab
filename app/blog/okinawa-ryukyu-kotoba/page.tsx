@@ -7,6 +7,7 @@ const article = getArticle("okinawa-ryukyu-kotoba")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/okinawa-ryukyu-kotoba" },
 };
 
 /** 本土日本語 ↔ うちなーぐち の対応を1行で見せる */

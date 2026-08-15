@@ -7,6 +7,7 @@ const article = getArticle("kawaii-hogen-ranking")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/kawaii-hogen-ranking" },
 };
 
 export default function Page() {

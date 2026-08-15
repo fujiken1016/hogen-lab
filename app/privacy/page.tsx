@@ -3,6 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー | 方言ラボ",
+  description:
+    "方言ラボのプライバシーポリシーです。アクセス解析（Google アナリティクス）、第三者配信の広告Cookieの利用と無効化の方法、お問い合わせ情報の取り扱いについて記載しています。",
+  alternates: { canonical: "https://hogen.mainichi-lab.com/privacy" },
 };
 
 // AdSense審査要件: Cookie・広告・解析の利用を明記

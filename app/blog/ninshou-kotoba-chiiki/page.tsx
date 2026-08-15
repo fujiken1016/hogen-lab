@@ -8,6 +8,7 @@ const article = getArticle("ninshou-kotoba-chiiki")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/ninshou-kotoba-chiiki" },
 };
 
 export default function Page() {

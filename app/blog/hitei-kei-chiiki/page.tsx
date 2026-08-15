@@ -8,6 +8,7 @@ const article = getArticle("hitei-kei-chiiki")!;
 export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
+  alternates: { canonical: "https://hogen.mainichi-lab.com/blog/hitei-kei-chiiki" },
 };
 
 export default function Page() {
