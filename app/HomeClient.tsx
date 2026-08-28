@@ -105,11 +105,17 @@ export default function HomeClient() {
             <span>✓ 全14問</span>
             <span>✓ 登録不要</span>
           </div>
-          <div className="relative inline-block">
-            <Link href="/shindan" className="btn-primary cta-glow text-lg px-12 py-4">
-              診断をはじめる
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="relative inline-block">
+              <Link href="/shindan" className="btn-primary cta-glow text-lg px-12 py-4">
+                診断をはじめる
+              </Link>
+              <span className="stamp w-14 h-14 text-sm absolute -top-5 -right-6">無料</span>
+            </div>
+            {/* 検索流入の最多群は「〜弁 変換」。変換が目的の来訪者用の第2導線（GSC実測 2026-08） */}
+            <Link href="/translate" className="btn-secondary min-h-[44px] inline-flex items-center px-6 text-sm">
+              方言に変換してみる →
             </Link>
-            <span className="stamp w-14 h-14 text-sm absolute -top-5 -right-6">無料</span>
           </div>
           {/* モバイル用キャラ列（PCでは右カラムに表示） */}
           <div className="md:hidden pt-3 space-y-1">
