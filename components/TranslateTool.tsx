@@ -7,6 +7,7 @@
 // 変換は端末内で完結する辞典ベース（lib/translate_dict.ts）。外部APIは呼ばない。
 // 置き換えたのは辞典に載っている語だけ。語尾・活用はそのまま残し、何を置き換えたかを必ず見せる。
 
+import Link from "next/link";
 import { useState } from "react";
 import ShareBar from "@/components/ShareBar";
 import { DIALECTS, STANDARD, speak, unlockBadge } from "@/lib/data";
@@ -16,7 +17,15 @@ import { convert, type ConvertResult } from "@/lib/translate_dict";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
-export default function TranslateTool({ dialect, slug }: { dialect?: string; slug?: string }) {
+export default function TranslateTool({
+  dialect,
+  slug,
+  quizSlug,
+}: {
+  dialect?: string;
+  slug?: string;
+  quizSlug?: string;
+}) {
   const [text, setText] = useState("");
   const [from, setFrom] = useState(STANDARD);
   const [to, setTo] = useState(dialect ?? "大阪弁");
@@ -160,6 +169,19 @@ export default function TranslateTool({ dialect, slug }: { dialect?: string; slu
             🔊 読み上げる
           </button>
           <ShareBar text={shareBlockText ?? ""} url={url} block={shareBlockText} />
+
+          {dialect && quizSlug && (
+            <div className="border-t border-line pt-3 text-center space-y-2">
+              <p className="text-xs text-sub">変換できたら、次は腕試し。</p>
+              <Link
+                href={`/quiz/${quizSlug}`}
+                onClick={() => track("translate_to_quiz", { dialect })}
+                className="btn-primary w-full min-h-[48px] inline-flex items-center justify-center"
+              >
+                🏅 {dialect}検定に挑戦する（無料）
+              </Link>
+            </div>
+          )}
         </div>
       )}
 

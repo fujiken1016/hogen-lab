@@ -89,7 +89,7 @@ export default async function TranslateDialectPage({ params }: Props) {
         </p>
       </div>
 
-      <TranslateTool dialect={dialect} slug={slug} />
+      <TranslateTool dialect={dialect} slug={slug} quizSlug={qSlug ?? undefined} />
 
       <section className="card p-5 space-y-3">
         <h2 className="font-bold text-sm">📝 {dialect}でよく使う言い換え（{pairs.length}）</h2>

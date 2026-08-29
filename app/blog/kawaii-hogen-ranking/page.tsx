@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArticleShell, H2, P, Note, PrBox, RankItem, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -29,6 +30,17 @@ export default function Page() {
         <br />
         <strong>③マネしやすさ</strong>：聞いてすぐ口に出せるか。使いたくなる言葉ほど「かわいい」と記憶されます。
       </Note>
+
+      <div className="my-6 rounded-2xl seigaiha border border-indigo/25 p-5 text-center">
+        <p className="font-display text-lg font-bold mb-1.5">あなたの1位は、どの方言？</p>
+        <p className="text-[13px] text-sub leading-[1.8] mb-3 max-w-md mx-auto">
+          この記事は編集部の順位です。「かわいい方言トーナメント」なら、2つから好きな方をタップするだけ・約1分で
+          <b>あなた自身の優勝方言</b>が決まります。読み終わってからでも遊べます。
+        </p>
+        <Link href="/kawaii" className="btn-primary inline-flex items-center justify-center min-h-[44px]">
+          🏆 かわいい方言トーナメントで決める
+        </Link>
+      </div>
 
       <H2>かわいい方言ランキングTOP10</H2>
 
