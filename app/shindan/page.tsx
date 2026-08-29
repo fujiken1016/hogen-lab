@@ -35,6 +35,7 @@ import { SECRETS, rollSecret, secretRand, unlockSecret } from "@/lib/secret";
 import TypeAvatar, { avatarColors } from "@/components/TypeAvatar";
 import { DialectType, MASCOT_NAMES, TYPES, affinity, typeByDialect, typeBySlug } from "@/lib/types";
 import { track } from "@/lib/ga";
+import { ToolIntro } from "@/components/ToolIntro";
 
 type Choice = { dialect: string; phrase: string };
 type PChoice = { label: string; dialects: string[]; cluster: string };
@@ -422,6 +423,18 @@ export default function ShindanPage() {
             </div>
           ))}
         </div>
+        <ToolIntro
+          heading="方言タイプ診断について"
+          paragraphs={[
+            "この診断は、ふだんの言い回しや語感の好みに関する全14問から、あなたの言葉がどの方言圏のタイプに近いかを判定する無料の性格・方言診断です。出身地を直接聞くのではなく、「気を抜いたときに出る言い方」を手がかりにするのが特徴で、引っ越しが多かった人や、標準語で育ったつもりの人ほど意外な結果が出ることがあります。",
+            "結果には全35タイプのご当地キャラクターが割り当てられ、性格の傾向・恋愛傾向・他のタイプとの相性も表示されます。登録不要・約2分で、何度でも受けられます。結果画面から友だちを招待すると、ふたりの相性もその場で確かめられます。",
+          ]}
+          related={[
+            { href: "/aishou", label: "💞 友だちとの相性診断" },
+            { href: "/translate", label: "🗣️ 方言変換" },
+            { href: "/quiz", label: "🏅 方言クイズ検定" },
+          ]}
+        />
       </div>
     );
   }
@@ -1198,6 +1211,18 @@ export default function ShindanPage() {
           ↻ もう一度診断する
         </button>
       </div>
+      <ToolIntro
+        heading="方言タイプ診断について"
+        paragraphs={[
+          "この診断は、ふだんの言い回しや語感の好みに関する全14問から、あなたの言葉がどの方言圏のタイプに近いかを判定する無料の性格・方言診断です。出身地を直接聞くのではなく、「気を抜いたときに出る言い方」を手がかりにするのが特徴で、引っ越しが多かった人や、標準語で育ったつもりの人ほど意外な結果が出ることがあります。",
+          "結果には全35タイプのご当地キャラクターが割り当てられ、性格の傾向・恋愛傾向・他のタイプとの相性も表示されます。登録不要・約2分で、何度でも受けられます。結果画面から友だちを招待すると、ふたりの相性もその場で確かめられます。",
+        ]}
+        related={[
+          { href: "/aishou", label: "💞 友だちとの相性診断" },
+          { href: "/translate", label: "🗣️ 方言変換" },
+          { href: "/quiz", label: "🏅 方言クイズ検定" },
+        ]}
+      />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { track } from "@/lib/ga";
 import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { REGION_OF } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
+import { ToolIntro } from "@/components/ToolIntro";
 
 const EMOJI: Record<string, string> = {
   ありがとう: "🙏",
@@ -206,6 +207,18 @@ export default function KurabePage() {
         </button>
         <Link href="/translate" className="btn-ghost">🗣️ 自由な文を方言に翻訳</Link>
       </div>
+      <ToolIntro
+        heading="全国方言くらべについて"
+        paragraphs={[
+          "「ありがとう」「とても」「捨てる」のような身近なひとことが、全国35の方言でどう言われるかを一覧で見くらべられるツールです。同じ意味の言葉を横に並べると、東日本と西日本の境界線や、九州・東北の中でのグラデーションが一目で見えてきます。",
+          "掲載している言い方は、辞典類・自治体資料と照合しながら整備しています。地域による言い方の違いは連続的で、県境でくっきり分かれるわけではありません。ここでは代表的な形を載せているので、「うちの地域はもうちょっと違う」という発見も含めて楽しんでください。",
+        ]}
+        related={[
+          { href: "/translate", label: "🗣️ 自由な文を方言に変換" },
+          { href: "/dict", label: "📚 方言辞典" },
+          { href: "/quiz", label: "🏅 方言クイズ検定" },
+        ]}
+      />
     </div>
   );
 }

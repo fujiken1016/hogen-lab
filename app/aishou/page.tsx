@@ -7,6 +7,7 @@ import CompatCard, { CompatPerson } from "@/components/CompatCard";
 import { decodeCode, loadMyResult } from "@/lib/compat";
 import { track } from "@/lib/ga";
 import { MASCOT_NAMES } from "@/lib/types";
+import { ToolIntro } from "@/components/ToolIntro";
 
 export default function AishouPage() {
   const [codeA, setCodeA] = useState("");
@@ -92,6 +93,18 @@ export default function AishouPage() {
           shareUrl={typeof window !== "undefined" ? `${window.location.origin}/aishou` : "https://hogen.mainichi-lab.com/aishou"}
         />
       )}
+      <ToolIntro
+        heading="方言相性チェッカーについて"
+        paragraphs={[
+          "ふたりの方言タイプから、言葉の相性を診断する無料ツールです。方言タイプ診断の結果コードを入力するか、その場でふたりがタイプを選ぶだけで、会話のテンポ・距離感の詰め方・けんかになりやすいポイントを診断します。",
+          "方言は「どこで育ったか」だけでなく「人との距離をどう取るか」の癖でもあります。関西の突っ込み文化と東北の間の文化が出会うと何が起きるか——そんな組み合わせの妙を、35タイプ×35タイプの全組み合わせで用意しています。友だち・恋人・職場の人と気軽に試してみてください。",
+        ]}
+        related={[
+          { href: "/shindan", label: "🔮 まず自分のタイプを診断" },
+          { href: "/kawaii", label: "💗 かわいい方言対決" },
+          { href: "/doko", label: "🗾 この方言どこ？" },
+        ]}
+      />
     </div>
   );
 }
