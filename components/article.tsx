@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import type { ReactNode } from "react";
 import { ARTICLES, otherArticles, type Article } from "@/lib/articles";
 
@@ -260,6 +261,9 @@ export function ArticleShell({ article, children }: { article: Article; children
       </header>
 
       <div>{children}</div>
+
+      {/* AdSense ART_END（本文末・関連リンク群の手前40px）。CLIENT未設定時はnull＝審査中は何も出ない */}
+      <AdSlot name="ART_END" />
 
       <footer className="mt-12 pt-7 border-t border-line">
         {/* 記事を読み終えた人が、そのまま1分で遊べるツールへ行けるようにする */}
