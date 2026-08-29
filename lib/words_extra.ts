@@ -3004,6 +3004,11 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "山側",
       "meaning": "北側（神戸の地形に由来する方角表現）",
       "example": "山側が曇ってきたから、そろそろ帰ろか。"
+    },
+    {
+      "word": "うらおもて",
+      "meaning": "じゃんけんでのチーム分け",
+      "example": "うらおもてで組決めよ。"
     }
   ],
   "和歌山弁": [
@@ -4210,6 +4215,11 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "だらぁ",
       "meaning": "ばか、あほ",
       "example": "そげなことも知らんだらぁか。"
+    },
+    {
+      "word": "おちらと",
+      "meaning": "ゆっくり・のびやかに",
+      "example": "おちらとしていきなはい。"
     }
   ],
   "岡山弁": [
@@ -11222,6 +11232,11 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "しかも",
       "meaning": "かなり、相当",
       "example": "今日はしかも寒いがったて。"
+    },
+    {
+      "word": "あいよー",
+      "meaning": "了解・はーい",
+      "example": "あいよー、今行くて。"
     }
   ],
   "富山弁": [
@@ -13669,6 +13684,16 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "きんさい",
       "meaning": "いらっしゃい、来なさい",
       "example": "はよきんさい、待っとったで。"
+    },
+    {
+      "word": "べんこくさい",
+      "meaning": "生意気だ",
+      "example": "べんこくそうて、だしかんさ。"
+    },
+    {
+      "word": "やわい",
+      "meaning": "準備",
+      "example": "はよやわいしとかなかんよ。"
     }
   ],
   "伊勢弁": [
