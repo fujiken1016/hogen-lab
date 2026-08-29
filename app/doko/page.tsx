@@ -9,6 +9,7 @@ import { track } from "@/lib/ga";
 import { marks, shareBlock } from "@/lib/share_text";
 import { DokoQ, REGION_OF, buildDokoQuestions, dokoRank } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
+import { ToolIntro } from "@/components/ToolIntro";
 
 const TOTAL = 8;
 
@@ -253,6 +254,18 @@ export default function DokoPage() {
           </div>
         )}
       </div>
+      <ToolIntro
+        heading="「この方言どこ？」クイズについて"
+        paragraphs={[
+          "実在する方言のフレーズを見て、どの地域の言葉かを当てる全8問のクイズです。選択肢は4つ。「聞いたことはあるけど、どこの言葉かは知らない」——そんな方言の知識を、ゲーム感覚で確かめられます。",
+          "出題されるフレーズは当サイトの方言データベースから選ばれ、意味と使用地域の解説つきで答え合わせができます。全問正解できたら相当な方言通。腕試しのあとは、35方言それぞれの検定（各8問）に挑戦してみてください。",
+        ]}
+        related={[
+          { href: "/quiz", label: "🏅 方言クイズ検定（35方言）" },
+          { href: "/shindan", label: "🔮 方言タイプ診断" },
+          { href: "/kurabe", label: "🔤 全国方言くらべ" },
+        ]}
+      />
     </div>
   );
 }

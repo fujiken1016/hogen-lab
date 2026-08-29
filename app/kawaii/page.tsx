@@ -9,6 +9,7 @@ import { track } from "@/lib/ga";
 import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { KawaiiEntry, buildKawaiiBracket, kawaiiCandidates } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
+import { ToolIntro } from "@/components/ToolIntro";
 
 type Phase = "intro" | "play" | "result";
 
@@ -285,6 +286,18 @@ export default function KawaiiPage() {
           <EntryCard e={right} onClick={() => choose(right)} />
         </div>
       )}
+      <ToolIntro
+        heading="かわいい方言対決について"
+        paragraphs={[
+          "全国の方言フレーズがトーナメント形式で対戦し、あなたの「かわいい」の一票で優勝が決まる投票型のミニゲームです。8語のうちどちらがかわいいかを直感で選んでいくだけ。約1分で、あなただけの「かわいい方言優勝」が決まります。",
+          "「なんしよっと？」「〜しちょる」「〜やん」——同じ意味でも土地によって響きはまったく違います。対戦カードは毎回シャッフルされるので、やるたびに違う組み合わせが楽しめます。結果はシェアして友だちの優勝と見比べるのがおすすめです。",
+        ]}
+        related={[
+          { href: "/kurabe", label: "🔤 全国方言くらべ" },
+          { href: "/shindan", label: "🔮 方言タイプ診断" },
+          { href: "/translate", label: "🗣️ 方言変換" },
+        ]}
+      />
     </div>
   );
 }

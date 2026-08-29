@@ -5,6 +5,7 @@ import ShareBar from "@/components/ShareBar";
 import { TodayWord, allWords, speak, todayWord } from "@/lib/data";
 import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { REGION_OF } from "@/lib/tools";
+import { ToolIntro } from "@/components/ToolIntro";
 
 export default function TodayPage() {
   const [today, setToday] = useState<TodayWord | null>(null);
@@ -77,6 +78,18 @@ export default function TodayPage() {
           ))}
         </div>
       )}
+      <ToolIntro
+        heading="今日の方言について"
+        paragraphs={[
+          "全国の方言から毎日1語を選んで紹介する日替わりコーナーです。意味と使い方の例文つきで、知らない土地の言葉に1日1語だけ触れられます。掲載している語は、辞典・自治体資料などの出典と照合しながら整備している当サイトの方言データベース（2,700語超）から選ばれています。",
+          "「この言い方、うちの地元と同じだ」「同じ言葉なのに意味が違う」といった発見が毎日の楽しみになるよう、地域の偏りが出ないように選んでいます。気に入った語があれば、方言辞典ページで関連語も調べられます。",
+        ]}
+        related={[
+          { href: "/dict", label: "📚 方言辞典" },
+          { href: "/kurabe", label: "🔤 全国方言くらべ" },
+          { href: "/shindan", label: "🔮 方言タイプ診断" },
+        ]}
+      />
     </div>
   );
 }
