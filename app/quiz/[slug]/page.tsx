@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import QuizRunner from "@/components/QuizRunner";
 import TypeAvatar from "@/components/TypeAvatar";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
+import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
 import {
   AREA_OF,
   QUIZ_DIALECTS,
@@ -35,8 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!dialect) return {};
   const area = AREA_OF[dialect] ?? "";
   const samples = quizSampleWords(dialect, 3);
-  const title = `${dialect}検定｜全8問・1分の${dialect}クイズ（${area}） | 方言ラボ`;
-  const description = `「${samples.join("」「")}」…${dialect}（${area}）の言葉、意味がわかる？ 全8問の4択クイズで${dialect}検定に挑戦。8割正解で合格バッジ。登録不要・スマホで約1分。`;
+  // 別名（「沖縄方言」→「沖縄弁・うちなーぐち」など）をタイトルに入れる。
+  // SC実測で「うちなーぐち検定」が11表示・掲載順位9.0でクリック0だったため。
+  const title = `${dialect}${aliasParen(dialect)}検定｜全8問・1分の${dialect}クイズ（${area}） | 方言ラボ`;
+  const description = `「${samples.join("」「")}」…${dialect}（${area}）の言葉、意味がわかる？ 全8問の4択クイズで${dialect}検定に挑戦。8割正解で合格バッジ。${aliasSentence(
+    dialect,
+    area,
+  )}登録不要・スマホで約1分。`;
   const url = `${BASE}/quiz/${slug}`;
   return {
     title,
@@ -97,6 +103,9 @@ export default async function QuizDialectPage({ params }: Props) {
       <section className="card p-5 space-y-2">
         <h2 className="font-bold text-sm">📚 {dialect}とは（{area}）</h2>
         <p className="text-sm leading-relaxed">{DIALECT_NOTES[dialect]}</p>
+        {aliasSentence(dialect, area) && (
+          <p className="text-xs text-sub leading-relaxed">{aliasSentence(dialect, area)}</p>
+        )}
         <p className="text-xs text-sub leading-relaxed">
           方言ラボの辞典には{dialect}の語を{wordCount}語収録しています。
           この検定の8問のうち{verified}問は、辞典・自治体資料・地方紙などの出典と1語ずつ突き合わせて
@@ -109,6 +118,13 @@ export default async function QuizDialectPage({ params }: Props) {
         <p className="text-xs text-sub leading-relaxed">
           出題語の例：{samples.join("・")}
         </p>
+        {tSlug && (
+          <p className="text-xs pt-1">
+            <Link href={`/translate/${tSlug}#words`} className="text-primary font-bold hover:underline">
+              → {dialect}の言葉一覧（{wordCount}語・意味と例文つき）を見る
+            </Link>
+          </p>
+        )}
       </section>
 
       {siblings.length > 0 && (

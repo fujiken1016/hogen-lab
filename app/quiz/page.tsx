@@ -6,9 +6,11 @@ import { AREA_OF, QUIZ_DIALECTS, quizSampleWords, quizSlug } from "@/lib/quiz_me
 import { typeByDialect } from "@/lib/types";
 
 const BASE = "https://hogen.mainichi-lab.com";
-const TITLE = "方言クイズ検定｜全35方言・各8問（津軽弁・土佐弁・博多弁…） | 方言ラボ";
+// SC実測（28日）: 「方言検定」8表示・順位8.6 /「方言 検定」8表示・順位7.4 でクリック0。
+// 旧タイトルは「方言クイズ検定」で、検索されている「方言検定」という並びを含んでいなかった。
+const TITLE = "方言検定｜全35方言の方言クイズ・各8問（土佐弁・博多弁・津軽弁…） | 方言ラボ";
 const DESC =
-  "土佐弁検定・博多弁検定・津軽弁検定など全35方言の検定に挑戦。各8問の4択クイズで、8割正解すると合格バッジ。方言を選んでスマホで約1分、登録不要。";
+  "土佐弁検定・博多弁検定・津軽弁検定・熊本弁検定など全35方言の方言検定に挑戦。各8問の4択クイズで、8割正解すると合格バッジ。方言を選んでスマホで約1分、登録不要。";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -22,7 +24,7 @@ export default function QuizIndexPage() {
   return (
     <div className="space-y-6 max-w-3xl mx-auto">
       <div className="text-center space-y-2">
-        <h1 className="section-title">🏅 方言クイズ検定</h1>
+        <h1 className="section-title">🏅 方言検定（方言クイズ）</h1>
         <p className="text-sub text-sm leading-relaxed">
           全{QUIZ_DIALECTS.length}方言の検定を用意しています。方言を選ぶとその検定ページへ。
           各8問・約1分、8割正解で合格バッジがもらえます。

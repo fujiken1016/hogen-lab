@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import TranslateTool from "@/components/TranslateTool";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
+import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
 import {
@@ -10,7 +11,6 @@ import {
   TRANSLATE_DIALECTS,
   phrasePairs,
   translateDialectOf,
-  translateSampleWords,
   translateSiblings,
   translateSlug,
 } from "@/lib/translate_meta";
@@ -32,10 +32,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!dialect) return {};
   const area = TRANSLATE_AREA_OF[dialect] ?? "";
   const pairs = phrasePairs(dialect, 3);
-  const title = `${dialect} 変換｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
+  const wordCount = wordsOf(dialect).length;
+  // 別名（「伊勢弁」→「三重弁」など）をタイトルに入れる。実際に表示されているクエリに合わせるため。
+  const title = `${dialect}${aliasParen(dialect)} 変換｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
   const description = `標準語の文を入力するだけで${dialect}（${area}）に変換します。逆に${dialect}を標準語へ戻すこともできます。${pairs
     .map((p) => `「${p.standard}」→「${p.dialect}」`)
-    .join("")}など、よく使う言い換えも一覧で確認できます。登録不要・スマホで数秒。`;
+    .join("")}など、よく使う言い換えと、辞典に収録した${dialect}${wordCount}語の一覧（意味・例文つき）も見られます。${aliasSentence(
+    dialect,
+    area,
+  )}登録不要・スマホで数秒。`;
   const url = `${BASE}/translate/${slug}`;
   return {
     title,
@@ -54,9 +59,10 @@ export default async function TranslateDialectPage({ params }: Props) {
   const area = TRANSLATE_AREA_OF[dialect] ?? "";
   const region = REGION_OF[dialect] ?? "";
   const pairs = phrasePairs(dialect);
-  const samples = translateSampleWords(dialect, 6);
   const siblings = translateSiblings(dialect);
-  const wordCount = wordsOf(dialect).length;
+  const words = wordsOf(dialect);
+  const wordCount = words.length;
+  const alias = aliasSentence(dialect, area);
   const type = typeByDialect(dialect);
   const qSlug = quizSlug(dialect);
 
@@ -83,9 +89,15 @@ export default async function TranslateDialectPage({ params }: Props) {
           標準語の文を入力すると、{area}のことば「{dialect}」に変換します。
           ⇄ を押せば {dialect} → 標準語の向きにも変えられます。
         </p>
+        {alias && <p className="text-xs text-sub leading-relaxed">{alias}</p>}
         <p className="text-xs text-sub leading-relaxed">
           方言ラボの辞典に収録された{dialect}の語（{wordCount}語）を置き換えるしくみです。
           語尾や活用は変えないので、置き換えられなかった部分はそのまま残ります。
+        </p>
+        <p className="text-xs">
+          <a href="#words" className="text-primary font-bold hover:underline">
+            ↓ {dialect}の言葉一覧（{wordCount}語・意味と例文つき）を見る
+          </a>
         </p>
       </div>
 
@@ -108,22 +120,73 @@ export default async function TranslateDialectPage({ params }: Props) {
         </p>
       </section>
 
+      {/* 回遊導線。長い語一覧の「前」に置く（後ろだと最下部まで届かない）。
+          SC実測で勝っているのは /translate/<地域> なので、同じ地域の別ツールへ送るのが最短。 */}
+      <section className="card p-5 space-y-3">
+        <h2 className="font-bold text-sm">
+          🧭 {area}の{dialect}を、もう少し
+        </h2>
+        <div className="grid gap-2">
+          {qSlug && (
+            <Link
+              href={`/quiz/${qSlug}`}
+              className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+            >
+              🏅 {dialect}検定に挑戦（全8問・約1分）
+            </Link>
+          )}
+          {type && (
+            <Link
+              href={`/c/${type.slug}`}
+              className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+            >
+              {type.emoji} {dialect}のキャラを見る
+            </Link>
+          )}
+          <Link
+            href="/doko"
+            className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+          >
+            🗾 この方言、何弁？あてクイズ
+          </Link>
+        </div>
+      </section>
+
       <section className="card p-5 space-y-2">
         <h2 className="font-bold text-sm">
           📚 {dialect}とは（{area}）
         </h2>
         <p className="text-sm leading-relaxed">{DIALECT_NOTES[dialect]}</p>
+        {alias && <p className="text-xs text-sub leading-relaxed">{alias}</p>}
+      </section>
+
+      {/* 「○○弁 一覧」「<言葉> 方言」「○○弁 例文」で検索している人の受け皿。
+          新しいURLは増やさず、既に勝っているこのページを厚くする（薄いページを量産しない）。 */}
+      <section id="words" className="card p-5 space-y-3 scroll-mt-4">
+        <h2 className="font-bold text-sm">
+          📖 {dialect}の言葉一覧（{wordCount}語）
+        </h2>
         <p className="text-xs text-sub leading-relaxed">
-          方言ラボの辞典には{dialect}の語を{wordCount}語収録しています。
+          方言ラボの辞典に収録している{dialect}の語を、意味と例文つきで全部載せています。
+          変換ツールはここに載っている語を置き換えています。
         </p>
-        <ul className="grid sm:grid-cols-2 gap-1.5 pt-1">
-          {samples.map((w) => (
-            <li key={w.word} className="text-xs">
-              <b>{w.word}</b>
-              <span className="text-sub"> … {w.meaning}</span>
+        <ul className="divide-y divide-line">
+          {words.map((w) => (
+            <li key={w.word} className="py-2.5">
+              <p className="text-sm break-words">
+                <b className="text-primary">{w.word}</b>
+                <span className="text-sub"> … {w.meaning}</span>
+              </p>
+              {w.example && (
+                <p className="text-xs text-sub mt-1 break-words leading-relaxed">例：{w.example}</p>
+              )}
             </li>
           ))}
         </ul>
+        <p className="text-[11px] text-sub leading-relaxed">
+          ※ 方言は地域・世代で差があります。同じ語を近隣の方言でも使うことがあり、
+          ここに載っている形が{dialect}だけの言い方とは限りません。
+        </p>
       </section>
 
       {siblings.length > 0 && (
