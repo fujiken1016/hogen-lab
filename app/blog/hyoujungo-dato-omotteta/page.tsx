@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArticleShell, H2, H3, P, Note, PrBox, ShindanCta, WordCard } from "@/components/article";
+import { ArticleShell, H2, H3, P, Note, ShindanCta, WordCard } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
 const article = getArticle("hyoujungo-dato-omotteta")!;
@@ -82,14 +82,6 @@ export default function Page() {
         靴のサイズが微妙に合わない状態も、人間関係の居心地の悪さも、すべて「いずい」で足ります。
         感覚を一語で言い切れる語彙があるかどうかは、その土地の暮らしの解像度そのものです。
       </WordCard>
-
-      <PrBox
-        title="ご当地の言葉と味を、まとめて取り寄せる"
-        keyword="ご当地 お取り寄せ グルメ"
-        body="方言の背景には、その土地の食と生活があります。記事に出てきた地域のご当地グルメを取り寄せて、言葉と一緒に味わってみるのも一興です。"
-        linkLabel="ご当地グルメを楽天市場で見る"
-        slot="RAKUTEN_HOGEN_2"
-      />
 
       <H2>6. えらい — 偉い、ではなく「しんどい」</H2>
       <WordCard

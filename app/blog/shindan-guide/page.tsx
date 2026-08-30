@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArticleShell, H2, H3, P, Note, PrBox, ShindanCta } from "@/components/article";
+import { ArticleShell, H2, H3, P, Note, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 import { ARCHETYPES } from "@/lib/data";
 import { CLUSTERS } from "@/lib/compat";
@@ -103,14 +103,6 @@ export default function Page() {
         2人で試すと面白いアクションの提案が付きます。
         総合点が低くても、特定の軸だけ突出して高い組み合わせは珍しくありません。
       </P>
-
-      <PrBox
-        title="診断で出た方言を、もっと掘ってみる"
-        keyword="方言 かるた"
-        body="診断で出た地域の方言かるたや方言集は、家族や友達と遊びながら覚えられる定番です。結果のキャラと同じ土地のものを選ぶと、話のネタが一気に増えます。"
-        linkLabel="方言かるたを楽天市場で見る"
-        slot="RAKUTEN_HOGEN_5"
-      />
 
       <H2>シークレットキャラについて</H2>
       <P>
