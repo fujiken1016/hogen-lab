@@ -236,13 +236,20 @@ export default function CharPage() {
           <Link href="/shindan" className="btn-primary px-8 py-3">
             {myDecoded ? "友達に診断を送る" : "2分で診断する（無料）"}
           </Link>
-          <Link href={`/quiz/${type.slug}`} className="btn-secondary">
+          <Link href={`/quiz/${type.slug}`} className="btn-secondary min-h-[44px] inline-flex items-center">
             {type.dialect}検定に挑戦
           </Link>
-          <Link href={`/translate/${type.slug}`} className="btn-secondary">
-            {type.dialect}に変換する
+          <Link href={`/translate/${type.slug}`} className="btn-secondary min-h-[44px] inline-flex items-center">
+            {type.dialect} 変換
           </Link>
         </div>
+        {/* SC実測で「福岡弁 変換」「岡山弁変換」などがこのキャラページに順位50〜76で当たっていた。
+            正しい受け皿（/translate/<slug>）と語一覧へ明示的に送る。 */}
+        <p className="text-xs">
+          <Link href={`/translate/${type.slug}#words`} className="text-primary font-bold hover:underline">
+            → {type.dialect}の言葉一覧（意味と例文つき）を見る
+          </Link>
+        </p>
       </div>
     </div>
   );

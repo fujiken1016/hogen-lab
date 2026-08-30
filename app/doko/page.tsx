@@ -69,9 +69,9 @@ export default function DokoPage() {
     return (
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="section-title">🗾 この方言、どこの言葉？</h1>
+          <h1 className="section-title">🗾 この方言、何弁？</h1>
           <p className="text-sub text-sm leading-relaxed">
-            全国35方言の中から8語を出題。意味を見て「どこの言葉か」を4択で当てるクイズです。
+            全国35方言の中から8語を出題。意味を見て「どこの言葉か（何弁か）」を4択で当てるクイズです。
           </p>
         </div>
         <div className="card p-6 space-y-4 text-center">

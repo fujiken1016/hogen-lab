@@ -7,12 +7,14 @@ const BASE = "https://hogen.mainichi-lab.com";
 
 // 全方言をここで選べる形は残したまま（既にインデックスされている可能性があるため）、
 // 方言別ページ（/translate/[slug]）への索引を兼ねる。
+// SC実測（28日）: 「方言翻訳」「方言 翻訳」でも表示が出ているが順位11〜24。
+// 「変換」しか名乗っていなかったので「翻訳」も並記する。
 export const metadata: Metadata = {
-  title: `方言変換｜標準語を全${TRANSLATE_DIALECTS.length}方言に変換 | 方言ラボ`,
-  description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換します。大阪弁・博多弁・津軽弁など、方言同士の変換もできます。方言ごとの変換ページ（「○○弁 変換」）へもここから移動できます。登録不要・スマホで数秒。`,
+  title: `方言変換・方言翻訳｜標準語を全${TRANSLATE_DIALECTS.length}方言に変換 | 方言ラボ`,
+  description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換・翻訳します。大阪弁・博多弁・津軽弁など、方言同士の変換もできます。方言ごとの変換ページ（「○○弁 変換」）へもここから移動でき、各ページでは収録語の一覧（意味・例文つき）も見られます。登録不要・スマホで数秒。`,
   alternates: { canonical: `${BASE}/translate` },
   openGraph: {
-    title: `方言変換｜標準語を全${TRANSLATE_DIALECTS.length}方言に変換 | 方言ラボ`,
+    title: `方言変換・方言翻訳｜標準語を全${TRANSLATE_DIALECTS.length}方言に変換 | 方言ラボ`,
     description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換。方言同士の変換もできます。`,
     url: `${BASE}/translate`,
     siteName: "方言ラボ",
