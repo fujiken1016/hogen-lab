@@ -12101,6 +12101,11 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "word": "やよ",
       "meaning": "～だよ（強調の語尾）",
       "example": "かけっこ３番やった、途中でこけたけど泣かんかったんやよ。"
+    },
+    {
+      "word": "ちょろがす",
+      "meaning": "幼児をあやす・かまう",
+      "example": "ばーばは、赤ちゃんをちょろがすが、うまいじ。"
     }
   ],
   "信州弁": [
