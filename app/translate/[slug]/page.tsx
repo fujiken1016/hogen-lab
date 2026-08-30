@@ -94,11 +94,12 @@ export default async function TranslateDialectPage({ params }: Props) {
           方言ラボの辞典に収録された{dialect}の語（{wordCount}語）を置き換えるしくみです。
           語尾や活用は変えないので、置き換えられなかった部分はそのまま残ります。
         </p>
-        <p className="text-xs">
-          <a href="#words" className="text-primary font-bold hover:underline">
-            ↓ {dialect}の言葉一覧（{wordCount}語・意味と例文つき）を見る
-          </a>
-        </p>
+        <a
+          href="#words"
+          className="btn-ghost min-h-[44px] inline-flex items-center justify-center text-xs font-bold"
+        >
+          ↓ {dialect}の言葉一覧（{wordCount}語・意味と例文つき）
+        </a>
       </div>
 
       <TranslateTool dialect={dialect} slug={slug} quizSlug={qSlug ?? undefined} />
