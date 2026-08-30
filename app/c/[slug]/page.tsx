@@ -9,8 +9,15 @@ import { useEffect, useState } from "react";
 import TypeAvatar, { avatarColors } from "@/components/TypeAvatar";
 import { decodeCode, loadMyResult, type MyResult } from "@/lib/compat";
 import { SHINDAN_PHRASES, wordsOf } from "@/lib/data";
+import { aliasParen } from "@/lib/dialect_alias";
 import SecretAvatar from "@/components/SecretAvatar";
 import { SECRETS, unlockedSecrets } from "@/lib/secret";
+import {
+  TRANSLATE_AREA_OF,
+  TRANSLATE_DIALECTS,
+  translateSiblings,
+  translateSlug,
+} from "@/lib/translate_meta";
 import { MASCOT_NAMES, TYPES, typeBySlug } from "@/lib/types";
 
 const GREETING_KEYS = ["ありがとう", "じゃあね", "とてもおいしい", "久しぶり"] as const;
@@ -102,7 +109,15 @@ export default function CharPage() {
 
   const heroColor = avatarColors(type.slug);
   const name = MASCOT_NAMES[type.slug];
-  const words = wordsOf(type.dialect).slice(0, 6);
+  const allWords = wordsOf(type.dialect);
+  const words = allWords.slice(0, 6);
+  // このページは noindex, follow のまま。検索から「○○弁 変換」で迷い込んだ人を、
+  // 正しい受け皿 /translate/<同地域> へ確実に送る（SC実測で /c/hakata・/c/okayama 等が
+  // 「福岡弁 変換」「岡山弁変換」で順位50〜76に出ていた。サイクル14の発見①）。
+  const tSlug = TRANSLATE_DIALECTS.includes(type.dialect) ? translateSlug(type.dialect) : undefined;
+  const area = TRANSLATE_AREA_OF[type.dialect] ?? "";
+  const alias = aliasParen(type.dialect);
+  const siblings = tSlug ? translateSiblings(type.dialect).slice(0, 6) : [];
   const phrases = SHINDAN_PHRASES[type.dialect] ?? {};
   const zukan = TYPES.filter((t) => t.slug !== "std");
   const idx = zukan.findIndex((t) => t.slug === type.slug);
@@ -142,6 +157,22 @@ export default function CharPage() {
           </p>
         </div>
         <div className="p-6 space-y-5 -mt-3 bg-white rounded-t-2xl relative">
+          {/* 「○○弁 変換」で来た人が最初に見る位置。キャラ紹介より先に正しい受け皿を出す */}
+          {tSlug && (
+            <div className="bg-primary/5 border border-primary/25 rounded-xl p-4 space-y-2">
+              <p className="text-xs text-sub leading-relaxed">
+                {type.dialect}
+                {alias}を実際に変換したい方は、こちらの専用ページへどうぞ。
+              </p>
+              <Link
+                href={`/translate/${tSlug}`}
+                className="btn-primary min-h-[48px] w-full inline-flex items-center justify-center text-sm"
+              >
+                🔤 {type.dialect}
+                {alias} 変換ツールを開く
+              </Link>
+            </div>
+          )}
           <div className="space-y-1.5">
             <h3 className="font-bold text-sm flex items-center gap-1.5">
               <span className="hanko !w-5 !h-5 !text-[10px] !rounded">紹</span>どんなキャラ？
@@ -188,6 +219,14 @@ export default function CharPage() {
                 </span>
               ))}
             </div>
+            {tSlug && (
+              <Link
+                href={`/translate/${tSlug}#words`}
+                className="text-xs font-bold text-primary hover:underline min-h-[44px] inline-flex items-center"
+              >
+                → {type.dialect}の言葉一覧（全{allWords.length}語・意味と例文つき）を見る
+              </Link>
+            )}
           </div>
 
           {/* 相性 */}
@@ -229,27 +268,79 @@ export default function CharPage() {
         </>
       )}
 
+      {/* 回遊カード。このページは noindex, follow なので、リンク自体は残る面（/translate・/quiz）に効く。
+          SC実測で「福岡弁 変換」「岡山弁変換」「鹿児島弁 変換」などがこのキャラページに
+          順位20〜76で当たっていたため、正しい受け皿へ確実に送る（新規URLは作らない）。 */}
+      <section className="card p-5 space-y-3">
+        <h2 className="font-bold text-sm">
+          🧭 {area && `${area}の`}
+          {type.dialect}
+          {alias}を、もう少し
+        </h2>
+        <div className="grid gap-2">
+          {tSlug && (
+            <Link
+              href={`/translate/${tSlug}`}
+              className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+            >
+              🔤 {type.dialect} 変換（標準語⇔{type.dialect}）
+            </Link>
+          )}
+          {tSlug && (
+            <Link
+              href={`/translate/${tSlug}#words`}
+              className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+            >
+              📖 {type.dialect}の言葉一覧（全{allWords.length}語・例文つき）
+            </Link>
+          )}
+          <Link
+            href={`/quiz/${type.slug}`}
+            className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+          >
+            🏅 {type.dialect}検定に挑戦（全8問・約1分）
+          </Link>
+          <Link
+            href="/doko"
+            className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+          >
+            🗾 この方言、何弁？あてクイズ
+          </Link>
+          <Link
+            href="/dict"
+            className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+          >
+            📔 マイ方言辞典に登録する
+          </Link>
+        </div>
+        {siblings.length > 0 && (
+          <div className="space-y-1.5 pt-1">
+            <p className="text-xs text-sub">近くの方言の変換ページ</p>
+            <div className="flex flex-wrap gap-2">
+              {siblings.map((d) => {
+                const s = translateSlug(d);
+                if (!s) return null;
+                return (
+                  <Link
+                    key={d}
+                    href={`/translate/${s}`}
+                    className="chip bg-primary/10 text-primary min-h-[44px] inline-flex items-center"
+                  >
+                    {d} 変換
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </section>
+
       {/* CTA */}
       <div className="card p-6 text-center space-y-3">
         <p className="font-bold">{myDecoded ? "友達はどのキャラ？" : `あなたも${name}かも？`}</p>
-        <div className="flex gap-2 justify-center flex-wrap">
-          <Link href="/shindan" className="btn-primary px-8 py-3">
-            {myDecoded ? "友達に診断を送る" : "2分で診断する（無料）"}
-          </Link>
-          <Link href={`/quiz/${type.slug}`} className="btn-secondary min-h-[44px] inline-flex items-center">
-            {type.dialect}検定に挑戦
-          </Link>
-          <Link href={`/translate/${type.slug}`} className="btn-secondary min-h-[44px] inline-flex items-center">
-            {type.dialect} 変換
-          </Link>
-        </div>
-        {/* SC実測で「福岡弁 変換」「岡山弁変換」などがこのキャラページに順位50〜76で当たっていた。
-            正しい受け皿（/translate/<slug>）と語一覧へ明示的に送る。 */}
-        <p className="text-xs">
-          <Link href={`/translate/${type.slug}#words`} className="text-primary font-bold hover:underline">
-            → {type.dialect}の言葉一覧（意味と例文つき）を見る
-          </Link>
-        </p>
+        <Link href="/shindan" className="btn-primary px-8 py-3 min-h-[48px] inline-flex items-center">
+          {myDecoded ? "友達に診断を送る" : "2分で診断する（無料）"}
+        </Link>
       </div>
     </div>
   );
