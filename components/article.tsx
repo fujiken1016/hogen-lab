@@ -12,10 +12,11 @@ export function rakutenLink(targetUrl: string): string {
   )}&link_type=hybrid_url`;
 }
 
-/** 楽天市場の検索URL（キーワードから組み立て） */
-export function rakutenSearch(keyword: string): string {
-  return rakutenLink(`https://search.rakuten.co.jp/search/mall/${encodeURIComponent(keyword)}/`);
-}
+/**
+ * 紹介する書籍1点。url は楽天ブックスの商品ページ直リンク（item.rakuten.co.jp/book/…）。
+ * 検索結果ページへのリンクは CVR が低いので新規に作らない（affiliate_links.md の方針）。
+ */
+export type PrBook = { name: string; meta?: string; url: string };
 
 export function H2({ children, id }: { children: ReactNode; id?: string }) {
   return (
@@ -124,18 +125,20 @@ export function RankItem({
   );
 }
 
-/** 楽天アフィリエイト枠（PR表記つき） */
+/**
+ * 楽天アフィリエイト枠（PR表記つき）。
+ * 掲載できるのは「記事の内容に直接つながる書籍」だけ。1記事あたり最大2点まで（AFF_SLOTS.md）。
+ */
 export function PrBox({
   title,
-  keyword,
   body,
-  linkLabel = "楽天市場で探す",
+  books,
   slot,
 }: {
   title: string;
-  keyword: string;
   body: string;
-  linkLabel?: string;
+  /** 紹介する書籍（楽天ブックスの商品ページ直リンク）。最大2点 */
+  books: PrBook[];
   /** アフィリ差し替え用スロット名（AFF_SLOTS.md 参照） */
   slot?: string;
 }) {
@@ -150,14 +153,33 @@ export function PrBox({
       </div>
       <p className="font-bold text-[15px] mb-1.5">{title}</p>
       <p className="text-[13.5px] leading-[1.9] text-ink/85 mb-3.5">{body}</p>
-      <a
-        href={rakutenSearch(keyword)}
-        target="_blank"
-        rel="nofollow sponsored noopener noreferrer"
-        className="btn-secondary !border-gold/70 text-sm"
-      >
-        {linkLabel} <span aria-hidden>↗</span>
-      </a>
+      <ul className="space-y-2.5">
+        {books.map((b) => (
+          <li key={b.url}>
+            <a
+              href={rakutenLink(b.url)}
+              target="_blank"
+              rel="nofollow sponsored noopener noreferrer"
+              className="flex min-h-[48px] items-center gap-2.5 rounded-xl border border-gold/70 bg-white/70 px-3.5 py-2.5 hover:bg-white"
+            >
+              <span className="min-w-0 break-words">
+                <span className="block text-[13.5px] font-bold leading-[1.6]">{b.name}</span>
+                {b.meta && (
+                  <span className="mt-0.5 block text-[11.5px] leading-[1.5] text-sub">
+                    {b.meta}
+                  </span>
+                )}
+              </span>
+              <span aria-hidden className="ml-auto shrink-0 text-gold">
+                ↗
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-2.5 text-[11px] leading-[1.7] text-sub">
+        リンク先は楽天ブックスの商品ページです。価格・在庫は変わることがあります。
+      </p>
     </aside>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArticleShell, H2, H3, P, Note, Sources, ShindanCta } from "@/components/article";
+import { ArticleShell, H2, H3, P, Note, PrBox, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
 const article = getArticle("media-to-hogen")!;
@@ -78,6 +78,24 @@ export default function Page() {
         言い換えると、方言は「どこの人か」を示す記号から、
         「どんな人か」を示す記号へと役割を移しつつある、ということです。
       </P>
+
+      <PrBox
+        title="この記事の元になった2冊"
+        body="役割語と方言コスプレは、どちらもこの2冊で提唱された考え方です。記事で紹介した内容は要点だけなので、実例の量と分析はぜひ原著で。どちらも岩波現代文庫で手に入ります。"
+        books={[
+          {
+            name: "ヴァーチャル日本語 役割語の謎",
+            meta: "金水敏／岩波現代文庫",
+            url: "https://item.rakuten.co.jp/book/17484007/",
+          },
+          {
+            name: "「方言コスプレ」の時代 ニセ関西弁から龍馬語まで",
+            meta: "田中ゆかり／岩波現代文庫",
+            url: "https://item.rakuten.co.jp/book/18000859/",
+          },
+        ]}
+        slot="RAKUTEN_HOGEN_6"
+      />
 
       <H2>メディアが実際に方言を広めた例</H2>
       <P>
