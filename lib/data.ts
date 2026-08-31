@@ -373,7 +373,7 @@ export const WORDS: Record<string, WordEntry[]> = {
     { word: "なおす", meaning: "片付ける・しまう", example: "そんおもちゃばなおさんね。" },
     { word: "もっこす", meaning: "頑固者", example: "うちの親父は肥後もっこすたい。" },
     { word: "とつけむにゃー", meaning: "とんでもない", example: "あやつはとつけむにゃーこつばしでかした。" },
-    { word: "ぬっか", meaning: "暖かい", example: "今日はぬっかねー、春んごたる。" },
+    { word: "ぬっか", meaning: "暖かい・暑い", example: "今日はぬっかねー、春んごたる。" },
     { word: "ほんなこつ", meaning: "本当・本当のこと", example: "そら、ほんなこつね？" },
   ],
   長崎弁: [
