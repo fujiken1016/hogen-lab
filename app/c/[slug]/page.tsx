@@ -8,6 +8,7 @@ import CompatCard from "@/components/CompatCard";
 import { useEffect, useState } from "react";
 import TypeAvatar, { avatarColors } from "@/components/TypeAvatar";
 import { decodeCode, loadMyResult, type MyResult } from "@/lib/compat";
+import { track } from "@/lib/ga";
 import { SHINDAN_PHRASES, wordsOf } from "@/lib/data";
 import { aliasParen } from "@/lib/dialect_alias";
 import SecretAvatar from "@/components/SecretAvatar";
@@ -127,6 +128,17 @@ export default function CharPage() {
   const trickyTypes = type.tricky.map((s) => typeBySlug(s)).filter(Boolean);
   const myDecoded = mine ? decodeCode(mine.code) : null;
 
+  // 回遊導線のクリック計測。dest=遷移先の種別 / slot=ページ内のどの位置か /
+  // dialect_slug=遷移先の地域slug（既存の quiz_start・translate_to_quiz と同じ命名流儀）
+  const toTool = (dest: string, slot: string, dialectSlug?: string) => () =>
+    track("char_to_tool", {
+      dest,
+      slot,
+      char_slug: type.slug,
+      dialect: type.dialect,
+      dialect_slug: dialectSlug ?? "",
+    });
+
   return (
     <div className="max-w-2xl mx-auto space-y-5">
       {/* 前後ナビ */}
@@ -166,6 +178,7 @@ export default function CharPage() {
               </p>
               <Link
                 href={`/translate/${tSlug}`}
+                onClick={toTool("translate", "hero", tSlug)}
                 className="btn-primary min-h-[48px] w-full inline-flex items-center justify-center text-sm"
               >
                 🔤 {type.dialect}
@@ -222,6 +235,7 @@ export default function CharPage() {
             {tSlug && (
               <Link
                 href={`/translate/${tSlug}#words`}
+                onClick={toTool("translate_words", "intro", tSlug)}
                 className="text-xs font-bold text-primary hover:underline min-h-[44px] inline-flex items-center"
               >
                 → {type.dialect}の言葉一覧（全{allWords.length}語・意味と例文つき）を見る
@@ -281,6 +295,7 @@ export default function CharPage() {
           {tSlug && (
             <Link
               href={`/translate/${tSlug}`}
+              onClick={toTool("translate", "cruise", tSlug)}
               className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
             >
               🔤 {type.dialect} 変換（標準語⇔{type.dialect}）
@@ -289,6 +304,7 @@ export default function CharPage() {
           {tSlug && (
             <Link
               href={`/translate/${tSlug}#words`}
+              onClick={toTool("translate_words", "cruise", tSlug)}
               className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
             >
               📖 {type.dialect}の言葉一覧（全{allWords.length}語・例文つき）
@@ -296,18 +312,21 @@ export default function CharPage() {
           )}
           <Link
             href={`/quiz/${type.slug}`}
+            onClick={toTool("quiz", "cruise", type.slug)}
             className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
           >
             🏅 {type.dialect}検定に挑戦（全8問・約1分）
           </Link>
           <Link
             href="/doko"
+            onClick={toTool("doko", "cruise")}
             className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
           >
             🗾 この方言、何弁？あてクイズ
           </Link>
           <Link
             href="/dict"
+            onClick={toTool("dict", "cruise")}
             className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
           >
             📔 マイ方言辞典に登録する
@@ -324,6 +343,7 @@ export default function CharPage() {
                   <Link
                     key={d}
                     href={`/translate/${s}`}
+                    onClick={toTool("translate_sibling", "cruise", s)}
                     className="chip bg-primary/10 text-primary min-h-[44px] inline-flex items-center"
                   >
                     {d} 変換
