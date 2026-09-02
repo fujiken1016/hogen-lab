@@ -134,8 +134,14 @@ export default async function TranslateDialectPage({ params }: Props) {
           <p className="text-xs text-sub leading-relaxed">
             置き換えた語は「どの語をどう変えたか」を意味・用例つきで一つずつ表示します。
             語尾や活用は変換しないので、置き換えられなかった部分は{dialect}のまま残ります。
-            収録している{wordCount}語は<a href="#words" className="text-primary font-bold hover:underline">このページの言葉一覧</a>で全部確認できます。
+            収録している{wordCount}語は、このページの言葉一覧で全部確認できます。
           </p>
+          <a
+            href="#words"
+            className="btn-ghost min-h-[44px] inline-flex items-center justify-center text-xs font-bold"
+          >
+            ↓ 標準語に戻せる{dialect}の語（{wordCount}語）を見る
+          </a>
         </section>
       )}
 
