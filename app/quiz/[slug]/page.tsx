@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import QuizRunner from "@/components/QuizRunner";
+import ToolReads from "@/components/ToolReads";
 import TypeAvatar from "@/components/TypeAvatar";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
@@ -126,6 +127,9 @@ export default async function QuizDialectPage({ params }: Props) {
           </p>
         )}
       </section>
+
+      {/* 検定 → 読みものへの回遊。記事側だけが書籍PR枠を持つ（裁定10：ツール面には置かない）。 */}
+      <ToolReads dialect={dialect} from="quiz" slug={slug} />
 
       {siblings.length > 0 && (
         <section className="space-y-2">

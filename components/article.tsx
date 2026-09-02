@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import RakutenLink from "@/components/RakutenLink";
 import type { ReactNode } from "react";
 import { ARTICLES, otherArticles, type Article } from "@/lib/articles";
 
@@ -156,10 +157,10 @@ export function PrBox({
       <ul className="space-y-2.5">
         {books.map((b) => (
           <li key={b.url}>
-            <a
+            <RakutenLink
               href={rakutenLink(b.url)}
-              target="_blank"
-              rel="nofollow sponsored noopener noreferrer"
+              slot={slot}
+              book={b.name}
               className="flex min-h-[48px] items-center gap-2.5 rounded-xl border border-gold/70 bg-white/70 px-3.5 py-2.5 hover:bg-white"
             >
               <span className="min-w-0 break-words">
@@ -173,7 +174,7 @@ export function PrBox({
               <span aria-hidden className="ml-auto shrink-0 text-gold">
                 ↗
               </span>
-            </a>
+            </RakutenLink>
           </li>
         ))}
       </ul>
