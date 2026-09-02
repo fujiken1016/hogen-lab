@@ -1,12 +1,17 @@
-// Cloudflareデプロイ設定（hogen.mainichi-lab.com 予定）
+// Cloudflareデプロイ設定（hogen.mainichi-lab.com）
 {
   "name": "hogen-lab",
-  "main": ".open-next/worker.js",
+  // 🔴 OpenNext の .open-next/worker.js を直接指さない。
+  // worker-entry.ts がそれをエッジキャッシュで包む（理由はファイル冒頭のコメント）。
+  // ビルドで .open-next/ が作り直されてもこのラッパーは残る。
+  "main": "worker-entry.ts",
   "compatibility_date": "2026-07-01",
   "compatibility_flags": ["nodejs_compat"],
   "routes": [
     { "pattern": "hogen.mainichi-lab.com", "custom_domain": true }
   ],
+  // デプロイごとに一意なIDが取れる。キャッシュキーに混ぜて「デプロイ＝自動総入れ替え」にする
+  "version_metadata": { "binding": "CF_VERSION_METADATA" },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS",
