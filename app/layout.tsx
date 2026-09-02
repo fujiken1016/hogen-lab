@@ -39,6 +39,21 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-XRJ40EFR6C');
         `}</Script>
+        {/* 収益先（楽天アフィリ）への離脱クリックを測る（2026-09-02 新設）。
+            楽天アフィリのレポートは計測IDを登録していないためサイト別・記事別の内訳を返さない。
+            9/27 の「楽天書籍リンク4週判定（クリック0なら畳む）」は、この GA4 イベントが
+            唯一の判定材料になる。PrBox はサーバーコンポーネントなので、
+            onClick ではなく document 全体への委譲リスナーで拾う。 */}
+        <Script id="aff-click" strategy="afterInteractive">{`
+          document.addEventListener('click', function(e){
+            var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+            if(!a) return;
+            var h = a.getAttribute('href') || '';
+            if(h.indexOf('hb.afl.rakuten.co.jp') === -1) return;
+            var m = h.match(/item\\.rakuten\\.co\\.jp%2Fbook%2F(\\d+)/i);
+            try{ gtag('event','aff_click',{network:'rakuten',item_id:m?m[1]:'unknown',from_page:location.pathname,slot:(a.closest('[data-aff]')||{getAttribute:function(){return ''}}).getAttribute('data-aff')||''}); }catch(err){}
+          }, true);
+        `}</Script>
         {/* Google AdSense（ca-pub-8289616283786904・mainichi-lab共通）
             next/script(afterInteractive)だとSSRのHTMLに出ないため、
             React 19のhead自動ホイストを使う素の<script>で入れる */}
