@@ -7,7 +7,7 @@ import { ARTICLES, otherArticles, type Article } from "@/lib/articles";
 const RAKUTEN_ID = "5684fd12.0952a564.5684fd13.520271a6";
 
 export function rakutenLink(targetUrl: string): string {
-  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_ID}/?pc=${encodeURIComponent(
+  return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_ID}/_RTLink143603?pc=${encodeURIComponent(
     targetUrl
   )}&link_type=hybrid_url`;
 }
