@@ -67,7 +67,12 @@ export default function RootLayout({
               <a href="/disclaimer" className="hover:text-primary">免責事項</a>
               <a href="/contact" className="hover:text-primary">お問い合わせ</a>
             </nav>
-            <p className="text-[10px] text-sub/60">© 2026 方言ラボ</p>
+            <p className="text-[10px] text-sub/60">
+              © 2026 方言ラボ ・ 運営：
+              <a href="https://mainichi-lab.com/" className="hover:text-primary underline underline-offset-2">
+                フジケン（毎日ラボ）
+              </a>
+            </p>
           </div>
         </footer>
       </body>
