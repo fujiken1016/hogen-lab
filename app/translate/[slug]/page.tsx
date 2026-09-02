@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ToolReads from "@/components/ToolReads";
 import TranslateTool from "@/components/TranslateTool";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
@@ -152,6 +153,10 @@ export default async function TranslateDialectPage({ params }: Props) {
           </Link>
         </div>
       </section>
+
+      {/* 勝ち面（このページ）から読みもの記事への回遊。記事側には文脈の合う書籍PR枠があるので、
+          ツール面に収益導線を置かずに（裁定10）収益へつながる唯一の道になる。 */}
+      <ToolReads dialect={dialect} from="translate" slug={slug} />
 
       <section className="card p-5 space-y-2">
         <h2 className="font-bold text-sm">
