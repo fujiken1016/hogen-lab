@@ -5,6 +5,7 @@ import ToolReads from "@/components/ToolReads";
 import TranslateTool from "@/components/TranslateTool";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
+import { hasReverseDemand, reverseName } from "@/lib/translate_reverse";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
 import {
@@ -35,8 +36,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pairs = phrasePairs(dialect, 3);
   const wordCount = wordsOf(dialect).length;
   // 別名（「伊勢弁」→「三重弁」など）をタイトルに入れる。実際に表示されているクエリに合わせるため。
-  const title = `${dialect}${aliasParen(dialect)} 変換｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
-  const description = `標準語の文を入力するだけで${dialect}（${area}）に変換します。逆に${dialect}を標準語へ戻すこともできます。${pairs
+  //
+  // このページは最初から⇄で「方言→標準語」も動くのに、title/descriptionが順方向しか名乗っていなかった。
+  // 2026-09-02のサジェスト実測で逆方向のクエリが実在した方言（lib/translate_reverse.ts）だけ、
+  // 両方向をtitleに入れる。実在しなかった方言には付けない（推測で35方言に広げない）。
+  const rev = hasReverseDemand(dialect);
+  const revName = reverseName(dialect);
+  const title = rev
+    ? `${dialect}${aliasParen(dialect)} 変換｜${revName}を標準語に変換・標準語を${dialect}に変換（${area}）| 方言ラボ`
+    : `${dialect}${aliasParen(dialect)} 変換｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
+  const dirLine = rev
+    ? `${revName}を標準語に変換できます。⇄ を押せば向きが変わり、標準語の文を${dialect}（${area}）に変換することもできます。`
+    : `標準語の文を入力するだけで${dialect}（${area}）に変換します。⇄ を押せば${dialect}を標準語に戻す向きにも変えられます。`;
+  const description = `${dirLine}${pairs
     .map((p) => `「${p.standard}」→「${p.dialect}」`)
     .join("")}など、よく使う言い換えと、辞典に収録した${dialect}${wordCount}語の一覧（意味・例文つき）も見られます。${aliasSentence(
     dialect,
@@ -66,6 +78,8 @@ export default async function TranslateDialectPage({ params }: Props) {
   const alias = aliasSentence(dialect, area);
   const type = typeByDialect(dialect);
   const qSlug = quizSlug(dialect);
+  const rev = hasReverseDemand(dialect);
+  const revName = reverseName(dialect);
 
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -87,8 +101,9 @@ export default async function TranslateDialectPage({ params }: Props) {
         </Link>
         <h1 className="section-title">🗣️ {dialect} 変換</h1>
         <p className="text-sub text-sm leading-relaxed">
-          標準語の文を入力すると、{area}のことば「{dialect}」に変換します。
-          ⇄ を押せば {dialect} → 標準語の向きにも変えられます。
+          <b>標準語 ⇄ {dialect}</b> の<b>両方向</b>に変換できます。
+          標準語の文を入れれば{area}のことば「{dialect}」に、
+          「⇄ 逆向き」を押せば<b>{dialect}を標準語に</b>変換します。
         </p>
         {alias && <p className="text-xs text-sub leading-relaxed">{alias}</p>}
         <p className="text-xs text-sub leading-relaxed">
@@ -104,6 +119,25 @@ export default async function TranslateDialectPage({ params }: Props) {
       </div>
 
       <TranslateTool dialect={dialect} slug={slug} quizSlug={qSlug ?? undefined} />
+
+      {/* 逆方向（方言→標準語）のクエリが実測で実在した方言だけ、その言葉でページ内に説明を置く。
+          機能は最初からあるのに「順方向のツール」としか書いていなかったので気づかれていなかった。
+          新しいURLは作らない＝このページの中に書く。 */}
+      {rev && (
+        <section className="card p-5 space-y-2">
+          <h2 className="font-bold text-sm">🔁 {revName}を標準語に変換するには</h2>
+          <p className="text-sm leading-relaxed">
+            上のツールの中央にある「⇄ 逆向き」を押すと、向きが <b>{dialect} → 標準語</b> に変わります。
+            聞き取れなかった{revName}の言い回しをそのまま貼り付ければ、
+            辞典に収録している語を標準語に置き換えて返します。
+          </p>
+          <p className="text-xs text-sub leading-relaxed">
+            置き換えた語は「どの語をどう変えたか」を意味・用例つきで一つずつ表示します。
+            語尾や活用は変換しないので、置き換えられなかった部分は{dialect}のまま残ります。
+            収録している{wordCount}語は<a href="#words" className="text-primary font-bold hover:underline">このページの言葉一覧</a>で全部確認できます。
+          </p>
+        </section>
+      )}
 
       <section className="card p-5 space-y-3">
         <h2 className="font-bold text-sm">📝 {dialect}でよく使う言い換え（{pairs.length}）</h2>

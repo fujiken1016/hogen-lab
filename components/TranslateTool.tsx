@@ -73,32 +73,54 @@ export default function TranslateTool({
       <div className="card p-5 space-y-4">
         {dialect ? (
           // 方言固定モード: 方向だけ切り替える（ページのテーマを外さない）
-          <div className="flex items-center gap-2">
-            <div className="flex-1 border border-line rounded-xl px-3 py-2.5 text-center font-bold text-sm bg-paper min-h-[44px] flex items-center justify-center">
-              {from}
+          // ⇄ の記号だけだと「逆向きにもできる」ことに気づかれない（実測でサジェストは逆方向の方が濃い）。
+          // ボタンに文字ラベルを付け、いまどちらの向きかを下に一行で書く。
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="flex-1 border border-line rounded-xl px-3 py-2.5 text-center font-bold text-sm bg-paper min-h-[48px] flex items-center justify-center">
+                {from}
+              </div>
+              <button
+                onClick={swap}
+                aria-label={`向きを入れ替えて ${to} を ${from} に変換する`}
+                className="btn-secondary px-2 min-h-[48px] min-w-[60px] flex flex-col items-center justify-center leading-none gap-0.5"
+              >
+                <span className="text-base">⇄</span>
+                <span className="text-[10px] font-bold">逆向き</span>
+              </button>
+              <div className="flex-1 border border-primary/40 rounded-xl px-3 py-2.5 text-center font-bold text-sm bg-primary/5 text-primary min-h-[48px] flex items-center justify-center">
+                {to}
+              </div>
             </div>
-            <button onClick={swap} className="btn-secondary px-3 min-h-[44px]" title="向きを入れ替える">
-              ⇄
-            </button>
-            <div className="flex-1 border border-primary/40 rounded-xl px-3 py-2.5 text-center font-bold text-sm bg-primary/5 text-primary min-h-[44px] flex items-center justify-center">
-              {to}
-            </div>
+            <p className="text-[11px] text-sub text-center leading-relaxed">
+              いまは <b>{from} → {to}</b>。「⇄ 逆向き」を押すと <b>{to} → {from}</b> に変換します。
+            </p>
           </div>
         ) : (
-          <div className="flex items-center gap-2">
-            <select value={from} onChange={(e) => setFrom(e.target.value)} className="select-base flex-1 min-h-[44px]">
-              {DIALECTS.map((d) => (
-                <option key={d}>{d}</option>
-              ))}
-            </select>
-            <button onClick={swap} className="btn-secondary px-3 min-h-[44px]" title="入れ替え">
-              ⇄
-            </button>
-            <select value={to} onChange={(e) => setTo(e.target.value)} className="select-base flex-1 min-h-[44px]">
-              {DIALECTS.map((d) => (
-                <option key={d}>{d}</option>
-              ))}
-            </select>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <select value={from} onChange={(e) => setFrom(e.target.value)} className="select-base flex-1 min-h-[48px]">
+                {DIALECTS.map((d) => (
+                  <option key={d}>{d}</option>
+                ))}
+              </select>
+              <button
+                onClick={swap}
+                aria-label={`向きを入れ替えて ${to} を ${from} に変換する`}
+                className="btn-secondary px-2 min-h-[48px] min-w-[60px] flex flex-col items-center justify-center leading-none gap-0.5"
+              >
+                <span className="text-base">⇄</span>
+                <span className="text-[10px] font-bold">逆向き</span>
+              </button>
+              <select value={to} onChange={(e) => setTo(e.target.value)} className="select-base flex-1 min-h-[48px]">
+                {DIALECTS.map((d) => (
+                  <option key={d}>{d}</option>
+                ))}
+              </select>
+            </div>
+            <p className="text-[11px] text-sub text-center leading-relaxed">
+              いまは <b>{from} → {to}</b>。「⇄ 逆向き」を押すと <b>{to} → {from}</b> に変換します。
+            </p>
           </div>
         )}
 
