@@ -44,9 +44,12 @@ export default function RootLayout({
             以前はここに楽天だけを見る委譲リスナーをインライン展開していたが、
             Amazon/note/A8/VC のリンクを足した瞬間に未計測になる作りだったため差し替えた
             （`tools/tracking_audit.py` の残課題3）。送るイベントと slot（data-aff）は従来どおり。
-            next/script(afterInteractive) はSSRのHTMLに出ないので、AdSenseと同じく
-            React 19 のhead自動ホイストに乗る素の <script> で入れる（全数検査もHTMLを見る）。 */}
-        <script src="/oc.js" defer />
+            🔴 素の <script src="/oc.js" defer /> で入れてはいけない（2026-09-02 に本番で実測）。
+            React 19 のリソース・ホイスト処理がSSRごとに走り、Workers Free の 10ms CPU 上限を超えて
+            error 1102 / HTTP 503 が /translate 等で 14/20 回発生した（同条件の対照版は 20/20 で 200）。
+            next/script(afterInteractive) なら従来のインライン版と同じ経路なのでCPUは増えない。
+            全数検査は marker "/oc.js" をHTML本文＋Nextチャンクから探す inline モードで見る。 */}
+        <Script src="/oc.js" strategy="afterInteractive" />
         {/* Google AdSense（ca-pub-8289616283786904・mainichi-lab共通）
             next/script(afterInteractive)だとSSRのHTMLに出ないため、
             React 19のhead自動ホイストを使う素の<script>で入れる */}
