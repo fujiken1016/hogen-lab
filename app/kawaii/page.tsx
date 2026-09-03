@@ -66,7 +66,7 @@ function EntryCard({
   );
 }
 
-export default function KawaiiPage() {
+function KawaiiPage() {
   const [phase, setPhase] = useState<Phase>("intro");
   const [round, setRound] = useState<KawaiiEntry[]>([]);
   const [matchIdx, setMatchIdx] = useState(0);
@@ -299,7 +299,19 @@ export default function KawaiiPage() {
           { href: "/translate", label: "🗣️ 方言変換" },
         ]}
       />
-      <PageDates route="/kawaii" type="WebApplication" name="かわいい方言対決 | 方言ラボ" />
     </div>
+  );
+}
+
+/**
+ * 日付証跡（公開日・最終更新日）は、ツールの画面状態（読み込み中・出題中など）に関係なく
+ * 必ず出す必要があるので、内部の分岐の外側で描画する。
+ */
+export default function Page() {
+  return (
+    <>
+      <KawaiiPage />
+      <PageDates route="/kawaii" type="WebApplication" name="かわいい方言対決 | 方言ラボ" />
+    </>
   );
 }

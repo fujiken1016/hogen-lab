@@ -17,7 +17,7 @@ const TOTAL = 8;
 type Phase = "intro" | "play" | "result";
 type Log = { q: DokoQ; picked: string; ok: boolean };
 
-export default function DokoPage() {
+function DokoPage() {
   const [phase, setPhase] = useState<Phase>("intro");
   const [questions, setQuestions] = useState<DokoQ[]>([]);
   const [index, setIndex] = useState(0);
@@ -267,7 +267,19 @@ export default function DokoPage() {
           { href: "/kurabe", label: "🔤 全国方言くらべ" },
         ]}
       />
-      <PageDates route="/doko" type="WebApplication" name="この方言どこ？ | 方言ラボ" />
     </div>
+  );
+}
+
+/**
+ * 日付証跡（公開日・最終更新日）は、ツールの画面状態（読み込み中・出題中など）に関係なく
+ * 必ず出す必要があるので、内部の分岐の外側で描画する。
+ */
+export default function Page() {
+  return (
+    <>
+      <DokoPage />
+      <PageDates route="/doko" type="WebApplication" name="この方言どこ？ | 方言ラボ" />
+    </>
   );
 }

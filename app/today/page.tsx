@@ -8,7 +8,7 @@ import { REGION_OF } from "@/lib/tools";
 import { ToolIntro } from "@/components/ToolIntro";
 import { PageDates } from "@/components/PageDates";
 
-export default function TodayPage() {
+function TodayPage() {
   const [today, setToday] = useState<TodayWord | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [filter, setFilter] = useState("すべて");
@@ -91,7 +91,19 @@ export default function TodayPage() {
           { href: "/shindan", label: "🔮 方言タイプ診断" },
         ]}
       />
-      <PageDates route="/today" type="WebApplication" name="今日の方言 | 方言ラボ" />
     </div>
+  );
+}
+
+/**
+ * 日付証跡（公開日・最終更新日）は、ツールの画面状態（読み込み中・出題中など）に関係なく
+ * 必ず出す必要があるので、内部の分岐の外側で描画する。
+ */
+export default function Page() {
+  return (
+    <>
+      <TodayPage />
+      <PageDates route="/today" type="WebApplication" name="今日の方言 | 方言ラボ" />
+    </>
   );
 }

@@ -27,7 +27,7 @@ const EMOJI: Record<string, string> = {
   寒いね: "🥶",
 };
 
-export default function KurabePage() {
+function KurabePage() {
   const [phraseKey, setPhraseKey] = useState<string | null>(null);
   const [pick, setPick] = useState<{ dialect: string; text: string } | null>(null);
 
@@ -220,7 +220,19 @@ export default function KurabePage() {
           { href: "/quiz", label: "🏅 方言クイズ検定" },
         ]}
       />
-      <PageDates route="/kurabe" type="WebApplication" name="全国方言くらべ | 方言ラボ" />
     </div>
+  );
+}
+
+/**
+ * 日付証跡（公開日・最終更新日）は、ツールの画面状態（読み込み中・出題中など）に関係なく
+ * 必ず出す必要があるので、内部の分岐の外側で描画する。
+ */
+export default function Page() {
+  return (
+    <>
+      <KurabePage />
+      <PageDates route="/kurabe" type="WebApplication" name="全国方言くらべ | 方言ラボ" />
+    </>
   );
 }
