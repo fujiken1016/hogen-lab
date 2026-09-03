@@ -13,6 +13,7 @@ import {
   annotatedQuiz,
   dictEntry,
   exclusiveWords,
+  homographs,
   inDokoPool,
   quizDialectOf,
   quizSampleWords,
@@ -21,6 +22,7 @@ import {
   sharedWords,
   siblingDialects,
   siblingOverlap,
+  synonymsOf,
   verifiedCount,
 } from "@/lib/quiz_meta";
 import { REAL_DIALECTS, REGION_OF } from "@/lib/tools";
@@ -89,11 +91,17 @@ export default async function QuizDialectPage({ params }: Props) {
   // ── 方言ごとに中身が違う実データ（SSRで本文に出す） ──
   const questions = annotatedQuiz(dialect);
   // 語数の多い方言（沖縄方言は139語）で全部並べると、同じ辞典データを載せている
-  // /translate/[slug] とページの中身がほぼ重なってしまう。1画面で読める量に切って、
-  // 残りは変換ページの語一覧へ送る（実測：無制限だと /translate/okinawa と62%一致した）。
+  // /translate/[slug] とページの中身が重なる。2026-09-03（2回目）の実測では
+  // 同一方言の /quiz/X × /translate/X が平均41.7%・最大46.6%まで一致していて、
+  // 重なっていた実体は「語 … 意味／例：例文」の一覧そのものだった。
+  //   → 例文は変換ページの役割に寄せて検定側からは外す（変換ページは1文字も削らない）
+  //   → 代わりに「他の方言では何と言うか（同義）」を1語ずつ添える。これは35方言の辞典を
+  //     横断して初めて出る情報で、/translate/[slug] には無い＝検定固有の中身になる
+  // 打ち切りは80語（重複が下がったぶん55→80に戻した）。残りは変換ページの語一覧へ送る。
   const onlyHereAll = exclusiveWords(dialect);
-  const onlyHere = onlyHereAll.slice(0, 55);
+  const onlyHere = onlyHereAll.slice(0, 80);
   const shared = sharedWords(dialect);
+  const homos = homographs(dialect);
   const overlaps = siblingOverlap(dialect).filter((o) => o.count > 0);
 
   const breadcrumb = {
@@ -170,6 +178,9 @@ export default async function QuizDialectPage({ params }: Props) {
               const entry = dictEntry(dialect, q.word);
               const src = quizSourceOf(dialect, q.word);
               const doko = inDokoPool(dialect, q.word);
+              // 「同じ意味を他の方言では何と言うか」。答えを見る人向けの追加情報なので
+              // <details> の中（ここ）にだけ置く。変換ページには無い横断データ。
+              const syn = synonymsOf(dialect, entry);
               return (
                 <li key={`${q.q}-${i}`} className="border-t border-line pt-3 space-y-1.5">
                   <p className="text-sm font-bold break-words">
@@ -212,6 +223,12 @@ export default async function QuizDialectPage({ params }: Props) {
                       出典・照合メモ：辞典には収録していますが、この語はまだ出典の照合が済んでいません。
                     </p>
                   )}
+                  {syn.length > 0 && (
+                    <p className="text-[11px] text-sub leading-relaxed break-words">
+                      同じ意味の語を、辞典はこの方言にも収録：
+                      {syn.map((s) => `${s.dialect}「${s.word}」`).join("・")}
+                    </p>
+                  )}
                   {q.also.length > 0 && (
                     <p className="text-[11px] text-sub leading-relaxed break-words">
                       ※ 辞典は同じ語を{q.also.join("・")}にも収録しています（{dialect}だけの言葉ではありません）。
@@ -239,19 +256,37 @@ export default async function QuizDialectPage({ params }: Props) {
             全{REAL_DIALECTS.length}方言の辞典で<b>{dialect}にしか立項が無い語</b>が、
             {wordCount}語中{onlyHereAll.length}語。出題語はネタバレを避けて外しています
             {onlyHereAll.length > onlyHere.length && <>（ここでは{onlyHere.length}語まで表示）</>}。
+            <b>同じ意味を他の方言では何と言うか</b>を、辞典の語釈で突き合わせて添えました。
           </p>
           <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1.5">
-            {onlyHere.map((w) => (
-              <li key={w.word} className="text-xs leading-relaxed break-words">
-                <b className="text-primary">{w.word}</b>
-                <span className="text-sub"> … {w.meaning}</span>
-                {w.example && <span className="text-sub">／例：{w.example}</span>}
-              </li>
-            ))}
+            {onlyHere.map((w) => {
+              const syn = synonymsOf(dialect, w);
+              return (
+                <li key={w.word} className="text-xs leading-relaxed break-words">
+                  <b className="text-primary">{w.word}</b>
+                  <span className="text-sub"> … {w.meaning}</span>
+                  {syn.length > 0 && (
+                    <span className="text-sub">
+                      ／同義：{syn.map((s) => `${s.dialect}「${s.word}」`).join("・")}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
           </ul>
           <p className="text-[11px] text-sub leading-relaxed">
             ※ この辞典に限った話で、近隣で同じ語を使うことはあります（方言は県境で切れません）。
+            「同義」は辞典の語釈が一致した語で、ニュアンスまで同じとは限りません。
           </p>
+          {tSlug && (
+            <p className="text-[11px] text-sub leading-relaxed">
+              例文つきの語釈は変換ページ側にまとめています（
+              <Link href={`/translate/${tSlug}#words`} className="text-primary underline underline-offset-2">
+                {dialect}の言葉一覧
+              </Link>
+              ）。
+            </p>
+          )}
           {tSlug && onlyHereAll.length > onlyHere.length && (
             <p className="text-xs">
               <Link href={`/translate/${tSlug}#words`} className="text-primary font-bold hover:underline">
@@ -280,6 +315,37 @@ export default async function QuizDialectPage({ params }: Props) {
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {/* ── 同形異義 ──
+          「同じ語形なのに、他の方言では別の意味」＝検定でいちばん間違えやすいところ。
+          35方言の辞典を横断して初めて出る情報なので、変換ページ（1方言分の語釈）には無い。 */}
+      {homos.length > 0 && (
+        <section className="card p-5 space-y-3">
+          <h2 className="font-bold text-sm">
+            ⚠️ 同じ語形でも、他の方言では意味が違う語（{homos.length}語）
+          </h2>
+          <p className="text-xs text-sub leading-relaxed">
+            検定の答えは<b>辞典の{dialect}の語釈</b>で判定しています。
+            下の語は同じ語形が別の方言にも立項されていますが、そちらでは意味が違います。
+            他の地方の出身者と話が食い違うのは、たいていこの型です。
+          </p>
+          <ul className="space-y-2">
+            {homos.map((h) => (
+              <li key={h.word} className="text-xs leading-relaxed break-words">
+                <b className="text-primary">{h.word}</b>
+                <span> … {dialect}では「{h.meaning}」</span>
+                <span className="text-sub">
+                  ／{h.others.map((o) => `${o.dialect}では「${o.meaning}」`).join("、")}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-[11px] text-sub leading-relaxed">
+            ※ 辞典に立項がある方言だけを比べた結果です。同じ語形が地方で別の意味になるのは
+            方言では珍しくなく、どちらかが誤りという話ではありません。
+          </p>
         </section>
       )}
 

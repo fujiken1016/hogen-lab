@@ -275,3 +275,89 @@ export function sharedWords(dialect: string): { word: string; others: string[] }
   }
   return out;
 }
+
+/* ────────────────────────────────────────────────────────────────
+ * 2026-09-03（2回目）: /quiz/X と /translate/X の重複を下げるための追加。
+ *
+ * 実測でわかったこと（同一方言の35ペアを総当たり）：一致率は平均41.7%・最大46.6%で、
+ * 共通していた文字列の中身は「収録語の一覧（語 … 意味／例：例文）」だった。
+ * /translate/[slug] は同じ語を意味・例文つきで全部載せている勝ち面なので、そちらは一切削らない。
+ * 代わりに検定側の役割を変える＝**例文は変換ページに任せ、検定は「他の方言と比べるとどうか」を持つ**。
+ *
+ *  - synonymsOf()   … 同じ語釈を他の方言では何と言うか（辞典の語釈で突き合わせ）
+ *  - homographs()   … 同じ語形が他の方言では違う意味で立項されている語（検定のひっかけ）
+ * どちらも「35方言の辞典を横断して初めて出る情報」で、/translate/[slug] には無い。
+ * ──────────────────────────────────────────────────────────────── */
+
+/** 語釈の表記ゆれを吸収する（括弧の補足・句点・空白を落とす） */
+function normMeaning(s: string): string {
+  return (s || "")
+    .replace(/[（(].*?[）)]/g, "")
+    .replace(/[。．\s]/g, "")
+    .trim();
+}
+
+/** 正規化した語釈 → その語釈を立てている（方言, 語）の一覧 */
+let meaningIndex: Map<string, { dialect: string; word: string }[]> | null = null;
+function getMeaningIndex(): Map<string, { dialect: string; word: string }[]> {
+  if (meaningIndex) return meaningIndex;
+  const m = new Map<string, { dialect: string; word: string }[]>();
+  for (const d of REAL_DIALECTS) {
+    for (const w of wordsOf(d)) {
+      const k = normMeaning(w.meaning);
+      if (!k) continue;
+      const list = m.get(k) ?? [];
+      list.push({ dialect: d, word: w.word });
+      m.set(k, list);
+    }
+  }
+  meaningIndex = m;
+  return m;
+}
+
+/**
+ * 同じ意味を、他の方言ではどう言うか。語形が同じものは除く（それは「重なっている語」で、
+ * 別の意味の情報になるため）。
+ */
+export function synonymsOf(
+  dialect: string,
+  entry: WordEntry | undefined,
+  cap = 6,
+): { dialect: string; word: string }[] {
+  if (!entry) return [];
+  const hits = getMeaningIndex().get(normMeaning(entry.meaning)) ?? [];
+  const seen = new Set<string>();
+  const out: { dialect: string; word: string }[] = [];
+  for (const h of hits) {
+    if (h.dialect === dialect || h.word === entry.word) continue;
+    if (seen.has(h.dialect)) continue;
+    seen.add(h.dialect);
+    out.push(h);
+    if (out.length >= cap) break;
+  }
+  return out;
+}
+
+/**
+ * 同じ語形が他の方言にも立項されていて、しかも語釈が違う語（＝検定のひっかけ）。
+ * 出題語は sharedWords() の時点で除いてあるのでネタバレにならない。
+ */
+export function homographs(
+  dialect: string,
+): { word: string; meaning: string; others: { dialect: string; meaning: string }[] }[] {
+  const mine = new Map(wordsOf(dialect).map((w) => [w.word, w]));
+  const out: { word: string; meaning: string; others: { dialect: string; meaning: string }[] }[] = [];
+  for (const { word, others } of sharedWords(dialect)) {
+    const m = mine.get(word);
+    if (!m) continue;
+    const diff: { dialect: string; meaning: string }[] = [];
+    for (const o of others) {
+      const e = wordsOf(o).find((w) => w.word === word);
+      if (e && normMeaning(e.meaning) !== normMeaning(m.meaning)) {
+        diff.push({ dialect: o, meaning: e.meaning });
+      }
+    }
+    if (diff.length > 0) out.push({ word, meaning: m.meaning, others: diff });
+  }
+  return out;
+}
