@@ -33,10 +33,30 @@ function git(args) {
 
 const TODAY = new Date().toISOString().slice(0, 10);
 
-/** そのパス群を最後に変更したコミットの日付 */
+// この仕組み自身（日付の表示・生成）が入れた行。これしか動いていないコミットは
+// 「更新」に数えない。数えないと、日付を入れた日に全ページが同じ日付になって不自然になるうえ、
+// 次の日にはまたその日付になる（自己増殖）ので、嘘の更新日が育つ。
+const STAMP_LINE = /PageDates|pageDates|page_dates|datePublished|dateModified|dateTime=|jpDate|lastmod|<time[ >]/;
+
+function isStampOnly(diff) {
+  const lines = diff
+    .split("\n")
+    .filter((l) => (l.startsWith("+") || l.startsWith("-")) && !/^(\+\+\+|---)/.test(l));
+  if (!lines.length) return true;
+  return lines.every((l) => STAMP_LINE.test(l));
+}
+
+/** そのパス群の中身が実際に変わった最後のコミットの日付 */
 function lastDate(paths) {
-  const out = git(["log", "-1", "--format=%cs", "--", ...paths]).trim();
-  return out || null;
+  const log = git(["log", "--format=%H\t%cs", "-n", "40", "--", ...paths]).trim();
+  if (!log) return null;
+  for (const row of log.split("\n")) {
+    const [sha, date] = row.split("\t");
+    if (!sha) continue;
+    const diff = git(["show", "--format=", "--unified=0", sha, "--", ...paths]);
+    if (!isStampOnly(diff)) return date;
+  }
+  return null;
 }
 
 /** そのパス群が最初に追加されたコミットの日付 */
