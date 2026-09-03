@@ -11,8 +11,33 @@
   --indigo: #6c5ce7; /* ビビッドバイオレット */
   --indigo-deep: #4b3bc4;
   --gold: #ffb800; /* ビビッドイエロー */
-  --sub: #8a7ba3;
+  /* 明るい面（--paper / 白 / 淡色タイル）に載せる文字用のピンク。#ff4d6d は 3.01:1 で AA 不合格、
+     #d10f3c は --paper 上 5.11:1 / 白上 5.46:1 / 図鑑タイルの淡色5種すべてで 4.9:1 以上。面・帯としての #ff4d6d はそのまま（§2-3） */
+  --primary-text: #d10f3c;
+  --sub: #6b6b84; /* design_guidelines §2-1 --gray-500。--paper #fff6ec 上 4.84:1 (旧 #8a7ba3 は 3.61:1 で AA 不合格) */
   --line: #f0dfe2;
+}
+
+/* ---------- タイプスケール（memory/design_guidelines.md §3-2 の実体値） ----------
+   Tailwind の text-* をガイドラインの値に付け替える。ここ以外でサイズを発明しない。
+   sm=15 / base=17(本文) / lg=19(リード) / xl=21(h3) / 2xl=26(h2) / 3xl=34(h1) / 4xl=40 */
+@theme {
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.8;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.85;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.85;
+  --text-xl: 1.3125rem;
+  --text-xl--line-height: 1.35;
+  --text-2xl: 1.625rem;
+  --text-2xl--line-height: 1.35;
+  --text-3xl: 2.125rem;
+  --text-3xl--line-height: 1.2;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.15;
+  /* 本文の行間は 1.85（§3-2 --lh-body）。leading-relaxed をその値に寄せる */
+  --leading-relaxed: 1.85;
 }
 
 @theme inline {
@@ -20,6 +45,7 @@
   --color-ink: var(--ink);
   --color-primary: var(--primary);
   --color-primary-deep: var(--primary-deep);
+  --color-primary-text: var(--primary-text);
   --color-indigo: var(--indigo);
   --color-indigo-deep: var(--indigo-deep);
   --color-gold: var(--gold);
@@ -63,6 +89,9 @@ textarea {
 body {
   background: var(--paper);
   color: var(--ink);
+  /* §3-2 本文の既定＝17px / 行間1.85 */
+  font-size: var(--text-base);
+  line-height: 1.85;
   overflow-x: clip;
   padding-bottom: env(safe-area-inset-bottom);
   font-family: var(--font-body), "Hiragino Kaku Gothic ProN", sans-serif;
@@ -91,6 +120,23 @@ h1,
 h2,
 .font-display {
   font-family: var(--font-display), "Hiragino Mincho ProN", serif;
+}
+
+/* 見出しの既定倍率（§3-3 h1=本文の2.0倍 / h2=1.5倍 / h3=1.24倍）。
+   @layer base に置いているので、text-* ユーティリティを付けた要素ではそちらが勝つ */
+@layer base {
+  h1 {
+    font-size: var(--text-3xl);
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: var(--text-2xl);
+    line-height: 1.35;
+  }
+  h3 {
+    font-size: var(--text-xl);
+    line-height: 1.35;
+  }
 }
 
 /* ---------- アニメーション ---------- */
@@ -491,7 +537,7 @@ h2,
   top: -10vh;
   width: 10px;
   height: 14px;
-  border-radius: 2px;
+  border-radius: 4px;
   animation: confettiFall linear both;
   pointer-events: none;
   z-index: 50;
@@ -530,7 +576,7 @@ h2,
 /* 回転スタンプバッジ（無料・NEW等） */
 .stamp {
   @apply inline-grid place-items-center rounded-full text-white font-bold text-center leading-tight;
-  background: var(--primary);
+  background: var(--primary-text);
   transform: rotate(-12deg);
   box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
 }
@@ -543,7 +589,7 @@ h2,
 
 /* 吹き出し */
 .bubble {
-  @apply relative bg-white border-2 rounded-2xl px-3 py-1.5 text-xs font-bold shadow-sm;
+  @apply relative bg-white border-2 rounded-2xl px-3 py-1.5 text-sm font-bold shadow-sm;
   border-color: var(--ink);
 }
 .bubble::after {
@@ -674,33 +720,33 @@ h2,
     font-family: var(--font-display), serif;
   }
   .section-head .ttl {
-    @apply text-xl font-bold leading-tight;
+    @apply text-2xl font-bold leading-tight;
   }
   .section-head .sub {
-    @apply block text-[10px] tracking-[0.2em] text-sub font-bold;
+    @apply block text-sm tracking-[0.12em] text-sub font-bold;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 text-white font-bold rounded-full px-6 py-3 transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 active:scale-95 shadow-[0_4px_14px_rgba(255,77,109,0.4)];
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 text-white font-bold rounded-full px-6 py-3 transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 active:scale-95 shadow-[0_4px_14px_rgba(255,77,109,0.4)];
     background-image: linear-gradient(135deg, #ff7a94, var(--primary) 45%, var(--primary-deep));
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-white text-ink border border-line font-bold rounded-full px-5 py-2.5 hover:border-indigo hover:text-indigo transition-all active:scale-95;
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 bg-white text-ink border border-line font-bold rounded-full px-5 py-2.5 hover:border-indigo hover:text-indigo transition-all active:scale-95;
   }
   .btn-ghost {
-    /* 文字だけのリンクでも指で押せる大きさを確保する（40px以上） */
-    @apply inline-flex items-center justify-center gap-2 min-h-[40px] px-2 text-sm text-sub hover:text-indigo transition-colors;
+    /* 文字だけのリンクでも指で押せる大きさを確保する（§5-2 48px以上） */
+    @apply inline-flex items-center justify-center gap-2 min-h-[48px] px-2 text-sm text-sub hover:text-indigo transition-colors;
   }
   .chip {
-    @apply inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wide;
+    @apply inline-block px-3 py-1 rounded-full text-sm font-bold tracking-wide;
   }
   .input-base {
-    @apply w-full border border-line rounded-xl px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-indigo/40;
+    @apply w-full min-h-[48px] border border-line rounded-xl px-4 py-3 bg-white text-base focus:outline-none focus:ring-2 focus:ring-indigo/40;
   }
   .select-base {
-    @apply border border-line rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo/40;
+    @apply min-h-[48px] border border-line rounded-xl px-3 py-2.5 bg-white text-base focus:outline-none focus:ring-2 focus:ring-indigo/40;
   }
   .section-title {
-    @apply text-2xl font-bold tracking-wide relative pb-3;
+    @apply text-3xl font-bold tracking-wide relative pb-3 leading-tight;
   }
   .section-title::after {
     content: "";
@@ -721,4 +767,4 @@ h2,
   text-align:center;
 }
 @media (min-width:768px){ .ad-slot{ max-width:728px; min-height:110px; } }
-.ad-label{ display:block; font-size:12px; color:#888; margin-bottom:6px; }
+.ad-label{ display:block; font-size:15px; color:var(--sub); margin-bottom:6px; }

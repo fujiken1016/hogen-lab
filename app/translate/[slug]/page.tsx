@@ -97,7 +97,7 @@ export default async function TranslateDialectPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <div className="text-center space-y-2">
-        <Link href="/translate" className="text-xs font-bold text-primary hover:underline">
+        <Link href="/translate" className="inline-flex min-h-[48px] items-center justify-center text-sm font-bold text-primary-text hover:underline">
           ← 方言変換（全{TRANSLATE_DIALECTS.length}方言）の一覧
         </Link>
         <h1 className="section-title">🗣️ {dialect} 変換</h1>
@@ -106,14 +106,14 @@ export default async function TranslateDialectPage({ params }: Props) {
           標準語の文を入れれば{area}のことば「{dialect}」に、
           「⇄ 逆向き」を押せば<b>{dialect}を標準語に</b>変換します。
         </p>
-        {alias && <p className="text-xs text-sub leading-relaxed">{alias}</p>}
-        <p className="text-xs text-sub leading-relaxed">
+        {alias && <p className="text-sm text-sub leading-relaxed">{alias}</p>}
+        <p className="text-sm text-sub leading-relaxed">
           方言ラボの辞典に収録された{dialect}の語（{wordCount}語）を置き換えるしくみです。
           語尾や活用は変えないので、置き換えられなかった部分はそのまま残ります。
         </p>
         <a
           href="#words"
-          className="btn-ghost min-h-[44px] inline-flex items-center justify-center text-xs font-bold"
+          className="btn-ghost min-h-[48px] inline-flex items-center justify-center text-sm font-bold"
         >
           ↓ {dialect}の言葉一覧（{wordCount}語・意味と例文つき）
         </a>
@@ -126,20 +126,20 @@ export default async function TranslateDialectPage({ params }: Props) {
           新しいURLは作らない＝このページの中に書く。 */}
       {rev && (
         <section className="card p-5 space-y-2">
-          <h2 className="font-bold text-sm">🔁 {revName}を標準語に変換するには</h2>
+          <h2 className="font-bold text-2xl">🔁 {revName}を標準語に変換するには</h2>
           <p className="text-sm leading-relaxed">
             上のツールの中央にある「⇄ 逆向き」を押すと、向きが <b>{dialect} → 標準語</b> に変わります。
             聞き取れなかった{revName}の言い回しをそのまま貼り付ければ、
             辞典に収録している語を標準語に置き換えて返します。
           </p>
-          <p className="text-xs text-sub leading-relaxed">
+          <p className="text-sm text-sub leading-relaxed">
             置き換えた語は「どの語をどう変えたか」を意味・用例つきで一つずつ表示します。
             語尾や活用は変換しないので、置き換えられなかった部分は{dialect}のまま残ります。
             収録している{wordCount}語は、このページの言葉一覧で全部確認できます。
           </p>
           <a
             href="#words"
-            className="btn-ghost min-h-[44px] inline-flex items-center justify-center text-xs font-bold"
+            className="btn-ghost min-h-[48px] inline-flex items-center justify-center text-sm font-bold"
           >
             ↓ 標準語に戻せる{dialect}の語（{wordCount}語）を見る
           </a>
@@ -147,17 +147,17 @@ export default async function TranslateDialectPage({ params }: Props) {
       )}
 
       <section className="card p-5 space-y-3">
-        <h2 className="font-bold text-sm">📝 {dialect}でよく使う言い換え（{pairs.length}）</h2>
+        <h2 className="font-bold text-2xl">📝 {dialect}でよく使う言い換え（{pairs.length}）</h2>
         <ul className="grid sm:grid-cols-2 gap-2">
           {pairs.map((p) => (
             <li key={p.key} className="bg-paper border border-line rounded-xl px-3 py-2 text-sm">
               <span className="text-sub">{p.standard}</span>
               <span className="text-sub mx-1.5">→</span>
-              <b className="text-primary break-words">{p.dialect}</b>
+              <b className="text-primary-text break-words">{p.dialect}</b>
             </li>
           ))}
         </ul>
-        <p className="text-[11px] text-sub leading-relaxed">
+        <p className="text-sm text-sub leading-relaxed">
           ※ 方言ラボの辞書データに収録している言い方です。方言は地域・世代で差があり、
           ここに載っている形が唯一の言い方というわけではありません。
         </p>
@@ -166,7 +166,7 @@ export default async function TranslateDialectPage({ params }: Props) {
       {/* 回遊導線。長い語一覧の「前」に置く（後ろだと最下部まで届かない）。
           SC実測で勝っているのは /translate/<地域> なので、同じ地域の別ツールへ送るのが最短。 */}
       <section className="card p-5 space-y-3">
-        <h2 className="font-bold text-sm">
+        <h2 className="font-bold text-2xl">
           🧭 {area}の{dialect}を、もう少し
         </h2>
         <div className="grid gap-2">
@@ -200,20 +200,20 @@ export default async function TranslateDialectPage({ params }: Props) {
       <ToolReads dialect={dialect} from="translate" slug={slug} />
 
       <section className="card p-5 space-y-2">
-        <h2 className="font-bold text-sm">
+        <h2 className="font-bold text-2xl">
           📚 {dialect}とは（{area}）
         </h2>
         <p className="text-sm leading-relaxed">{DIALECT_NOTES[dialect]}</p>
-        {alias && <p className="text-xs text-sub leading-relaxed">{alias}</p>}
+        {alias && <p className="text-sm text-sub leading-relaxed">{alias}</p>}
       </section>
 
       {/* 「○○弁 一覧」「<言葉> 方言」「○○弁 例文」で検索している人の受け皿。
           新しいURLは増やさず、既に勝っているこのページを厚くする（薄いページを量産しない）。 */}
       <section id="words" className="card p-5 space-y-3 scroll-mt-4">
-        <h2 className="font-bold text-sm">
+        <h2 className="font-bold text-2xl">
           📖 {dialect}の言葉一覧（{wordCount}語）
         </h2>
-        <p className="text-xs text-sub leading-relaxed">
+        <p className="text-sm text-sub leading-relaxed">
           方言ラボの辞典に収録している{dialect}の語を、意味と例文つきで全部載せています。
           変換ツールはここに載っている語を置き換えています。
         </p>
@@ -221,16 +221,16 @@ export default async function TranslateDialectPage({ params }: Props) {
           {words.map((w) => (
             <li key={w.word} className="py-2.5">
               <p className="text-sm break-words">
-                <b className="text-primary">{w.word}</b>
+                <b className="text-primary-text">{w.word}</b>
                 <span className="text-sub"> … {w.meaning}</span>
               </p>
               {w.example && (
-                <p className="text-xs text-sub mt-1 break-words leading-relaxed">例：{w.example}</p>
+                <p className="text-sm text-sub mt-1 break-words leading-relaxed">例：{w.example}</p>
               )}
             </li>
           ))}
         </ul>
-        <p className="text-[11px] text-sub leading-relaxed">
+        <p className="text-sm text-sub leading-relaxed">
           ※ 方言は地域・世代で差があります。同じ語を近隣の方言でも使うことがあり、
           ここに載っている形が{dialect}だけの言い方とは限りません。
         </p>
@@ -238,13 +238,13 @@ export default async function TranslateDialectPage({ params }: Props) {
 
       {siblings.length > 0 && (
         <section className="space-y-2">
-          <h2 className="font-bold text-sm text-center">同じ{region}の変換ツール</h2>
+          <h2 className="font-bold text-2xl text-center">同じ{region}の変換ツール</h2>
           <div className="flex flex-wrap justify-center gap-2">
             {siblings.map((d) => (
               <Link
                 key={d}
                 href={`/translate/${translateSlug(d)}`}
-                className="btn-secondary text-sm min-h-[44px] inline-flex items-center"
+                className="btn-secondary text-sm min-h-[48px] inline-flex items-center"
               >
                 {d} 変換
               </Link>
@@ -253,7 +253,7 @@ export default async function TranslateDialectPage({ params }: Props) {
         </section>
       )}
 
-      <div className="flex flex-wrap justify-center gap-2 text-xs">
+      <div className="flex flex-wrap justify-center gap-2 text-sm">
         {qSlug && (
           <Link href={`/quiz/${qSlug}`} className="btn-ghost">
             🏅 {dialect}検定に挑戦

@@ -25,7 +25,7 @@ function Pitch({
 }) {
   return (
     <div className="flex items-center gap-3 py-2">
-      <span className="text-[12px] text-sub w-14 shrink-0">{label}</span>
+      <span className="text-sm text-sub w-14 shrink-0">{label}</span>
       <span className="flex items-end gap-0.5">
         {mora.map((m, i) => (
           <span key={i} className="flex flex-col items-center w-7">
@@ -34,11 +34,11 @@ function Pitch({
                 pattern[i] === "H" ? "bg-primary" : "bg-line"
               } ${pattern[i] === "H" ? "mb-1.5" : "mt-4 mb-1.5"}`}
             />
-            <span className="text-[13px] font-bold leading-none">{m}</span>
+            <span className="text-sm font-bold leading-none">{m}</span>
           </span>
         ))}
       </span>
-      {note && <span className="text-[11px] text-sub">{note}</span>}
+      {note && <span className="text-sm text-sub">{note}</span>}
     </div>
   );
 }
@@ -64,13 +64,13 @@ export default function Page() {
       </P>
 
       <div className="card p-4 sm:p-5 my-5">
-        <p className="text-xs font-bold text-sub mb-1">東京式（東京）</p>
+        <p className="text-sm font-bold text-sub mb-1">東京式（東京）</p>
         <Pitch label="箸" mora={["は", "し"]} pattern={["H", "L"]} note="頭が高い" />
         <Pitch label="橋" mora={["は", "し"]} pattern={["L", "H"]} note="後ろが高い" />
-        <p className="text-xs font-bold text-sub mt-4 mb-1">京阪式（京都・大阪）</p>
+        <p className="text-sm font-bold text-sub mt-4 mb-1">京阪式（京都・大阪）</p>
         <Pitch label="箸" mora={["は", "し"]} pattern={["L", "H"]} />
         <Pitch label="橋" mora={["は", "し"]} pattern={["H", "L"]} />
-        <p className="text-[12px] text-sub leading-[1.9] mt-3">
+        <p className="text-sm text-sub leading-[1.9] mt-3">
           東と西で、ちょうど入れ替わります。関西の人が「はし（橋）」と言うと、
           関東の人には「箸」に聞こえてしまう——という行き違いが実際に起こります。
         </p>

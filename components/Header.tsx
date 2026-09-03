@@ -79,7 +79,7 @@ export default function Header() {
   return (
     <header className="bg-indigo-deep text-white sticky top-0 z-20 shadow-md border-b-2 border-gold/70">
       <div className="max-w-5xl mx-auto px-4 py-2 flex items-center gap-2 sm:gap-4">
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
+        <Link href="/" className="flex min-h-[48px] items-center gap-2 group shrink-0">
           <span className="hanko group-hover:rotate-6 transition-transform">方</span>
           <span className="font-display text-lg sm:text-xl font-bold tracking-widest">
             方言<span className="text-gold">ラボ</span>
@@ -92,7 +92,7 @@ export default function Header() {
             <Link
               key={n.href}
               href={n.href}
-              className={`px-3 min-h-[40px] flex items-center rounded-full transition-all ${
+              className={`px-3 min-h-[48px] flex items-center rounded-full transition-all ${
                 isActive(n.href) ? "bg-white/15 text-gold font-bold" : "opacity-85 hover:opacity-100 hover:bg-white/10"
               }`}
             >
@@ -104,7 +104,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-2 shrink-0">
           <Link
             href="/shindan"
-            className="bg-primary hover:bg-primary-deep text-white text-[11px] sm:text-xs font-bold rounded-full px-3.5 sm:px-4 min-h-[44px] flex items-center shadow-sm active:scale-95 transition-transform"
+            className="bg-primary-text hover:bg-primary-deep text-white text-sm font-bold rounded-full px-3.5 sm:px-4 min-h-[48px] flex items-center shadow-sm active:scale-95 transition-transform"
           >
             無料診断
           </Link>
@@ -114,10 +114,10 @@ export default function Header() {
             aria-expanded={open}
             aria-controls="global-menu"
             aria-label={open ? "メニューを閉じる" : "メニューを開く"}
-            className="flex items-center gap-1.5 min-h-[44px] min-w-[44px] px-2.5 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/25 transition-colors"
+            className="flex items-center gap-1.5 min-h-[48px] min-w-[44px] px-2.5 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/25 transition-colors"
           >
             <span aria-hidden className="text-base leading-none">{open ? "✕" : "☰"}</span>
-            <span className="text-[11px] font-bold">メニュー</span>
+            <span className="text-sm font-bold">メニュー</span>
           </button>
         </div>
       </div>
@@ -138,21 +138,21 @@ export default function Header() {
           >
             <div className="max-w-5xl mx-auto px-4 py-3 space-y-3">
               <section>
-                <h2 className="text-[11px] tracking-widest text-gold/90 font-bold px-1 pb-1.5">🎮 ツールで遊ぶ</h2>
+                <h2 className="text-lg tracking-widest text-gold font-bold px-1 pb-1.5">🎮 ツールで遊ぶ</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">{TOOLS.map(panelLink)}</div>
               </section>
               <section>
-                <h2 className="text-[11px] tracking-widest text-gold/90 font-bold px-1 pb-1.5">📚 調べる・読む</h2>
+                <h2 className="text-lg tracking-widest text-gold font-bold px-1 pb-1.5">📚 調べる・読む</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">{READS.map(panelLink)}</div>
               </section>
-              <nav className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-white/70 pt-1 pb-1">
-                <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center min-h-[40px] px-1 hover:text-gold">
+              <nav className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-white/70 pt-1 pb-1">
+                <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center min-h-[48px] px-1 hover:text-gold">
                   ホーム
                 </Link>
-                <Link href="/about" onClick={() => setOpen(false)} className="inline-flex items-center min-h-[40px] px-1 hover:text-gold">
+                <Link href="/about" onClick={() => setOpen(false)} className="inline-flex items-center min-h-[48px] px-1 hover:text-gold">
                   運営者情報
                 </Link>
-                <Link href="/contact" onClick={() => setOpen(false)} className="inline-flex items-center min-h-[40px] px-1 hover:text-gold">
+                <Link href="/contact" onClick={() => setOpen(false)} className="inline-flex items-center min-h-[48px] px-1 hover:text-gold">
                   お問い合わせ
                 </Link>
               </nav>

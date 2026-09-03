@@ -16,9 +16,9 @@ function NameRow({ name, area, memo }: { name: string; area: string; memo?: stri
     <div className="border-b border-line last:border-0 py-3">
       <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
         <span className="font-display text-lg font-bold text-primary-deep">{name}</span>
-        <span className="text-[12px] text-sub">{area}</span>
+        <span className="text-sm text-sub">{area}</span>
       </div>
-      {memo && <p className="text-[13px] leading-[1.85] text-ink/85 mt-1.5">{memo}</p>}
+      {memo && <p className="text-sm leading-[1.85] text-ink/85 mt-1.5">{memo}</p>}
     </div>
   );
 }

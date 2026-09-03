@@ -99,10 +99,13 @@ export default function Page() {
         文法では「西」なのに、アクセントでは「東京と同じ」。
         そんな地域がふつうに存在します。方言を「東西」の2つに割り切れないのは、
         <strong>項目ごとに違う地図ができる</strong>からです。アクセントの分布については
-        <Link href="/blog/hogen-accent-chizu" className="text-primary hover:underline">
-          アクセントの日本地図の記事
-        </Link>
+        アクセントの日本地図の記事
         でくわしく扱っています。
+      </P>
+      <P>
+        <Link href="/blog/hogen-accent-chizu" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → アクセントの日本地図の記事
+        </Link>
       </P>
 
       <H2>境界の県では、実際どうなっているのか</H2>
@@ -137,10 +140,13 @@ export default function Page() {
         ただし、どの要因がどれくらい効いたのかを数字で示すのは難しく、
         <strong>「これが原因だ」と断定できる段階ではありません</strong>。
         方言が分かれる仕組みそのものについては
-        <Link href="/blog/naze-hogen-umareru" className="text-primary hover:underline">
-          方言はなぜ生まれるのかの記事
-        </Link>
+        方言はなぜ生まれるのかの記事
         にまとめています。
+      </P>
+      <P>
+        <Link href="/blog/naze-hogen-umareru" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言はなぜ生まれるのかの記事
+        </Link>
       </P>
 
       <H2>まとめ</H2>

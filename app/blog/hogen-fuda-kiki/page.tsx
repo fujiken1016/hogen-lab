@@ -102,12 +102,11 @@ export default function Page() {
         奄美から与那国までの各語は、日本では長く「方言」として扱われてきました。
         しかし言語学的には、共通語との差が大きく、
         相互に通じない部分も多いことから、独立した言語として数える立場があります。
-        この分類については
-        <Link href="/blog/okinawa-ryukyu-kotoba" className="text-primary hover:underline">
-          うちなーぐちと琉球諸語の記事
-        </Link>
-        でくわしく扱っています。
+        この分類については「うちなーぐちと琉球諸語」の記事でくわしく扱っています。
         また、八丈語（東京都八丈島）が入っている点も見落とされがちです。
+        <Link href="/blog/okinawa-ryukyu-kotoba" className="mt-1 inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → うちなーぐちと琉球諸語の記事
+        </Link>
       </Note>
 
       <H2>いま、何が行われているのか</H2>
@@ -145,10 +144,13 @@ export default function Page() {
         伝統的な方言の語彙や文法が失われていく一方で、
         若い世代からは新しい非共通語形が生まれ、広がってもいます
         （
-        <Link href="/blog/jan-shin-hogen" className="text-primary hover:underline">
-          新方言
-        </Link>
+        新方言
         ）。
+      </P>
+      <P>
+        <Link href="/blog/jan-shin-hogen" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 新方言
+        </Link>
       </P>
       <P>
         危機にあるのは「地域の言葉ぜんぶ」ではなく、

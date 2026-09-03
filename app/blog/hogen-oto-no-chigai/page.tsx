@@ -87,10 +87,13 @@ export default function Page() {
         音が詰まって、共通語より音節数が減る。
         鹿児島の言葉が速く聞こえる理由の一つです。
         地域ごとの差は
-        <Link href="/blog/kyushu-hogen-gradation" className="text-primary hover:underline">
-          九州方言の記事
-        </Link>
+        九州方言の記事
         で扱っています。
+      </P>
+      <P>
+        <Link href="/blog/kyushu-hogen-gradation" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 九州方言の記事
+        </Link>
       </P>
 
       <H2>子音のほうの地域差</H2>
@@ -111,10 +114,13 @@ export default function Page() {
         <strong>「キ」が「チ」になる方言。</strong>
         沖縄などで知られる対応です。
         琉球のことばの音の法則は
-        <Link href="/blog/okinawa-ryukyu-kotoba" className="text-primary hover:underline">
-          うちなーぐちの記事
-        </Link>
+        うちなーぐちの記事
         でくわしく解説しました。
+      </P>
+      <P>
+        <Link href="/blog/okinawa-ryukyu-kotoba" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → うちなーぐちの記事
+        </Link>
       </P>
       <Note title="出雲に残る「クヮ」">
         出雲方言では「火事」を「クヮジ」と発音することがあります。
@@ -137,10 +143,13 @@ export default function Page() {
         つまりアクセントの地域差は、
         <strong>単なる違いではなく、失われ方の違い</strong>でもあるわけです。
         分布については
-        <Link href="/blog/hogen-accent-chizu" className="text-primary hover:underline">
-          アクセントの日本地図の記事
-        </Link>
+        アクセントの日本地図の記事
         を参照してください。
+      </P>
+      <P>
+        <Link href="/blog/hogen-accent-chizu" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → アクセントの日本地図の記事
+        </Link>
       </P>
 
       <H2>まとめ</H2>

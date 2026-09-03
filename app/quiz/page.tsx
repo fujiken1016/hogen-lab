@@ -37,7 +37,7 @@ export default function QuizIndexPage() {
         if (list.length === 0) return null;
         return (
           <section key={r.name} className="space-y-2">
-            <h2 className="font-bold text-sm text-sub border-b border-line pb-1">{r.name}</h2>
+            <h2 className="font-bold text-2xl text-sub border-b border-line pb-1">{r.name}</h2>
             <div className="grid sm:grid-cols-2 gap-3">
               {list.map((d) => {
                 const t = typeByDialect(d);
@@ -50,7 +50,7 @@ export default function QuizIndexPage() {
                     {t && <TypeAvatar type={t} size={52} />}
                     <div className="min-w-0">
                       <div className="font-bold">{d} 検定</div>
-                      <div className="text-xs text-sub mt-0.5 leading-relaxed">
+                      <div className="text-sm text-sub mt-0.5 leading-relaxed">
                         {AREA_OF[d]}・全8問（{quizSampleWords(d, 2).join("・")} など）
                       </div>
                     </div>
@@ -62,13 +62,13 @@ export default function QuizIndexPage() {
         );
       })}
 
-      <p className="text-[11px] text-sub leading-relaxed">
+      <p className="text-sm text-sub leading-relaxed">
         ※ 出題は方言ラボ辞典に収録している語だけを使い、出典を照合済みの語を優先しています。
         辞典が他の方言にも同じ語を収録している場合は設問ごとに併記します。方言には地域差・世代差があり、
         判定は辞典の語釈にもとづくもので、あなたの言葉が間違いという意味ではありません。
       </p>
 
-      <div className="flex flex-wrap justify-center gap-2 text-xs">
+      <div className="flex flex-wrap justify-center gap-2 text-sm">
         <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
         <Link href="/kawaii" className="btn-ghost">💗 かわいい方言トーナメント</Link>
         <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>

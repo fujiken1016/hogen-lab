@@ -39,9 +39,9 @@ export default function ShareBar({ text, url, block }: { text: string; url: stri
       {block && (
         // 何がコピーされるかを先に見せる。答えは入っていないことが目で分かるようにする
         <div className="w-full max-w-sm bg-paper border border-line rounded-xl px-3 py-2.5 text-left">
-          <p className="text-[10px] text-sub font-bold mb-1">📋 コピーされる文（答えは入りません）</p>
-          <p className="text-xs leading-relaxed whitespace-pre-wrap break-words">{block}</p>
-          <p className="text-[10px] text-sub break-all mt-0.5">{url}</p>
+          <p className="text-sm text-sub font-bold mb-1">📋 コピーされる文（答えは入りません）</p>
+          <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">{block}</p>
+          <p className="text-sm text-sub break-all mt-0.5">{url}</p>
         </div>
       )}
       <div className="flex flex-wrap justify-center gap-2">
@@ -50,7 +50,7 @@ export default function ShareBar({ text, url, block }: { text: string; url: stri
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackShare("x")}
-          className="inline-flex items-center gap-1.5 bg-black text-white text-sm font-bold rounded-full px-4 py-2 min-h-[44px] hover:opacity-80 transition-opacity"
+          className="inline-flex items-center gap-1.5 bg-black text-white text-sm font-bold rounded-full px-4 py-2 min-h-[48px] hover:opacity-80 transition-opacity"
         >
           𝕏 ポスト
         </a>
@@ -59,13 +59,13 @@ export default function ShareBar({ text, url, block }: { text: string; url: stri
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackShare("line")}
-          className="inline-flex items-center gap-1.5 bg-[#06C755] text-white text-sm font-bold rounded-full px-4 py-2 min-h-[44px] hover:opacity-80 transition-opacity"
+          className="inline-flex items-center gap-1.5 bg-[#06C755] text-[#053a1c] text-sm font-bold rounded-full px-4 py-2 min-h-[48px] hover:opacity-80 transition-opacity"
         >
           LINEで送る
         </a>
         <button
           onClick={copy}
-          className="inline-flex items-center gap-1.5 bg-white border border-line text-sm font-bold rounded-full px-4 py-2 min-h-[44px] hover:border-indigo transition-colors"
+          className="inline-flex items-center gap-1.5 bg-white border border-line text-sm font-bold rounded-full px-4 py-2 min-h-[48px] hover:border-indigo transition-colors"
         >
           {status === "ok"
             ? "✓ コピーしました"
@@ -81,14 +81,14 @@ export default function ShareBar({ text, url, block }: { text: string; url: stri
               trackShare("native");
               navigator.share({ text: body, url }).catch(() => {});
             }}
-            className="inline-flex items-center gap-1.5 bg-white border border-line text-sm font-bold rounded-full px-4 py-2 min-h-[44px] hover:border-indigo transition-colors"
+            className="inline-flex items-center gap-1.5 bg-white border border-line text-sm font-bold rounded-full px-4 py-2 min-h-[48px] hover:border-indigo transition-colors"
           >
             📤 その他
           </button>
         )}
       </div>
       {/* コピーの結果は、読める長さだけ必ず表示する */}
-      <p aria-live="polite" className="text-xs font-bold text-center min-h-[1.25rem]">
+      <p aria-live="polite" className="text-sm font-bold text-center min-h-[1.25rem]">
         {status === "ok" && (
           <span className="text-indigo">{block ? "結果をコピーしました" : "リンクをコピーしました"}</span>
         )}

@@ -76,7 +76,7 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
   if (phase === "intro") {
     return (
       <div className="card p-6 space-y-4 text-center">
-        <div className="flex items-center justify-center gap-3 text-xs font-bold text-indigo">
+        <div className="flex items-center justify-center gap-3 text-sm font-bold text-indigo">
           <span>✓ 全8問</span>
           <span>✓ 約1分</span>
           <span>✓ 登録不要</span>
@@ -84,7 +84,7 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
         <button onClick={start} className="btn-primary text-lg px-10 py-4 w-full sm:w-auto min-h-[52px]">
           {dialect}検定をはじめる
         </button>
-        <p className="text-[11px] text-sub leading-relaxed text-left">
+        <p className="text-sm text-sub leading-relaxed text-left">
           出題は<strong>方言ラボ辞典に収録している語</strong>だけです。
           <strong>出典を1語ずつ照合した語</strong>を先に出し、辞典が他の方言にも同じ語を収録している場合は
           その場で併記します。方言には地域差・世代差があり、
@@ -131,7 +131,7 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
 
         {/* 結果は自動で流さず、自分のペースで読み返せるように全問残す */}
         <div className="card p-5 space-y-3">
-          <h3 className="font-bold text-sm">📋 出題のふりかえり（全{logs.length}問）</h3>
+          <h3 className="font-bold text-xl">📋 出題のふりかえり（全{logs.length}問）</h3>
           <ul className="space-y-2">
             {logs.map((l, i) => {
               const ok = l.picked === l.q.answer;
@@ -145,12 +145,12 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
                     {l.q.word ? `「${l.q.word}」= ` : ""}
                     {l.q.choices[l.q.answer]}
                   </div>
-                  <div className="text-xs text-sub mt-1">{l.q.explain}</div>
+                  <div className="text-sm text-sub mt-1">{l.q.explain}</div>
                   {!ok && (
-                    <div className="text-xs text-indigo mt-1">あなたの回答：{l.q.choices[l.picked]}</div>
+                    <div className="text-sm text-indigo mt-1">あなたの回答：{l.q.choices[l.picked]}</div>
                   )}
                   {l.q.also.length > 0 && (
-                    <div className="text-[11px] text-sub mt-1">
+                    <div className="text-sm text-sub mt-1">
                       ※ この語は辞典では{l.q.also.slice(0, 4).join("・")}
                       {l.q.also.length > 4 ? "ほか" : ""}にも収録があります
                     </div>
@@ -159,17 +159,17 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
               );
             })}
           </ul>
-          <p className="text-[11px] text-sub leading-relaxed">
+          <p className="text-sm text-sub leading-relaxed">
             ※ 判定は方言ラボ辞典の語釈にもとづくものです。方言は地域・世代で差があり、
             あなたの言葉が誤りという意味ではありません。違いに気づいたら「みんなの辞書」からお知らせください。
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2">
-          <button onClick={start} className="btn-primary min-h-[44px]">
+          <button onClick={start} className="btn-primary min-h-[48px]">
             もう一度
           </button>
-          <Link href="/quiz" className="btn-secondary min-h-[44px] inline-flex items-center">
+          <Link href="/quiz" className="btn-secondary min-h-[48px] inline-flex items-center">
             ほかの方言の検定
           </Link>
         </div>
@@ -184,7 +184,7 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
   return (
     <div className="space-y-5">
       <div className="space-y-2">
-        <div className="flex justify-between text-xs text-sub">
+        <div className="flex justify-between text-sm text-sub">
           <span>{dialect}検定</span>
           <span>
             Q{index + 1} / {questions.length}・一致 {correct}
@@ -199,9 +199,9 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
       </div>
 
       <div className="card p-5 sm:p-6 space-y-4">
-        <h2 className="text-lg font-bold break-words">{q.q}</h2>
+        <h2 className="text-2xl font-bold break-words">{q.q}</h2>
         {q.verified && (
-          <p className="text-[11px] text-sub">📚 出典照合済みの語です（DICT_AUDIT の照合リスト）</p>
+          <p className="text-sm text-sub">📚 出典照合済みの語です（DICT_AUDIT の照合リスト）</p>
         )}
         <div className="grid gap-2">
           {q.order.map((originalIdx) => {
@@ -209,18 +209,18 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
             if (picked !== null) {
               if (originalIdx === q.answer) cls = "border-green-500 bg-green-50";
               else if (originalIdx === picked) cls = "border-indigo/60 bg-indigo/5";
-              else cls = "border-line text-sub/60";
+              else cls = "border-line text-sub";
             }
             return (
               <button
                 key={originalIdx}
                 onClick={() => choose(originalIdx)}
                 disabled={picked !== null}
-                className={`border rounded-xl px-4 py-3.5 min-h-[48px] text-left bg-white transition-colors break-words ${cls}`}
+                className={`border rounded-xl px-4 py-3.5 min-h-[60px] text-base text-left bg-white transition-colors break-words ${cls}`}
               >
                 {q.choices[originalIdx]}
                 {picked !== null && originalIdx === picked && originalIdx !== q.answer && (
-                  <span className="block text-[10px] text-indigo mt-0.5">あなたの回答</span>
+                  <span className="block text-sm text-indigo mt-0.5">あなたの回答</span>
                 )}
               </button>
             );
@@ -241,7 +241,7 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
               </p>
               <p className="mt-1">{q.explain}</p>
               {q.also.length > 0 && (
-                <p className="text-[11px] text-sub mt-1.5">
+                <p className="text-sm text-sub mt-1.5">
                   ※ この語は辞典では{q.also.slice(0, 4).join("・")}
                   {q.also.length > 4 ? "ほか" : ""}にも収録があります。{dialect}だけの言葉とは限りません。
                 </p>

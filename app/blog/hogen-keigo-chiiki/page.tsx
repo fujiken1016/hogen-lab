@@ -122,10 +122,13 @@ export default function Page() {
         近畿の「〜はる」のように、敬意の重さを下げることで
         日常語として定着した例もあります。
         京都から言葉が広がっていった仕組みについては
-        <Link href="/blog/naze-hogen-umareru" className="text-primary hover:underline">
-          方言はなぜ生まれるのかの記事
-        </Link>
+        方言はなぜ生まれるのかの記事
         も参考になります。
+      </P>
+      <P>
+        <Link href="/blog/naze-hogen-umareru" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言はなぜ生まれるのかの記事
+        </Link>
       </P>
 
       <H2>実生活での注意点：3つ</H2>

@@ -37,7 +37,7 @@ export default function TranslatePage() {
         <p className="text-sub text-sm">
           全{TRANSLATE_DIALECTS.length}方言に対応。<b>「⇄ 逆向き」で方言を標準語に変換</b>することもできます
         </p>
-        <p className="text-xs text-sub leading-relaxed">
+        <p className="text-sm text-sub leading-relaxed">
           方言ラボの辞典（35方言・3,362語）に収録されている語を置き換えるしくみです。
           語尾や活用は変えず、置き換えられなかった部分はそのまま残します。
         </p>
@@ -46,16 +46,16 @@ export default function TranslatePage() {
       <TranslateTool />
 
       <section className="space-y-3">
-        <h2 className="font-bold text-sm text-center">方言を選んで変換する（「○○弁 変換」の個別ページ）</h2>
+        <h2 className="font-bold text-2xl text-center">方言を選んで変換する（「○○弁 変換」の個別ページ）</h2>
         {groups.map((g) => (
           <div key={g.region} className="card p-4 space-y-2">
-            <h3 className="text-xs font-bold text-sub">{g.region}</h3>
+            <h3 className="text-xl font-bold text-sub">{g.region}</h3>
             <div className="flex flex-wrap gap-2">
               {g.dialects.map((d) => (
                 <Link
                   key={d}
                   href={`/translate/${translateSlug(d)}`}
-                  className="btn-secondary text-sm min-h-[44px] inline-flex items-center"
+                  className="btn-secondary text-sm min-h-[48px] inline-flex items-center"
                 >
                   {d} 変換
                 </Link>
@@ -65,7 +65,7 @@ export default function TranslatePage() {
         ))}
       </section>
 
-      <div className="flex flex-wrap justify-center gap-2 text-xs">
+      <div className="flex flex-wrap justify-center gap-2 text-sm">
         <Link href="/quiz" className="btn-ghost">🏅 方言クイズ検定</Link>
         <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
         <Link href="/dict" className="btn-ghost">📖 方言辞典</Link>

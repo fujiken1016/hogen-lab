@@ -90,7 +90,7 @@ export default function DictPage() {
       )}
 
       <div className="card p-5 space-y-3">
-        <h2 className="font-bold">ことばを投稿する</h2>
+        <h2 className="text-2xl font-bold">ことばを投稿する</h2>
         <div className="flex gap-2">
           <select value={dialect} onChange={(e) => setDialect(e.target.value)} className="select-base">
             {options.map((d) => (
@@ -134,16 +134,16 @@ export default function DictPage() {
       </div>
 
       {shown.length === 0 ? (
-        <p className="text-center text-sub/70 py-8">まだ投稿がありません。最初のことばを投稿しよう！</p>
+        <p className="text-center text-sub py-8">まだ投稿がありません。最初のことばを投稿しよう！</p>
       ) : (
         <div className="grid gap-2">
           {shown.map((e) => (
             <div key={e.id} className="card p-4">
               <div className="flex items-baseline gap-3 flex-wrap">
-                <span className="chip bg-primary/10 text-primary shrink-0">{e.dialect}</span>
+                <span className="chip bg-primary/10 text-primary-text shrink-0">{e.dialect}</span>
                 <span className="font-bold text-lg">{e.word}</span>
                 <span className="text-sub">{e.meaning}</span>
-                <button onClick={() => remove(e.id)} className="ml-auto text-xs text-sub/60 hover:text-red-500 shrink-0">
+                <button onClick={() => remove(e.id)} className="ml-auto text-sm text-sub hover:text-red-500 shrink-0">
                   削除
                 </button>
               </div>

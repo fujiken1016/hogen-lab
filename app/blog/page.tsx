@@ -39,10 +39,10 @@ export default function BlogIndex() {
             <span className="min-w-0">
               <span className="flex items-center gap-2 mb-1.5">
                 <span className="chip bg-indigo/10 text-indigo">{a.category}</span>
-                <span className="text-[11px] text-sub">約{a.readMin}分</span>
+                <span className="text-sm text-sub">約{a.readMin}分</span>
               </span>
-              <span className="block font-bold text-[15px] leading-snug">{a.title}</span>
-              <span className="block text-[13px] text-sub leading-[1.85] mt-1.5">{a.lead}</span>
+              <span className="block font-bold text-base leading-snug">{a.title}</span>
+              <span className="block text-sm text-sub leading-[1.85] mt-1.5">{a.lead}</span>
             </span>
           </Link>
         ))}
@@ -56,7 +56,7 @@ export default function BlogIndex() {
 
       <div className="mt-9 rounded-2xl seigaiha border border-indigo/25 p-5 text-center">
         <p className="font-display text-lg font-bold mb-2">読んだあとは、診断で答え合わせ</p>
-        <p className="text-[13px] text-sub leading-[1.9] mb-4">
+        <p className="text-sm text-sub leading-[1.9] mb-4">
           14問・約2分。全国のご当地キャラから、あなたの言葉に近い相棒が見つかります。
         </p>
         <Link href="/shindan" className="btn-primary">

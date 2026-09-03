@@ -147,7 +147,7 @@ export default function Page() {
         違いがいちばん実感できるのは、同じ内容を並べたときです。横スクロールで見比べてみてください。
       </P>
       <div className="my-5 -mx-4 px-4 overflow-x-auto">
-        <table className="min-w-[560px] w-full text-[13px] border-collapse">
+        <table className="min-w-[560px] w-full text-sm border-collapse">
           <thead>
             <tr className="bg-indigo/10 text-indigo">
               <th className="text-left font-bold px-3 py-2.5 rounded-l-lg">標準語</th>

@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="max-w-xl mx-auto text-center space-y-5 py-16">
-      <p className="font-display font-black text-7xl text-primary/30">404</p>
-      <h1 className="text-xl font-bold">このページ、どっか行ってもうたわ</h1>
+      <p className="font-display font-bold text-7xl text-primary/30">404</p>
+      <h1 className="text-3xl font-bold">このページ、どっか行ってもうたわ</h1>
       <p className="text-sub text-sm leading-relaxed">
         URLが変わったか、もともと存在しないページです。
         <br />

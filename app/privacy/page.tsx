@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <article className="max-w-2xl mx-auto space-y-6 text-sm leading-relaxed">
-      <h1 className="text-2xl font-bold font-display">プライバシーポリシー</h1>
+      <h1 className="text-3xl font-bold font-display">プライバシーポリシー</h1>
       <p>
         方言ラボ（以下「当サイト」）は、ユーザーの個人情報の保護を重要と考え、以下の方針に基づき運営します。
       </p>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold">1. 収集する情報</h2>
+        <h2 className="text-2xl font-bold">1. 収集する情報</h2>
         <p>
           当サイトの診断・相性・図鑑などの機能は、回答内容や結果をお使いの端末内（ブラウザのローカルストレージ）にのみ保存します。
           これらのデータが当サイトのサーバーに送信・保存されることはありません。
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold">2. アクセス解析ツールについて</h2>
+        <h2 className="text-2xl font-bold">2. アクセス解析ツールについて</h2>
         <p>
           当サイトは、サービス向上のためアクセス解析ツール（Google Analytics等）を利用する場合があります。
           これらのツールはトラフィックデータの収集のためにCookieを使用します。
@@ -38,19 +38,19 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold">3. 広告について</h2>
+        <h2 className="text-2xl font-bold">3. 広告について</h2>
         <p>
           当サイトは、第三者配信の広告サービス（Google AdSense等）を利用する場合があります。
           広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookieを使用することがあります。
-          パーソナライズ広告は、
-          <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline">
-            広告設定
+          パーソナライズ広告は、Googleの「広告設定」で無効にできます。詳しくはGoogleのポリシーと規約をご覧ください。
+        </p>
+        <p className="flex flex-wrap gap-x-4">
+          <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[48px] items-center text-primary-text underline">
+            → 広告設定
           </a>
-          で無効にできます。詳しくは
-          <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer" className="text-primary underline">
-            Googleのポリシーと規約
+          <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[48px] items-center text-primary-text underline">
+            → Googleのポリシーと規約
           </a>
-          をご覧ください。
         </p>
         <p>
           Amazonのアソシエイトとして、方言ラボは適格販売により収入を得ています。
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold">4. 免責事項</h2>
+        <h2 className="text-2xl font-bold">4. 免責事項</h2>
         <p>
           当サイトの診断・相性・占いコンテンツはエンターテインメントを目的としたものであり、結果の正確性・有用性を保証するものではありません。
           方言のデータは方言辞典サイト・自治体公開資料・Wikipedia/Wiktionary（CC BY-SA）等を参照して独自に編集したものですが、
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold">5. 著作権</h2>
+        <h2 className="text-2xl font-bold">5. 著作権</h2>
         <p>
           当サイトに掲載されているキャラクター・文章・画像等の著作権は運営者に帰属します。
           引用の範囲を超える無断転載はご遠慮ください。
@@ -83,13 +83,13 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-lg font-bold">6. ポリシーの変更</h2>
+        <h2 className="text-2xl font-bold">6. ポリシーの変更</h2>
         <p>本ポリシーの内容は、法令の変更やサービス内容の変更に応じて、予告なく改定されることがあります。</p>
       </section>
 
-      <p className="text-xs text-sub">制定日: 2026年8月2日</p>
+      <p className="text-sm text-sub">制定日: 2026年8月2日</p>
       <p>
-        <Link href="/" className="text-primary font-bold hover:underline">← トップにもどる</Link>
+        <Link href="/" className="inline-flex min-h-[48px] items-center text-primary-text font-bold hover:underline">← トップにもどる</Link>
       </p>
       <PageDates route="/privacy" type="WebPage" name="プライバシーポリシー | 方言ラボ" />
     </article>

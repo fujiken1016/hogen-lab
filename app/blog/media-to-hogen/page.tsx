@@ -132,10 +132,13 @@ export default function Page() {
         「めっちゃ」を使う人が関西出身とは限らないように、
         全国区になった瞬間、その語は方言としての機能を手放すことになります。
         言葉が新しく生まれ、広がっていく仕組みについては
-        <Link href="/blog/jan-shin-hogen" className="text-primary hover:underline">
-          新方言の記事
-        </Link>
+        新方言の記事
         でくわしく扱っています。
+      </P>
+      <P>
+        <Link href="/blog/jan-shin-hogen" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 新方言の記事
+        </Link>
       </P>
 
       <H2>それでも、方言コスプレは悪いことではない</H2>

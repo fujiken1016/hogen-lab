@@ -69,11 +69,11 @@ function KurabePage() {
             </button>
           ))}
         </div>
-        <p className="text-[11px] text-sub leading-relaxed">
+        <p className="text-sm text-sub leading-relaxed">
           収録している言い方は方言ラボの辞書データによるものです。方言は地域・世代によって差があり、
           ここに載っている形が唯一の言い方というわけではありません。
         </p>
-        <div className="flex flex-wrap justify-center gap-2 text-xs">
+        <div className="flex flex-wrap justify-center gap-2 text-sm">
           <Link href="/translate" className="btn-ghost">🗣️ 自由な文を方言に翻訳</Link>
           <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
         </div>
@@ -102,7 +102,7 @@ function KurabePage() {
     return (
       <div className="max-w-2xl mx-auto space-y-4">
         <div className="card p-7 text-center space-y-4 anim-fade-up">
-          <p className="text-xs text-sub tracking-widest">あなたが選んだ言い方</p>
+          <p className="text-sm text-sub tracking-widest">あなたが選んだ言い方</p>
           <div className="font-display font-bold text-3xl sm:text-4xl break-words">「{pick.text}」</div>
           {t && (
             <div className="flex justify-center">
@@ -110,17 +110,17 @@ function KurabePage() {
             </div>
           )}
           <p className="text-sm">
-            これは <strong className="text-primary">{pick.dialect}</strong>
+            これは <strong className="text-primary-text">{pick.dialect}</strong>
             {REGION_OF[pick.dialect] && <span className="text-sub">（{REGION_OF[pick.dialect]}）</span>} の言い方として
             収録されています。
           </p>
-          <p className="text-xs text-sub">標準語なら「{standard}」</p>
+          <p className="text-sm text-sub">標準語なら「{standard}」</p>
           {same.length > 1 && (
-            <div className="text-xs bg-paper border border-line rounded-xl p-3">
+            <div className="text-sm bg-paper border border-line rounded-xl p-3">
               <p className="font-bold mb-1.5">同じ言い方を収録している地域（{same.length}）</p>
               <div className="flex flex-wrap gap-1.5 justify-center">
                 {same.map((d) => (
-                  <span key={d} className="chip bg-primary/10 text-primary !text-[11px]">
+                  <span key={d} className="chip bg-primary/10 text-primary-text !text-sm">
                     {d}
                   </span>
                 ))}
@@ -142,7 +142,7 @@ function KurabePage() {
             別のひとことをくらべる
           </button>
         </div>
-        <div className="flex flex-wrap justify-center gap-2 text-xs">
+        <div className="flex flex-wrap justify-center gap-2 text-sm">
           <Link href="/shindan" className="btn-ghost">🔮 方言タイプ診断</Link>
           <Link href="/kawaii" className="btn-ghost">💗 かわいい方言トーナメント</Link>
           <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
@@ -155,17 +155,17 @@ function KurabePage() {
   return (
     <div className="max-w-3xl mx-auto space-y-5">
       <div className="text-center space-y-2">
-        <p className="text-xs text-sub tracking-widest">全国方言くらべ</p>
+        <p className="text-sm text-sub tracking-widest">全国方言くらべ</p>
         <h1 className="font-display font-bold text-2xl sm:text-3xl">「{phraseKey}」は、どう言う？</h1>
-        <p className="text-sub text-xs">
+        <p className="text-sub text-sm">
           標準語では「{standard}」。自分が使う言い方をタップすると、その言い方の地域が分かります。
         </p>
       </div>
 
       {REGIONS.map((r) => (
         <section key={r.name} className="space-y-2">
-          <h2 className="text-sm font-bold flex items-center gap-2">
-            <span className="hanko-sq !w-6 !h-6 !text-[10px]">地</span>
+          <h2 className="text-2xl font-bold flex items-center gap-2">
+            <span className="hanko-sq !w-6 !h-6 !text-sm">地</span>
             {r.name}
           </h2>
           <div className="grid sm:grid-cols-2 gap-2">
@@ -178,7 +178,7 @@ function KurabePage() {
                   onClick={() => selectDialect(d, text)}
                   className="card !rounded-xl p-3.5 min-h-[64px] text-left flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all"
                 >
-                  <span className="chip bg-indigo/10 text-indigo !text-[10px] shrink-0">{d}</span>
+                  <span className="chip bg-indigo/10 text-indigo !text-sm shrink-0">{d}</span>
                   <span className="font-bold text-sm break-words min-w-0">{text}</span>
                 </button>
               );
@@ -188,7 +188,7 @@ function KurabePage() {
       ))}
 
       <div className="card p-4 text-center space-y-2">
-        <p className="text-xs text-sub">標準語の言い方も選べます</p>
+        <p className="text-sm text-sub">標準語の言い方も選べます</p>
         <button
           onClick={() => selectDialect(STANDARD, standard)}
           className="btn-secondary min-h-[48px]"
@@ -197,7 +197,7 @@ function KurabePage() {
         </button>
       </div>
 
-      <p className="text-[11px] text-sub leading-relaxed">
+      <p className="text-sm text-sub leading-relaxed">
         ※ 掲載している言い方は方言辞典サイト・自治体公開資料等を参照して独自に編集したものです。
         方言は地域・世代で差があり、同じ県内でも言い方が分かれることがあります。
       </p>

@@ -41,7 +41,7 @@ function TodayPage() {
         <div className="text-4xl font-bold font-display">{today.word}</div>
         <div className="text-lg text-sub">{today.meaning}</div>
         <div className="bg-paper border border-line rounded-xl p-4 text-left">
-          <span className="text-xs text-sub block mb-1">例文</span>
+          <span className="text-sm text-sub block mb-1">例文</span>
           {today.example}
         </div>
         <div className="flex justify-center">
