@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Bush, Cloud, Moon, Stars, Sun, Tree, WaveEdge } from "@/components/Scenery";
+import DialectIndex from "@/components/DialectIndex";
 import SecretAvatar from "@/components/SecretAvatar";
 import { SECRETS, unlockedSecrets } from "@/lib/secret";
 import TypeAvatar from "@/components/TypeAvatar";
@@ -410,6 +411,11 @@ export default function HomeClient() {
           ))}
         </div>
       </section>
+
+      {/* 全国35方言の索引。トップは唯一「確実にクロールされている面」なので、
+          ここから /translate/<地域>・/quiz/<地域> 全70面へ深さ1のリンクを通す（2026-09-03）。
+          背景＝SC実測で59面が「検出-インデックス未登録・一度もクロールされていない」 */}
+      <DialectIndex />
 
       {/* クロージングCTA（紺の全幅バンド・波打ち際の夜空） */}
       <div className="full-bleed bg-indigo-deep text-white -mb-6 relative overflow-hidden">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import type { ReactNode } from "react";
 import { ARTICLES, otherArticles, type Article } from "@/lib/articles";
+import { dialectLinksForArticle } from "@/lib/article_dialects";
 import { SITE, jpDate, pageDates } from "@/lib/page_dates";
 
 /** 楽天アフィリエイトID（2026-08-12 取得・全記事共通） */
@@ -251,6 +252,9 @@ export function ShindanCta({
 /** 記事の外枠（ヘッダー・本文・関連記事） */
 export function ArticleShell({ article, children }: { article: Article; children: ReactNode }) {
   const related = otherArticles(article.slug, 3);
+  // この記事が実際に扱っている方言のツール面（lib/article_dialects.ts＝tool_reads の逆引き）。
+  // 2026-09-03: 記事13本→/translate/<地域>・/quiz/<地域> への内部リンクが実測0本だったので追加。
+  const dialectLinks = dialectLinksForArticle(article.slug);
   const route = `/blog/${article.slug}`;
   // 公開日は lib/articles.ts、最終更新日は git 履歴（lib/page_dates.json）。
   // 表示している値と JSON-LD の値は同じものを使う（食い違わせない）。
@@ -320,6 +324,50 @@ export function ArticleShell({ article, children }: { article: Article; children
       <AdSlot name="ART_END" />
 
       <footer className="mt-12 pt-7 border-t border-line">
+        {/* この記事に出てくる方言の「変換」「検定」へ直接送る。
+            対応が無い記事では何も出さない（存在しない関係を作らない） */}
+        {dialectLinks.length > 0 && (
+          <>
+            <div className="section-head mb-4">
+              <span className="hanko-sq">方</span>
+              <span className="ttl">
+                この記事に出てくる方言を試す
+                <span className="sub">TRY THESE DIALECTS</span>
+              </span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-9">
+              {dialectLinks.map((d) => (
+                <div
+                  key={d.dialect}
+                  className="!rounded-xl border border-line bg-paper p-2 shadow-[0_2px_10px_rgba(34,48,63,0.06)]"
+                >
+                  <div className="text-[12px] font-bold text-center leading-tight mb-1.5 truncate">
+                    {d.dialect}
+                  </div>
+                  <div className="flex gap-1.5">
+                    {d.translate && (
+                      <Link
+                        href={`/translate/${d.translate}`}
+                        className="flex-1 min-h-[40px] inline-flex items-center justify-center !rounded-lg border border-primary/30 bg-primary/5 text-primary text-[11px] font-bold"
+                      >
+                        変換
+                      </Link>
+                    )}
+                    {d.quiz && (
+                      <Link
+                        href={`/quiz/${d.quiz}`}
+                        className="flex-1 min-h-[40px] inline-flex items-center justify-center !rounded-lg border border-indigo/30 bg-indigo/5 text-indigo text-[11px] font-bold"
+                      >
+                        検定
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         {/* 記事を読み終えた人が、そのまま1分で遊べるツールへ行けるようにする */}
         <div className="section-head mb-4">
           <span className="hanko-sq">遊</span>

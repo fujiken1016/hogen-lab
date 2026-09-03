@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ARTICLES } from "@/lib/articles";
+import DialectIndex from "@/components/DialectIndex";
 import { PageDates } from "@/components/PageDates";
 
 export const metadata: Metadata = {
@@ -45,6 +46,12 @@ export default function BlogIndex() {
             </span>
           </Link>
         ))}
+      </div>
+
+      {/* 全国35方言の索引。/blog はクロール済みの面なので、ここから未クロールの
+          /translate/<地域>・/quiz/<地域> へ直リンクを通す（2026-09-03） */}
+      <div className="mt-10">
+        <DialectIndex heading="読んだ方言を、実際に試す" sub="ALL DIALECTS" mark="試" />
       </div>
 
       <div className="mt-9 rounded-2xl seigaiha border border-indigo/25 p-5 text-center">
