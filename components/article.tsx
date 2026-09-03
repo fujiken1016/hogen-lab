@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import type { ReactNode } from "react";
 import { ARTICLES, otherArticles, type Article } from "@/lib/articles";
+import { SITE, jpDate, pageDates } from "@/lib/page_dates";
 
 /** 楽天アフィリエイトID（2026-08-12 取得・全記事共通） */
 const RAKUTEN_ID = "5684fd12.0952a564.5684fd13.520271a6";
@@ -250,10 +251,34 @@ export function ShindanCta({
 /** 記事の外枠（ヘッダー・本文・関連記事） */
 export function ArticleShell({ article, children }: { article: Article; children: ReactNode }) {
   const related = otherArticles(article.slug, 3);
-  const jpDate = article.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, "$1年$2月$3日");
+  const route = `/blog/${article.slug}`;
+  // 公開日は lib/articles.ts、最終更新日は git 履歴（lib/page_dates.json）。
+  // 表示している値と JSON-LD の値は同じものを使う（食い違わせない）。
+  const d = pageDates(route);
+  const published = d?.published ?? article.date;
+  const modified = d?.modified ?? article.date;
+
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.description,
+    url: SITE + route,
+    inLanguage: "ja",
+    datePublished: published,
+    dateModified: modified,
+    author: { "@type": "Person", name: "フジケン", url: SITE + "/about" },
+    publisher: { "@type": "Organization", name: "方言ラボ", url: SITE + "/" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": SITE + route },
+    isAccessibleForFree: true,
+  };
 
   return (
     <article className="max-w-2xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, "\\u003c") }}
+      />
       <nav className="text-[11px] text-sub mb-4 flex items-center gap-1.5 flex-wrap">
         <Link href="/" className="hover:text-primary">
           方言ラボ
@@ -277,7 +302,14 @@ export function ArticleShell({ article, children }: { article: Article; children
         <p className="text-[14px] text-sub leading-[1.9] mt-3.5">{article.lead}</p>
         <div className="flex items-center gap-3 text-[11px] text-sub mt-4 pt-4 border-t border-line">
           <span className="chip bg-indigo/10 text-indigo">{article.category}</span>
-          <span>{jpDate}</span>
+          <span>
+            公開 <time dateTime={published}>{jpDate(published)}</time>
+          </span>
+          {modified !== published && (
+            <span>
+              更新 <time dateTime={modified}>{jpDate(modified)}</time>
+            </span>
+          )}
           <span>読了 約{article.readMin}分</span>
         </div>
       </header>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ARTICLES } from "@/lib/articles";
+import { PageDates } from "@/components/PageDates";
 
 export const metadata: Metadata = {
   title: "読みもの一覧 | 方言ラボ",
@@ -55,6 +56,7 @@ export default function BlogIndex() {
           無料で方言診断をはじめる
         </Link>
       </div>
+      <PageDates route="/blog" type="CollectionPage" name="方言の読みもの一覧 | 方言ラボ" />
     </div>
   );
 }

@@ -17,6 +17,7 @@ import {
   translateSlug,
 } from "@/lib/translate_meta";
 import { typeByDialect } from "@/lib/types";
+import { PageDates } from "@/components/PageDates";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -273,6 +274,8 @@ export default async function TranslateDialectPage({ params }: Props) {
           📖 方言辞典
         </Link>
       </div>
+
+      <PageDates route={`/translate/${slug}`} type="WebApplication" name={`${dialect} 変換｜方言ラボ`} />
     </div>
   );
 }

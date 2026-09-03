@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TranslateTool from "@/components/TranslateTool";
 import { TRANSLATE_DIALECTS, translateByRegion, translateSlug } from "@/lib/translate_meta";
+import { PageDates } from "@/components/PageDates";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -69,6 +70,7 @@ export default function TranslatePage() {
         <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
         <Link href="/dict" className="btn-ghost">📖 方言辞典</Link>
       </div>
+      <PageDates route="/translate" type="CollectionPage" name="方言変換（全国）| 方言ラボ" />
     </div>
   );
 }

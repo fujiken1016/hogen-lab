@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
+import { PageDates } from "@/components/PageDates";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -21,5 +22,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <HomeClient />;
+  return (
+    <>
+      <HomeClient />
+      <PageDates route="/" type="WebPage" name="方言ラボ" />
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageDates } from "@/components/PageDates";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー | 方言ラボ",
@@ -90,6 +91,7 @@ export default function PrivacyPage() {
       <p>
         <Link href="/" className="text-primary font-bold hover:underline">← トップにもどる</Link>
       </p>
+      <PageDates route="/privacy" type="WebPage" name="プライバシーポリシー | 方言ラボ" />
     </article>
   );
 }

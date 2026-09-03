@@ -36,6 +36,7 @@ import TypeAvatar, { avatarColors } from "@/components/TypeAvatar";
 import { DialectType, MASCOT_NAMES, TYPES, affinity, typeByDialect, typeBySlug } from "@/lib/types";
 import { track } from "@/lib/ga";
 import { ToolIntro } from "@/components/ToolIntro";
+import { PageDates } from "@/components/PageDates";
 
 type Choice = { dialect: string; phrase: string };
 type PChoice = { label: string; dialects: string[]; cluster: string };
@@ -1223,6 +1224,7 @@ export default function ShindanPage() {
           { href: "/quiz", label: "🏅 方言クイズ検定" },
         ]}
       />
+      <PageDates route="/shindan" type="WebApplication" name="方言タイプ診断 | 方言ラボ" />
     </div>
   );
 }
