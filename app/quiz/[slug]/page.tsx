@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PageDates } from "@/components/PageDates";
 import QuizRunner from "@/components/QuizRunner";
 import ToolReads from "@/components/ToolReads";
 import TypeAvatar from "@/components/TypeAvatar";
@@ -343,6 +344,8 @@ export default async function QuizDialectPage({ params }: Props) {
         <Link href="/shindan" className="btn-ghost">🎭 方言タイプ診断</Link>
         <Link href="/dict" className="btn-ghost">📖 方言辞典</Link>
       </div>
+
+      <PageDates route={`/quiz/${slug}`} type="WebApplication" name={`${dialect}検定｜方言ラボ`} />
     </div>
   );
 }
