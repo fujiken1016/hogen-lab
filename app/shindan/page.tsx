@@ -151,7 +151,7 @@ const LUCKY_COLORS = [
 // 曜日表示（鑑定書の日付・運気の波に使う）
 const WDAYS = ["日", "月", "火", "水", "木", "金", "土"];
 
-export default function ShindanPage() {
+function ShindanPage() {
   const [phase, setPhase] = useState<"intro" | "region" | "quiz" | "reveal" | "result">("intro");
   const [grown, setGrown] = useState(false); // 結果画面のバーを0%から伸ばす演出用
   const [current, setCurrent] = useState<Question | null>(null); // 適応型: いま表示中の1問
@@ -1224,7 +1224,19 @@ export default function ShindanPage() {
           { href: "/quiz", label: "🏅 方言クイズ検定" },
         ]}
       />
-      <PageDates route="/shindan" type="WebApplication" name="方言タイプ診断 | 方言ラボ" />
     </div>
+  );
+}
+
+/**
+ * 日付証跡（公開日・最終更新日）は、ツールの画面状態（読み込み中・出題中など）に関係なく
+ * 必ず出す必要があるので、内部の分岐の外側で描画する。
+ */
+export default function Page() {
+  return (
+    <>
+      <ShindanPage />
+      <PageDates route="/shindan" type="WebApplication" name="方言タイプ診断 | 方言ラボ" />
+    </>
   );
 }
