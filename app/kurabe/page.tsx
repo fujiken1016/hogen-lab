@@ -10,6 +10,7 @@ import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { REGION_OF } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
 import { ToolIntro } from "@/components/ToolIntro";
+import { PageDates } from "@/components/PageDates";
 
 const EMOJI: Record<string, string> = {
   ありがとう: "🙏",
@@ -219,6 +220,7 @@ export default function KurabePage() {
           { href: "/quiz", label: "🏅 方言クイズ検定" },
         ]}
       />
+      <PageDates route="/kurabe" type="WebApplication" name="全国方言くらべ | 方言ラボ" />
     </div>
   );
 }

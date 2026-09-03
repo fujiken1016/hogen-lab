@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { DIALECTS, FREE_INPUT_KEY, STANDARD, speak, unlockBadge, safeParseArray, lsSet } from "@/lib/data";
+import { PageDates } from "@/components/PageDates";
 
 type Seed = { q: string; text: string; matched: string | null };
 
@@ -158,6 +159,7 @@ export default function DictPage() {
           ))}
         </div>
       )}
+      <PageDates route="/dict" type="WebApplication" name="方言辞典 | 方言ラボ" />
     </div>
   );
 }

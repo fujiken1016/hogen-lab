@@ -1,4 +1,24 @@
 import type { NextConfig } from "next";
+import { execFileSync } from "node:child_process";
+import path from "node:path";
+
+// ページの公開日・最終更新日（lib/page_dates.json）を git 履歴から再生成する。
+// ⚠️ ここに置いてあるのは、本番デプロイが `npx opennextjs-cloudflare build` 経由で
+//    **npm の prebuild を通らない**ため。ビルドのたびに必ず走る場所に置かないと、
+//    日付が古いまま本番へ出て「更新していないサイト」に見えてしまう。
+// dev では走らせない（起動が遅くなるだけなので）。手動実行は `npm run dates`。
+if (process.env.NODE_ENV !== "development" && process.env.SKIP_PAGE_DATES !== "1") {
+  try {
+    const out = execFileSync(
+      process.execPath,
+      [path.join(process.cwd(), "scripts/gen_page_dates.mjs")],
+      { encoding: "utf8" }
+    );
+    process.stdout.write(out);
+  } catch (e) {
+    console.warn("[page_dates] 生成に失敗（既存の lib/page_dates.json を使う）:", e);
+  }
+}
 
 const nextConfig: NextConfig = {
   async redirects() {

@@ -10,6 +10,7 @@ import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { KawaiiEntry, buildKawaiiBracket, kawaiiCandidates } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
 import { ToolIntro } from "@/components/ToolIntro";
+import { PageDates } from "@/components/PageDates";
 
 type Phase = "intro" | "play" | "result";
 
@@ -298,6 +299,7 @@ export default function KawaiiPage() {
           { href: "/translate", label: "🗣️ 方言変換" },
         ]}
       />
+      <PageDates route="/kawaii" type="WebApplication" name="かわいい方言対決 | 方言ラボ" />
     </div>
   );
 }

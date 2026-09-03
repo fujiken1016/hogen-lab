@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageDates } from "@/components/PageDates";
 
 export const metadata: Metadata = {
   title: "免責事項 | 方言ラボ",
@@ -44,6 +45,7 @@ export default function DisclaimerPage() {
       <p>
         <Link href="/" className="text-primary font-bold hover:underline">← トップにもどる</Link>
       </p>
+      <PageDates route="/disclaimer" type="WebPage" name="免責事項 | 方言ラボ" />
     </article>
   );
 }

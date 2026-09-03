@@ -1,0 +1,422 @@
+{
+ "/": {
+  "published": "2026-07-04",
+  "modified": "2026-08-28"
+ },
+ "/about": {
+  "published": "2026-08-02",
+  "modified": "2026-08-15"
+ },
+ "/aishou": {
+  "published": "2026-08-02",
+  "modified": "2026-08-30"
+ },
+ "/blog": {
+  "published": "2026-08-12",
+  "modified": "2026-08-15"
+ },
+ "/blog/ainugo-chimei": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/arigatou-zenkoku": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/higashi-nishi-kyoukai": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hitei-kei-chiiki": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hogen-accent-chizu": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hogen-chizu-chousa": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hogen-fuda-kiki": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hogen-keigo-chiiki": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hogen-oto-no-chigai": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/hyoujungo-dato-omotteta": {
+  "published": "2026-08-12",
+  "modified": "2026-08-31"
+ },
+ "/blog/jan-shin-hogen": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/kawaii-hogen-ranking": {
+  "published": "2026-08-12",
+  "modified": "2026-08-31"
+ },
+ "/blog/kyushu-hogen-gradation": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/media-to-hogen": {
+  "published": "2026-08-13",
+  "modified": "2026-08-31"
+ },
+ "/blog/naze-hogen-umareru": {
+  "published": "2026-08-12",
+  "modified": "2026-08-31"
+ },
+ "/blog/ninshou-kotoba-chiiki": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/okinawa-ryukyu-kotoba": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/blog/shindan-guide": {
+  "published": "2026-08-12",
+  "modified": "2026-08-31"
+ },
+ "/blog/tohoku-kansai-hakata": {
+  "published": "2026-08-12",
+  "modified": "2026-08-31"
+ },
+ "/blog/yobina-chiiki-sa": {
+  "published": "2026-08-13",
+  "modified": "2026-08-15"
+ },
+ "/contact": {
+  "published": "2026-08-02",
+  "modified": "2026-08-15"
+ },
+ "/dict": {
+  "published": "2026-08-02",
+  "modified": "2026-08-15"
+ },
+ "/disclaimer": {
+  "published": "2026-08-02",
+  "modified": "2026-08-15"
+ },
+ "/doko": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/kawaii": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/kurabe": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/privacy": {
+  "published": "2026-08-02",
+  "modified": "2026-08-15"
+ },
+ "/quiz": {
+  "published": "2026-08-02",
+  "modified": "2026-08-31"
+ },
+ "/quiz/akita": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/quiz/awa": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/quiz/fukushima": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/hakata": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/hida": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/hiroshima": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/hokkaido": {
+  "published": "2026-08-14",
+  "modified": "2026-08-28"
+ },
+ "/quiz/ibaraki": {
+  "published": "2026-08-14",
+  "modified": "2026-08-27"
+ },
+ "/quiz/ise": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/iwate": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/iyo": {
+  "published": "2026-08-14",
+  "modified": "2026-09-02"
+ },
+ "/quiz/izumo": {
+  "published": "2026-08-14",
+  "modified": "2026-09-02"
+ },
+ "/quiz/kagoshima": {
+  "published": "2026-08-14",
+  "modified": "2026-08-14"
+ },
+ "/quiz/kanazawa": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/quiz/kansai": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/kobe": {
+  "published": "2026-08-14",
+  "modified": "2026-08-26"
+ },
+ "/quiz/kumamoto": {
+  "published": "2026-08-14",
+  "modified": "2026-09-02"
+ },
+ "/quiz/kyoto": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/nagasaki": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/quiz/nagoya": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/niigata": {
+  "published": "2026-08-14",
+  "modified": "2026-08-27"
+ },
+ "/quiz/oita": {
+  "published": "2026-08-14",
+  "modified": "2026-08-29"
+ },
+ "/quiz/okayama": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/okinawa": {
+  "published": "2026-08-14",
+  "modified": "2026-08-29"
+ },
+ "/quiz/sanuki": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/quiz/sendai": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/shinshu": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/quiz/shizuoka": {
+  "published": "2026-08-14",
+  "modified": "2026-08-28"
+ },
+ "/quiz/tosa": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/quiz/tottori": {
+  "published": "2026-08-14",
+  "modified": "2026-08-25"
+ },
+ "/quiz/toyama": {
+  "published": "2026-08-14",
+  "modified": "2026-08-27"
+ },
+ "/quiz/tsugaru": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/quiz/wakayama": {
+  "published": "2026-08-14",
+  "modified": "2026-08-14"
+ },
+ "/quiz/yamagata": {
+  "published": "2026-08-14",
+  "modified": "2026-08-28"
+ },
+ "/quiz/yamaguchi": {
+  "published": "2026-08-14",
+  "modified": "2026-08-21"
+ },
+ "/shindan": {
+  "published": "2026-08-02",
+  "modified": "2026-08-30"
+ },
+ "/today": {
+  "published": "2026-08-02",
+  "modified": "2026-08-30"
+ },
+ "/translate": {
+  "published": "2026-08-02",
+  "modified": "2026-09-02"
+ },
+ "/translate/akita": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/translate/awa": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/translate/fukushima": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/hakata": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/hida": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/hiroshima": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/hokkaido": {
+  "published": "2026-08-14",
+  "modified": "2026-08-28"
+ },
+ "/translate/ibaraki": {
+  "published": "2026-08-14",
+  "modified": "2026-08-27"
+ },
+ "/translate/ise": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/iwate": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/iyo": {
+  "published": "2026-08-14",
+  "modified": "2026-09-02"
+ },
+ "/translate/izumo": {
+  "published": "2026-08-14",
+  "modified": "2026-09-02"
+ },
+ "/translate/kagoshima": {
+  "published": "2026-08-14",
+  "modified": "2026-08-14"
+ },
+ "/translate/kanazawa": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/translate/kansai": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/kobe": {
+  "published": "2026-08-14",
+  "modified": "2026-08-26"
+ },
+ "/translate/kumamoto": {
+  "published": "2026-08-14",
+  "modified": "2026-09-02"
+ },
+ "/translate/kyoto": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/nagasaki": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/translate/nagoya": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/niigata": {
+  "published": "2026-08-14",
+  "modified": "2026-08-27"
+ },
+ "/translate/oita": {
+  "published": "2026-08-14",
+  "modified": "2026-08-29"
+ },
+ "/translate/okayama": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/okinawa": {
+  "published": "2026-08-14",
+  "modified": "2026-08-29"
+ },
+ "/translate/sanuki": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/translate/sendai": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/shinshu": {
+  "published": "2026-08-14",
+  "modified": "2026-09-03"
+ },
+ "/translate/shizuoka": {
+  "published": "2026-08-14",
+  "modified": "2026-08-28"
+ },
+ "/translate/tosa": {
+  "published": "2026-08-14",
+  "modified": "2026-08-30"
+ },
+ "/translate/tottori": {
+  "published": "2026-08-14",
+  "modified": "2026-08-25"
+ },
+ "/translate/toyama": {
+  "published": "2026-08-14",
+  "modified": "2026-08-27"
+ },
+ "/translate/tsugaru": {
+  "published": "2026-08-14",
+  "modified": "2026-09-01"
+ },
+ "/translate/wakayama": {
+  "published": "2026-08-14",
+  "modified": "2026-08-14"
+ },
+ "/translate/yamagata": {
+  "published": "2026-08-14",
+  "modified": "2026-08-28"
+ },
+ "/translate/yamaguchi": {
+  "published": "2026-08-14",
+  "modified": "2026-08-21"
+ }
+}

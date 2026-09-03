@@ -6,6 +6,7 @@ import { TodayWord, allWords, speak, todayWord } from "@/lib/data";
 import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { REGION_OF } from "@/lib/tools";
 import { ToolIntro } from "@/components/ToolIntro";
+import { PageDates } from "@/components/PageDates";
 
 export default function TodayPage() {
   const [today, setToday] = useState<TodayWord | null>(null);
@@ -90,6 +91,7 @@ export default function TodayPage() {
           { href: "/shindan", label: "🔮 方言タイプ診断" },
         ]}
       />
+      <PageDates route="/today" type="WebApplication" name="今日の方言 | 方言ラボ" />
     </div>
   );
 }

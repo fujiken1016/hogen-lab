@@ -4,6 +4,7 @@ import TypeAvatar from "@/components/TypeAvatar";
 import { REGIONS } from "@/lib/data";
 import { AREA_OF, QUIZ_DIALECTS, quizSampleWords, quizSlug } from "@/lib/quiz_meta";
 import { typeByDialect } from "@/lib/types";
+import { PageDates } from "@/components/PageDates";
 
 const BASE = "https://hogen.mainichi-lab.com";
 // SC実測（28日）: 「方言検定」8表示・順位8.6 /「方言 検定」8表示・順位7.4 でクリック0。
@@ -73,6 +74,7 @@ export default function QuizIndexPage() {
         <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
         <Link href="/shindan" className="btn-ghost">🎭 方言タイプ診断</Link>
       </div>
+      <PageDates route="/quiz" type="CollectionPage" name="方言検定（全国）| 方言ラボ" />
     </div>
   );
 }

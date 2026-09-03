@@ -10,6 +10,7 @@ import { marks, shareBlock } from "@/lib/share_text";
 import { DokoQ, REGION_OF, buildDokoQuestions, dokoRank } from "@/lib/tools";
 import { typeByDialect } from "@/lib/types";
 import { ToolIntro } from "@/components/ToolIntro";
+import { PageDates } from "@/components/PageDates";
 
 const TOTAL = 8;
 
@@ -266,6 +267,7 @@ export default function DokoPage() {
           { href: "/kurabe", label: "🔤 全国方言くらべ" },
         ]}
       />
+      <PageDates route="/doko" type="WebApplication" name="この方言どこ？ | 方言ラボ" />
     </div>
   );
 }

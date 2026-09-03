@@ -8,6 +8,7 @@ import { decodeCode, loadMyResult } from "@/lib/compat";
 import { track } from "@/lib/ga";
 import { MASCOT_NAMES } from "@/lib/types";
 import { ToolIntro } from "@/components/ToolIntro";
+import { PageDates } from "@/components/PageDates";
 
 export default function AishouPage() {
   const [codeA, setCodeA] = useState("");
@@ -105,6 +106,7 @@ export default function AishouPage() {
           { href: "/doko", label: "🗾 この方言どこ？" },
         ]}
       />
+      <PageDates route="/aishou" type="WebApplication" name="方言相性診断 | 方言ラボ" />
     </div>
   );
 }

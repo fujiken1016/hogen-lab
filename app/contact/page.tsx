@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageDates } from "@/components/PageDates";
 
 export const metadata: Metadata = {
   title: "お問い合わせ | 方言ラボ",
@@ -47,6 +48,7 @@ export default function ContactPage() {
       <p>
         <Link href="/" className="text-primary font-bold hover:underline">← トップにもどる</Link>
       </p>
+      <PageDates route="/contact" type="ContactPage" name="お問い合わせ | 方言ラボ" />
     </article>
   );
 }
