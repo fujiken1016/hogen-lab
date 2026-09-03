@@ -64,23 +64,23 @@ export default function RootLayout({
         <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-6">{children}</main>
         <footer className="border-t border-line seigaiha">
           <div className="max-w-5xl mx-auto px-4 py-5 space-y-2 text-center">
-            <div className="flex items-center justify-center gap-2 text-xs text-sub">
-              <span className="hanko !w-6 !h-6 !text-xs">方</span>
+            <div className="flex items-center justify-center gap-2 text-sm text-sub">
+              <span className="hanko !w-6 !h-6 !text-sm">方</span>
               方言ラボ — あなたの言葉は、何弁？　ふるさとの言葉を遊んで学ぶ
             </div>
-            <p className="text-[10px] text-sub/70 leading-relaxed">
+            <p className="text-sm text-sub leading-relaxed">
               辞書データは方言辞典サイト・自治体公開資料・Wikipedia/Wiktionary（CC BY-SA）等を参照して独自に編集したものです。
               方言は地域・世代で差があります。誤りのご指摘は「みんなの辞書」からどうぞ。
             </p>
-            <nav className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] text-sub pt-1">
-              <a href="/about" className="hover:text-primary">運営者情報</a>
-              <a href="/privacy" className="hover:text-primary">プライバシーポリシー</a>
-              <a href="/disclaimer" className="hover:text-primary">免責事項</a>
-              <a href="/contact" className="hover:text-primary">お問い合わせ</a>
+            <nav className="flex flex-wrap items-center justify-center gap-x-4 text-sm text-sub pt-1">
+              <a href="/about" className="inline-flex min-h-[48px] items-center px-1 hover:text-primary">運営者情報</a>
+              <a href="/privacy" className="inline-flex min-h-[48px] items-center px-1 hover:text-primary">プライバシーポリシー</a>
+              <a href="/disclaimer" className="inline-flex min-h-[48px] items-center px-1 hover:text-primary">免責事項</a>
+              <a href="/contact" className="inline-flex min-h-[48px] items-center px-1 hover:text-primary">お問い合わせ</a>
             </nav>
-            <p className="text-[10px] text-sub/60">
+            <p className="text-sm text-sub">
               © 2026 方言ラボ ・ 運営：
-              <a href="https://mainichi-lab.com/" className="hover:text-primary underline underline-offset-2">
+              <a href="https://mainichi-lab.com/" className="inline-flex min-h-[48px] items-center hover:text-primary underline underline-offset-2">
                 フジケン（毎日ラボ）
               </a>
             </p>

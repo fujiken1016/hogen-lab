@@ -165,10 +165,13 @@ export default function Page() {
         なお、こうした人称の使い分けを極端に単純化したものが、
         フィクションの中の「わし＝博士」「おら＝田舎者」という記号です。
         その話は
-        <Link href="/blog/media-to-hogen" className="text-primary hover:underline">
-          役割語と方言コスプレの記事
-        </Link>
+        役割語と方言コスプレの記事
         で扱っています。
+      </P>
+      <P>
+        <Link href="/blog/media-to-hogen" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 役割語と方言コスプレの記事
+        </Link>
       </P>
 
       <ShindanCta

@@ -415,7 +415,7 @@ function ShindanPage() {
           <button onClick={start} className="btn-primary cta-glow text-lg px-10 py-4">
             診断をはじめる（約2分）
           </button>
-          <p className="text-xs text-sub">全14問・245通り以上の結果・登録不要・無料</p>
+          <p className="text-sm text-sub">全14問・245通り以上の結果・登録不要・無料</p>
         </div>
         <div className="flex justify-center gap-1 sm:gap-3 flex-wrap">
           {[1, 5, 9, 13, 20, 27].map((idx, i) => (
@@ -445,8 +445,8 @@ function ShindanPage() {
     return (
       <div className="max-w-2xl mx-auto space-y-5">
         <div className="text-center space-y-2">
-          <p className="text-primary font-bold tracking-widest text-xs">STEP 0</p>
-          <h1 className="text-2xl font-bold">育った地域・ゆかりのある地域は？</h1>
+          <p className="text-primary-text font-bold tracking-widest text-sm">STEP 0</p>
+          <h1 className="text-3xl font-bold">育った地域・ゆかりのある地域は？</h1>
           <p className="text-sub text-sm">
             あなたの地方の言い方を優先して出題します（結果を縛るものではありません）
             <br />
@@ -461,7 +461,7 @@ function ShindanPage() {
               className="card !rounded-xl p-4 text-left hover:border-primary hover:-translate-y-0.5 transition-all"
             >
               <div className="font-bold">{r.name}</div>
-              <div className="text-[11px] text-sub mt-0.5 truncate">
+              <div className="text-sm text-sub mt-0.5 truncate">
                 {r.dialects.slice(0, 3).join("・")}
                 {r.dialects.length > 3 ? " など" : ""}
               </div>
@@ -498,10 +498,10 @@ function ShindanPage() {
           ))}
         </div>
         <div className="space-y-2">
-          <div className="flex justify-between items-baseline text-xs text-sub">
+          <div className="flex justify-between items-baseline text-sm text-sub">
             <span>{q.kind === "phrase" ? "ふだんの言葉に一番近いものを選んでください" : "深く考えず、直感で選んでください"}</span>
             <span className="shrink-0 pl-2">
-              残りの質問 <b className="font-display text-xl text-primary">{TOTAL_Q - index}</b>
+              残りの質問 <b className="font-display text-xl text-primary-text">{TOTAL_Q - index}</b>
             </span>
           </div>
           <div className="h-2 bg-line rounded-full overflow-hidden">
@@ -511,22 +511,22 @@ function ShindanPage() {
             />
           </div>
           <div className="text-right">
-            <button onClick={start} className="text-[10px] text-sub hover:text-primary transition-colors">
+            <button onClick={start} className="inline-flex min-h-[48px] items-center text-sm text-sub hover:text-primary-text transition-colors">
               ↻ 最初からやり直す
             </button>
           </div>
         </div>
         <div className="card p-6 space-y-4">
-          <h2 className="text-lg font-bold">{q.label}</h2>
+          <h2 className="text-2xl font-bold">{q.label}</h2>
           <div className="grid gap-2">
             {q.kind === "phrase"
               ? q.choices.map((c, i) => (
                   <button
                     key={i}
                     onClick={() => choose(c)}
-                    className="border border-line rounded-xl px-4 py-3.5 text-left bg-white hover:border-primary hover:bg-primary/5 active:bg-primary/10 active:scale-[0.99] transition-all flex items-baseline gap-2.5"
+                    className="border border-line rounded-xl px-4 py-3.5 min-h-[60px] text-base text-left bg-white hover:border-primary hover:bg-primary/5 active:bg-primary/10 active:scale-[0.99] transition-all flex items-baseline gap-2.5"
                   >
-                    <span className="font-black text-sm shrink-0" style={{ color: letterColor(i) }}>
+                    <span className="font-bold text-sm shrink-0" style={{ color: letterColor(i) }}>
                       {LETTERS[i]}.
                     </span>
                     <span>{c.phrase}</span>
@@ -537,9 +537,9 @@ function ShindanPage() {
                     <button
                       key={i}
                       onClick={() => setPendingP(c)}
-                      className="border border-line rounded-xl px-4 py-3.5 text-left bg-white hover:border-primary hover:bg-primary/5 active:bg-primary/10 active:scale-[0.99] transition-all flex items-baseline gap-2.5"
+                      className="border border-line rounded-xl px-4 py-3.5 min-h-[60px] text-base text-left bg-white hover:border-primary hover:bg-primary/5 active:bg-primary/10 active:scale-[0.99] transition-all flex items-baseline gap-2.5"
                     >
-                      <span className="font-black text-sm shrink-0" style={{ color: letterColor(i) }}>
+                      <span className="font-bold text-sm shrink-0" style={{ color: letterColor(i) }}>
                         {LETTERS[i]}.
                       </span>
                       <span>{c.label}</span>
@@ -550,7 +550,7 @@ function ShindanPage() {
                       <div className="border border-primary bg-primary/5 rounded-xl px-4 py-3.5 text-sm font-bold">
                         {pendingP.label}
                       </div>
-                      <p className="text-xs text-sub text-center">どれくらい当てはまる？（ハートをタップ）</p>
+                      <p className="text-sm text-sub text-center">どれくらい当てはまる？（ハートをタップ）</p>
                       {/* ハートスケール: 小→大＆淡→濃で強さを表す（ラブ診断風） */}
                       <div className="flex items-end justify-center gap-2.5 pt-1">
                         {[1, 2, 3, 4, 5].map((n) => {
@@ -559,7 +559,7 @@ function ShindanPage() {
                             <button
                               key={n}
                               onClick={() => applyPersonality(pendingP, n)}
-                              className="flex flex-col items-center gap-1 transition-transform hover:-translate-y-1 active:scale-90"
+                              className="flex flex-1 min-h-[60px] flex-col items-center justify-end gap-1 transition-transform hover:-translate-y-1 active:scale-90"
                               aria-label={`強さ${n}`}
                             >
                               <svg width={s} height={s} viewBox="0 0 24 24">
@@ -572,16 +572,16 @@ function ShindanPage() {
                                   strokeLinejoin="round"
                                 />
                               </svg>
-                              <span className="text-[10px] text-sub font-bold">{n}</span>
+                              <span className="text-sm text-sub font-bold">{n}</span>
                             </button>
                           );
                         })}
                       </div>
-                      <div className="flex justify-between text-[10px] text-sub px-1">
+                      <div className="flex justify-between text-sm text-sub px-1">
                         <span>← ちょっとだけ</span>
                         <span>完全にそれ →</span>
                       </div>
-                      <button onClick={() => setPendingP(null)} className="btn-ghost w-full justify-center text-xs">
+                      <button onClick={() => setPendingP(null)} className="btn-ghost w-full justify-center text-sm">
                         ← 選び直す
                       </button>
                     </div>
@@ -590,7 +590,7 @@ function ShindanPage() {
 
           {/* 応援ストリップ（余白埋め: キャラが応援してくれる） */}
           <div className="flex justify-center items-end gap-1.5 pt-1 opacity-90">
-            <span className="bubble !text-[10px] !px-2 !py-1 rotate-[-3deg] mb-3">
+            <span className="bubble !text-sm !px-2 !py-1 rotate-[-3deg] mb-3">
               {["ええ感じやん！", "その調子だべ！", "ばりよかよ〜", "なまら順調っしょ", "こじゃんとえいぞ！"][index % 5]}
             </span>
             {[6, 14, 22, 28].map((idx, i) => (
@@ -609,7 +609,7 @@ function ShindanPage() {
             </button>
           ) : (
             <div className="bg-paper border border-line rounded-xl p-4 space-y-3">
-              <p className="text-xs text-sub">
+              <p className="text-sm text-sub">
                 あなたの地元の言い方を入力してください。全国{Object.keys(SHINDAN_PHRASES).length - 1}方言のデータと照合して、一番近い方言に加点します。
               </p>
               <input
@@ -726,14 +726,14 @@ function ShindanPage() {
             <span className="sparkle text-2xl" style={{ top: "10%", left: "10%" }}>✦</span>
             <span className="sparkle text-lg" style={{ top: "20%", right: "12%", animationDelay: "0.7s" }}>✧</span>
             <span className="sparkle text-xl" style={{ bottom: "16%", left: "16%", animationDelay: "1.3s" }}>✦</span>
-            <p className="text-gold text-xs font-black tracking-[0.4em] animate-pulse">★ S E C R E T ★</p>
+            <p className="text-gold text-sm font-bold tracking-[0.4em] animate-pulse">★ S E C R E T ★</p>
             <div className="flex justify-center">
               <SecretAvatar slug={secret.slug} size={150} dance />
             </div>
             <h2 className="font-display text-3xl font-bold text-goldgrad">{secret.name}</h2>
             <p className="text-white/90 text-sm font-bold">{secret.tagline}</p>
-            <p className="text-white/70 text-xs leading-relaxed max-w-md mx-auto">{secret.desc}</p>
-            <p className="inline-block rounded-full border border-gold/50 text-gold text-[11px] font-bold px-4 py-1">
+            <p className="text-white/70 text-sm leading-relaxed max-w-md mx-auto">{secret.desc}</p>
+            <p className="inline-block rounded-full border border-gold/50 text-gold text-sm font-bold px-4 py-1">
               {secret.rateLabel} — 図鑑のシークレット枠が解放されました！
             </p>
           </div>
@@ -752,7 +752,7 @@ function ShindanPage() {
           <span className="sparkle text-lg" style={{ top: "28%", right: "10%", animationDelay: "0.9s" }}>✦</span>
           <span className="sparkle text-sm" style={{ top: "62%", left: "18%", animationDelay: "1.5s" }}>✧</span>
           <span className="sparkle text-xl" style={{ top: "70%", right: "16%", animationDelay: "0.4s" }}>✦</span>
-          <p className="text-gold text-xs font-bold tracking-widest">YOUR HOGEN TYPE</p>
+          <p className="text-gold text-sm font-bold tracking-widest">YOUR HOGEN TYPE</p>
           <div className="flex justify-center anim-pop relative">
             {/* キャラの周りを漂うお祝い絵文字 */}
             <span className="emoji-drift text-2xl" style={{ top: "18%", left: "16%" }}>🎉</span>
@@ -765,7 +765,7 @@ function ShindanPage() {
             {myType.dialect}タイプ × {archetype.label}・{LEVEL_LABELS[level - 1]}
           </p>
           {/* 称号（小）→ 名前（特大・金箔）の2段組でコントラストをつける */}
-          <h1 className="anim-fade-up leading-tight px-2" style={{ animationDelay: "0.25s" }}>
+          <h1 className="anim-fade-up leading-tight px-2 text-3xl" style={{ animationDelay: "0.25s" }}>
             <span className="block text-sm text-white/80 font-bold tracking-[0.15em] mb-1">
               — {personaMod} —
             </span>
@@ -783,17 +783,17 @@ function ShindanPage() {
           </p>
           <p className="anim-fade-up" style={{ animationDelay: "0.5s" }}>
             <span className="inline-flex items-baseline gap-1.5 rounded-full bg-white/10 border border-white/20 px-4 py-1">
-              <span className="text-white/70 text-xs">{myType.dialect}成分</span>
+              <span className="text-white/70 text-sm">{myType.dialect}成分</span>
               <span className="font-display font-bold text-2xl text-gold">{ranked[0]?.pct ?? 0}</span>
-              <span className="text-gold text-xs">%</span>
+              <span className="text-gold text-sm">%</span>
             </span>
           </p>
         </div>
         <div className="p-6 space-y-5 -mt-4 bg-white rounded-t-2xl relative">
           {/* 詳細レポート（ラブ診断級のボリューム） */}
           <div className="space-y-1.5">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded">性</span>基本性格
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded">性</span>基本性格
             </h3>
             <p className="leading-relaxed text-sm">
               {archetype.desc}
@@ -802,8 +802,8 @@ function ShindanPage() {
           </div>
 
           <div className="space-y-1.5">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded !bg-indigo">言</span>
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded !bg-indigo">言</span>
               あなたの中の{myType.dialect}気質
             </h3>
             <p className="leading-relaxed text-sm text-sub">{myType.desc}</p>
@@ -838,15 +838,15 @@ function ShindanPage() {
             <div className="font-bold text-sm">あなたの方言成分</div>
             {ranked.slice(0, 5).map(({ d, pct }, i) => (
               <div key={d} className="flex items-center gap-3">
-                <span className={`w-20 shrink-0 ${i === 0 ? "text-sm font-bold" : "text-xs text-sub"}`}>{d}</span>
+                <span className={`w-20 shrink-0 ${i === 0 ? "text-sm font-bold" : "text-sm text-sub"}`}>{d}</span>
                 <div className={`flex-1 bg-line/50 rounded-full overflow-hidden ${i === 0 ? "h-4" : "h-2.5"}`}>
                   <div
                     className={`h-full rounded-full transition-all duration-700 ease-out ${i === 0 ? "bg-primary bar-shimmer" : "bg-primary/55"}`}
                     style={{ width: `${grown ? pct : 0}%`, transitionDelay: `${i * 0.1}s` }}
                   />
                 </div>
-                <span className={`text-right shrink-0 ${i === 0 ? "w-14 font-display font-bold text-lg text-primary" : "w-14 text-xs text-sub"}`}>
-                  {pct}<span className="text-[10px]">%</span>
+                <span className={`text-right shrink-0 ${i === 0 ? "w-14 font-display font-bold text-lg text-primary-text" : "w-14 text-sm text-sub"}`}>
+                  {pct}<span className="text-sm">%</span>
                 </span>
               </div>
             ))}
@@ -864,7 +864,7 @@ function ShindanPage() {
               <TypeAvatar type={t} size={44} />
               <div className="flex-1 min-w-0">
                 <div className="text-sm font-bold truncate">
-                  {t.name} <span className="font-normal text-xs text-sub">（{t.dialect}）</span>
+                  {t.name} <span className="font-normal text-sm text-sub">（{t.dialect}）</span>
                 </div>
                 <div className="bg-line/50 rounded-full h-2.5 overflow-hidden mt-1">
                   <div
@@ -873,7 +873,7 @@ function ShindanPage() {
                   />
                 </div>
               </div>
-              <span className="text-lg font-black text-primary w-14 text-right shrink-0">{a.score}%</span>
+              <span className="text-lg font-bold text-primary-text w-14 text-right shrink-0">{a.score}%</span>
             </div>
           ))}
         </div>
@@ -883,7 +883,7 @@ function ShindanPage() {
           <div className="flex-1 min-w-0">
             <div className="text-sm font-bold truncate">
               火花が散る相手：{compatWorst.t.name}
-              <span className="font-normal text-xs text-sub">（{compatWorst.t.dialect}）</span>
+              <span className="font-normal text-sm text-sub">（{compatWorst.t.dialect}）</span>
             </div>
             <div className="bg-line/50 rounded-full h-2.5 overflow-hidden mt-1">
               <div
@@ -894,7 +894,7 @@ function ShindanPage() {
           </div>
           <span className="text-lg font-bold text-indigo w-14 text-right shrink-0">{compatWorst.a.score}%</span>
         </div>
-        <p className="text-xs text-sub">友達に診断リンクを送ると、実際の2人の相性%が出ます</p>
+        <p className="text-sm text-sub">友達に診断リンクを送ると、実際の2人の相性%が出ます</p>
       </div>
 
       {/* 友達との相性結果（招待リンク経由。性格情報なしの簡易版） */}
@@ -909,16 +909,17 @@ function ShindanPage() {
       <div className="card p-6 space-y-4 text-center anim-fade-up" style={{ animationDelay: "0.32s" }}>
         <div className="font-bold">💞 あなたの相性コード</div>
         <div className="inline-block rounded-2xl border-2 border-dashed border-primary/50 bg-primary/5 px-8 py-3">
-          <span className="font-display font-black text-4xl tracking-[0.25em] text-primary">{myCode}</span>
+          <span className="font-display font-bold text-4xl tracking-[0.25em] text-primary-text">{myCode}</span>
         </div>
-        <p className="text-xs text-sub leading-relaxed">
+        <p className="text-sm text-sub leading-relaxed">
           この4文字を送り合えば、お互い診断し直さずに何度でも相性を鑑定できます。
           <br />
-          結果はこの端末に保存済み。
-          <Link href="/aishou" className="text-primary font-bold hover:underline">
-            相性チェッカー
+          結果はこの端末に保存済み。相性チェッカーでもいつでも使えます。
+        </p>
+        <p>
+          <Link href="/aishou" className="inline-flex min-h-[48px] items-center text-sm text-primary-text font-bold hover:underline">
+            → 相性チェッカー
           </Link>
-          でもいつでも使えます。
         </p>
         <button
           onClick={() => {
@@ -933,20 +934,20 @@ function ShindanPage() {
               : "コードをコピー"}
         </button>
         {/* コピーの結果は必ず目に見える形で、読める長さだけ出す */}
-        <p aria-live="polite" className="text-xs font-bold min-h-[1.25rem]">
+        <p aria-live="polite" className="text-sm font-bold min-h-[1.25rem]">
           {codeStatus === "ok" && (
-            <span className="text-primary">
+            <span className="text-primary-text">
               相性コード「{myCode}」をコピーしました。友達に送ってください。
             </span>
           )}
           {codeStatus === "fail" && (
-            <span className="text-primary">
+            <span className="text-primary-text">
               コピーできませんでした。お使いのブラウザの設定でコピーが許可されていない可能性があります。上の4文字「{myCode}」を手動で控えてください。
             </span>
           )}
         </p>
         <div className="pt-3 border-t border-line space-y-2">
-          <p className="text-xs font-bold">友達のコードを入力して、その場で鑑定</p>
+          <p className="text-sm font-bold">友達のコードを入力して、その場で鑑定</p>
           <div className="flex gap-2 max-w-xs mx-auto">
             <input
               value={friendCode}
@@ -972,7 +973,7 @@ function ShindanPage() {
               鑑定
             </button>
           </div>
-          {friendCodeError && <p className="text-primary text-xs font-bold">{friendCodeError}</p>}
+          {friendCodeError && <p className="text-primary-text text-sm font-bold">{friendCodeError}</p>}
         </div>
       </div>
 
@@ -994,7 +995,7 @@ function ShindanPage() {
           <div className="space-y-2 text-sm">
             {freeInputs.map((f, i) => (
               <div key={i} className="flex items-baseline gap-2 flex-wrap">
-                <span className="text-sub text-xs shrink-0">「{f.q}」→</span>
+                <span className="text-sub text-sm shrink-0">「{f.q}」→</span>
                 <span className="font-bold">{f.text}</span>
                 {f.matched ? (
                   <span className="chip bg-gold/15 text-amber-800 border border-gold/40">
@@ -1006,9 +1007,11 @@ function ShindanPage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-sub">
+          <p className="text-sm text-sub">
             この言い方はこの端末に保存しました。
-            <Link href="/dict" className="text-primary hover:underline">
+          </p>
+          <p>
+            <Link href="/dict" className="inline-flex min-h-[48px] items-center text-sm text-primary-text hover:underline">
               みんなの方言辞書に投稿する →
             </Link>
           </p>
@@ -1028,19 +1031,19 @@ function ShindanPage() {
         <div className="m-2.5 rounded-xl border border-gold/40 p-5 sm:p-6 space-y-6 relative">
           {/* 表題 */}
           <div className="text-center space-y-1.5">
-            <p className="text-gold text-[10px] font-bold tracking-[0.35em]">KOTODAMA KANTEI</p>
+            <p className="text-gold text-sm font-bold tracking-[0.35em]">KOTODAMA KANTEI</p>
             <h2 className="font-display text-3xl font-bold text-goldgrad tracking-wide">ことだま鑑定書</h2>
-            <p className="text-white/50 text-xs">
+            <p className="text-white/50 text-sm">
               {now.getMonth() + 1}月{now.getDate()}日（{WDAYS[now.getDay()]}）　{MASCOT_NAMES[myType.slug]} どの
             </p>
-            <p className="text-white/75 text-xs leading-relaxed">
+            <p className="text-white/75 text-sm leading-relaxed">
               {kantei.moon.icon} 今宵の月「{kantei.moon.name}」— {kantei.moon.text}
             </p>
           </div>
 
           {/* 総合運 */}
           <div className="text-center space-y-2">
-            <div className="text-white/60 text-[10px] tracking-[0.35em]">総 合 運</div>
+            <div className="text-white/60 text-sm tracking-[0.35em]">総 合 運</div>
             <div className="text-gold text-4xl tracking-[0.15em]">{stars(kantei.totalN)}</div>
             <p className="text-white/90 text-sm font-display">{kantei.opener}</p>
           </div>
@@ -1051,9 +1054,9 @@ function ShindanPage() {
               <div key={c.label} className="bg-white/5 border border-white/10 rounded-xl p-3.5 space-y-1">
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-white font-bold text-sm">{c.icon} {c.label}</span>
-                  <span className="text-gold text-xs tracking-tight shrink-0">{stars(c.n)}</span>
+                  <span className="text-gold text-sm tracking-tight shrink-0">{stars(c.n)}</span>
                 </div>
-                <p className="text-white/70 text-xs leading-relaxed">{c.text}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{c.text}</p>
               </div>
             ))}
           </div>
@@ -1061,7 +1064,7 @@ function ShindanPage() {
           {/* ことだま数（数秘術） */}
           <div className="flex gap-4 items-start bg-white/5 border border-white/10 rounded-xl p-4">
             <div className="shrink-0 text-center w-16">
-              <div className="text-[9px] text-gold tracking-[0.2em]">ことだま数</div>
+              <div className="text-sm text-gold tracking-[0.2em]">ことだま数</div>
               <div className="font-display text-5xl text-goldgrad font-bold leading-none mt-1.5">
                 {kantei.kotodama.n}
               </div>
@@ -1070,7 +1073,7 @@ function ShindanPage() {
               <div className="text-white font-bold text-sm">
                 第「{kantei.kotodama.name}」— {kantei.kotodama.catch}
               </div>
-              <p className="text-white/70 text-xs leading-relaxed mt-1">{kantei.kotodama.text}</p>
+              <p className="text-white/70 text-sm leading-relaxed mt-1">{kantei.kotodama.text}</p>
             </div>
           </div>
 
@@ -1084,14 +1087,14 @@ function ShindanPage() {
                 {kantei.gogyo.el}
               </span>
               <div className="min-w-0">
-                <div className="text-[9px] text-gold tracking-[0.2em]">ことだま五行</div>
+                <div className="text-sm text-gold tracking-[0.2em]">ことだま五行</div>
                 <div className="text-white font-bold text-sm">
                   {myType.dialect}のことだまは「{kantei.gogyo.el}（{kantei.gogyo.reading}）」の気
                 </div>
               </div>
             </div>
-            <p className="text-white/70 text-xs leading-relaxed">{kantei.gogyo.nature}</p>
-            <div className="grid gap-1.5 text-xs border-t border-white/10 pt-2.5">
+            <p className="text-white/70 text-sm leading-relaxed">{kantei.gogyo.nature}</p>
+            <div className="grid gap-1.5 text-sm border-t border-white/10 pt-2.5">
               <div className="flex gap-2">
                 <span className="text-emerald-300 font-bold shrink-0 w-8">相生</span>
                 <span className="text-white/70 leading-relaxed">{kantei.gogyo.boost}</span>
@@ -1114,20 +1117,20 @@ function ShindanPage() {
               style={{ background: "linear-gradient(180deg, #2A2148, #1B1535)" }}
             >
               <div>
-                <div className="text-gold font-display text-xs">{kantei.tarot.no}</div>
+                <div className="text-gold font-display text-sm">{kantei.tarot.no}</div>
                 <div className="text-2xl my-1">{kantei.isUp ? "🌞" : "🌙"}</div>
-                <div className="text-white text-[10px] font-bold leading-tight">{kantei.tarot.name}</div>
+                <div className="text-white text-sm font-bold leading-tight">{kantei.tarot.name}</div>
               </div>
             </div>
             <div className="min-w-0">
-              <div className="text-[9px] text-gold tracking-[0.2em]">今日の一枚</div>
+              <div className="text-sm text-gold tracking-[0.2em]">今日の一枚</div>
               <div className="text-white font-bold text-sm mt-0.5">
                 「{kantei.tarot.name}」
-                <span className={`ml-1.5 text-[10px] px-2 py-0.5 rounded-full border ${kantei.isUp ? "border-gold/50 text-gold" : "border-white/30 text-white/60"}`}>
+                <span className={`ml-1.5 text-sm px-2 py-0.5 rounded-full border ${kantei.isUp ? "border-gold/50 text-gold" : "border-white/30 text-white/60"}`}>
                   {kantei.isUp ? "正位置" : "逆位置"}
                 </span>
               </div>
-              <p className="text-white/70 text-xs leading-relaxed mt-1">
+              <p className="text-white/70 text-sm leading-relaxed mt-1">
                 {kantei.isUp ? kantei.tarot.up : kantei.tarot.down}
               </p>
             </div>
@@ -1137,7 +1140,7 @@ function ShindanPage() {
           <div className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2.5">
             <div className="flex items-baseline justify-between gap-2 flex-wrap">
               <div className="text-white font-bold text-sm">📈 運気の波 — これから7日間</div>
-              <div className="text-gold text-xs font-bold">
+              <div className="text-gold text-sm font-bold">
                 勝負日：{kantei.bestDayOffset === 0 ? "今日！" : `${bestDate.getMonth() + 1}/${bestDate.getDate()}（${WDAYS[bestDate.getDay()]}）`}
               </div>
             </div>
@@ -1158,7 +1161,7 @@ function ShindanPage() {
                           : "rgba(255,255,255,0.22)",
                       }}
                     />
-                    <span className={`text-[9px] ${i === 0 ? "text-gold font-bold" : isBest ? "text-gold" : "text-white/50"}`}>
+                    <span className={`text-sm ${i === 0 ? "text-gold font-bold" : isBest ? "text-gold" : "text-white/50"}`}>
                       {i === 0 ? "今日" : `${d.getDate()}`}
                     </span>
                   </div>
@@ -1168,7 +1171,7 @@ function ShindanPage() {
           </div>
 
           {/* お守り（吉方位・ラッキー方言・カラー・開運行動） */}
-          <div className="grid sm:grid-cols-2 gap-2 text-xs">
+          <div className="grid sm:grid-cols-2 gap-2 text-sm">
             <div className="bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5">
               <span className="text-gold font-bold">🧭 吉方位「{kantei.direction.dir}」</span>
               <p className="mt-1 text-white/60 leading-relaxed">{kantei.direction.tip}</p>
@@ -1195,7 +1198,7 @@ function ShindanPage() {
             </div>
           </div>
 
-          <p className="text-center text-[10px] text-white/40">
+          <p className="text-center text-sm text-white/40">
             ことだま鑑定は毎日0時に更新されます — 明日の鑑定書もお楽しみに
           </p>
         </div>
@@ -1204,7 +1207,7 @@ function ShindanPage() {
       {/* シェア＆招待 */}
       <div className="card p-6 space-y-4 text-center">
         <div className="font-bold">結果をシェアして、友達との相性を見る</div>
-        <p className="text-xs text-sub">
+        <p className="text-sm text-sub">
           このリンクから友達が診断すると、あなたとの相性が自動で表示されます
         </p>
         <ShareBar text={shareText} url={inviteUrl} block={shareBlockText} />

@@ -86,13 +86,13 @@ export default function TranslateTool({
                 className="btn-secondary px-2 min-h-[48px] min-w-[60px] flex flex-col items-center justify-center leading-none gap-0.5"
               >
                 <span className="text-base">⇄</span>
-                <span className="text-[10px] font-bold">逆向き</span>
+                <span className="text-sm font-bold">逆向き</span>
               </button>
-              <div className="flex-1 border border-primary/40 rounded-xl px-3 py-2.5 text-center font-bold text-sm bg-primary/5 text-primary min-h-[48px] flex items-center justify-center">
+              <div className="flex-1 border border-primary/40 rounded-xl px-3 py-2.5 text-center font-bold text-sm bg-primary/5 text-primary-text min-h-[48px] flex items-center justify-center">
                 {to}
               </div>
             </div>
-            <p className="text-[11px] text-sub text-center leading-relaxed">
+            <p className="text-sm text-sub text-center leading-relaxed">
               いまは <b>{from} → {to}</b>。「⇄ 逆向き」を押すと <b>{to} → {from}</b> に変換します。
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function TranslateTool({
                 className="btn-secondary px-2 min-h-[48px] min-w-[60px] flex flex-col items-center justify-center leading-none gap-0.5"
               >
                 <span className="text-base">⇄</span>
-                <span className="text-[10px] font-bold">逆向き</span>
+                <span className="text-sm font-bold">逆向き</span>
               </button>
               <select value={to} onChange={(e) => setTo(e.target.value)} className="select-base flex-1 min-h-[48px]">
                 {DIALECTS.map((d) => (
@@ -118,7 +118,7 @@ export default function TranslateTool({
                 ))}
               </select>
             </div>
-            <p className="text-[11px] text-sub text-center leading-relaxed">
+            <p className="text-sm text-sub text-center leading-relaxed">
               いまは <b>{from} → {to}</b>。「⇄ 逆向き」を押すと <b>{to} → {from}</b> に変換します。
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function TranslateTool({
         <div key={runId} className="card p-5 space-y-3 anim-pop">
           <div className="flex items-center gap-2 flex-wrap">
             <div className="chip bg-indigo/10 text-indigo">{shownPair.to}</div>
-            <span className="text-xs text-sub">{result.hits.length}語を置き換えました</span>
+            <span className="text-sm text-sub">{result.hits.length}語を置き換えました</span>
           </div>
 
           <div className="text-xl font-bold break-words leading-relaxed">
@@ -158,28 +158,28 @@ export default function TranslateTool({
             )}
           </div>
 
-          <p className="text-[11px] text-sub leading-relaxed bg-paper border border-line rounded-xl p-3">
+          <p className="text-sm text-sub leading-relaxed bg-paper border border-line rounded-xl p-3">
             ※ 辞典に収録されている語だけを置き換えています。語尾や活用は変換していないため、
             実際の話し方とは異なる場合があります。「これが正しい{shownPair.to}」というものではなく、
             方言ラボの辞典に載っている言い方の提示です。
           </p>
 
           <div className="space-y-2">
-            <h3 className="text-sm font-bold">置き換えた語（{result.hits.length}）</h3>
+            <h3 className="text-xl font-bold">置き換えた語（{result.hits.length}）</h3>
             <ul className="space-y-2">
               {result.hits.map((h, i) => (
                 <li key={`${h.source}-${i}`} className="bg-paper border border-line rounded-xl px-3 py-2 text-sm">
                   <div className="break-words">
                     <span className="text-sub">{h.source}</span>
                     <span className="text-sub mx-1.5">→</span>
-                    <b className="text-primary">{h.target}</b>
+                    <b className="text-primary-text">{h.target}</b>
                   </div>
-                  <div className="text-xs text-sub break-words mt-0.5">
+                  <div className="text-sm text-sub break-words mt-0.5">
                     意味：{h.meaning}
                     {h.alts.length > 0 && <>／別の言い方：{h.alts.join("・")}</>}
                   </div>
-                  {h.example && <div className="text-xs text-sub break-words mt-0.5">用例：{h.example}</div>}
-                  <div className="text-[10px] text-sub mt-0.5">
+                  {h.example && <div className="text-sm text-sub break-words mt-0.5">用例：{h.example}</div>}
+                  <div className="text-sm text-sub mt-0.5">
                     出典：方言ラボの{h.origin}データ（{h.dict}）
                   </div>
                 </li>
@@ -187,14 +187,14 @@ export default function TranslateTool({
             </ul>
           </div>
 
-          <button onClick={() => speak(result.output)} className="btn-secondary text-sm min-h-[44px]">
+          <button onClick={() => speak(result.output)} className="btn-secondary text-sm min-h-[48px]">
             🔊 読み上げる
           </button>
           <ShareBar text={shareBlockText ?? ""} url={url} block={shareBlockText} />
 
           {dialect && quizSlug && (
             <div className="border-t border-line pt-3 text-center space-y-2">
-              <p className="text-xs text-sub">変換できたら、次は腕試し。</p>
+              <p className="text-sm text-sub">変換できたら、次は腕試し。</p>
               <Link
                 href={`/quiz/${quizSlug}`}
                 onClick={() => track("translate_to_quiz", { dialect })}
@@ -213,20 +213,20 @@ export default function TranslateTool({
           <p className="text-sm font-bold leading-relaxed">
             この文には、{shownPair.to}の辞典に収録されている語が含まれていませんでした。
           </p>
-          <p className="text-xs text-sub leading-relaxed">
+          <p className="text-sm text-sub leading-relaxed">
             方言ラボの変換は、辞典に載っている語だけを置き換えるしくみです（AIが文を作り直すことはしません）。
             収録語が入っていない文は、そのままの形で返します。
           </p>
           {result.suggestions.length > 0 && (
             <div className="space-y-2">
-              <h3 className="text-sm font-bold">{shownPair.to}で置き換えられる語の例</h3>
-              <p className="text-xs text-sub">タップすると入力欄に足せます。</p>
+              <h3 className="text-xl font-bold">{shownPair.to}で置き換えられる語の例</h3>
+              <p className="text-sm text-sub">タップすると入力欄に足せます。</p>
               <div className="flex flex-wrap gap-2">
                 {result.suggestions.map((s) => (
                   <button
                     key={s.input}
                     onClick={() => setText((t) => (t ? `${t}${s.input}` : s.input))}
-                    className="btn-secondary text-sm min-h-[44px]"
+                    className="btn-secondary text-sm min-h-[48px]"
                   >
                     {s.input} → {s.output}
                   </button>

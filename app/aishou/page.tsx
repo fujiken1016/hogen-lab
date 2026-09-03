@@ -42,10 +42,10 @@ export default function AishouPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-5">
       <div className="text-center space-y-2">
-        <p className="text-primary font-bold tracking-widest text-xs">AISHOU CHECKER</p>
+        <p className="text-primary-text font-bold tracking-widest text-sm">AISHOU CHECKER</p>
         <h1 className="text-3xl font-bold font-display">相性チェッカー</h1>
         <p className="text-sub text-sm leading-relaxed">
-          診断結果に表示される<b className="text-primary">4文字の相性コード</b>を2つ入力するだけ。
+          診断結果に表示される<b className="text-primary-text">4文字の相性コード</b>を2つ入力するだけ。
           <br />
           何度でも・誰とでも、診断し直さずに相性を鑑定できます。
         </p>
@@ -54,7 +54,7 @@ export default function AishouPage() {
       <div className="card p-6 space-y-4">
         <div className="grid sm:grid-cols-2 gap-3">
           <div>
-            <label className="text-xs font-bold text-sub">あなたのコード</label>
+            <label className="text-sm font-bold text-sub">あなたのコード</label>
             <input
               value={codeA}
               onChange={(e) => setCodeA(e.target.value.toUpperCase())}
@@ -64,7 +64,7 @@ export default function AishouPage() {
             />
           </div>
           <div>
-            <label className="text-xs font-bold text-sub">相手のコード</label>
+            <label className="text-sm font-bold text-sub">相手のコード</label>
             <input
               value={codeB}
               onChange={(e) => setCodeB(e.target.value.toUpperCase())}
@@ -74,16 +74,17 @@ export default function AishouPage() {
             />
           </div>
         </div>
-        {error && <p className="text-primary text-xs font-bold text-center">{error}</p>}
+        {error && <p className="text-primary-text text-sm font-bold text-center">{error}</p>}
         <button onClick={check} disabled={!codeA.trim() || !codeB.trim()} className="btn-primary w-full py-3.5">
           💞 相性を鑑定する
         </button>
-        <p className="text-[11px] text-sub text-center">
-          コードを持っていない人は
-          <Link href="/shindan" className="text-primary font-bold hover:underline">
-            2分の診断
+        <p className="text-sm text-sub text-center">
+          コードを持っていない人は、2分の診断で発行できます（結果画面に表示されます）
+        </p>
+        <p className="text-center">
+          <Link href="/shindan" className="inline-flex min-h-[48px] items-center justify-center text-sm font-bold text-primary-text hover:underline">
+            → 2分の診断でコードを発行する
           </Link>
-          で発行できます（結果画面に表示されます）
         </p>
       </div>
 

@@ -56,10 +56,13 @@ export default function Page() {
         質問の「〜と？」。
         目的語に「ば」を使う（「これば見て」）のも、この地域の代表的な特徴です。
         博多弁の詳細は
-        <Link href="/blog/tohoku-kansai-hakata" className="text-primary hover:underline">
-          三大方言の比較記事
-        </Link>
+        三大方言の比較記事
         でも扱っています。
+      </P>
+      <P>
+        <Link href="/blog/tohoku-kansai-hakata" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 三大方言の比較記事
+        </Link>
       </P>
       <Note title="「ばい」と「たい」はどう違うのか">
         ざっくり言えば、<strong>「ばい」は事実をそのまま差し出す言い方</strong>、
@@ -104,10 +107,13 @@ export default function Page() {
         <strong>アクセントによる語の区別を持たない無アクセント地域</strong>もあります。
         隣り合った県のあいだで、アクセントの仕組みそのものが違う。
         全国的な分布は
-        <Link href="/blog/hogen-accent-chizu" className="text-primary hover:underline">
-          アクセントの日本地図の記事
-        </Link>
+        アクセントの日本地図の記事
         を参照してください。
+      </P>
+      <P>
+        <Link href="/blog/hogen-accent-chizu" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → アクセントの日本地図の記事
+        </Link>
       </P>
 
       <H2>境界は「線」ではなく「帯」</H2>
@@ -121,10 +127,13 @@ export default function Page() {
         宮崎県も、北部と南西部で属する区画が違う。
         <strong>県境と方言の境目は一致しない</strong>のが原則です。
         東西の境界でも同じことが起きているのは
-        <Link href="/blog/higashi-nishi-kyoukai" className="text-primary hover:underline">
-          糸魚川‐浜名湖線の記事
-        </Link>
+        糸魚川‐浜名湖線の記事
         で見たとおりです。
+      </P>
+      <P>
+        <Link href="/blog/higashi-nishi-kyoukai" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 糸魚川‐浜名湖線の記事
+        </Link>
       </P>
       <Note title="区画は「何を基準にするか」で変わる">
         方言区画は一つに定まっていません。
@@ -142,10 +151,13 @@ export default function Page() {
         <strong>否定は「〜ん」。</strong>
         西日本方言と同じく、「行かん」「知らん」の形です。
         否定形の全国分布は
-        <Link href="/blog/hitei-kei-chiiki" className="text-primary hover:underline">
-          否定形の地域差の記事
-        </Link>
+        否定形の地域差の記事
         で扱いました。
+      </P>
+      <P>
+        <Link href="/blog/hitei-kei-chiiki" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 否定形の地域差の記事
+        </Link>
       </P>
       <P>
         <strong>母音の無声化が盛ん。</strong>

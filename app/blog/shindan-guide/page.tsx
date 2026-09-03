@@ -19,10 +19,15 @@ export default function Page() {
   return (
     <ArticleShell article={article}>
       <P>
-        方言ラボの<Link href="/shindan" className="text-primary font-bold underline underline-offset-2">方言タイプ診断</Link>
+        方言ラボの方言タイプ診断
         は、14問の質問に答えるだけで、全国{TYPES.length}体のご当地キャラからあなたの相棒を判定するツールです。
         ただ、結果画面には「ことだま鑑定」や「4桁コード」など、初見だと用途がわかりにくい要素も並んでいます。
         この記事では、診断の遊び方と結果の読み方をひととおり解説します。
+      </P>
+      <P>
+        <Link href="/shindan" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言タイプ診断
+        </Link>
       </P>
 
       <H2>診断の流れ：14問・約2分</H2>
@@ -57,8 +62,8 @@ export default function Page() {
       <div className="grid sm:grid-cols-2 gap-2.5 my-4">
         {CLUSTERS.map((c) => (
           <div key={c} className="card p-3.5">
-            <p className="font-bold text-[14px] text-primary-deep">{ARCHETYPES[c]?.label}</p>
-            <p className="text-[12.5px] text-sub leading-[1.8] mt-1">{ARCHETYPES[c]?.love}</p>
+            <p className="font-bold text-base text-primary-deep">{ARCHETYPES[c]?.label}</p>
+            <p className="text-sm text-sub leading-[1.8] mt-1">{ARCHETYPES[c]?.love}</p>
           </div>
         ))}
       </div>
@@ -86,9 +91,14 @@ export default function Page() {
       </P>
       <H3>使い方A｜友達のコードを入力する</H3>
       <P>
-        <Link href="/aishou" className="text-primary font-bold underline underline-offset-2">相性チェッカー</Link>
+        相性チェッカー
         に2人分のコードを入れると、その場で相性が出ます。友達に診断をやり直してもらう必要はありません。
         自分のコードは自動で入るので、実際に入力するのは相手のぶんだけです。
+      </P>
+      <P>
+        <Link href="/aishou" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 相性チェッカー
+        </Link>
       </P>
       <H3>使い方B｜結果ページのリンクを共有する</H3>
       <P>
@@ -115,8 +125,8 @@ export default function Page() {
               ❔
             </span>
             <div>
-              <p className="font-bold text-[14px]">{s.name}</p>
-              <p className="text-[12px] text-sub mt-0.5">出現率 {s.rateLabel}</p>
+              <p className="font-bold text-base">{s.name}</p>
+              <p className="text-sm text-sub mt-0.5">出現率 {s.rateLabel}</p>
             </div>
           </div>
         ))}
@@ -140,11 +150,31 @@ export default function Page() {
       </P>
       <H3>Q. 診断のあとは何をすればいい？</H3>
       <P>
-        結果が出たら、<Link href="/quiz" className="text-primary font-bold underline underline-offset-2">クイズ検定</Link>
-        でバッジを集めたり、<Link href="/translate" className="text-primary font-bold underline underline-offset-2">方言翻訳</Link>
+        結果が出たら、クイズ検定
+        でバッジを集めたり、方言翻訳
         で自分の文章を出たキャラの方言に変換してみるのがおすすめです。
-        毎日1語ずつ覚えるなら<Link href="/today" className="text-primary font-bold underline underline-offset-2">今日の方言</Link>、
-        地元の言い回しを登録したいなら<Link href="/dict" className="text-primary font-bold underline underline-offset-2">みんなの辞書</Link>へどうぞ。
+        毎日1語ずつ覚えるなら今日の方言、
+        地元の言い回しを登録したいならみんなの辞書へどうぞ。
+      </P>
+      <P>
+        <Link href="/quiz" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → クイズ検定
+        </Link>
+      </P>
+      <P>
+        <Link href="/translate" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言翻訳
+        </Link>
+      </P>
+      <P>
+        <Link href="/today" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 今日の方言
+        </Link>
+      </P>
+      <P>
+        <Link href="/dict" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → みんなの辞書
+        </Link>
       </P>
 
       <ShindanCta

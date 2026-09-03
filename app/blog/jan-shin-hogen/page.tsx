@@ -145,11 +145,14 @@ export default function Page() {
       <P>
         かつて言葉は、京都から人の移動にのって同心円状に広がっていきました
         （
-        <Link href="/blog/naze-hogen-umareru" className="text-primary hover:underline">
-          方言周圏論
-        </Link>
+        方言周圏論
         ）。いまは違います。テレビ、そしてSNSによって、
         <strong>距離を飛び越えて言葉が伝わる</strong>ようになりました。
+      </P>
+      <P>
+        <Link href="/blog/naze-hogen-umareru" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言周圏論
+        </Link>
       </P>
       <P>
         「めっちゃ」が関西から全国に広がったのも、

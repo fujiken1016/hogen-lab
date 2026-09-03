@@ -24,7 +24,7 @@ export default function ResultViewPage() {
     return (
       <div className="max-w-xl mx-auto text-center space-y-4 py-16">
         <div className="text-5xl">🤔</div>
-        <h1 className="text-xl font-bold">このコードは見つかりませんでした</h1>
+        <h1 className="text-3xl font-bold">このコードは見つかりませんでした</h1>
         <p className="text-sub text-sm">リンクが欠けているかも。送り主にもう一度確認してみてください。</p>
         <Link href="/shindan" className="btn-primary inline-flex">自分の診断をはじめる</Link>
       </div>
@@ -51,7 +51,7 @@ export default function ResultViewPage() {
           <span className="sparkle text-2xl" style={{ top: "14%", left: "12%" }}>✦</span>
           <span className="sparkle text-lg" style={{ top: "28%", right: "10%", animationDelay: "0.9s" }}>✦</span>
           <span className="sparkle text-xl" style={{ top: "68%", right: "16%", animationDelay: "0.4s" }}>✧</span>
-          <p className="text-gold text-xs font-bold tracking-widest">
+          <p className="text-gold text-sm font-bold tracking-widest">
             {isSelf ? "YOUR HOGEN TYPE" : "FRIEND'S HOGEN TYPE"}
           </p>
           <div className="flex justify-center anim-pop">
@@ -60,7 +60,7 @@ export default function ResultViewPage() {
           <p className="text-gold text-sm font-bold">
             {type.dialect}タイプ × {archetype.label}・{LEVEL_LABELS[level - 1]}
           </p>
-          <h1 className="leading-tight px-2">
+          <h1 className="leading-tight px-2 text-3xl">
             <span className="block text-sm text-white/80 font-bold tracking-[0.15em] mb-1">— {personaMod} —</span>
             <span className={`font-display font-bold text-goldgrad tracking-tight ${MASCOT_NAMES[type.slug].length >= 8 ? "text-3xl sm:text-5xl" : "text-4xl sm:text-5xl"}`}>
               {MASCOT_NAMES[type.slug]}
@@ -72,15 +72,15 @@ export default function ResultViewPage() {
           </p>
           <p>
             <span className="inline-flex items-baseline gap-1.5 rounded-full bg-white/10 border border-white/20 px-4 py-1">
-              <span className="text-white/70 text-xs">相性コード</span>
+              <span className="text-white/70 text-sm">相性コード</span>
               <span className="font-display font-bold text-xl text-gold tracking-[0.2em]">{code}</span>
             </span>
           </p>
         </div>
         <div className="p-6 space-y-5 -mt-4 bg-white rounded-t-2xl relative">
           <div className="space-y-1.5">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded">性</span>基本性格
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded">性</span>基本性格
             </h3>
             <p className="leading-relaxed text-sm">
               {archetype.desc}
@@ -88,8 +88,8 @@ export default function ResultViewPage() {
             </p>
           </div>
           <div className="space-y-1.5">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded !bg-indigo">言</span>
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded !bg-indigo">言</span>
               {type.dialect}気質
             </h3>
             <p className="leading-relaxed text-sm text-sub">{type.desc}</p>
@@ -128,7 +128,7 @@ export default function ResultViewPage() {
       {!isSelf && !myDecoded && (
         <div className="card p-6 text-center space-y-3">
           <p className="font-bold">この人との相性、気になりませんか？</p>
-          <p className="text-xs text-sub">2分の診断であなたのキャラが決まると、そのまま2人の相性が出ます</p>
+          <p className="text-sm text-sub">2分の診断であなたのキャラが決まると、そのまま2人の相性が出ます</p>
           <Link href={`/shindan?vs=${code}`} className="btn-primary cta-glow inline-flex px-10 py-3.5">
             診断して相性を見る（無料）
           </Link>
@@ -136,7 +136,7 @@ export default function ResultViewPage() {
       )}
 
       {isSelf && (
-        <p className="text-center text-xs text-sub">これはあなた自身の結果ページです。このURLをそのままシェアできます。</p>
+        <p className="text-center text-sm text-sub">これはあなた自身の結果ページです。このURLをそのままシェアできます。</p>
       )}
     </div>
   );

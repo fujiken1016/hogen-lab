@@ -82,7 +82,7 @@ function DokoPage() {
               return t ? <TypeAvatar key={d} type={t} size={56} /> : null;
             })}
           </div>
-          <div className="flex items-center justify-center gap-3 text-xs font-bold text-indigo">
+          <div className="flex items-center justify-center gap-3 text-sm font-bold text-indigo">
             <span>✓ 全8問</span>
             <span>✓ 約1分</span>
             <span>✓ 登録不要</span>
@@ -90,14 +90,14 @@ function DokoPage() {
           <button onClick={start} className="btn-primary text-lg px-10 py-4 w-full sm:w-auto">
             クイズをはじめる
           </button>
-          <p className="text-[11px] text-sub leading-relaxed text-left">
+          <p className="text-sm text-sub leading-relaxed text-left">
             出題語は<strong>出典を1語ずつ照合したリスト</strong>だけを使い、
             ダミーの選択肢は<strong>正解の地方と隣り合わない地方</strong>から選んでいます。
             それでも方言には地域差・世代差があり、同じ言葉を別の土地で使うことはあります。
             ここでの「答え」は<strong>方言ラボ辞典の収録地域</strong>であって、あなたの言葉が間違いという意味ではありません。
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-2 text-xs">
+        <div className="flex flex-wrap justify-center gap-2 text-sm">
           <Link href="/quiz" className="btn-ghost">🏅 方言クイズ検定へ</Link>
           <Link href="/dict" className="btn-ghost">📖 方言辞典を見る</Link>
         </div>
@@ -124,7 +124,7 @@ function DokoPage() {
           {correct === questions.length && <Confetti />}
           <div className="text-5xl anim-pop">{rank.emoji}</div>
           <div>
-            <p className="text-xs text-sub tracking-widest">あなたの称号</p>
+            <p className="text-sm text-sub tracking-widest">あなたの称号</p>
             <h2 className="text-2xl font-bold font-display mt-1">{rank.title}</h2>
           </div>
           <p className="text-lg font-bold">
@@ -137,7 +137,7 @@ function DokoPage() {
 
         {/* 間違えた問題は消さずに残す。結果画面で自分のペースで読み返せるようにする */}
         <div className="card p-5 space-y-3">
-          <h3 className="font-bold text-sm">📋 出題のふりかえり（全{logs.length}問）</h3>
+          <h3 className="font-bold text-xl">📋 出題のふりかえり（全{logs.length}問）</h3>
           <ul className="space-y-2">
             {logs.map((l, i) => (
               <li
@@ -147,16 +147,16 @@ function DokoPage() {
                 <div className="font-bold">
                   {l.ok ? "⭕" : "📖"}「{l.q.word}」= {l.q.meaning}
                 </div>
-                <div className="text-xs text-sub mt-1">
+                <div className="text-sm text-sub mt-1">
                   辞典の収録：{l.q.answer}（{REGION_OF[l.q.answer]}）
                   {l.q.sameRegionAlso.length > 0 && <span>・{l.q.sameRegionAlso.join("・")}</span>}
                   {!l.ok && <span className="text-indigo">／あなたの回答：{l.picked}</span>}
                 </div>
-                <div className="text-xs mt-1">例：{l.q.example}</div>
+                <div className="text-sm mt-1">例：{l.q.example}</div>
               </li>
             ))}
           </ul>
-          <p className="text-[11px] text-sub">
+          <p className="text-sm text-sub">
             ※ 「収録」は方言ラボ辞典の分類です（出題語は出典を1語ずつ照合しています）。同じ語を別の土地で使うこともあり、
             あなたの言葉が誤りという意味ではありません。違いに気づいたら「みんなの辞書」からお知らせください。
           </p>
@@ -167,7 +167,7 @@ function DokoPage() {
           <Link href="/shindan" className="btn-secondary">方言タイプ診断へ</Link>
           <Link href="/kawaii" className="btn-secondary">かわいい方言トーナメント</Link>
         </div>
-        <div className="flex flex-wrap justify-center gap-2 text-xs">
+        <div className="flex flex-wrap justify-center gap-2 text-sm">
           <Link href="/kurabe" className="btn-ghost">🗾 全国方言くらべ</Link>
           <Link href="/quiz" className="btn-ghost">🏅 クイズ検定</Link>
           <Link href="/dict" className="btn-ghost">📖 辞典</Link>
@@ -184,7 +184,7 @@ function DokoPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-5">
       <div className="space-y-2">
-        <div className="flex justify-between text-xs text-sub">
+        <div className="flex justify-between text-sm text-sub">
           <span>この方言どこの言葉？</span>
           <span>
             Q{index + 1} / {questions.length}・一致 {correct}
@@ -210,7 +210,7 @@ function DokoPage() {
             if (answered) {
               if (c === q.answer) cls = "border-green-500 bg-green-50";
               else if (c === picked) cls = "border-indigo/50 bg-indigo/5";
-              else cls = "border-line text-sub/60";
+              else cls = "border-line text-sub";
             }
             return (
               <button
@@ -220,10 +220,10 @@ function DokoPage() {
                 className={`border rounded-xl px-4 py-3.5 min-h-[52px] text-left bg-white transition-colors ${cls}`}
               >
                 <span className="font-bold">{c}</span>
-                <span className="text-xs text-sub ml-2">{REGION_OF[c]}</span>
-                {answered && c === q.answer && <span className="text-[11px] text-green-700 ml-2">辞典の収録地域</span>}
+                <span className="text-sm text-sub ml-2">{REGION_OF[c]}</span>
+                {answered && c === q.answer && <span className="text-sm text-green-700 ml-2">辞典の収録地域</span>}
                 {answered && c === picked && c !== q.answer && (
-                  <span className="text-[11px] text-indigo ml-2">あなたの回答</span>
+                  <span className="text-sm text-indigo ml-2">あなたの回答</span>
                 )}
               </button>
             );
@@ -238,12 +238,12 @@ function DokoPage() {
                 {picked === q.answer ? "⭕ 辞典と一致！" : "📖 辞典では"}「{q.word}」は
                 <span className="text-indigo">{q.answer}</span>（{REGION_OF[q.answer]}）の語として収録しています
               </p>
-              <p className="text-xs">例文：{q.example}</p>
+              <p className="text-sm">例文：{q.example}</p>
               {q.sameRegionAlso.length > 0 && (
-                <p className="text-[11px] text-sub">※ 同じ{REGION_OF[q.answer]}の{q.sameRegionAlso.join("・")}にも収録があります。</p>
+                <p className="text-sm text-sub">※ 同じ{REGION_OF[q.answer]}の{q.sameRegionAlso.join("・")}にも収録があります。</p>
               )}
               {picked !== q.answer && (
-                <p className="text-[11px] text-sub">
+                <p className="text-sm text-sub">
                   ※ {picked}でも使う、というご指摘は「みんなの辞書」からお寄せください。辞典に反映します。
                 </p>
               )}

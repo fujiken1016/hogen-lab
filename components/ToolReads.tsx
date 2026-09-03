@@ -29,8 +29,8 @@ export default function ToolReads({
 
   return (
     <section className="card p-5 space-y-3">
-      <h2 className="font-bold text-sm">📖 {dialect}を、読みものでもう一歩</h2>
-      <p className="text-xs text-sub leading-relaxed">
+      <h2 className="font-bold text-2xl">📖 {dialect}を、読みものでもう一歩</h2>
+      <p className="text-sm text-sub leading-relaxed">
         方言ラボが書いた解説記事です。ことばの背景を知ってから使うと、変換の結果の見え方も変わります。
       </p>
       <div className="grid gap-2.5">
@@ -52,13 +52,13 @@ export default function ToolReads({
               {r.article.emoji}
             </span>
             <span className="min-w-0">
-              <span className="block text-[13.5px] font-bold leading-snug break-words">
+              <span className="block text-base font-bold leading-snug break-words">
                 {r.article.title}
               </span>
-              <span className="block text-[12px] text-sub mt-1 leading-[1.7] break-words">
+              <span className="block text-sm text-sub mt-1 leading-[1.7] break-words">
                 {r.reason}
               </span>
-              <span className="block text-[11px] text-sub/80 mt-1">
+              <span className="block text-sm text-sub mt-1">
                 {r.article.category}・約{r.article.readMin}分
               </span>
             </span>
@@ -69,7 +69,7 @@ export default function ToolReads({
         <Link
           href="/blog"
           onClick={() => track("tool_to_article", { from, article_slug: "index", dialect, dialect_slug: slug })}
-          className="btn-ghost text-xs min-h-[44px] inline-flex items-center"
+          className="btn-ghost text-sm min-h-[48px] inline-flex items-center"
         >
           読みもの一覧（全{ARTICLES.length}本）へ →
         </Link>

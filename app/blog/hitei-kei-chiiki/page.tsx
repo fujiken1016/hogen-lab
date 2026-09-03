@@ -36,10 +36,13 @@ export default function Page() {
       <P>
         この境目は、いる／おる、だ／や、といった他の東西差と重なりながら、
         だいたい同じあたりを通ります。線がどこを走っているかは
-        <Link href="/blog/higashi-nishi-kyoukai" className="text-primary hover:underline">
-          東西境界線の記事
-        </Link>
+        東西境界線の記事
         でくわしく扱いました。
+      </P>
+      <P>
+        <Link href="/blog/higashi-nishi-kyoukai" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 東西境界線の記事
+        </Link>
       </P>
       <Note title="全国の否定形を、まとめて見た地図がある">
         国立国語研究所『方言文法全国地図』は、
@@ -96,11 +99,10 @@ export default function Page() {
         鉄道網による通学圏の拡大や、周辺部からの人口流入、
         SNSで話し言葉と書き言葉の境目が薄れたことなどが要因として挙げられていますが、
         <strong>いずれも推定であって、証明された原因ではありません</strong>。
-        周圏論そのものは
-        <Link href="/blog/naze-hogen-umareru" className="text-primary hover:underline">
-          方言はなぜ生まれるのかの記事
+        周圏論そのものは「方言はなぜ生まれるのか」の記事で解説しています。
+        <Link href="/blog/naze-hogen-umareru" className="mt-1 inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言はなぜ生まれるのかの記事
         </Link>
-        で解説しています。
       </Note>
 
       <H2>過去の否定でも、地域が割れる</H2>
@@ -131,10 +133,13 @@ export default function Page() {
       <P>
         <strong>「〜ん」（九州）</strong>——九州は基本的に「ん」の領域です。
         ただし九州のなかでも文末の付き方は地域で大きく違います。くわしくは
-        <Link href="/blog/kyushu-hogen-gradation" className="text-primary hover:underline">
-          九州方言の記事
-        </Link>
+        九州方言の記事
         へ。
+      </P>
+      <P>
+        <Link href="/blog/kyushu-hogen-gradation" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 九州方言の記事
+        </Link>
       </P>
 
       <H2>まとめ</H2>

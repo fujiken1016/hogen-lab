@@ -46,7 +46,7 @@ export function PageDates({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, "\\u003c") }}
       />
       {!jsonLdOnly && (
-        <p className="text-[11px] text-sub text-center mt-8 mb-1 leading-relaxed">
+        <p className="text-sm text-sub text-center mt-8 mb-1 leading-relaxed">
           公開：<time dateTime={d.published}>{jpDate(d.published)}</time>
           {d.modified !== d.published && (
             <>

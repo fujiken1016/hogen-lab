@@ -17,9 +17,9 @@ export function ToolIntro({
 }) {
   return (
     <section className="max-w-2xl mx-auto mt-14 pt-8 border-t border-line text-left">
-      <h2 className="font-display text-lg font-bold mb-3">{heading}</h2>
+      <h2 className="font-display text-2xl font-bold mb-3">{heading}</h2>
       {paragraphs.map((t, i) => (
-        <p key={i} className="text-[13.5px] leading-[1.95] text-ink/80 mb-3">
+        <p key={i} className="text-base leading-[1.95] text-ink/80 mb-3">
           {t}
         </p>
       ))}
@@ -28,7 +28,7 @@ export function ToolIntro({
           <Link
             key={r.href}
             href={r.href}
-            className="chip bg-primary/10 text-primary-deep font-bold hover:bg-primary/20 transition-colors"
+            className="chip inline-flex min-h-[48px] items-center bg-primary/10 text-primary-text font-bold hover:bg-primary/20 transition-colors"
           >
             {r.label}
           </Link>

@@ -39,7 +39,7 @@ export default function CharPage() {
     return (
       <div className="max-w-2xl mx-auto space-y-5">
         <div className="text-center">
-          <Link href="/#zukan" className="text-xs font-bold text-primary hover:underline">← 図鑑にもどる</Link>
+          <Link href="/#zukan" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text hover:underline">← 図鑑にもどる</Link>
         </div>
         <div className="rounded-2xl overflow-hidden border-2 border-gold relative">
           <div
@@ -49,14 +49,14 @@ export default function CharPage() {
             <span className="sparkle text-2xl" style={{ top: "8%", left: "10%" }}>✦</span>
             <span className="sparkle text-lg" style={{ top: "16%", right: "12%", animationDelay: "0.8s" }}>✧</span>
             <span className="sparkle text-xl" style={{ bottom: "14%", left: "16%", animationDelay: "1.4s" }}>✦</span>
-            <p className="text-gold text-xs font-black tracking-[0.4em]">★ S E C R E T ★</p>
+            <p className="text-gold text-sm font-bold tracking-[0.4em]">★ S E C R E T ★</p>
             <div className="relative inline-block">
               <div className={isOpen ? "" : "secret-hidden"}>
                 <SecretAvatar slug={secret.slug} size={200} dance bg={isOpen} />
               </div>
               {!isOpen && (
                 <div className="absolute inset-0 grid place-items-center pointer-events-none">
-                  <span className="text-7xl font-black text-white/95 drop-shadow-lg font-display">？</span>
+                  <span className="text-7xl font-bold text-white/95 drop-shadow-lg font-display">？</span>
                 </div>
               )}
             </div>
@@ -67,15 +67,15 @@ export default function CharPage() {
               {isOpen ? secret.tagline : "その正体は、出会った者にしか明かされない——"}
             </p>
             {isOpen ? (
-              <p className="text-white/70 text-xs leading-relaxed max-w-md mx-auto">{secret.desc}</p>
+              <p className="text-white/70 text-sm leading-relaxed max-w-md mx-auto">{secret.desc}</p>
             ) : (
-              <p className="text-white/60 text-xs leading-relaxed max-w-md mx-auto">
+              <p className="text-white/60 text-sm leading-relaxed max-w-md mx-auto">
                 方言診断の結果発表の瞬間、ごくまれに降臨する幻のキャラ。
                 <br />
                 狙って出すことはできません。出会えるかは、その日の言霊しだい。
               </p>
             )}
-            <p className="inline-block rounded-full border border-gold/50 text-gold text-[11px] font-bold px-4 py-1">
+            <p className="inline-block rounded-full border border-gold/50 text-gold text-sm font-bold px-4 py-1">
               {secret.rateLabel}{isOpen ? " — 出会済み・図鑑解放済み" : ""}
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function CharPage() {
           {isOpen ? (
             <>
               <p className="font-bold">あなたは{secret.name}に出会えた、選ばれし人です</p>
-              <p className="text-xs text-sub">この確率を引いた強運、今日は大事に使ってください</p>
+              <p className="text-sm text-sub">この確率を引いた強運、今日は大事に使ってください</p>
             </>
           ) : (
             <p className="font-bold">今日の診断で、降臨するかも…？</p>
@@ -102,7 +102,7 @@ export default function CharPage() {
     return (
       <div className="max-w-xl mx-auto text-center space-y-4 py-16">
         <div className="text-5xl">🔍</div>
-        <h1 className="text-xl font-bold">このキャラは見つかりませんでした</h1>
+        <h1 className="text-3xl font-bold">このキャラは見つかりませんでした</h1>
         <Link href="/#zukan" className="btn-primary inline-flex">図鑑にもどる</Link>
       </div>
     );
@@ -142,9 +142,9 @@ export default function CharPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-5">
       {/* 前後ナビ */}
-      <div className="flex items-center justify-between text-xs font-bold">
+      <div className="flex items-center justify-between text-sm font-bold">
         <Link href={`/c/${prev.slug}`} className="btn-ghost">← {MASCOT_NAMES[prev.slug]}</Link>
-        <Link href="/#zukan" className="text-primary hover:underline">図鑑にもどる</Link>
+        <Link href="/#zukan" className="inline-flex min-h-[48px] items-center text-primary-text hover:underline">図鑑にもどる</Link>
         <Link href={`/c/${next.slug}`} className="btn-ghost">{MASCOT_NAMES[next.slug]} →</Link>
       </div>
 
@@ -156,7 +156,7 @@ export default function CharPage() {
             background: `radial-gradient(ellipse 90% 70% at 50% 20%, ${heroColor.body}55, transparent), linear-gradient(168deg, ${heroColor.dark} 0%, #182A3E 90%)`,
           }}
         >
-          <p className="text-gold text-xs font-bold tracking-widest">CHARACTER FILE No.{String(idx + 1).padStart(2, "0")}</p>
+          <p className="text-gold text-sm font-bold tracking-widest">CHARACTER FILE No.{String(idx + 1).padStart(2, "0")}</p>
           <div className="flex justify-center anim-pop">
             <TypeAvatar type={type} size={190} dance bg />
           </div>
@@ -172,7 +172,7 @@ export default function CharPage() {
           {/* 「○○弁 変換」で来た人が最初に見る位置。キャラ紹介より先に正しい受け皿を出す */}
           {tSlug && (
             <div className="bg-primary/5 border border-primary/25 rounded-xl p-4 space-y-2">
-              <p className="text-xs text-sub leading-relaxed">
+              <p className="text-sm text-sub leading-relaxed">
                 {type.dialect}
                 {alias}を実際に変換したい方は、こちらの専用ページへどうぞ。
               </p>
@@ -187,8 +187,8 @@ export default function CharPage() {
             </div>
           )}
           <div className="space-y-1.5">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded">紹</span>どんなキャラ？
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded">紹</span>どんなキャラ？
             </h3>
             <p className="leading-relaxed text-sm">{type.desc}</p>
           </div>
@@ -205,14 +205,14 @@ export default function CharPage() {
 
           {/* あいさつ集 */}
           <div className="space-y-2">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded !bg-indigo">言</span>
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded !bg-indigo">言</span>
               {type.dialect}のあいさつ
             </h3>
             <div className="grid sm:grid-cols-2 gap-2 text-sm">
               {GREETING_KEYS.filter((k) => phrases[k]).map((k) => (
                 <div key={k} className="flex items-baseline gap-2 bg-paper rounded-xl px-3.5 py-2.5">
-                  <span className="text-[10px] text-sub shrink-0 w-16">{k}</span>
+                  <span className="text-sm text-sub shrink-0 w-16">{k}</span>
                   <span className="font-bold">{phrases[k]}</span>
                 </div>
               ))}
@@ -221,8 +221,8 @@ export default function CharPage() {
 
           {/* 方言サンプル */}
           <div className="space-y-2">
-            <h3 className="font-bold text-sm flex items-center gap-1.5">
-              <span className="hanko !w-5 !h-5 !text-[10px] !rounded !bg-indigo">辞</span>
+            <h3 className="font-bold text-xl flex items-center gap-1.5">
+              <span className="hanko !w-5 !h-5 !text-sm !rounded !bg-indigo">辞</span>
               代表的な{type.dialect}
             </h3>
             <div className="flex flex-wrap gap-1.5">
@@ -236,7 +236,7 @@ export default function CharPage() {
               <Link
                 href={`/translate/${tSlug}#words`}
                 onClick={toTool("translate_words", "intro", tSlug)}
-                className="text-xs font-bold text-primary hover:underline min-h-[44px] inline-flex items-center"
+                className="text-sm font-bold text-primary-text hover:underline min-h-[48px] inline-flex items-center"
               >
                 → {type.dialect}の言葉一覧（全{allWords.length}語・意味と例文つき）を見る
               </Link>
@@ -251,7 +251,7 @@ export default function CharPage() {
                 {bestTypes.map((t) => (
                   <Link key={t!.slug} href={`/c/${t!.slug}`} className="text-center hover:-translate-y-0.5 transition-transform">
                     <TypeAvatar type={t!} size={56} />
-                    <div className="text-[10px] font-bold text-primary truncate w-16">{MASCOT_NAMES[t!.slug]}</div>
+                    <div className="text-sm font-bold text-primary-text truncate w-16">{MASCOT_NAMES[t!.slug]}</div>
                   </Link>
                 ))}
               </div>
@@ -262,7 +262,7 @@ export default function CharPage() {
                 {trickyTypes.map((t) => (
                   <Link key={t!.slug} href={`/c/${t!.slug}`} className="text-center hover:-translate-y-0.5 transition-transform">
                     <TypeAvatar type={t!} size={56} />
-                    <div className="text-[10px] font-bold text-indigo truncate w-16">{MASCOT_NAMES[t!.slug]}</div>
+                    <div className="text-sm font-bold text-indigo truncate w-16">{MASCOT_NAMES[t!.slug]}</div>
                   </Link>
                 ))}
               </div>
@@ -286,7 +286,7 @@ export default function CharPage() {
           SC実測で「福岡弁 変換」「岡山弁変換」「鹿児島弁 変換」などがこのキャラページに
           順位20〜76で当たっていたため、正しい受け皿へ確実に送る（新規URLは作らない）。 */}
       <section className="card p-5 space-y-3">
-        <h2 className="font-bold text-sm">
+        <h2 className="font-bold text-2xl">
           🧭 {area && `${area}の`}
           {type.dialect}
           {alias}を、もう少し
@@ -334,7 +334,7 @@ export default function CharPage() {
         </div>
         {siblings.length > 0 && (
           <div className="space-y-1.5 pt-1">
-            <p className="text-xs text-sub">近くの方言の変換ページ</p>
+            <p className="text-sm text-sub">近くの方言の変換ページ</p>
             <div className="flex flex-wrap gap-2">
               {siblings.map((d) => {
                 const s = translateSlug(d);
@@ -344,7 +344,7 @@ export default function CharPage() {
                     key={d}
                     href={`/translate/${s}`}
                     onClick={toTool("translate_sibling", "cruise", s)}
-                    className="chip bg-primary/10 text-primary min-h-[44px] inline-flex items-center"
+                    className="chip bg-primary/10 text-primary-text min-h-[48px] inline-flex items-center"
                   >
                     {d} 変換
                   </Link>

@@ -36,13 +36,13 @@ export default function DialectIndex({
           <h2 className="ttl">{heading}</h2>
         </div>
       </div>
-      <p className="text-[12px] text-sub leading-[1.9]">
+      <p className="text-sm text-sub leading-[1.9]">
         地域ごとに「変換（標準語↔方言）」と「検定（8問）」のページがあります。気になる方言から直接どうぞ。
       </p>
 
       {groups.map((g) => (
         <div key={g.region} className="space-y-2">
-          <h3 className="text-[12px] font-bold text-sub tracking-wide">{g.region}</h3>
+          <h3 className="text-xl font-bold text-sub tracking-wide">{g.region}</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
             {g.dialects.map((d) => {
               const tSlug = translateSlug(d);
@@ -53,20 +53,20 @@ export default function DialectIndex({
                   key={d}
                   className="!rounded-xl border border-line bg-paper p-2 shadow-[0_2px_10px_rgba(34,48,63,0.06)]"
                 >
-                  <div className="text-[12px] font-bold text-center leading-tight mb-1.5 truncate">
+                  <div className="text-sm font-bold text-center leading-tight mb-1.5 truncate">
                     {d}
                   </div>
                   <div className="flex gap-1.5">
                     <Link
                       href={`/translate/${tSlug}`}
-                      className="flex-1 min-h-[40px] inline-flex items-center justify-center !rounded-lg border border-primary/30 bg-primary/5 text-primary text-[11px] font-bold hover:bg-primary/10 transition-colors"
+                      className="flex-1 min-h-[48px] inline-flex items-center justify-center !rounded-lg border border-primary/30 bg-primary/5 text-primary-text text-sm font-bold hover:bg-primary/10 transition-colors"
                     >
                       変換
                     </Link>
                     {qSlug && (
                       <Link
                         href={`/quiz/${qSlug}`}
-                        className="flex-1 min-h-[40px] inline-flex items-center justify-center !rounded-lg border border-indigo/30 bg-indigo/5 text-indigo text-[11px] font-bold hover:bg-indigo/10 transition-colors"
+                        className="flex-1 min-h-[48px] inline-flex items-center justify-center !rounded-lg border border-indigo/30 bg-indigo/5 text-indigo text-sm font-bold hover:bg-indigo/10 transition-colors"
                       >
                         検定
                       </Link>
@@ -80,10 +80,10 @@ export default function DialectIndex({
       ))}
 
       <p className="flex flex-wrap justify-center gap-2 pt-1">
-        <Link href="/translate" className="btn-ghost text-xs min-h-[44px] inline-flex items-center">
+        <Link href="/translate" className="btn-ghost text-sm min-h-[48px] inline-flex items-center">
           方言変換の一覧へ →
         </Link>
-        <Link href="/quiz" className="btn-ghost text-xs min-h-[44px] inline-flex items-center">
+        <Link href="/quiz" className="btn-ghost text-sm min-h-[48px] inline-flex items-center">
           方言検定の一覧へ →
         </Link>
       </p>

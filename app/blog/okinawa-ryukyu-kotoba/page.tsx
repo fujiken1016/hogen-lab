@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 function Pair({ hondo, oki, note }: { hondo: string; oki: string; note?: string }) {
   return (
     <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 py-2 border-b border-line last:border-0">
-      <span className="text-[14px] font-bold w-24 shrink-0">{hondo}</span>
+      <span className="text-base font-bold w-24 shrink-0">{hondo}</span>
       <span className="text-sub" aria-hidden>
         →
       </span>
       <span className="font-display text-lg font-bold text-primary-deep">{oki}</span>
-      {note && <span className="text-[11.5px] text-sub w-full sm:w-auto">{note}</span>}
+      {note && <span className="text-sm text-sub w-full sm:w-auto">{note}</span>}
     </div>
   );
 }

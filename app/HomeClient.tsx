@@ -88,10 +88,10 @@ export default function HomeClient() {
         <Cloud className="w-16 -top-2 left-[40%] cloud-drift opacity-70" style={{ animationDelay: "1.8s" }} />
         {/* モバイルはキャラ列と重なるため木・茂みは置かない（雲と太陽のみ） */}
         <div className="space-y-5">
-          <p className="text-primary font-bold tracking-[0.25em] text-xs">
+          <p className="text-primary-text font-bold tracking-[0.25em] text-sm">
             HOGEN TYPE SHINDAN
           </p>
-          <h1 className="font-display font-bold leading-none">
+          <h1 className="font-display font-bold leading-none text-4xl">
             <span className="block text-2xl sm:text-3xl text-sub mb-2">あなたの言葉は、</span>
             <span className="text-7xl sm:text-8xl tracking-tight">
               何<span className="text-primary">弁</span>？
@@ -101,7 +101,7 @@ export default function HomeClient() {
             言葉と性格の14問でわかる「方言キャラタイプ診断」。性格も、恋愛傾向も、友達との相性も。
             ふるさとの言葉が、あなたを教えてくれる。
           </p>
-          <div className="flex items-center gap-3 text-xs font-bold text-indigo">
+          <div className="flex items-center gap-3 text-sm font-bold text-indigo">
             <span>✓ 約2分</span>
             <span>✓ 全14問</span>
             <span>✓ 登録不要</span>
@@ -114,15 +114,15 @@ export default function HomeClient() {
               <span className="stamp w-14 h-14 text-sm absolute -top-5 -right-6">無料</span>
             </div>
             {/* 検索流入の最多群は「〜弁 変換」。変換が目的の来訪者用の第2導線（GSC実測 2026-08） */}
-            <Link href="/translate" className="btn-secondary min-h-[44px] inline-flex items-center px-6 text-sm">
+            <Link href="/translate" className="btn-secondary min-h-[48px] inline-flex items-center px-6 text-sm">
               方言に変換してみる →
             </Link>
           </div>
           {/* モバイル用キャラ列（PCでは右カラムに表示） */}
           <div className="md:hidden pt-3 space-y-1">
             <div className="flex justify-center gap-6">
-              <span className="bubble !text-[10px] rotate-[-4deg]">なんしよっと？</span>
-              <span className="bubble !text-[10px] rotate-[3deg]">めっちゃええやん</span>
+              <span className="bubble !text-sm rotate-[-4deg]">なんしよっと？</span>
+              <span className="bubble !text-sm rotate-[3deg]">めっちゃええやん</span>
             </div>
             <div className="flex -space-x-2 justify-center">
               {[9, 11, 29, 21, 34, 5, 16].map((idx, i) => (
@@ -158,7 +158,7 @@ export default function HomeClient() {
               </div>
             ))}
           </div>
-          <span className="tate absolute -right-2 top-0 font-display text-sm text-sub/70 max-lg:hidden">
+          <span className="tate absolute -right-2 top-0 font-display text-sm text-sub max-lg:hidden">
             ふるさとの言葉と、遊ぼう。
           </span>
         </div>
@@ -183,11 +183,11 @@ export default function HomeClient() {
         <div className="max-w-5xl mx-auto grid grid-cols-4 divide-x divide-white/15 relative">
           {stats.map((s) => (
             <div key={s.unit} className="py-5 text-center">
-              <div className="font-black text-2xl sm:text-3xl text-gold leading-none">
+              <div className="font-bold text-2xl sm:text-3xl text-gold leading-none">
                 {s.n}
-                <span className="text-xs font-bold ml-0.5 text-white/80">{s.unit}</span>
+                <span className="text-sm font-bold ml-0.5 text-white/80">{s.unit}</span>
               </div>
-              <div className="text-[10px] text-white/60 mt-1.5 tracking-widest">{s.sub}</div>
+              <div className="text-sm text-white/60 mt-1.5 tracking-widest">{s.sub}</div>
             </div>
           ))}
         </div>
@@ -201,7 +201,7 @@ export default function HomeClient() {
               <span style={{ transform: `rotate(${[-5, 4, -3, 5][i % 4]}deg)` }} className="inline-block">
                 <TypeAvatar type={t} size={52} still />
               </span>
-              <span className="chip !px-2 !py-0.5 !text-[10px] bg-primary/10 text-primary whitespace-nowrap">
+              <span className="chip !px-2 !py-0.5 !text-sm bg-primary/10 text-primary whitespace-nowrap">
                 {MASCOT_NAMES[t.slug]}
               </span>
             </span>
@@ -231,9 +231,9 @@ export default function HomeClient() {
               <div className="absolute -bottom-2 -right-2 rotate-[-8deg]">
                 <TypeAvatar type={TYPES[[1, 13, 33][i]]} size={62} />
               </div>
-              <div className="text-xs font-bold text-primary mb-1">STEP {s.n}</div>
+              <div className="text-sm font-bold text-primary-text mb-1">STEP {s.n}</div>
               <div className="font-bold mb-1">{s.t}</div>
-              <p className="text-xs text-sub leading-relaxed">{s.d}</p>
+              <p className="text-sm text-sub leading-relaxed">{s.d}</p>
             </div>
           ))}
         </div>
@@ -247,7 +247,7 @@ export default function HomeClient() {
             <span className="sub">CHARACTER ZUKAN</span>
             <h2 className="ttl">方言キャラ図鑑 — 全{TYPES.length}体</h2>
           </div>
-          <Link href="/shindan" className="ml-auto text-xs text-primary font-bold hover:underline shrink-0">
+          <Link href="/shindan" className="ml-auto inline-flex min-h-[48px] items-center text-sm text-primary-text font-bold hover:underline shrink-0">
             自分のキャラを調べる →
           </Link>
         </div>
@@ -265,10 +265,10 @@ export default function HomeClient() {
                 <div className="flex justify-center">
                   <TypeAvatar type={t} size={92} bg />
                 </div>
-                <div className="text-[10px] font-bold text-primary leading-tight mt-1 truncate">
+                <div className="text-sm font-bold text-primary-text leading-tight mt-1 truncate">
                   {MASCOT_NAMES[t.slug]}
                 </div>
-                <div className="text-[10px] text-sub">{t.dialect}</div>
+                <div className="text-sm text-sub">{t.dialect}</div>
               </Link>
             </div>
           ))}
@@ -283,20 +283,20 @@ export default function HomeClient() {
                   style={{ background: "linear-gradient(160deg, #241C3A, #3A2A5E)" }}
                   title={opened ? s.name : "診断でごくまれに出現…"}
                 >
-                  <span className="sparkle text-xs" style={{ top: "6%", left: "10%" }}>✦</span>
-                  <span className="sparkle text-xs" style={{ top: "14%", right: "8%", animationDelay: "1.2s" }}>✧</span>
+                  <span className="sparkle text-sm" style={{ top: "6%", left: "10%" }}>✦</span>
+                  <span className="sparkle text-sm" style={{ top: "14%", right: "8%", animationDelay: "1.2s" }}>✧</span>
                   <div className={`flex justify-center ${opened ? "" : "secret-hidden"}`}>
                     <SecretAvatar slug={s.slug} size={92} bg />
                   </div>
                   {!opened && (
                     <div className="absolute inset-x-0 top-6 grid place-items-center pointer-events-none">
-                      <span className="text-5xl font-black text-white/95 drop-shadow-lg font-display">？</span>
+                      <span className="text-5xl font-bold text-white/95 drop-shadow-lg font-display">？</span>
                     </div>
                   )}
-                  <div className="text-[10px] font-bold text-gold leading-tight mt-1 truncate">
+                  <div className="text-sm font-bold text-gold leading-tight mt-1 truncate">
                     {opened ? s.name : "？？？"}
                   </div>
-                  <div className="text-[10px] text-white/60">{opened ? "SECRET" : s.rateLabel}</div>
+                  <div className="text-sm text-white/60">{opened ? "SECRET" : s.rateLabel}</div>
                 </Link>
               </div>
             );
@@ -326,7 +326,7 @@ export default function HomeClient() {
                 <span className="text-3xl shrink-0">{f.emoji}</span>
                 <span>
                   <span className="font-bold text-sm block">{f.title}</span>
-                  <span className="text-[11px] text-sub">{f.desc}</span>
+                  <span className="text-sm text-sub">{f.desc}</span>
                 </span>
               </Link>
             ))}
@@ -348,15 +348,15 @@ export default function HomeClient() {
               </div>
               <div className="min-w-0">
                 <div className="font-bold text-xl font-display truncate">{today.word}</div>
-                <div className="text-xs text-sub truncate">
+                <div className="text-sm text-sub truncate">
                   {today.meaning} —「{today.example}」
                 </div>
               </div>
-              <span className="ml-auto text-primary text-sm shrink-0">→</span>
+              <span className="ml-auto text-primary-text text-sm shrink-0">→</span>
             </Link>
           )}
           <div className="card !rounded-xl p-4">
-            <div className="text-xs font-bold mb-2">
+            <div className="text-sm font-bold mb-2">
               🏅 獲得バッジ（{badges.length}/{badgeList.length}）
             </div>
             <div className="flex flex-wrap gap-1.5 max-h-24 overflow-hidden">
@@ -364,10 +364,10 @@ export default function HomeClient() {
                 <span
                   key={b.id}
                   title={b.desc}
-                  className={`chip !text-[10px] !px-2 border ${
+                  className={`chip !text-sm !px-2 border ${
                     badges.includes(b.id)
                       ? "bg-gold/15 border-gold/60 text-amber-800"
-                      : "bg-paper border-line text-sub/60"
+                      : "bg-paper border-line text-sub"
                   }`}
                 >
                   {b.label}
@@ -386,7 +386,7 @@ export default function HomeClient() {
             <span className="sub">ARTICLES</span>
             <h2 className="ttl">読みもの</h2>
           </div>
-          <Link href="/blog" className="ml-auto btn-ghost text-xs shrink-0">
+          <Link href="/blog" className="ml-auto btn-ghost text-sm shrink-0">
             一覧へ →
           </Link>
         </div>
@@ -402,8 +402,8 @@ export default function HomeClient() {
                 {a.emoji}
               </span>
               <span className="min-w-0">
-                <span className="block font-bold text-[13px] leading-snug line-clamp-2">{a.title}</span>
-                <span className="block text-[11px] text-sub mt-1">
+                <span className="block font-bold text-sm leading-snug line-clamp-2">{a.title}</span>
+                <span className="block text-sm text-sub mt-1">
                   {a.category}・約{a.readMin}分
                 </span>
               </span>

@@ -60,14 +60,20 @@ export default function Page() {
         語彙より見えにくい部分の地域差が、ここで初めて全国規模で可視化されました。
         東西の境界線の話も、敬語の分布の話も、この地図が土台になっています。
         くわしくは
-        <Link href="/blog/higashi-nishi-kyoukai" className="text-primary hover:underline">
-          東西境界線の記事
-        </Link>
+        東西境界線の記事
         と
-        <Link href="/blog/hogen-keigo-chiiki" className="text-primary hover:underline">
-          敬語の地域差の記事
-        </Link>
+        敬語の地域差の記事
         で扱っています。
+      </P>
+      <P>
+        <Link href="/blog/higashi-nishi-kyoukai" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 東西境界線の記事
+        </Link>
+      </P>
+      <P>
+        <Link href="/blog/hogen-keigo-chiiki" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 敬語の地域差の記事
+        </Link>
       </P>
 
       <H2>誰に聞いたのか——ここが最重要</H2>

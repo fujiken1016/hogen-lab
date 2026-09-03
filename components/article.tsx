@@ -31,7 +31,7 @@ export function H2({ children, id }: { children: ReactNode; id?: string }) {
 
 export function H3({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mt-7 mb-2.5 text-base font-bold flex items-center gap-2">
+    <h3 className="mt-7 mb-2.5 text-xl font-bold flex items-center gap-2">
       <span className="w-1.5 h-5 rounded-full bg-primary/70 shrink-0" />
       {children}
     </h3>
@@ -39,15 +39,15 @@ export function H3({ children }: { children: ReactNode }) {
 }
 
 export function P({ children }: { children: ReactNode }) {
-  return <p className="text-[15px] leading-[1.95] mb-4">{children}</p>;
+  return <p className="text-base leading-[1.95] mb-4">{children}</p>;
 }
 
 /** 引用・補足のかこみ */
 export function Note({ children, title }: { children: ReactNode; title?: string }) {
   return (
     <div className="my-5 rounded-xl border border-indigo/25 bg-indigo/[0.05] px-4 py-3.5">
-      {title && <div className="text-xs font-bold text-indigo mb-1.5 tracking-wide">{title}</div>}
-      <div className="text-[13.5px] leading-[1.9] text-ink/85">{children}</div>
+      {title && <div className="text-sm font-bold text-indigo mb-1.5 tracking-wide">{title}</div>}
+      <div className="text-base leading-[1.9] text-ink/85">{children}</div>
     </div>
   );
 }
@@ -72,14 +72,14 @@ export function WordCard({
     <div className="card p-4 sm:p-5 my-4">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
         <span className="font-display text-2xl font-bold text-primary-deep">{word}</span>
-        {reading && <span className="text-xs text-sub">{reading}</span>}
+        {reading && <span className="text-sm text-sub">{reading}</span>}
         <span className="chip bg-indigo/10 text-indigo ml-auto">{dialect}</span>
       </div>
       <p className="text-sm font-bold mt-2">{meaning}</p>
-      <p className="text-[13.5px] text-sub mt-2 bg-paper/70 rounded-lg px-3 py-2 border border-line">
+      <p className="text-base text-sub mt-2 bg-paper/70 rounded-lg px-3 py-2 border border-line">
         「{example}」
       </p>
-      {children && <div className="text-[13.5px] leading-[1.9] mt-3">{children}</div>}
+      {children && <div className="text-base leading-[1.9] mt-3">{children}</div>}
     </div>
   );
 }
@@ -104,24 +104,24 @@ export function RankItem({
   return (
     <div className="card p-4 sm:p-5 my-4 relative overflow-hidden">
       <div
-        className="absolute -right-3 -top-4 font-display font-black text-[76px] leading-none text-primary/[0.07] select-none"
+        className="absolute -right-3 -top-4 font-display font-bold text-[76px] leading-none text-primary/[0.07] select-none"
         aria-hidden
       >
         {rank}
       </div>
       <div className="relative">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="chip bg-primary text-white">
+          <span className="chip bg-primary-text text-white">
             {medal ? `${medal} ` : ""}第{rank}位
           </span>
           <span className="font-bold">{dialect}</span>
         </div>
         <p className="font-display text-2xl font-bold text-primary-deep mt-2.5">{phrase}</p>
         <p className="text-sm font-bold text-sub mt-1">{meaning}</p>
-        <p className="text-[13.5px] mt-2.5 bg-paper/70 rounded-lg px-3 py-2 border border-line">
+        <p className="text-base mt-2.5 bg-paper/70 rounded-lg px-3 py-2 border border-line">
           「{example}」
         </p>
-        <div className="text-[13.5px] leading-[1.9] mt-3">{children}</div>
+        <div className="text-base leading-[1.9] mt-3">{children}</div>
       </div>
     </div>
   );
@@ -150,11 +150,11 @@ export function PrBox({
       className="my-7 rounded-2xl border-2 border-dashed border-gold/60 bg-gold/[0.07] p-4 sm:p-5"
     >
       <div className="flex items-center gap-2 mb-2">
-        <span className="chip bg-gold/80 text-white text-[10px] tracking-widest">PR</span>
-        <span className="text-[11px] text-sub">広告（アフィリエイトリンク）を含みます</span>
+        <span className="chip bg-gold/80 text-white text-sm tracking-widest">PR</span>
+        <span className="text-sm text-sub">広告（アフィリエイトリンク）を含みます</span>
       </div>
-      <p className="font-bold text-[15px] mb-1.5">{title}</p>
-      <p className="text-[13.5px] leading-[1.9] text-ink/85 mb-3.5">{body}</p>
+      <p className="font-bold text-base mb-1.5">{title}</p>
+      <p className="text-base leading-[1.9] text-ink/85 mb-3.5">{body}</p>
       <ul className="space-y-2.5">
         {books.map((b) => (
           <li key={b.url}>
@@ -165,21 +165,21 @@ export function PrBox({
               className="flex min-h-[48px] items-center gap-2.5 rounded-xl border border-gold/70 bg-white/70 px-3.5 py-2.5 hover:bg-white"
             >
               <span className="min-w-0 break-words">
-                <span className="block text-[13.5px] font-bold leading-[1.6]">{b.name}</span>
+                <span className="block text-base font-bold leading-[1.6]">{b.name}</span>
                 {b.meta && (
-                  <span className="mt-0.5 block text-[11.5px] leading-[1.5] text-sub">
+                  <span className="mt-0.5 block text-sm leading-[1.5] text-sub">
                     {b.meta}
                   </span>
                 )}
               </span>
-              <span aria-hidden className="ml-auto shrink-0 text-gold">
+              <span aria-hidden className="ml-auto shrink-0 text-indigo">
                 ↗
               </span>
             </a>
           </li>
         ))}
       </ul>
-      <p className="mt-2.5 text-[11px] leading-[1.7] text-sub">
+      <p className="mt-2.5 text-sm leading-[1.7] text-sub">
         リンク先は楽天ブックスの商品ページです。価格・在庫は変わることがあります。
       </p>
     </aside>
@@ -190,11 +190,11 @@ export function PrBox({
 export function Sources({ items }: { items: { label: string; url?: string }[] }) {
   return (
     <section className="mt-10 rounded-xl border border-line bg-paper/60 px-4 py-4">
-      <h2 className="text-xs font-bold tracking-wide text-sub mb-2.5">参考・出典</h2>
-      <ul className="space-y-1.5 text-[12px] leading-[1.85] text-sub">
+      <h2 className="text-2xl font-bold tracking-wide text-sub mb-2.5">参考・出典</h2>
+      <ul className="space-y-1.5 text-sm leading-[1.85] text-sub">
         {items.map((s) => (
           <li key={s.label} className="flex gap-2">
-            <span aria-hidden className="text-sub/60">
+            <span aria-hidden className="text-sub">
               ・
             </span>
             <span className="min-w-0 break-words">
@@ -203,7 +203,7 @@ export function Sources({ items }: { items: { label: string; url?: string }[] })
                   href={s.url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="inline-flex min-h-[48px] items-center text-primary-text hover:underline"
                 >
                   {s.label}
                 </a>
@@ -214,12 +214,11 @@ export function Sources({ items }: { items: { label: string; url?: string }[] })
           </li>
         ))}
       </ul>
-      <p className="text-[11px] text-sub/70 mt-3 leading-[1.8]">
-        方言は同じ県内でも地域・世代によって差があります。掲載内容と異なる言い方をご存じの場合は
-        <Link href="/contact" className="text-primary hover:underline">
-          お問い合わせ
-        </Link>
-        からお知らせください。
+      <p className="text-sm text-sub mt-3 leading-[1.8]">
+        方言は同じ県内でも地域・世代によって差があります。掲載内容と異なる言い方をご存じの場合はお知らせください。
+      </p>
+      <p>
+        <Link href="/contact" className="inline-flex min-h-[48px] items-center text-sm text-primary-text hover:underline">→ お問い合わせ</Link>
       </p>
     </section>
   );
@@ -236,7 +235,7 @@ export function ShindanCta({
   return (
     <div className="my-8 rounded-2xl seigaiha border border-indigo/25 p-5 sm:p-6 text-center">
       <p className="font-display text-xl font-bold mb-2">{title}</p>
-      <p className="text-[13.5px] text-sub leading-[1.9] mb-4 max-w-md mx-auto">{body}</p>
+      <p className="text-base text-sub leading-[1.9] mb-4 max-w-md mx-auto">{body}</p>
       <div className="flex flex-wrap gap-2 justify-center">
         <Link href="/shindan" className="btn-primary">
           無料で方言診断をはじめる
@@ -283,12 +282,12 @@ export function ArticleShell({ article, children }: { article: Article; children
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, "\\u003c") }}
       />
-      <nav className="text-[11px] text-sub mb-4 flex items-center gap-1.5 flex-wrap">
-        <Link href="/" className="hover:text-primary">
+      <nav className="text-sm text-sub mb-4 flex items-center gap-1.5 flex-wrap">
+        <Link href="/" className="inline-flex min-h-[48px] items-center hover:text-primary-text">
           方言ラボ
         </Link>
         <span aria-hidden>›</span>
-        <Link href="/blog" className="hover:text-primary">
+        <Link href="/blog" className="inline-flex min-h-[48px] items-center hover:text-primary-text">
           読みもの
         </Link>
         <span aria-hidden>›</span>
@@ -296,15 +295,15 @@ export function ArticleShell({ article, children }: { article: Article; children
       </nav>
 
       <header className="mb-7">
-        <p className="text-[11px] text-sub mb-3">※本ページはプロモーションが含まれています</p>
+        <p className="text-sm text-sub mb-3">※本ページはプロモーションが含まれています</p>
         <div className="text-5xl mb-3" aria-hidden>
           {article.emoji}
         </div>
-        <h1 className="font-display text-[26px] sm:text-3xl font-bold leading-[1.5] tracking-wide">
+        <h1 className="font-display text-3xl sm:text-3xl font-bold leading-[1.5] tracking-wide">
           {article.title}
         </h1>
-        <p className="text-[14px] text-sub leading-[1.9] mt-3.5">{article.lead}</p>
-        <div className="flex items-center gap-3 text-[11px] text-sub mt-4 pt-4 border-t border-line">
+        <p className="text-base text-sub leading-[1.9] mt-3.5">{article.lead}</p>
+        <div className="flex items-center gap-3 text-sm text-sub mt-4 pt-4 border-t border-line">
           <span className="chip bg-indigo/10 text-indigo">{article.category}</span>
           <span>
             公開 <time dateTime={published}>{jpDate(published)}</time>
@@ -341,14 +340,14 @@ export function ArticleShell({ article, children }: { article: Article; children
                   key={d.dialect}
                   className="!rounded-xl border border-line bg-paper p-2 shadow-[0_2px_10px_rgba(34,48,63,0.06)]"
                 >
-                  <div className="text-[12px] font-bold text-center leading-tight mb-1.5 truncate">
+                  <div className="text-sm font-bold text-center leading-tight mb-1.5 truncate">
                     {d.dialect}
                   </div>
                   <div className="flex gap-1.5">
                     {d.translate && (
                       <Link
                         href={`/translate/${d.translate}`}
-                        className="flex-1 min-h-[40px] inline-flex items-center justify-center !rounded-lg border border-primary/30 bg-primary/5 text-primary text-[11px] font-bold"
+                        className="flex-1 min-h-[48px] inline-flex items-center justify-center !rounded-lg border border-primary/30 bg-primary/5 text-primary-text text-sm font-bold"
                       >
                         変換
                       </Link>
@@ -356,7 +355,7 @@ export function ArticleShell({ article, children }: { article: Article; children
                     {d.quiz && (
                       <Link
                         href={`/quiz/${d.quiz}`}
-                        className="flex-1 min-h-[40px] inline-flex items-center justify-center !rounded-lg border border-indigo/30 bg-indigo/5 text-indigo text-[11px] font-bold"
+                        className="flex-1 min-h-[48px] inline-flex items-center justify-center !rounded-lg border border-indigo/30 bg-indigo/5 text-indigo text-sm font-bold"
                       >
                         検定
                       </Link>
@@ -392,8 +391,8 @@ export function ArticleShell({ article, children }: { article: Article; children
                 {t.emoji}
               </span>
               <span className="min-w-0">
-                <span className="block text-[13px] font-bold leading-snug">{t.title}</span>
-                <span className="block text-[11px] text-sub mt-0.5">{t.desc}</span>
+                <span className="block text-sm font-bold leading-snug">{t.title}</span>
+                <span className="block text-sm text-sub mt-0.5">{t.desc}</span>
               </span>
             </Link>
           ))}
@@ -416,8 +415,8 @@ export function ArticleShell({ article, children }: { article: Article; children
                 {a.emoji}
               </span>
               <span className="min-w-0">
-                <span className="block text-[13.5px] font-bold leading-snug">{a.title}</span>
-                <span className="block text-[11px] text-sub mt-1">
+                <span className="block text-base font-bold leading-snug">{a.title}</span>
+                <span className="block text-sm text-sub mt-1">
                   {a.category}・約{a.readMin}分
                 </span>
               </span>

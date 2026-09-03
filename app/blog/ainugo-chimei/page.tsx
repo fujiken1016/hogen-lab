@@ -153,10 +153,13 @@ export default function Page() {
         国立アイヌ民族博物館はアイヌ語アーカイブを公開し、
         アイヌ民族文化財団はラジオ講座などの学習機会を提供しています。
         言語が消えるときに何が起きるのかは、
-        <Link href="/blog/hogen-fuda-kiki" className="text-primary hover:underline">
-          方言札と危機言語の記事
-        </Link>
+        方言札と危機言語の記事
         でも扱いました。
+      </P>
+      <P>
+        <Link href="/blog/hogen-fuda-kiki" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 方言札と危機言語の記事
+        </Link>
       </P>
 
       <H2>まとめ</H2>
