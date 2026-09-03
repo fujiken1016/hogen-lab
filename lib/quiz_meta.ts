@@ -7,11 +7,11 @@
 //   「○○弁だけの言葉」と誤解させないため。方言は県境で切れない。
 // - 判定の文言は「不正解」と断定せず「辞典では〜として収録」に寄せる（画面側で実装）。
 
-import { QUIZZES, QuizQ, wordsOf } from "./data";
+import { QUIZZES, QuizQ, WordEntry, wordsOf } from "./data";
 import { DOKO_SEEDS } from "./doko_pool";
 import { REAL_DIALECTS, REGION_OF } from "./tools";
 import { TYPES } from "./types";
-import { isVerifiedQuizWord } from "./verified_quiz_words";
+import { VERIFIED_QUIZ_WORDS, isVerifiedQuizWord } from "./verified_quiz_words";
 
 /** 検定を用意している方言（＝QUIZZES に8問そろっているもの） */
 export const QUIZ_DIALECTS: string[] = REAL_DIALECTS.filter((d) => (QUIZZES[d]?.length ?? 0) > 0);
@@ -176,4 +176,102 @@ export function verifiedCount(dialect: string): number {
 export function siblingDialects(dialect: string): string[] {
   const region = REGION_OF[dialect];
   return QUIZ_DIALECTS.filter((d) => d !== dialect && REGION_OF[d] === region);
+}
+
+/**
+ * 出題語の出典。VERIFIED_QUIZ_WORDS に記録している照合メモを**画面に出す**ために公開した
+ * （2026-09-03）。それまでは記録用として持っているだけで、ページには「○問が照合済み」という
+ * 件数しか出していなかった。出典まで書けるのが方言ラボの差別化なので、検定ページで全部見せる。
+ */
+const SRC_BY_PAIR = new Map(VERIFIED_QUIZ_WORDS.map((v) => [`${v.dialect} ${v.word}`, v.src]));
+
+export function quizSourceOf(dialect: string, word: string | null): string | undefined {
+  if (!word) return undefined;
+  return SRC_BY_PAIR.get(`${dialect} ${word}`);
+}
+
+/** /doko の出題プール（＝正解が一意に決まる語として照合済み）に入っている語か */
+export function inDokoPool(dialect: string, word: string | null): boolean {
+  return !!word && VERIFIED_PAIRS.has(`${dialect} ${word}`);
+}
+
+/** 辞典側のエントリ（意味・例文）。設問の見出し語から引く */
+export function dictEntry(dialect: string, word: string | null): WordEntry | undefined {
+  if (!word) return undefined;
+  const ws = wordsOf(dialect);
+  const exact = ws.find((w) => w.word === word);
+  if (exact) return exact;
+  // 「ゴミをなげる」のような句は末尾の見出し語で引き直す（alsoRecordedIn と同じ考え方）
+  return ws.find((w) => w.word.length >= 3 && w.word !== word && word.endsWith(w.word));
+}
+
+/**
+ * その方言だけに収録がある語（他34方言の辞典に立項が無い語）。
+ * 検定の出題語は**除く**（このページで意味まで並べると検定のネタバレになるため）。
+ * 方言ごとに中身も語数も全く違うので、35ページが機械的に似るのを構造的に防ぐ材料になる。
+ */
+export function exclusiveWords(dialect: string): WordEntry[] {
+  const idx = getWordIndex();
+  const quizWords = new Set(
+    annotatedQuiz(dialect)
+      .map((q) => q.word)
+      .filter((w): w is string => !!w),
+  );
+  const seen = new Set<string>();
+  const out: WordEntry[] = [];
+  for (const w of wordsOf(dialect)) {
+    if (seen.has(w.word)) continue;
+    seen.add(w.word);
+    if (quizWords.has(w.word)) continue;
+    if ((idx.get(w.word) ?? []).length !== 1) continue;
+    out.push(w);
+  }
+  return out;
+}
+
+/** 同じ地方の方言と、辞典で重なっている語の数と例（出題語は例から除く） */
+export function siblingOverlap(
+  dialect: string,
+): { dialect: string; count: number; samples: string[] }[] {
+  const mine = wordsOf(dialect).map((w) => w.word);
+  const mineSet = new Set(mine);
+  const quizWords = new Set(
+    annotatedQuiz(dialect)
+      .map((q) => q.word)
+      .filter((w): w is string => !!w),
+  );
+  return siblingDialects(dialect).map((d) => {
+    const shared = [...new Set(wordsOf(d).map((w) => w.word))].filter((w) => mineSet.has(w));
+    return {
+      dialect: d,
+      count: shared.length,
+      samples: shared.filter((w) => !quizWords.has(w)).slice(0, 4),
+    };
+  });
+}
+
+/**
+ * 他の方言にも収録がある語と、その相手の方言。
+ * exclusiveWords() の裏返しで、2つ合わせるとその方言の全収録語になる。
+ * 「どの語がその方言だけで、どの語が近隣と共通か」は方言ごとに全く違うので、
+ * 35ページを機械的な差し替えでない形にするための実データとして本文に出している。
+ * 意味は載せない（/translate/[slug] の語一覧と同じ文章を作らないため）。
+ */
+export function sharedWords(dialect: string): { word: string; others: string[] }[] {
+  const idx = getWordIndex();
+  const quizWords = new Set(
+    annotatedQuiz(dialect)
+      .map((q) => q.word)
+      .filter((w): w is string => !!w),
+  );
+  const seen = new Set<string>();
+  const out: { word: string; others: string[] }[] = [];
+  for (const w of wordsOf(dialect)) {
+    if (seen.has(w.word)) continue;
+    seen.add(w.word);
+    if (quizWords.has(w.word)) continue;
+    const others = (idx.get(w.word) ?? []).filter((d) => d !== dialect);
+    if (others.length > 0) out.push({ word: w.word, others });
+  }
+  return out;
 }
