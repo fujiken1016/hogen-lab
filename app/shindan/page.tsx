@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import CrossSite from "@/components/CrossSite";
 import ShareBar from "@/components/ShareBar";
 import { useCopy } from "@/lib/clipboard";
 import Link from "next/link";
@@ -1215,6 +1216,8 @@ function ShindanPage() {
           ↻ もう一度診断する
         </button>
       </div>
+      <CrossSite content="shindan" />
+
       <ToolIntro
         heading="方言タイプ診断について"
         paragraphs={[

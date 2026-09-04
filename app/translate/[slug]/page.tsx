@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CrossSite from "@/components/CrossSite";
 import ToolReads from "@/components/ToolReads";
 import TranslateTool from "@/components/TranslateTool";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
@@ -20,6 +21,12 @@ import { typeByDialect } from "@/lib/types";
 import { PageDates } from "@/components/PageDates";
 
 const BASE = "https://hogen.mainichi-lab.com";
+
+// 毎日ラボ（ポータル）への導線を出す方言スラッグ。
+// 🔴 35面すべてには広げない。AdSense審査中は「共通テンプレート＝全面波及」の変更をしない運用のため、
+//    GSCで実測クリック上位の3面だけに限定する（2026/08/05〜09/01：tosa 18・shizuoka 14・niigata 14 クリック）。
+//    全35面への展開は審査の決着後に判断する（memory/deferred_until_adsense.md に起票済み）。
+const CROSS_SITE_SLUGS = new Set(["tosa", "shizuoka", "niigata"]);
 
 // 方言ごとに1URL。「○○弁 変換」「○○弁 翻訳」は方言ごとに検索され、
 // 変換の中身も方言ごとに全く違う（＝分割の2条件を満たす）。/translate は全方言の索引として残す。
@@ -252,6 +259,8 @@ export default async function TranslateDialectPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {CROSS_SITE_SLUGS.has(slug) && <CrossSite content={`translate_${slug}`} />}
 
       <div className="flex flex-wrap justify-center gap-2 text-sm">
         {qSlug && (
