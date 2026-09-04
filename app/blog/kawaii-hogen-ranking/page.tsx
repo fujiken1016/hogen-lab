@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArticleShell, H2, P, Note, PrBox, RankItem, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
+import CrossSite from "@/components/CrossSite";
 
 const article = getArticle("kawaii-hogen-ranking")!;
 
@@ -196,6 +197,8 @@ export default function Page() {
         その言葉自体に土地の感情がしみこんでいます。だから翻訳すると少しだけ意味がこぼれ落ちる。
         方言がかわいく聞こえるのは、そのこぼれた部分に惹かれているからかもしれません。
       </P>
+
+      <CrossSite content="blog_kawaii-hogen-ranking" />
 
       <ShindanCta
         title="あなたの言葉に近いのは、どの方言？"
