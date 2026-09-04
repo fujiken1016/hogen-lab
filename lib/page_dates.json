@@ -61,7 +61,7 @@
  },
  "/blog/kawaii-hogen-ranking": {
   "published": "2026-08-12",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/blog/kyushu-hogen-gradation": {
   "published": "2026-08-13",
@@ -109,7 +109,7 @@
  },
  "/doko": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/kawaii": {
   "published": "2026-08-14",
@@ -133,7 +133,7 @@
  },
  "/quiz/awa": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-04"
  },
  "/quiz/fukushima": {
   "published": "2026-08-14",
@@ -141,7 +141,7 @@
  },
  "/quiz/hakata": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/quiz/hida": {
   "published": "2026-08-14",
@@ -149,7 +149,7 @@
  },
  "/quiz/hiroshima": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/quiz/hokkaido": {
   "published": "2026-08-14",
@@ -181,15 +181,15 @@
  },
  "/quiz/kanazawa": {
   "published": "2026-08-14",
-  "modified": "2026-08-30"
+  "modified": "2026-09-04"
  },
  "/quiz/kansai": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/quiz/kobe": {
   "published": "2026-08-14",
-  "modified": "2026-08-26"
+  "modified": "2026-09-04"
  },
  "/quiz/kumamoto": {
   "published": "2026-08-14",
@@ -197,7 +197,7 @@
  },
  "/quiz/kyoto": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/quiz/nagasaki": {
   "published": "2026-08-14",
@@ -209,7 +209,7 @@
  },
  "/quiz/niigata": {
   "published": "2026-08-14",
-  "modified": "2026-08-27"
+  "modified": "2026-09-04"
  },
  "/quiz/oita": {
   "published": "2026-08-14",
@@ -229,7 +229,7 @@
  },
  "/quiz/sendai": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/quiz/shinshu": {
   "published": "2026-08-14",
@@ -241,7 +241,7 @@
  },
  "/quiz/tosa": {
   "published": "2026-08-14",
-  "modified": "2026-08-30"
+  "modified": "2026-09-04"
  },
  "/quiz/tottori": {
   "published": "2026-08-14",
@@ -253,11 +253,11 @@
  },
  "/quiz/tsugaru": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-04"
  },
  "/quiz/wakayama": {
   "published": "2026-08-14",
-  "modified": "2026-08-14"
+  "modified": "2026-09-04"
  },
  "/quiz/yamagata": {
   "published": "2026-08-14",
@@ -265,11 +265,11 @@
  },
  "/quiz/yamaguchi": {
   "published": "2026-08-14",
-  "modified": "2026-08-21"
+  "modified": "2026-09-04"
  },
  "/shindan": {
   "published": "2026-08-02",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/today": {
   "published": "2026-08-02",
@@ -285,7 +285,7 @@
  },
  "/translate/awa": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-04"
  },
  "/translate/fukushima": {
   "published": "2026-08-14",
@@ -293,7 +293,7 @@
  },
  "/translate/hakata": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/translate/hida": {
   "published": "2026-08-14",
@@ -301,7 +301,7 @@
  },
  "/translate/hiroshima": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/translate/hokkaido": {
   "published": "2026-08-14",
@@ -333,15 +333,15 @@
  },
  "/translate/kanazawa": {
   "published": "2026-08-14",
-  "modified": "2026-08-30"
+  "modified": "2026-09-04"
  },
  "/translate/kansai": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/translate/kobe": {
   "published": "2026-08-14",
-  "modified": "2026-08-26"
+  "modified": "2026-09-04"
  },
  "/translate/kumamoto": {
   "published": "2026-08-14",
@@ -349,7 +349,7 @@
  },
  "/translate/kyoto": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/translate/nagasaki": {
   "published": "2026-08-14",
@@ -361,7 +361,7 @@
  },
  "/translate/niigata": {
   "published": "2026-08-14",
-  "modified": "2026-08-27"
+  "modified": "2026-09-04"
  },
  "/translate/oita": {
   "published": "2026-08-14",
@@ -381,7 +381,7 @@
  },
  "/translate/sendai": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-04"
  },
  "/translate/shinshu": {
   "published": "2026-08-14",
@@ -393,7 +393,7 @@
  },
  "/translate/tosa": {
   "published": "2026-08-14",
-  "modified": "2026-08-30"
+  "modified": "2026-09-04"
  },
  "/translate/tottori": {
   "published": "2026-08-14",
@@ -405,11 +405,11 @@
  },
  "/translate/tsugaru": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-04"
  },
  "/translate/wakayama": {
   "published": "2026-08-14",
-  "modified": "2026-08-14"
+  "modified": "2026-09-04"
  },
  "/translate/yamagata": {
   "published": "2026-08-14",
@@ -417,6 +417,6 @@
  },
  "/translate/yamaguchi": {
   "published": "2026-08-14",
-  "modified": "2026-08-21"
+  "modified": "2026-09-04"
  }
 }
