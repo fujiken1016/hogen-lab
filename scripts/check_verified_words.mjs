@@ -24,8 +24,10 @@ const norm = (s) =>
 
 /** 方言 → 見出し語の配列（wordsOf() と同じ並び：手書き WORDS のあとに words_extra） */
 const words = {};
-const push = (d, w) => {
-  (words[d] ??= []).push(w);
+// 可変長で受ける。以前は (d, w) の2引数で、呼び出し側の push(d, ...ws) が
+// words_extra の各方言「先頭1語」しか登録できていなかった（第25回に発見）。
+const push = (d, ...ws) => {
+  (words[d] ??= []).push(...ws);
 };
 
 const dataTs = read("lib/data.ts");

@@ -12078,8 +12078,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "点数、良かったじー。"
     },
     {
-      "word": "たいばら",
-      "meaning": "大変な事態",
+      "word": "だいばら",
+      "meaning": "大変な事態（「ばら」＝大変 に「大」が付いた強調形）",
       "example": "あらぁ、だいばらな話やわ。"
     },
     {
