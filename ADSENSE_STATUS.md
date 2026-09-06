@@ -116,7 +116,7 @@
 
 ## 6. フジケンがやる申請手順（Googleアカウント操作）
 
-1. https://www.google.com/adsense/ にアクセスし、**k.fujita1016@gmail.com** でログイン
+1. https://www.google.com/adsense/ にアクセスし、**運営者のGoogleアカウント** でログイン（アドレスはこのリポジトリに書かない＝公開リポジトリのため）
 2. 「お申し込み」→ サイトURLに `https://hogen.mainichi-lab.com` を入力（**wwwなし・httpsで統一**）
 3. 国「日本」、支払い受取人の氏名・住所を入力（**AdSenseの氏名は銀行口座の名義と完全一致させる**。ここがずれると後の入金でつまずく）
 4. 「サイトをAdSenseにリンク」で審査コード（`<script ... adsbygoogle.js?client=ca-pub-XXXX>`）が表示されるので、**コードをそのままフジケンからClaudeに渡す**
