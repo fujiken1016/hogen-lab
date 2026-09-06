@@ -61,9 +61,21 @@ const add = (w, d) => verified.add(`${norm(w)}|${d}`);
 for (const m of read("lib/doko_pool.ts").matchAll(/^\s*\{ word: "([^"]+)", dialect: "([^"]+)" \},/gm)) add(m[1], m[2]);
 for (const m of read("lib/verified_quiz_words.ts").matchAll(/word: "([^"]+)", dialect: "([^"]+)"/g)) add(m[1], m[2]);
 
+// 検定台帳・/doko プールに既にある語を一般語台帳に書くと二重登録になる。
+// 第26回に8語（秋田弁 へば・がっこ・こえ・け／熊本弁 がまだす・いっちょん／和歌山弁 のし・あがら）を
+// 二重登録しかけた＝「一般語だと思って調べ直した語が、実は検定側で照合済みだった」。
+// 進捗の水増しになるうえ、片方だけ更新すると出典が食い違うので、機械で止める。
+const already = new Set(verified);
+
 const ledger = JSON.parse(read("data_src/verified_words.json")).entries;
 let bad = 0;
 for (const e of ledger) {
+  if (already.has(`${norm(e.word)}|${e.dialect}`)) {
+    console.log(
+      `DUPLICATE 二重登録: ${e.word}（${e.dialect}）— 検定台帳か /doko プールに既にある。一般語台帳から消すこと`
+    );
+    bad++;
+  }
   if (!has(e.dialect, e.word)) {
     console.log(`MISSING 辞典に無い: ${e.word}（${e.dialect}）— 台帳と辞典がずれている`);
     bad++;
