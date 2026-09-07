@@ -12,6 +12,11 @@
   ],
   // デプロイごとに一意なIDが取れる。キャッシュキーに混ぜて「デプロイ＝自動総入れ替え」にする
   "version_metadata": { "binding": "CF_VERSION_METADATA" },
+  // 「一言」ボックス（/api/voice）の受け皿。2026-09-07 新設。
+  // 外部フォーム事業者を使わず自分のCloudflareアカウントに置く。個人情報は保存しない
+  "kv_namespaces": [
+    { "binding": "VOICE", "id": "204296042b4e4b16aae30fbe46c34494" }
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS",

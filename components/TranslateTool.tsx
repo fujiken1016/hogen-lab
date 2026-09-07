@@ -10,6 +10,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ShareBar from "@/components/ShareBar";
+import VoiceBox from "@/components/VoiceBox";
 import { DIALECTS, STANDARD, speak, unlockBadge } from "@/lib/data";
 import { track } from "@/lib/ga";
 import { shareBlock } from "@/lib/share_text";
@@ -21,10 +22,14 @@ export default function TranslateTool({
   dialect,
   slug,
   quizSlug,
+  voice = false,
 }: {
   dialect?: string;
   slug?: string;
   quizSlug?: string;
+  /** 変換後に「一言」ボックスを出すか。既定 false ＝呼び出し側で明示した面だけに出る
+   *  （AdSense審査中は共通テンプレート経由の全面波及をしない運用。CROSS_SITE_SLUGS と同じ考え方） */
+  voice?: boolean;
 }) {
   const [text, setText] = useState("");
   const [from, setFrom] = useState(STANDARD);
@@ -236,6 +241,9 @@ export default function TranslateTool({
           )}
         </div>
       )}
+
+      {/* 変換が終わってからだけ出す。冒頭・途中には割り込ませない */}
+      {voice && result && <VoiceBox page={slug ? `translate/${slug}` : "translate"} />}
     </div>
   );
 }
