@@ -104,7 +104,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-2 shrink-0">
           <Link
             href="/shindan"
-            className="bg-primary-text hover:bg-primary-deep text-white text-sm font-bold rounded-full px-3.5 sm:px-4 min-h-[48px] flex items-center shadow-sm active:scale-95 transition-transform"
+            className="bg-primary-text hover:bg-primary-face-3 text-white text-sm font-bold rounded-full px-3.5 sm:px-4 min-h-[48px] flex items-center shadow-sm active:scale-95 transition-transform"
           >
             無料診断
           </Link>
