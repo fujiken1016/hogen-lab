@@ -14,6 +14,14 @@
   /* 明るい面（--paper / 白 / 淡色タイル）に載せる文字用のピンク。#ff4d6d は 3.01:1 で AA 不合格、
      #d10f3c は --paper 上 5.11:1 / 白上 5.46:1 / 図鑑タイルの淡色5種すべてで 4.9:1 以上。面・帯としての #ff4d6d はそのまま（§2-3） */
   --primary-text: #d10f3c;
+  /* 白文字を載せる「主ボタンの面」用の赤。btn-primary は 17px/700＝大型テキストではないので基準は 4.5:1。
+     旧グラデ (#ff7a94 / #ff4d6d / #e6395c) は白上 2.48 / 3.21 / 4.11 で全停止点が AA 不合格だった。
+     --primary-text #d10f3c (5.46:1) を明るい端に固定し、そこから暗くする。
+     白上の実測＝ #d10f3c 5.46:1 / #c20d38 6.16:1 / #ae0b31 7.26:1（最悪値は明るい端の 5.46:1）。
+     🔴 グラデ背景は全停止点で計算すること（1点だけ測って合格にしない）。面・帯としての #ff4d6d はそのまま */
+  --primary-face-1: #d10f3c;
+  --primary-face-2: #c20d38;
+  --primary-face-3: #ae0b31;
   --sub: #6b6b84; /* design_guidelines §2-1 --gray-500。--paper #fff6ec 上 4.84:1 (旧 #8a7ba3 は 3.61:1 で AA 不合格) */
   --line: #f0dfe2;
 }
@@ -46,6 +54,10 @@
   --color-primary: var(--primary);
   --color-primary-deep: var(--primary-deep);
   --color-primary-text: var(--primary-text);
+  /* 白文字を載せる面（全停止点で白と4.5:1以上）。:root の --primary-face-* にコメントあり */
+  --color-primary-face-1: var(--primary-face-1);
+  --color-primary-face-2: var(--primary-face-2);
+  --color-primary-face-3: var(--primary-face-3);
   --color-indigo: var(--indigo);
   --color-indigo-deep: var(--indigo-deep);
   --color-gold: var(--gold);
@@ -727,7 +739,18 @@ h2,
   }
   .btn-primary {
     @apply inline-flex min-h-[48px] items-center justify-center gap-2 text-white font-bold rounded-full px-6 py-3 transition-all disabled:opacity-40 disabled:cursor-not-allowed hover:-translate-y-0.5 active:scale-95 shadow-[0_4px_14px_rgba(255,77,109,0.4)];
-    background-image: linear-gradient(135deg, #ff7a94, var(--primary) 45%, var(--primary-deep));
+    /* 白文字 4.5:1 以上を全停止点で満たす面（:root の --primary-face-* に実測値のコメントあり） */
+    background-image: linear-gradient(
+      135deg,
+      var(--primary-face-1),
+      var(--primary-face-2) 45%,
+      var(--primary-face-3)
+    );
+  }
+  /* hover/active は色を変えない（移動とスケールのみ）＝コントラストは静止時と同じ */
+  .btn-primary:focus-visible {
+    outline: 3px solid var(--indigo-deep);
+    outline-offset: 3px;
   }
   .btn-secondary {
     @apply inline-flex min-h-[48px] items-center justify-center gap-2 bg-white text-ink border border-line font-bold rounded-full px-5 py-2.5 hover:border-indigo hover:text-indigo transition-all active:scale-95;
