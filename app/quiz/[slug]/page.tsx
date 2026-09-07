@@ -169,6 +169,14 @@ export default async function QuizDialectPage({ params }: Props) {
   // 出題語は onlyHere / shared のどちらからも外してあるので、その差が「検定で出す語」
   const quizOnly = Math.max(0, wordCount - onlyHereAll.length - shared.length);
 
+  // 図番号。DOMに出る順に採番する。条件で消える図があるので固定値で書かない
+  let _fn = 0;
+  const figBreakdown = ++_fn;
+  const figVerified = ++_fn;
+  const figOnlyHere = onlyHere.length > 0 ? ++_fn : 0;
+  const figHomo = homos.length > 0 ? ++_fn : 0;
+  const figOverlap = overlaps.length > 0 ? ++_fn : 0;
+
   // 目次。実際に描画する節だけを並べる（方言によって出ない節がある）
   const toc: { id: string; label: string }[] = [
     { id: "about", label: `${dialect}とは（${area}）` },
@@ -284,7 +292,7 @@ export default async function QuizDialectPage({ params }: Props) {
             ]}
           />
           <figcaption className="text-sm text-sub leading-relaxed pt-2">
-            図1：辞典が{dialect}として立てている{wordCount}語を、他の方言と重なるかどうかで3つに分けたもの。
+            図{figBreakdown}：辞典が{dialect}として立てている{wordCount}語を、他の方言と重なるかどうかで3つに分けたもの。
             数はこの辞典の中での実測値です。
           </figcaption>
         </figure>
@@ -316,6 +324,22 @@ export default async function QuizDialectPage({ params }: Props) {
           出題した{questions.length}語は、答えも解説も出典も隠していません。
           先に見ると検定の答えが分かってしまうので、開くかどうかは自分で決めてください。
         </p>
+        <figure className="overflow-x-auto">
+          <BarChart
+            id="fig-verified"
+            title={`${dialect}検定${questions.length}問の出典照合の状況`}
+            desc={`${questions.length}問のうち${verified}問は出典と1語ずつ突き合わせた語、${questions.length - verified}問は辞典に収録はあるが出典の照合が済んでいない語。`}
+            unit="問"
+            bars={[
+              { label: "出典と照合した語から出題", value: verified, color: "var(--indigo)" },
+              { label: "照合がまだ済んでいない語", value: questions.length - verified, color: "var(--primary-deep)" },
+            ]}
+          />
+          <figcaption className="text-sm text-sub leading-relaxed pt-2">
+            図{figVerified}：{dialect}検定{questions.length}問の内訳。
+            どの資料で確かめたかは、下を開くと1語ずつ書いてあります。
+          </figcaption>
+        </figure>
         <details>
         <summary className="font-bold text-sm cursor-pointer min-h-[48px] flex items-center leading-relaxed text-primary-text underline underline-offset-2">
           📋 {questions.length}語の答え・解説・出典を開く（ネタバレを含みます）
@@ -415,7 +439,7 @@ export default async function QuizDialectPage({ params }: Props) {
             ]}
           />
           <figcaption className="text-sm text-sub leading-relaxed pt-2">
-            図2：{dialect}だけに立項がある語のうち、ここに出している{onlyHere.length}語の内訳。
+            図{figOnlyHere}：{dialect}だけに立項がある語のうち、ここに出している{onlyHere.length}語の内訳。
             右の{onlyNoSyn.length}語は、全{REAL_DIALECTS.length}方言の辞典を見ても同じ語釈の語が出てこなかったものです。
           </figcaption>
         </figure>
@@ -554,7 +578,7 @@ export default async function QuizDialectPage({ params }: Props) {
               ]}
             />
             <figcaption className="text-sm text-sub leading-relaxed pt-2">
-              図4：他の方言と語形が重なる{shared.length}語の内訳。
+              図{figHomo}：他の方言と語形が重なる{shared.length}語の内訳。
               語形が同じでも語釈が食い違う語が{homos.length}語あり、その中身が下の表です。
             </figcaption>
           </figure>
@@ -612,7 +636,7 @@ export default async function QuizDialectPage({ params }: Props) {
               }))}
             />
             <figcaption className="text-sm text-sub leading-relaxed pt-2">
-              図3：同じ{region}の方言と、辞典が同じ語形を立てている語の数。
+              図{figOverlap}：同じ{region}の方言と、辞典が同じ語形を立てている語の数。
               数が多い相手ほど、{dialect}検定でも判断が割れやすい語が多くなります。
             </figcaption>
           </figure>
