@@ -28,6 +28,13 @@ const BASE = "https://hogen.mainichi-lab.com";
 //    全35面への展開は審査の決着後に判断する（memory/deferred_until_adsense.md に起票済み）。
 const CROSS_SITE_SLUGS = new Set(["tosa", "shizuoka", "niigata"]);
 
+// 「一言」ボックス（変換後の感想）を出す方言スラッグ。2026-09-07 新設。
+// 🔴 いちばん人が来ている1面だけ。GSC実測（2026/08/05〜09/01）で最多クリックが tosa（18クリック）。
+//    共通テンプレート経由で35面に広げない（AdSense審査中の運用。CROSS_SITE_SLUGS と同じ理由）。
+//    判定日 2026-10-19：声が1件でも届いたか。0件なら shizuoka / niigata へ広げる
+//    （`memory/customer_voice.md` の「2026-09-07 声を取りに行く導線」）。
+const VOICE_SLUGS = new Set(["tosa"]);
+
 // 方言ごとに1URL。「○○弁 変換」「○○弁 翻訳」は方言ごとに検索され、
 // 変換の中身も方言ごとに全く違う（＝分割の2条件を満たす）。/translate は全方言の索引として残す。
 //
@@ -126,7 +133,7 @@ export default async function TranslateDialectPage({ params }: Props) {
         </a>
       </div>
 
-      <TranslateTool dialect={dialect} slug={slug} quizSlug={qSlug ?? undefined} />
+      <TranslateTool dialect={dialect} slug={slug} quizSlug={qSlug ?? undefined} voice={VOICE_SLUGS.has(slug)} />
 
       {/* 逆方向（方言→標準語）のクエリが実測で実在した方言だけ、その言葉でページ内に説明を置く。
           機能は最初からあるのに「順方向のツール」としか書いていなかったので気づかれていなかった。

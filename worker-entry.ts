@@ -62,9 +62,66 @@ function cacheKeyFor(url: URL, version: string): Request {
   return new Request(key.toString(), { method: "GET" });
 }
 
+/** 個人情報になりうる形を保存前に落とす。クライアント側と同じ処理を server でも通す
+ *  （クライアントを経由しない直接POSTでも預からないため。2026-09-07 の疎通テストで
+ *   curl 直POSTがそのまま保存されることを実測し、ここに足した）。 */
+function scrubVoice(s: string): string {
+  return s
+    .replace(/[\w.+-]+@[\w-]+\.[\w.-]+/g, "[削除]")
+    .replace(/https?:\/\/\S+/g, "[削除]")
+    .replace(/0\d{1,4}[-\s]?\d{1,4}[-\s]?\d{3,4}/g, "[削除]")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 200);
+}
+
+/**
+ * 「一言」ボックスの受け皿。2026-09-07 新設（SHIP-12 カスタマー）。
+ *
+ * なぜ Next の route handler ではなくここか：
+ *   OpenNext を通さない＝SSRのCPU（このWorkerが10ms上限で殺される原因）を1msも使わない。
+ *   `/api/` は上の BYPASS_PREFIXES でキャッシュ対象外なので、割り込んでも既存の挙動を変えない。
+ *
+ * 預かるもの＝評価（good/bad）と200文字までの本文だけ。
+ * 🔴 名前・メール・IPは保存しない（個人情報を預からないための設計。クライアント側でも scrub 済み）。
+ * 読む＝`npx wrangler kv key list --binding VOICE --remote`（`tools/read_voices.sh`）
+ */
+async function handleVoice(request: Request, env: Record<string, unknown>): Promise<Response> {
+  const kv = env.VOICE as { put(k: string, v: string): Promise<void> } | undefined;
+  const no = new Response(null, { status: 204 });
+  if (!kv) return no;
+
+  // 他所のページから叩かれた分は保存しない（荒らし・誤爆の最低限の間引き）
+  const origin = request.headers.get("origin") ?? "";
+  if (origin && !origin.endsWith("hogen.mainichi-lab.com")) return no;
+
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return no;
+  }
+  const b = (body ?? {}) as Record<string, unknown>;
+  const rating = b.rating === "good" || b.rating === "bad" ? b.rating : "";
+  const page = String(b.page ?? "").slice(0, 80);
+  const text = scrubVoice(String(b.text ?? "").slice(0, 400));
+  if (!rating && !text) return no;
+
+  const key = `voice:${new Date().toISOString()}:${crypto.randomUUID().slice(0, 8)}`;
+  try {
+    await kv.put(key, JSON.stringify({ at: new Date().toISOString(), rating, page, text }));
+  } catch {
+    /* 保存に失敗しても画面は壊さない */
+  }
+  return no;
+}
+
 export default {
   async fetch(request: Request, env: Record<string, unknown>, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+    if (url.pathname === "/api/voice" && request.method === "POST") {
+      return handleVoice(request, env);
+    }
     if (!isCacheableRequest(request, url)) {
       return worker.fetch(request, env, ctx);
     }
