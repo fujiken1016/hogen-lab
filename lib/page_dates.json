@@ -137,7 +137,7 @@
  },
  "/quiz/fukushima": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-07"
  },
  "/quiz/hakata": {
   "published": "2026-08-14",
@@ -229,7 +229,7 @@
  },
  "/quiz/sendai": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-07"
  },
  "/quiz/shinshu": {
   "published": "2026-08-14",
@@ -241,7 +241,7 @@
  },
  "/quiz/tosa": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-07"
  },
  "/quiz/tottori": {
   "published": "2026-08-14",
@@ -289,7 +289,7 @@
  },
  "/translate/fukushima": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-07"
  },
  "/translate/hakata": {
   "published": "2026-08-14",
@@ -381,7 +381,7 @@
  },
  "/translate/sendai": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-07"
  },
  "/translate/shinshu": {
   "published": "2026-08-14",
@@ -393,7 +393,7 @@
  },
  "/translate/tosa": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-07"
  },
  "/translate/tottori": {
   "published": "2026-08-14",
