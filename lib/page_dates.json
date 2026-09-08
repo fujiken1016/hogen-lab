@@ -109,7 +109,7 @@
  },
  "/doko": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/kawaii": {
   "published": "2026-08-14",
@@ -129,7 +129,7 @@
  },
  "/quiz/akita": {
   "published": "2026-08-14",
-  "modified": "2026-08-30"
+  "modified": "2026-09-09"
  },
  "/quiz/awa": {
   "published": "2026-08-14",
@@ -141,7 +141,7 @@
  },
  "/quiz/hakata": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/quiz/hida": {
   "published": "2026-08-14",
@@ -161,11 +161,11 @@
  },
  "/quiz/ise": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-09"
  },
  "/quiz/iwate": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-09"
  },
  "/quiz/iyo": {
   "published": "2026-08-14",
@@ -181,15 +181,15 @@
  },
  "/quiz/kanazawa": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/quiz/kansai": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/quiz/kobe": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/quiz/kumamoto": {
   "published": "2026-08-14",
@@ -197,11 +197,11 @@
  },
  "/quiz/kyoto": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/quiz/nagasaki": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-09"
  },
  "/quiz/nagoya": {
   "published": "2026-08-14",
@@ -217,7 +217,7 @@
  },
  "/quiz/okayama": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-09"
  },
  "/quiz/okinawa": {
   "published": "2026-08-14",
@@ -229,7 +229,7 @@
  },
  "/quiz/sendai": {
   "published": "2026-08-14",
-  "modified": "2026-09-07"
+  "modified": "2026-09-09"
  },
  "/quiz/shinshu": {
   "published": "2026-08-14",
@@ -237,7 +237,7 @@
  },
  "/quiz/shizuoka": {
   "published": "2026-08-14",
-  "modified": "2026-08-28"
+  "modified": "2026-09-09"
  },
  "/quiz/tosa": {
   "published": "2026-08-14",
@@ -281,7 +281,7 @@
  },
  "/translate/akita": {
   "published": "2026-08-14",
-  "modified": "2026-08-30"
+  "modified": "2026-09-09"
  },
  "/translate/awa": {
   "published": "2026-08-14",
@@ -293,7 +293,7 @@
  },
  "/translate/hakata": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/translate/hida": {
   "published": "2026-08-14",
@@ -313,11 +313,11 @@
  },
  "/translate/ise": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-09"
  },
  "/translate/iwate": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-09"
  },
  "/translate/iyo": {
   "published": "2026-08-14",
@@ -333,15 +333,15 @@
  },
  "/translate/kanazawa": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/translate/kansai": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/translate/kobe": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/translate/kumamoto": {
   "published": "2026-08-14",
@@ -349,11 +349,11 @@
  },
  "/translate/kyoto": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-09"
  },
  "/translate/nagasaki": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-09"
  },
  "/translate/nagoya": {
   "published": "2026-08-14",
@@ -369,7 +369,7 @@
  },
  "/translate/okayama": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-09"
  },
  "/translate/okinawa": {
   "published": "2026-08-14",
@@ -381,7 +381,7 @@
  },
  "/translate/sendai": {
   "published": "2026-08-14",
-  "modified": "2026-09-07"
+  "modified": "2026-09-09"
  },
  "/translate/shinshu": {
   "published": "2026-08-14",
@@ -389,7 +389,7 @@
  },
  "/translate/shizuoka": {
   "published": "2026-08-14",
-  "modified": "2026-08-28"
+  "modified": "2026-09-09"
  },
  "/translate/tosa": {
   "published": "2026-08-14",
