@@ -108,7 +108,6 @@ export const DOKO_SEEDS: DokoSeed[] = [
   // 「おおきに（Ookini）＝ありがとう」を大阪弁として挙げている＝京都・大阪の二府県で使う語で、
   // /doko の「正解が一意」条件を満たさない。※同ページに かんにん・いけず・いちびる は無い。
   { word: "かんにん", dialect: "京都弁" },
-  { word: "はんなり", dialect: "京都弁" },
   { word: "おばんざい", dialect: "京都弁" },
   { word: "にぬき", dialect: "京都弁" },
   { word: "おこしやす", dialect: "京都弁" },

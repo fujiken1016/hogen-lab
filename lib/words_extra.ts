@@ -5356,7 +5356,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "な",
-      "meaning": "あなた、おまえ",
+      "meaning": "あなた、おまえ（古風。現在は「おめ」が優勢）",
       "example": "なはどごさ行ぐの？"
     },
     {

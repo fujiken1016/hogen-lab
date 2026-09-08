@@ -84,25 +84,35 @@ for (const e of ledger) {
   if (e.status !== "unconfirmed") add(e.word, e.dialect);
 }
 
-// /translate/[slug] の meta description に出る語＝各方言の先頭6語
-const META_N = 6;
-let total = 0;
-let done = 0;
-const rest = [];
-for (const d of Object.keys(words)) {
-  for (const w of (words[d] ?? []).slice(0, META_N)) {
-    total++;
-    if (verified.has(`${norm(w)}|${d}`)) done++;
-    else rest.push(`${d} ${w}`);
+// /translate/[slug] は先頭6語ではなく全語を画面に出しているので、分母を先頭10語まで広げた（第27回）。
+// 6語の数字も併記して履歴を切らない（第26回の申し送り3）。
+const META_N = 6;   // meta description に出る語（外に断定に近い形で出る集合）
+const PAGE_N = 10;  // /translate/[slug] の画面上位（各方言の7〜10語目まで可視化する）
+const count = (n) => {
+  let total = 0, done = 0;
+  const rest = [];
+  for (const d of Object.keys(words)) {
+    for (const w of (words[d] ?? []).slice(0, n)) {
+      total++;
+      if (verified.has(`${norm(w)}|${d}`)) done++;
+      else rest.push(`${d} ${w}`);
+    }
   }
-}
+  return { total, done, rest };
+};
+const meta = count(META_N);
+const page = count(PAGE_N);
 
 const unconfirmed = ledger.filter((e) => e.status === "unconfirmed").length;
 console.log(
   `\n一般語の台帳 ${ledger.length}語（うち出典で肯定 ${ledger.length - unconfirmed}語・未確認 ${unconfirmed}語）`
 );
 console.log(
-  `/translate の meta に出る語（各方言の先頭${META_N}語）: ${done}/${total} 照合済み — 残り ${rest.length}語`
+  `/translate の meta に出る語（各方言の先頭${META_N}語）: ${meta.done}/${meta.total} 照合済み — 残り ${meta.rest.length}語`
 );
-if (rest.length) console.log(`  残り: ${rest.join("、")}`);
+if (meta.rest.length) console.log(`  残り: ${meta.rest.join("、")}`);
+console.log(
+  `/translate の画面上位（各方言の先頭${PAGE_N}語）: ${page.done}/${page.total} 照合済み — 残り ${page.rest.length}語`
+);
+if (page.rest.length) console.log(`  残り: ${page.rest.join("、")}`);
 process.exit(bad > 0 ? 1 : 0);
