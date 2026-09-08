@@ -285,7 +285,7 @@ export const WORDS: Record<string, WordEntry[]> = {
     { word: "とぶ", meaning: "走る", example: "遅刻するで、とんでけ！" },
     { word: "こわい", meaning: "（ご飯などが）固い", example: "このごはん、ちっとこわいね。" },
     { word: "もうらしい", meaning: "かわいそう", example: "ひとりで置いてかれて、もうらしいこと。" },
-    { word: "しみる", meaning: "凍みるように寒い", example: "今朝はしみるねー。" },
+    { word: "しみる", meaning: "凍りつく・冷え込む（凍みる）", example: "今朝はしみるねー。" },
     { word: "なから", meaning: "だいたい・ほとんど", example: "仕事はなから終わっただに。" },
     { word: "めた", meaning: "やたら・とても", example: "このそば、めたうまいだに。" },
     { word: "〜ずら", meaning: "〜だろう・〜だよね", example: "明日は晴れるずら。" },
