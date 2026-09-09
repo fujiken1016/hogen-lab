@@ -183,8 +183,12 @@ export default function Page() {
             url: "https://www.iwanami.co.jp/book/b625302.html",
           },
           {
-            label: "田中ゆかり「方言とコミュニケーション――『ヴァーチャル方言』とその効能」SYNODOS",
-            url: "https://synodos.jp/opinion/society/12700/",
+            label:
+              "田中ゆかり「方言とコミュニケーション――『ヴァーチャル方言』とその効能」SYNODOS 2014-09-01（現URLは404。Internet Archive の保存版）",
+            /* 2026-09-09 の週次監査で原URLが404になっていた（UA を変えても404／
+               synodos.jp 自体は生存）。出典なので別ソースへ差し替えず、本文を実見できる
+               Wayback 20260516174218 のスナップショットに繋ぐ。 */
+            url: "https://web.archive.org/web/20260516174218/https://synodos.jp/opinion/society/12700/",
           },
           {
             label: "田中ゆかり『「方言コスプレ」の時代――ニセ関西弁から龍馬語まで』岩波書店",
