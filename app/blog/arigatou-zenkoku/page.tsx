@@ -169,8 +169,14 @@ export default function Page() {
             url: "https://crd.ndl.go.jp/reference/entry/index.php?id=1000135381&page=ref_view",
           },
           {
-            label: "goo辞書 方言集「もっけだ（山形の方言）」",
-            url: "https://dictionary.goo.ne.jp/leaf/dialect/457/m0u/",
+            label:
+              "goo辞書 方言集「もっけだ（山形の方言）」（goo辞書は終了しホストが消滅。Internet Archive の保存版）",
+            /* 2026-09-09 の週次監査で確定：dictionary.goo.ne.jp は
+               Cloudflare DNS・Google DNS のどちらでも A レコードが返らない（ゾーンはあるが
+               アドレスなし＝ホスト消滅。www.goo.ne.jp は NXDOMAIN）。前週は「このMacから
+               引けない」までしか言えなかったが、公開リゾルバ2つで全滅を実測したので
+               死亡と判定し、本文を実見できる Wayback 20250620224306 に繋ぎ替えた。 */
+            url: "https://web.archive.org/web/20250620224306/https://dictionary.goo.ne.jp/leaf/dialect/457/m0u/",
           },
           {
             label: "ウィクショナリー日本語版「にふぇーでーびる」",
