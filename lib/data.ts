@@ -386,7 +386,7 @@ export const WORDS: Record<string, WordEntry[]> = {
     { word: "うんにゃ", meaning: "いいえ・違う", example: "うんにゃ、そがんことなかよ。" },
     { word: "からう", meaning: "背負う", example: "ランドセルばからって学校に行く。" },
     { word: "ねまる", meaning: "（食べ物が）腐る", example: "この牛乳、ねまっとるけん飲まれんよ。" },
-    { word: "あいば", meaning: "じゃあね・それでは", example: "あいばね、また明日！" },
+    { word: "あいば", meaning: "それなら・それでは", example: "あいばね、また明日！" },
     { word: "なして", meaning: "どうして・なぜ", example: "なして昨日は来んやったと？" },
     { word: "やぜか", meaning: "うっとうしい・面倒", example: "雨ん続いてやぜかー。" },
   ],
