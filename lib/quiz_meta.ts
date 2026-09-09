@@ -187,7 +187,11 @@ const SRC_BY_PAIR = new Map(VERIFIED_QUIZ_WORDS.map((v) => [`${v.dialect} ${v.wo
 
 export function quizSourceOf(dialect: string, word: string | null): string | undefined {
   if (!word) return undefined;
-  return SRC_BY_PAIR.get(`${dialect} ${word}`);
+  const src = SRC_BY_PAIR.get(`${dialect} ${word}`);
+  /* 照合メモは編集時に Markdown 記法で強調を書いてしまうことがある。画面には素の
+     テキストとして出しているので、`**` がそのまま読者に見える（2026-09-09 の週次監査で
+     /quiz/ibaraki・/quiz/nagoya の2面で実際に露出していた）。描画側で必ず落とす。 */
+  return src ? src.replace(/\*\*/g, "") : undefined;
 }
 
 /** /doko の出題プール（＝正解が一意に決まる語として照合済み）に入っている語か */
