@@ -169,7 +169,7 @@
  },
  "/quiz/iyo": {
   "published": "2026-08-14",
-  "modified": "2026-09-02"
+  "modified": "2026-09-10"
  },
  "/quiz/izumo": {
   "published": "2026-08-14",
@@ -177,7 +177,7 @@
  },
  "/quiz/kagoshima": {
   "published": "2026-08-14",
-  "modified": "2026-08-14"
+  "modified": "2026-09-10"
  },
  "/quiz/kanazawa": {
   "published": "2026-08-14",
@@ -213,7 +213,7 @@
  },
  "/quiz/oita": {
   "published": "2026-08-14",
-  "modified": "2026-08-29"
+  "modified": "2026-09-10"
  },
  "/quiz/okayama": {
   "published": "2026-08-14",
@@ -225,7 +225,7 @@
  },
  "/quiz/sanuki": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-10"
  },
  "/quiz/sendai": {
   "published": "2026-08-14",
@@ -257,7 +257,7 @@
  },
  "/quiz/wakayama": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-10"
  },
  "/quiz/yamagata": {
   "published": "2026-08-14",
@@ -321,7 +321,7 @@
  },
  "/translate/iyo": {
   "published": "2026-08-14",
-  "modified": "2026-09-02"
+  "modified": "2026-09-10"
  },
  "/translate/izumo": {
   "published": "2026-08-14",
@@ -329,7 +329,7 @@
  },
  "/translate/kagoshima": {
   "published": "2026-08-14",
-  "modified": "2026-08-14"
+  "modified": "2026-09-10"
  },
  "/translate/kanazawa": {
   "published": "2026-08-14",
@@ -365,7 +365,7 @@
  },
  "/translate/oita": {
   "published": "2026-08-14",
-  "modified": "2026-08-29"
+  "modified": "2026-09-10"
  },
  "/translate/okayama": {
   "published": "2026-08-14",
@@ -377,7 +377,7 @@
  },
  "/translate/sanuki": {
   "published": "2026-08-14",
-  "modified": "2026-09-01"
+  "modified": "2026-09-10"
  },
  "/translate/sendai": {
   "published": "2026-08-14",
@@ -409,7 +409,7 @@
  },
  "/translate/wakayama": {
   "published": "2026-08-14",
-  "modified": "2026-09-04"
+  "modified": "2026-09-10"
  },
  "/translate/yamagata": {
   "published": "2026-08-14",

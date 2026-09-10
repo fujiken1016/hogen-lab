@@ -3928,7 +3928,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "ただもの",
-      "meaning": "いつも",
+      "meaning": "毎度、度々",
       "example": "ただもの世話になっとります。"
     },
     {
