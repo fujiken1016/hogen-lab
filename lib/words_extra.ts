@@ -7265,7 +7265,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "たんぱら",
       "meaning": "すぐに腹を立てる、気が短い様子",
-      "example": "あの人たんぱらだはんで気ぃつけろ。"
+      "example": "あの人たんぱらだがら気ぃつけろ。"
     },
     {
       "word": "えぶり",
@@ -7275,7 +7275,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "てぼっこ",
       "meaning": "不器用な人",
-      "example": "わ、てぼっこだはんで裁縫できねっす。"
+      "example": "おれ、てぼっこだがら裁縫できねっす。"
     },
     {
       "word": "どげーだ",
@@ -7295,7 +7295,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "てんつこき",
       "meaning": "うそつき",
-      "example": "あいつはてんつこきだはんで信用でぎね。"
+      "example": "あいつはてんつこきだがら信用でぎね。"
     },
     {
       "word": "そんま",
@@ -7305,7 +7305,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "あど",
       "meaning": "もう、あと",
-      "example": "あどちょっとで着ぐはんでな。"
+      "example": "あどちょっとで着ぐがらな。"
     },
     {
       "word": "こげ",
@@ -7320,7 +7320,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "のだばる",
       "meaning": "横になる、寝転がる",
-      "example": "疲れたはんでちょっとのだばるべ。"
+      "example": "疲れたがらちょっとのだばるべ。"
     },
     {
       "word": "あんべ",

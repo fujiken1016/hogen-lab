@@ -69,6 +69,22 @@ const already = new Set(verified);
 
 const ledger = JSON.parse(read("data_src/verified_words.json")).entries;
 let bad = 0;
+
+// 台帳の中での二重登録。第30回に unconfirmed 20語を「更新」ではなく「追記」してしまい、
+// 語数（191語）がそのぶん水増しされていた（第31回に発見・統合）。
+// 上の DUPLICATE は「検定/doko 台帳との重複」しか見ていなかったので、同一台帳内も見る。
+const seenInLedger = new Map();
+for (const e of ledger) {
+  const k = `${norm(e.word)}|${e.dialect}`;
+  if (seenInLedger.has(k)) {
+    console.log(
+      `DUPLICATE 台帳内の二重登録: ${e.word}（${e.dialect}）— 第${seenInLedger.get(k)}回と第${e.cycle}回に重複。新しい方に統合し、古い note は「（第N回の記録：…）」として残すこと`
+    );
+    bad++;
+  }
+  seenInLedger.set(k, e.cycle);
+}
+
 for (const e of ledger) {
   if (already.has(`${norm(e.word)}|${e.dialect}`)) {
     console.log(
