@@ -11563,7 +11563,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "あじごと",
       "meaning": "心配",
-      "example": "そんげあじごとせんでもいいちゃ。"
+      "example": "そんなあじごとせんでもいいちゃ。"
     },
     {
       "word": "あじゃあじゃ",
@@ -11710,7 +11710,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "おいね",
       "meaning": "そうだね",
-      "example": "おいね、ほんとにそうやわ。"
+      "example": "おいね、ほんとにほーやわ。"
     },
     {
       "word": "おんぼらーと",
@@ -11775,7 +11775,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "じゃまない",
       "meaning": "大丈夫だ",
-      "example": "そんなん、じゃまないじゃまない。"
+      "example": "ほんなん、じゃまないじゃまない。"
     },
     {
       "word": "しょむない",
@@ -11900,7 +11900,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "だらぶち",
       "meaning": "大ばか者",
-      "example": "そんなことするなんて、だらぶちやなぁ。"
+      "example": "ほんなことするなんて、だらぶちやなぁ。"
     },
     {
       "word": "ながまる",
@@ -12095,7 +12095,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "はんかくさい",
       "meaning": "愚かだ、馬鹿らしい",
-      "example": "そんなはんかくさいこと言わんとって。"
+      "example": "ほんなはんかくさいこと言わんとって。"
     },
     {
       "word": "やよ",
@@ -12507,7 +12507,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     {
       "word": "しゃっちょこばる",
       "meaning": "緊張して堅い態度をとる",
-      "example": "そんげしゃっちょこばらんと、楽にしられ。"
+      "example": "そんなにしゃっちょこばらんと、楽にしられ。"
     },
     {
       "word": "するしない",

@@ -268,7 +268,7 @@ export const WORDS: Record<string, WordEntry[]> = {
     { word: "〜まっし", meaning: "〜しなさい（優しい命令）", example: "冷めんうちに食べまっし。" },
     { word: "あんやと", meaning: "ありがとう", example: "いつもあんやとねー。" },
     { word: "きのどくな", meaning: "ありがとう（恐縮を込めた感謝）", example: "まー、こんなにもろて、きのどくなー。" },
-    { word: "だちゃかん", meaning: "だめだ", example: "そんなことしとったら、だちゃかんて。" },
+    { word: "だちゃかん", meaning: "だめだ", example: "ほんなことしとったら、だちゃかんて。" },
     { word: "かたい", meaning: "お利口だ・聞き分けがよい", example: "ゆーこときいて、ほんとにかたい子やね。" },
     { word: "がんこ", meaning: "とても・すごく", example: "今日はがんこ寒いわ。" },
     { word: "きときと", meaning: "新鮮な", example: "この魚、きときとやぞ。" },
