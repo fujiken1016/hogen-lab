@@ -84,12 +84,18 @@ export default function QuizRunner({ dialect }: { dialect: string }) {
         <button onClick={start} className="btn-primary text-lg px-10 py-4 w-full sm:w-auto min-h-[52px]">
           {dialect}検定をはじめる
         </button>
+        {/* 2026-09-14: ここにあった出題方針・判定の但し書き（131字）は35方言の検定すべてに
+            同じ文面で出ていたので /quiz/about に移した。残すのは要約1行とリンク1本だけ。 */}
         <p className="text-sm text-sub leading-relaxed text-left">
-          出題は<strong>方言ラボ辞典に収録している語</strong>だけです。
-          <strong>出典を1語ずつ照合した語</strong>を先に出し、辞典が他の方言にも同じ語を収録している場合は
-          その場で併記します。方言には地域差・世代差があり、
-          ここでの「答え」は<strong>辞典の語釈</strong>であって、
-          <strong>あなたの言葉が間違いという意味ではありません</strong>。
+          判定は<strong>辞典の語釈</strong>にもとづきます。
+        </p>
+        <p className="text-left">
+          <a
+            href="/quiz/about"
+            className="inline-flex min-h-[48px] items-center text-sm text-primary-text underline underline-offset-2"
+          >
+            → 出題・出典照合・判定の基準
+          </a>
         </p>
       </div>
     );

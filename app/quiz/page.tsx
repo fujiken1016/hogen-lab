@@ -62,10 +62,17 @@ export default function QuizIndexPage() {
         );
       })}
 
+      {/* 2026-09-14: 出題方針・判定基準の本文は /quiz/about に集約した */}
       <p className="text-sm text-sub leading-relaxed">
-        ※ 出題は方言ラボ辞典に収録している語だけを使い、出典を照合済みの語を優先しています。
-        辞典が他の方言にも同じ語を収録している場合は設問ごとに併記します。方言には地域差・世代差があり、
-        判定は辞典の語釈にもとづくもので、あなたの言葉が間違いという意味ではありません。
+        出題は方言ラボ辞典に立項している語だけ。判定は辞典の語釈にもとづきます。
+      </p>
+      <p>
+        <Link
+          href="/quiz/about"
+          className="inline-flex min-h-[48px] items-center text-sm text-primary-text underline underline-offset-2"
+        >
+          → 方言検定の作り方と読み方（出題・出典照合・判定の基準）
+        </Link>
       </p>
 
       <div className="flex flex-wrap justify-center gap-2 text-sm">
