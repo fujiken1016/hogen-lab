@@ -44,20 +44,20 @@ export default function CompatCard({ a, b, shareUrl }: { a: CompatPerson; b: Com
       {/* スコアヒーロー */}
       <div
         className="text-center px-6 py-7 space-y-3 text-white sunburst"
-        style={{ background: "linear-gradient(160deg, #4B3BC4 0%, #6C5CE7 60%, #FF4D6D 130%)" }}
+        style={{ background: "linear-gradient(160deg, #4B3BC4 0%, #5A49C9 60%, #C9284A 130%)" }}
       >
         <p className="text-sm font-bold tracking-[0.3em] text-white/80">AISHOU KANTEI</p>
         <div className="flex justify-center items-center gap-3 sm:gap-5">
           <div className="text-center">
             <TypeAvatar type={a.type} size={84} />
             <div className="text-sm mt-1 font-bold">{a.label}</div>
-            <div className="text-sm text-white/70">{a.type.dialect}</div>
+            <div className="text-sm text-white/85">{a.type.dialect}</div>
           </div>
           <span className="text-3xl font-bold text-gold">×</span>
           <div className="text-center">
             <TypeAvatar type={b.type} size={84} />
             <div className="text-sm mt-1 font-bold">{b.label}</div>
-            <div className="text-sm text-white/70">{b.type.dialect}</div>
+            <div className="text-sm text-white/85">{b.type.dialect}</div>
           </div>
         </div>
         <div className="font-display font-bold text-6xl anim-pop">
