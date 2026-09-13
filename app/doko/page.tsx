@@ -32,7 +32,7 @@ type Log = { q: DokoQ; picked: string; ok: boolean };
 function DokoIntro({ pool, dialects }: { pool: number; dialects: number }) {
   return (
     <ToolIntro
-      heading="「この方言、何弁？」について"
+      heading="「何弁？」クイズについて"
       paragraphs={[
         `方言の語とその意味を見て、どの地方の言葉かを4択で当てる全${TOTAL}問のクイズです。出題プールは${dialects}方言・${pool}語。語そのものを知らなくても、音の並びから地方の見当をつけていく遊び方ができます。`,
         "当てるのは「県」ではなく「地方」です。方言は県境で切れず、隣の県にまたがることのほうが多いので、県単位で正解を1つに決めるとクイズとして成立しません。北海道・東北から九州・沖縄までの区切りで答えます。",
