@@ -9,7 +9,7 @@
  },
  "/aishou": {
   "published": "2026-08-02",
-  "modified": "2026-09-03"
+  "modified": "2026-09-14"
  },
  "/blog": {
   "published": "2026-08-12",
@@ -109,15 +109,15 @@
  },
  "/doko": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-14"
  },
  "/kawaii": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-14"
  },
  "/kurabe": {
   "published": "2026-08-14",
-  "modified": "2026-09-03"
+  "modified": "2026-09-14"
  },
  "/privacy": {
   "published": "2026-08-02",
@@ -273,7 +273,7 @@
  },
  "/today": {
   "published": "2026-08-02",
-  "modified": "2026-09-03"
+  "modified": "2026-09-14"
  },
  "/translate": {
   "published": "2026-08-02",
