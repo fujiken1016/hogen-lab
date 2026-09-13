@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/aishou`, lastModified: lastmod("/aishou"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/translate`, lastModified: lastmod("/translate"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/quiz`, lastModified: lastmod("/quiz"), changeFrequency: "monthly", priority: 0.8 },
+    // 35面に同文で置いていた出題方針・判定基準の集約先（2026-09-14 新設）
+    { url: `${BASE}/quiz/about`, lastModified: lastmod("/quiz/about"), changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/doko`, lastModified: lastmod("/doko"), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/kawaii`, lastModified: lastmod("/kawaii"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/kurabe`, lastModified: lastmod("/kurabe"), changeFrequency: "monthly", priority: 0.8 },

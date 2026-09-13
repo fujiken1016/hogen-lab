@@ -31,7 +31,7 @@ export default function ToolReads({
     <section className="card p-5 space-y-3">
       <h2 className="font-bold text-2xl">📖 {dialect}を、読みものでもう一歩</h2>
       <p className="text-sm text-sub leading-relaxed">
-        方言ラボが書いた解説記事です。ことばの背景を知ってから使うと、変換の結果の見え方も変わります。
+        {dialect}の背景を書いた解説記事です。
       </p>
       <div className="grid gap-2.5">
         {reads.map((r) => (

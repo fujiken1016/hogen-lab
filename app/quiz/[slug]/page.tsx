@@ -9,7 +9,7 @@ import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
 import {
   AREA_OF,
-  QUIZ_DIALECTS,
+
   annotatedQuiz,
   dictEntry,
   exclusiveWords,
@@ -172,7 +172,6 @@ export default async function QuizDialectPage({ params }: Props) {
   // 図番号。DOMに出る順に採番する。条件で消える図があるので固定値で書かない
   let _fn = 0;
   const figBreakdown = ++_fn;
-  const figVerified = ++_fn;
   const figOnlyHere = onlyHere.length > 0 ? ++_fn : 0;
   const figHomo = homos.length > 0 ? ++_fn : 0;
   const figOverlap = overlaps.length > 0 ? ++_fn : 0;
@@ -242,8 +241,8 @@ export default async function QuizDialectPage({ params }: Props) {
         )}
         <h1 className="section-title">🏅 {dialect}検定</h1>
         <p className="text-sub text-sm leading-relaxed">
-          {area}のことば「{dialect}」から全8問。意味を4択で選ぶだけの検定です。
-          8問中6問以上（80%）が辞典と一致すると「{dialect} 検定合格」バッジがもらえます。
+          {area}のことば「{dialect}」から全{questions.length}問。辞典の{dialect}
+          {wordCount}語から出題します。
         </p>
       </div>
 
@@ -276,8 +275,7 @@ export default async function QuizDialectPage({ params }: Props) {
           <p className="text-sm text-sub leading-relaxed">{aliasSentence(dialect, area)}</p>
         )}
         <p className="text-sm text-sub leading-relaxed">
-          辞典には{dialect}を{wordCount}語収録。{questions.length}問中{verified}問は出典と1語ずつ突き合わせた語です
-          （「この方言どこの言葉？」の出題プールと検定用の照合リストから出題）。どの資料で確かめたかは下に1語ずつ書いています。
+          辞典には{dialect}を{wordCount}語収録。{questions.length}問中{verified}問が出典照合済みの語です。
         </p>
 
         <figure className="overflow-x-auto pt-1">
@@ -292,8 +290,7 @@ export default async function QuizDialectPage({ params }: Props) {
             ]}
           />
           <figcaption className="text-sm text-sub leading-relaxed pt-2">
-            図{figBreakdown}：辞典が{dialect}として立てている{wordCount}語を、他の方言と重なるかどうかで3つに分けたもの。
-            数はこの辞典の中での実測値です。
+            図{figBreakdown}：辞典の{dialect}{wordCount}語の内訳。
           </figcaption>
         </figure>
         <p>
@@ -303,6 +300,14 @@ export default async function QuizDialectPage({ params }: Props) {
         </p>
         <p className="text-sm text-sub leading-relaxed">
           出題語の例：{samples.join("・")}
+        </p>
+        <p>
+          <Link
+            href="/quiz/about"
+            className="inline-flex min-h-[48px] items-center text-sm text-primary-text underline underline-offset-2"
+          >
+            → 方言検定の作り方と読み方
+          </Link>
         </p>
         {tSlug && (
           <p className="text-sm pt-1">
@@ -320,34 +325,16 @@ export default async function QuizDialectPage({ params }: Props) {
         <h2 className="font-bold text-2xl">
           📋 {dialect}検定の答え・解説・出典（{questions.length}語）
         </h2>
+        {/* 2026-09-14: 出典照合の図とネタバレ注意の説明文は、どの方言でも同じ中身だったので
+            /quiz/about に移した（数は上の1文に残している）。 */}
         <p className="text-sm text-sub leading-relaxed">
-          出題した{questions.length}語は、答えも解説も出典も隠していません。
-          先に見ると検定の答えが分かってしまうので、開くかどうかは自分で決めてください。
+          開くと答えが分かります。
         </p>
-        <figure className="overflow-x-auto">
-          <BarChart
-            id="fig-verified"
-            title={`${dialect}検定${questions.length}問の出典照合の状況`}
-            desc={`${questions.length}問のうち${verified}問は出典と1語ずつ突き合わせた語、${questions.length - verified}問は辞典に収録はあるが出典の照合が済んでいない語。`}
-            unit="問"
-            bars={[
-              { label: "出典と照合した語から出題", value: verified, color: "var(--indigo)" },
-              { label: "照合がまだ済んでいない語", value: questions.length - verified, color: "var(--primary-deep)" },
-            ]}
-          />
-          <figcaption className="text-sm text-sub leading-relaxed pt-2">
-            図{figVerified}：{dialect}検定{questions.length}問の内訳。
-            どの資料で確かめたかは、下を開くと1語ずつ書いてあります。
-          </figcaption>
-        </figure>
         <details>
         <summary className="font-bold text-sm cursor-pointer min-h-[48px] flex items-center leading-relaxed text-primary-text underline underline-offset-2">
           📋 {questions.length}語の答え・解説・出典を開く（ネタバレを含みます）
         </summary>
         <div className="pt-3 space-y-4">
-          <p className="text-sm text-sub leading-relaxed">
-            ここでの「答え」は辞典の語釈で、あなたの言葉が間違いという意味ではありません。
-          </p>
           <ol className="space-y-4">
             {questions.map((q, i) => {
               const entry = dictEntry(dialect, q.word);
@@ -385,17 +372,17 @@ export default async function QuizDialectPage({ params }: Props) {
                   )}
                   {src && (
                     <p className="text-sm text-sub leading-relaxed break-words">
-                      出典・照合メモ：{src}
+                      出典：{src}
                     </p>
                   )}
                   {!src && doko && (
                     <p className="text-sm text-sub leading-relaxed">
-                      出典・照合メモ：「この方言どこの言葉？」の出題プールに収録（出典照合済み）。
+                      出典：「この方言どこの言葉？」の出題プールに収録（照合済み）。
                     </p>
                   )}
                   {!src && !doko && (
                     <p className="text-sm text-sub leading-relaxed">
-                      出典・照合メモ：辞典には収録していますが、この語はまだ出典の照合が済んでいません。
+                      出典：照合が済んでいません。
                     </p>
                   )}
                   {syn.length > 0 && (
@@ -439,8 +426,7 @@ export default async function QuizDialectPage({ params }: Props) {
             ]}
           />
           <figcaption className="text-sm text-sub leading-relaxed pt-2">
-            図{figOnlyHere}：{dialect}だけに立項がある語のうち、ここに出している{onlyHere.length}語の内訳。
-            右の{onlyNoSyn.length}語は、全{REAL_DIALECTS.length}方言の辞典を見ても同じ語釈の語が出てこなかったものです。
+            図{figOnlyHere}：{dialect}だけに立項がある{onlyHere.length}語の内訳。
           </figcaption>
         </figure>
       )}
@@ -451,15 +437,14 @@ export default async function QuizDialectPage({ params }: Props) {
             🔤 {dialect}だけの語で、他の方言に言い換えがあるもの（{onlySyn.length}語）
           </h2>
           <p className="text-sm text-sub leading-relaxed">
-            全{REAL_DIALECTS.length}方言の辞典で{dialect}にしか立項が無い語が、{wordCount}語中{onlyHereAll.length}語。
-            出題語はネタバレを避けて外しています
-            {onlyHereAll.length > onlyHere.length && <>（ここでは合わせて{onlyHere.length}語まで表示）</>}。
-            この節はそのうち、同じ意味の語が他の方言にもあるもの。語形は{dialect}固有でも、言いたいことは他の土地にも通じます。
+            {wordCount}語中{onlyHereAll.length}語が{dialect}にしか立項の無い語。うち{onlySyn.length}語は、
+            同じ意味の語が他の方言にもあります
+            {onlyHereAll.length > onlyHere.length && <>（表示は{onlyHere.length}語まで）</>}。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] text-sm border-collapse">
               <caption className="text-left text-sm text-sub leading-relaxed pb-2">
-                {dialect}にしか立項が無い語と、同じ語釈を持つ他の方言の語（{onlySyn.length}語）
+                {dialect}固有の語と、同じ語釈を持つ他の方言の語（{onlySyn.length}語）
               </caption>
               <thead>
                 <tr className="border-b border-line text-left align-bottom">
@@ -485,9 +470,6 @@ export default async function QuizDialectPage({ params }: Props) {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-sub leading-relaxed">
-            ※「同義」は辞典の語釈が一致した語で、ニュアンスまで同じとは限りません。
-          </p>
         </section>
       )}
 
@@ -497,8 +479,7 @@ export default async function QuizDialectPage({ params }: Props) {
             🗝️ {dialect}だけの語で、言い換えが見つからないもの（{onlyNoSyn.length}語）
           </h2>
           <p className="text-sm text-sub leading-relaxed">
-            同じ語釈の語が、全{REAL_DIALECTS.length}方言の辞典のどこにも出てこなかった語です。
-            {dialect}検定でいちばん{area}らしさが出るのはこの並びだと思います。
+            {area}らしさがいちばん出るのはこの{onlyNoSyn.length}語です。
           </p>
           <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1.5">
             {onlyNoSyn.map((w) => (
@@ -508,14 +489,6 @@ export default async function QuizDialectPage({ params }: Props) {
               </li>
             ))}
           </ul>
-          <p className="text-sm text-sub leading-relaxed">
-            ※ この辞典に限った話で、近隣で同じ語を使うことはあります（方言は県境で切れません）。
-          </p>
-          {tSlug && (
-            <p className="text-sm text-sub leading-relaxed">
-              例文つきの語釈は変換ページ側にまとめています。
-            </p>
-          )}
           {tSlug && (
             <p className="pt-1">
               <Link href={`/translate/${tSlug}#words`} className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
@@ -540,8 +513,7 @@ export default async function QuizDialectPage({ params }: Props) {
             🗾 {dialect}と他の方言に共通する語（{shared.length}語）
           </h2>
           <p className="text-sm text-sub leading-relaxed">
-            {dialect}として収録しているが、辞典が他の方言にも同じ語を立てているもの。
-            検定でも「{dialect}だけの言葉ではありません」と設問ごとに書き添えています。
+            辞典が{dialect}以外にも立てている{shared.length}語。
           </p>
           <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1.5">
             {shared.map((w) => (
@@ -563,9 +535,7 @@ export default async function QuizDialectPage({ params }: Props) {
             ⚠️ 同じ語形でも、他の方言では意味が違う語（{homos.length}語）
           </h2>
           <p className="text-sm text-sub leading-relaxed">
-            {dialect}検定の答えは辞典の{dialect}の語釈で判定しています。
-            下の語は同じ語形が別の方言にも立項されていますが、そちらでは意味が違います。
-            他の地方の出身者と話が食い違うのは、たいていこの型です。
+            語形は{dialect}と同じでも、他の方言では語釈が違う{homos.length}語。
           </p>
           <figure className="overflow-x-auto">
             <BarChart
@@ -578,8 +548,7 @@ export default async function QuizDialectPage({ params }: Props) {
               ]}
             />
             <figcaption className="text-sm text-sub leading-relaxed pt-2">
-              図{figHomo}：他の方言と語形が重なる{shared.length}語の内訳。
-              語形が同じでも語釈が食い違う語が{homos.length}語あり、その中身が下の表です。
+              図{figHomo}：語形が重なる{shared.length}語のうち、語釈が食い違うのは{homos.length}語。
             </figcaption>
           </figure>
           {/* 2つの語釈を左右に並べて見比べる中身なので表にする（§3-2「比べるものは表」）。
@@ -587,7 +556,7 @@ export default async function QuizDialectPage({ params }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] text-sm border-collapse">
               <caption className="text-left text-sm text-sub leading-relaxed pb-2">
-                {dialect}と他の方言で語釈が食い違う{homos.length}語（辞典に立項がある方言だけの比較）
+                {dialect}と他の方言で語釈が食い違う{homos.length}語
               </caption>
               <thead>
                 <tr className="border-b border-line text-left align-bottom">
@@ -611,10 +580,6 @@ export default async function QuizDialectPage({ params }: Props) {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-sub leading-relaxed">
-            ※ 辞典に立項がある方言だけを比べた結果です。同じ語形が地方で別の意味になるのは
-            方言では珍しくなく、どちらかが誤りという話ではありません。
-          </p>
         </section>
       )}
 
@@ -636,8 +601,7 @@ export default async function QuizDialectPage({ params }: Props) {
               }))}
             />
             <figcaption className="text-sm text-sub leading-relaxed pt-2">
-              図{figOverlap}：同じ{region}の方言と、辞典が同じ語形を立てている語の数。
-              数が多い相手ほど、{dialect}検定でも判断が割れやすい語が多くなります。
+              図{figOverlap}：{dialect}と同じ語形を立てている{region}の方言。
             </figcaption>
           </figure>
           <ul className="space-y-1.5">
@@ -692,26 +656,16 @@ export default async function QuizDialectPage({ params }: Props) {
         <h2 className="font-bold text-2xl">📝 {dialect}検定のまとめ</h2>
         <ul className="list-disc pl-5 space-y-1.5">
           <li className="text-sm leading-relaxed">
-            {dialect}検定は全{questions.length}問の4択。{verified}問は出典と1語ずつ突き合わせた語で、
-            {questions.length}問中6問（8割）で合格バッジが出ます。
-          </li>
-          <li className="text-sm leading-relaxed">
-            辞典の{dialect}は{wordCount}語。うち{onlyHereAll.length}語は、全{REAL_DIALECTS.length}方言の中で
-            {dialect}にしか立項がありません。
+            辞典の{dialect}は{wordCount}語。うち{onlyHereAll.length}語は{dialect}にしか立項がありません。
           </li>
           {homos.length > 0 && (
             <li className="text-sm leading-relaxed">
-              いちばん間違えやすいのは、同じ語形で意味が違う{homos.length}語。
-              出身地が違う人と話が食い違うのは、たいていこの型です。
+              {dialect}検定でいちばん間違えやすいのは、同じ語形で意味が違う{homos.length}語です。
             </li>
           )}
-          <li className="text-sm leading-relaxed">
-            出題した{questions.length}語は、答え・解説・出典まで全部このページに書いてあります。
-            {dialect}を知らなくても、読んでから受け直せば解けます。
-          </li>
         </ul>
         <p className="text-sm leading-relaxed pt-1">
-          次の1アクション：まず{questions.length}問だけ試してみてください。1分で終わります。
+          次の1アクション：{dialect}の{questions.length}問を試してみてください。
         </p>
         <p>
           <a
@@ -723,15 +677,13 @@ export default async function QuizDialectPage({ params }: Props) {
         </p>
       </section>
 
+      {/* 2026-09-14: ヘッダーのグローバルナビと重複していた6本を、この方言から辿る意味のある3本に絞った */}
       <div className="flex flex-wrap justify-center gap-2 text-sm">
         {tSlug && (
-          <Link href={`/translate/${tSlug}`} className="btn-ghost">🗣️ {dialect}に変換してみる</Link>
+          <Link href={`/translate/${tSlug}`} className="btn-ghost">🗣️ {dialect}に変換</Link>
         )}
-        <Link href="/quiz" className="btn-ghost">🏅 検定の一覧（全{QUIZ_DIALECTS.length}方言）</Link>
-        <Link href="/doko" className="btn-ghost">🗾 この方言どこの言葉？</Link>
-        <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>
-        <Link href="/shindan" className="btn-ghost">🎭 方言タイプ診断</Link>
-        <Link href="/dict" className="btn-ghost">📖 方言辞典</Link>
+        <Link href="/quiz" className="btn-ghost">🏅 検定の一覧</Link>
+        <Link href="/quiz/about" className="btn-ghost">📐 検定の作り方</Link>
       </div>
 
       <PageDates route={`/quiz/${slug}`} type="WebApplication" name={`${dialect}検定｜方言ラボ`} />
