@@ -1911,6 +1911,238 @@
    "cycle": 33,
    "note": "仙台弁こけし「あんべ悪い＝具合悪い」。本辞典は秋田弁・福島弁にも「具合が悪い」で収録。⚠️ 同じ仙台弁に「あんべわれ」も同居",
    "src": "仙台弁こけし『仙台弁ミニ辞典』 https://kokesu.com/sendaiben/ （河北新報PR大使・仙台市『仙台弁こけしコラボ事業』のご当地キャラ。見出し語＋意味＋例文＋共通語訳）＝2026-09-15 実測"
+  },
+  {
+   "word": "たいぎゃ",
+   "dialect": "熊本弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "p.5「たいぎゃ／たいが＝すごく、とても」県全域。語釈「とても」一致（本辞典の「本当に」は出典に無いが矛盾なし）",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "どぎゃん",
+   "dialect": "熊本弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "p.9「どぎゃんね？＝どうですか？」県北・県央",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "おどん",
+   "dialect": "熊本弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "p.4「おい／おっが／おどん＝私」県北・県央",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "はいよ",
+   "dialect": "熊本弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "p.3「〜してはいよ＝〜してください」県全域（例「通ってはいよ」）",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ぬし",
+   "dialect": "熊本弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "p.4「わい／わっが／ぬしや＝あなた」県北・県央",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "すーすーすっ",
+   "dialect": "熊本弁",
+   "status": "fixed",
+   "cycle": 34,
+   "note": "p.10「スースーすっ。＝少しはだざむい」県央。本辞典の見出し語「すーすーすー」は出典に無い語形（熊本弁は「する→すっ」）。見出し語を「すーすーすっ」、例文を「窓ん隙間から風の入って、すーすーすっ。」に修正。語釈は据え置き",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "しょんなか",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.8「しょんなか＝仕方がない」県北・県央。本辞典は博多弁にも同義で収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "そぎゃん",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.4「そぎゃん＝そんなに、そのように」県全域＝語釈完全一致。本辞典は出雲弁にも収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "こぎゃん",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.4「こぎゃん＝このように、こんなに」県全域。本辞典は出雲弁にも収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "あど",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.11 からだの呼び方「あど＝かかと」県全域。本辞典は大分弁にも同義で収録（山形弁の「あど＝もう、あと」は別語）",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ばい",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.2「〜ばい＝〜だよ」県全域。本辞典は博多弁にも同義で収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ばってん",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.2「〜ばってん＝〜だけど」県全域。本辞典は博多弁・長崎弁にも同義で収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "はらかく",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.5「はらかく＝腹を立てる、怒る」県全域＝語釈一致。本辞典は博多弁・長崎弁にも収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "なんばしよっと",
+   "dialect": "熊本弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "p.6「なんばしょっと？＝何してるの？」県全域（出典の表記は「しょっと」）。本辞典は博多弁にも収録",
+   "src": "熊本県 商工労働部 商工政策課『くまもと方言ハンドブック』（外国人材向け・令和7年度発行・監修 熊本県立大学名誉教授 馬場良二） https://www.pref.kumamoto.jp/soshiki/58/258611.html ／PDF https://www.pref.kumamoto.jp/uploaded/life/258611_794495_misc.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ちびる",
+   "dialect": "広島弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "単語一覧40「ちびる＝すり減る」＝語釈完全一致",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "わし",
+   "dialect": "広島弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "単語一覧27「わし＝私（主に男性の一人称）」＝語釈一致。※西日本で広く使うが本辞典の他方言には未収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ちゃった",
+   "dialect": "広島弁",
+   "status": "ok",
+   "cycle": 34,
+   "note": "単語一覧16「〇〇しちゃった＝〇〇された（尊敬語）」＝本辞典「〜された（軽い尊敬）」と一致",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "いらう",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧31「いらう＝触る」。本辞典は阿波弁・神戸弁・伊勢弁・京都弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "かもう",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧35「かもう＝からかう、触る」。本辞典は新潟弁にも「からかう」で収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ねぶる",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧43「ねぶる＝なめる」。本辞典は讃岐弁・大分弁・名古屋弁・京都弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ひやい",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧62「ひやい＝冷たい」。本辞典は山口弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "きっぽ",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧23「きっぽ＝（古い）傷あと」。本辞典は山口弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "やおい",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧68「やおい＝柔らかい」。本辞典は山口弁・伊予弁にも収録（伊予弁 やおい は未確認のまま＝広島市の資料は愛媛の裏付けにならない）",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "すいばり",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧24「すいばり／そばり＝とげ」。本辞典は山口弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "にがる",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧58「にがる＝（体の内部・腹などが）痛い」。本辞典は岡山弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "むつこい",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧67「むつこい＝味が濃くおいしくない」＝本辞典「味がしつこい、脂っこい」と矛盾なし。本辞典は伊予弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "ようけ",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧13「よー／よーけ／よけー＝たくさん」。本辞典は讃岐・伊予・鳥取・山口・飛騨弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "はぁ",
+   "dialect": "広島弁",
+   "status": "multi",
+   "cycle": 34,
+   "note": "単語一覧11「はー＝もう、すでに」（出典の表記は「はー」）。本辞典は福島弁にも収録",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
+  },
+  {
+   "word": "つまらん",
+   "dialect": "広島弁",
+   "status": "unconfirmed",
+   "cycle": 34,
+   "note": "単語一覧57「つまらん＝おもしろくない、大したことがない」＝出典の語義は標準語に近い意味のみ。本辞典の語義「いけない、だめだ」は出典で裏が取れない（否定もされていない）。語義は据え置き",
+   "src": "広島市 健康福祉局 介護保険課『ひろしま方言ハンドブック』（外国人介護職員向け・68単語＋例文・監修 尾道市立大学教授 灰谷謙二） https://www.city.hiroshima.lg.jp/living/fukushi-kaigo/1014902/1006001/1025754/1047178.html ／PDF hiroshima_dialect_a4.pdf ＝画像PDFのため目視で読取（2026-09-16 実測）"
   }
  ]
 }

@@ -8217,9 +8217,9 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
       "example": "この暑さん中の畑仕事は、やおいかんばい。"
     },
     {
-      "word": "すーすーすー",
+      "word": "すーすーすっ",
       "meaning": "すきま風が入って寒い・スースーする",
-      "example": "窓ん隙間から風のすーすーすーたい。"
+      "example": "窓ん隙間から風の入って、すーすーすっ。"
     },
     {
       "word": "ひやか",
