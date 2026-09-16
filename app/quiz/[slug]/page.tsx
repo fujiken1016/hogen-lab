@@ -115,10 +115,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // 別名（「沖縄方言」→「沖縄弁・うちなーぐち」など）をタイトルに入れる。
   // SC実測で「うちなーぐち検定」が11表示・掲載順位9.0でクリック0だったため。
   const title = `${dialect}${aliasParen(dialect)}検定｜全8問・1分の${dialect}クイズ（${area}） | 方言ラボ`;
-  const description = `「${samples.join("」「")}」…${dialect}（${area}）の言葉、意味がわかる？ 全8問の4択クイズで${dialect}検定に挑戦。8割正解で合格バッジ。出題した8語は意味・例文・出典つきで全部公開しています。${aliasSentence(
+  // description は検索結果で切れない長さに収める（2026-09-16 週次監査の実測で138〜152字あり、
+  // 日本語のスニペットは概ね120字前後で打ち切られていた）。別名文（aliasSentence）は
+  // SC実測で拾えていたクエリの受け皿なので残し、タイトルと重複する情報のほうを削っている。
+  const description = `「${samples.join("」「")}」…${dialect}（${area}）の言葉、意味がわかる？ 全8問の4択、8割正解で合格バッジ。出題8語は意味・例文・出典つきで公開。${aliasSentence(
     dialect,
     area,
-  )}登録不要・スマホで約1分。`;
+  )}`;
   const url = `${BASE}/quiz/${slug}`;
   return {
     title,

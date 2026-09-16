@@ -40,6 +40,18 @@ export function aliasParen(dialect: string): string {
   return a.length ? `（${a.join("・")}）` : "";
 }
 
+/**
+ * description 用の短い別名表記。別名が無ければ空文字。
+ * aliasSentence は本文向けに「${dialect}は${area}のことばで…」と名乗るぶん長く、
+ * description に入れると検索結果で切れる長さを超えていた（2026-09-16 週次監査の実測）。
+ * 別名そのものはSC実測で拾えていたクエリの受け皿なので落とさず、言い回しだけ詰めた版。
+ */
+export function aliasSentenceShort(dialect: string): string {
+  const a = aliasesOf(dialect);
+  if (!a.length) return "";
+  return `「${a.join("」「")}」とも呼ばれます。`;
+}
+
 /** 本文・description に置く一文。別名が無ければ空文字 */
 export function aliasSentence(dialect: string, area: string): string {
   const a = aliasesOf(dialect);

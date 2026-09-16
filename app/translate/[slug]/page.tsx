@@ -5,7 +5,7 @@ import CrossSite from "@/components/CrossSite";
 import ToolReads from "@/components/ToolReads";
 import TranslateTool from "@/components/TranslateTool";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
-import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
+import { aliasParen, aliasSentence, aliasSentenceShort } from "@/lib/dialect_alias";
 import { hasReverseDemand, reverseName } from "@/lib/translate_reverse";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
@@ -60,15 +60,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = rev
     ? `${dialect}${aliasParen(dialect)} 変換｜${revName}を標準語に変換・標準語を${dialect}に変換（${area}）| 方言ラボ`
     : `${dialect}${aliasParen(dialect)} 変換｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
+  // description は検索結果で切れない長さに収める（2026-09-16 週次監査の実測で156〜208字あり、
+  // 日本語のスニペットは概ね120字前後で打ち切られていた）。双方向の名乗り（rev）と別名文は
+  // どちらもSC実測で拾えていたクエリの受け皿なので残し、言い回しのほうを詰めている。
   const dirLine = rev
-    ? `${revName}を標準語に変換できます。⇄ を押せば向きが変わり、標準語の文を${dialect}（${area}）に変換することもできます。`
-    : `標準語の文を入力するだけで${dialect}（${area}）に変換します。⇄ を押せば${dialect}を標準語に戻す向きにも変えられます。`;
+    ? `${revName}を標準語に、標準語を${dialect}（${area}）に、⇄ で双方向に変換できます。`
+    : `標準語の文を${dialect}（${area}）に変換します。⇄ で${dialect}を標準語に戻すこともできます。`;
   const description = `${dirLine}${pairs
+    .slice(0, 2)
     .map((p) => `「${p.standard}」→「${p.dialect}」`)
-    .join("")}など、よく使う言い換えと、辞典に収録した${dialect}${wordCount}語の一覧（意味・例文つき）も見られます。${aliasSentence(
-    dialect,
-    area,
-  )}登録不要・スマホで数秒。`;
+    .join("")}など、よく使う言い換えと、辞典の${dialect}${wordCount}語も一覧で。${aliasSentenceShort(dialect)}`;
   const url = `${BASE}/translate/${slug}`;
   return {
     title,
