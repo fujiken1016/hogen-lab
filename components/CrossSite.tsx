@@ -22,8 +22,10 @@
  *    （`~/Desktop/claude/memory/deferred_until_adsense.md` に起票済み）。
  */
 export default function CrossSite({ content }: { content: string }) {
+  // 2026-09-17: 送り先をポータルトップ→受注窓口へ変更（推奨台帳 2026-09-06 行）。
+  // ポータルトップ止まりでは受注に繋がらない。無料ツールを自社事業の入口にする。
   const href =
-    "https://mainichi-lab.com/?utm_source=hogen&utm_medium=inline&utm_campaign=cross_2026q3&utm_content=" +
+    "https://mainichi-lab.com/contact?utm_source=hogen&utm_medium=inline&utm_campaign=cross_2026q3&utm_content=" +
     content;
 
   return (
