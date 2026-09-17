@@ -204,6 +204,12 @@ export default async function TranslateDialectPage({ params }: Props) {
             </Link>
           )}
           <Link
+            href="/shindan"
+            className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
+          >
+            🔮 方言タイプ診断（あなたは何弁？）
+          </Link>
+          <Link
             href="/doko"
             className="btn-secondary min-h-[48px] inline-flex items-center justify-center text-sm"
           >
