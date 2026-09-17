@@ -12,6 +12,7 @@ import { REGION_OF } from "@/lib/tools";
 import {
   TRANSLATE_AREA_OF,
   TRANSLATE_DIALECTS,
+  crossRegionPicks,
   phrasePairs,
   translateDialectOf,
   translateSiblings,
@@ -89,6 +90,7 @@ export default async function TranslateDialectPage({ params }: Props) {
   const region = REGION_OF[dialect] ?? "";
   const pairs = phrasePairs(dialect);
   const siblings = translateSiblings(dialect);
+  const crossPicks = crossRegionPicks(dialect);
   const words = wordsOf(dialect);
   const wordCount = words.length;
   const alias = aliasSentence(dialect, area);
@@ -256,6 +258,23 @@ export default async function TranslateDialectPage({ params }: Props) {
           <h2 className="font-bold text-2xl text-center">同じ{region}の変換ツール</h2>
           <div className="flex flex-wrap justify-center gap-2">
             {siblings.map((d) => (
+              <Link
+                key={d}
+                href={`/translate/${translateSlug(d)}`}
+                className="btn-secondary text-sm min-h-[48px] inline-flex items-center"
+              >
+                {d} 変換
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {crossPicks.length > 0 && (
+        <section className="space-y-2">
+          <h2 className="font-bold text-2xl text-center">他の地方の変換ツール</h2>
+          <div className="flex flex-wrap justify-center gap-2">
+            {crossPicks.map((d) => (
               <Link
                 key={d}
                 href={`/translate/${translateSlug(d)}`}

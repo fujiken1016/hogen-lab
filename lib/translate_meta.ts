@@ -108,6 +108,19 @@ export function translateSiblings(dialect: string): string[] {
   return TRANSLATE_DIALECTS.filter((d) => d !== dialect && REGION_OF[d] === region);
 }
 
+// 2026-09-17: 地方をまたぐ回遊リンク（推奨台帳 2026-08-24 行）。
+// siblings は同じ地方の中だけなので、四国・関東など地方をまたいだ移動経路が無かった。
+// GSC実測（2026/08/05〜09/01）でクリック最多の3方言＝tosa/shizuoka/niigataは
+// 四国・東海・甲信越北陸と地方が分かれているので、そのまま「地方をまたぐ」候補になる
+// （CROSS_SITE_SLUGS と同じ基準を再利用。新しい指標は増やさない）。
+const CROSS_REGION_TOP: string[] = ["土佐弁", "静岡弁", "新潟弁"];
+
+/** 他の地方で実測クリックが多い変換ツール（相互リンク用・最大3件） */
+export function crossRegionPicks(dialect: string): string[] {
+  const region = REGION_OF[dialect];
+  return CROSS_REGION_TOP.filter((d) => d !== dialect && REGION_OF[d] !== region);
+}
+
 /** 地方ごとにまとめた一覧（/translate の索引用） */
 export function translateByRegion(): { region: string; dialects: string[] }[] {
   const order: string[] = [];
