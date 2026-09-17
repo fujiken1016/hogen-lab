@@ -141,7 +141,7 @@
  },
  "/quiz/hakata": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-17"
  },
  "/quiz/hida": {
   "published": "2026-08-14",
@@ -185,7 +185,7 @@
  },
  "/quiz/kansai": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-17"
  },
  "/quiz/kobe": {
   "published": "2026-08-14",
@@ -197,7 +197,7 @@
  },
  "/quiz/kyoto": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-17"
  },
  "/quiz/nagasaki": {
   "published": "2026-08-14",
@@ -245,7 +245,7 @@
  },
  "/quiz/tottori": {
   "published": "2026-08-14",
-  "modified": "2026-08-25"
+  "modified": "2026-09-17"
  },
  "/quiz/toyama": {
   "published": "2026-08-14",
@@ -293,7 +293,7 @@
  },
  "/translate/hakata": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-17"
  },
  "/translate/hida": {
   "published": "2026-08-14",
@@ -337,7 +337,7 @@
  },
  "/translate/kansai": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-17"
  },
  "/translate/kobe": {
   "published": "2026-08-14",
@@ -349,7 +349,7 @@
  },
  "/translate/kyoto": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-09-17"
  },
  "/translate/nagasaki": {
   "published": "2026-08-14",
@@ -397,7 +397,7 @@
  },
  "/translate/tottori": {
   "published": "2026-08-14",
-  "modified": "2026-08-25"
+  "modified": "2026-09-17"
  },
  "/translate/toyama": {
   "published": "2026-08-14",
