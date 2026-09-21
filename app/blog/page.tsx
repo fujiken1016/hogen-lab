@@ -57,7 +57,7 @@ export default function BlogIndex() {
       <div className="mt-9 rounded-2xl seigaiha border border-indigo/25 p-5 text-center">
         <p className="font-display text-lg font-bold mb-2">読んだあとは、診断で答え合わせ</p>
         <p className="text-sm text-sub leading-[1.9] mb-4">
-          14問・約2分。全国のご当地キャラから、あなたの言葉に近い相棒が見つかります。
+          10問・約2分。全国のご当地キャラから、あなたの言葉に近い相棒が見つかります。
         </p>
         <Link href="/shindan" className="btn-primary">
           無料で方言診断をはじめる
