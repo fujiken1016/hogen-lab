@@ -5,7 +5,7 @@ import { PageDates } from "@/components/PageDates";
 export const metadata: Metadata = {
   title: "お問い合わせ | 方言ラボ",
   description:
-    "方言ラボへのお問い合わせ窓口です。方言データの誤りのご指摘、掲載内容に関するご連絡はこちらからお願いします。",
+    "方言ラボへのお問い合わせ窓口です。方言データの誤りのご指摘、収録語や例文の追加のご要望、掲載内容・取材に関するご連絡は、このページのメールアドレスまでお願いします。",
   alternates: { canonical: "https://hogen.mainichi-lab.com/contact" },
 };
 

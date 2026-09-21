@@ -22,7 +22,7 @@ const INDEX_TITLE = `方言変換・方言翻訳｜方言を標準語に変換�
 
 export const metadata: Metadata = {
   title: INDEX_TITLE,
-  description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換・翻訳します。⇄ で向きを変えれば、方言を標準語に変換することもできます（「方言 標準語 変換」）。大阪弁・博多弁・津軽弁など、方言同士の変換も可能。方言ごとの変換ページ（「○○弁 変換」）へもここから移動でき、各ページでは収録語の一覧（意味・例文つき）も見られます。登録不要・スマホで数秒。`,
+  description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換・翻訳します。⇄ で向きを変えれば方言を標準語に変換することもできます。大阪弁・博多弁・津軽弁など方言同士の変換も可能。方言ごとの変換ページでは収録語の一覧（意味・例文つき）も見られます。`,
   alternates: { canonical: `${BASE}/translate` },
   openGraph: {
     title: INDEX_TITLE,
