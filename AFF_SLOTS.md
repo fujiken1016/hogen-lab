@@ -161,3 +161,4 @@ https://hb.afl.rakuten.co.jp/ichiba/{アフィリID}/_RTLink143603?pc={URLエン
 > 書式＝`YYYY-MM-DD｜実数 n／表 n｜差分`。**書かない週＝SHIP-03 が止まった週**として人事が数える。
 
 - 2026-09-16｜実数 4／表 4｜差分なし（`data-aff=` の直書きは2件だが、記事側は `PrBox` 経由。`<PrBox` の呼び出し数4＝全4枠／リンク5本と一致）
+- 2026-09-20｜実数 4／表 4｜差分なし（`data-aff=` の直書きは2件だが記事側は `PrBox` 経由。`app/` + `components/` で `<PrBox` の呼び出し数4＝全4枠。⚠️ 前回の点検ログにある `src/` というパスは存在しない＝`app/` と `components/` を見ること）
