@@ -227,7 +227,7 @@ export function Sources({ items }: { items: { label: string; url?: string }[] })
 /** 診断への誘導 */
 export function ShindanCta({
   title = "あなたの言葉は、何弁？",
-  body = "14問・約2分で、全国35体のご当地キャラからあなたの相棒が決まります。結果は4桁コードで友達と相性チェックもできます。",
+  body = "10問・約2分で、全国35体のご当地キャラからあなたの相棒が決まります。結果は4桁コードで友達と相性チェックもできます。",
 }: {
   title?: string;
   body?: string;
@@ -380,7 +380,7 @@ export function ArticleShell({ article, children }: { article: Article; children
             { href: "/doko", emoji: "🗾", title: "この方言どこ？", desc: "全8問の方言あて" },
             { href: "/kawaii", emoji: "💗", title: "かわいい方言対決", desc: "8語のトーナメント" },
             { href: "/kurabe", emoji: "🔤", title: "全国方言くらべ", desc: "同じ一言の35通り" },
-            { href: "/shindan", emoji: "🔮", title: "方言タイプ診断", desc: "14問であなたの相棒" },
+            { href: "/shindan", emoji: "🔮", title: "方言タイプ診断", desc: "10問であなたの相棒" },
           ].map((t) => (
             <Link
               key={t.href}

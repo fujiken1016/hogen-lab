@@ -43,7 +43,7 @@ const FEATURES = [
 ];
 
 const STEPS = [
-  { n: "01", t: "14問にこたえる", d: "言葉づかい8問＋性格6問を選ぶだけ。約2分。" },
+  { n: "01", t: "10問にこたえる", d: "言葉づかい6問＋性格4問を選ぶだけ。約2分。" },
   { n: "02", t: "キャラが判明", d: "35体のご当地キャラから、あなたの相棒が決まる。" },
   { n: "03", t: "友達と相性チェック", d: "リンクを送ると、2人の相性が%で出る。" },
 ];
@@ -98,12 +98,12 @@ export default function HomeClient() {
             </span>
           </h1>
           <p className="text-sub text-sm leading-relaxed max-w-md">
-            言葉と性格の14問でわかる「方言キャラタイプ診断」。性格も、恋愛傾向も、友達との相性も。
+            言葉と性格の10問でわかる「方言キャラタイプ診断」。性格も、恋愛傾向も、友達との相性も。
             ふるさとの言葉が、あなたを教えてくれる。
           </p>
           <div className="flex items-center gap-3 text-sm font-bold text-indigo">
             <span>✓ 約2分</span>
-            <span>✓ 全14問</span>
+            <span>✓ 全10問</span>
             <span>✓ 登録不要</span>
           </div>
           <div className="flex flex-wrap items-center gap-4">
