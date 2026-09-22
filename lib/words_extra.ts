@@ -7666,7 +7666,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "ほたる",
-      "meaning": "放っておく",
+      "meaning": "捨てる・放っておく",
       "example": "泣きよる子をほたっちょけんわ。"
     },
     {

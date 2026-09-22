@@ -7,3 +7,5 @@ node_modules/
 .DS_Store
 *.log
 tsconfig.tsbuildinfo
+scripts/ndl/verified_set.json
+scripts/ndl/*.zip
