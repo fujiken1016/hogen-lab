@@ -67,10 +67,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dirLine = rev
     ? `${revName}を標準語に、標準語を${dialect}（${area}）に、⇄ で双方向に変換できます。`
     : `標準語の文を${dialect}（${area}）に変換します。⇄ で${dialect}を標準語に戻すこともできます。`;
-  const description = `${dirLine}${pairs
-    .slice(0, 2)
-    .map((p) => `「${p.standard}」→「${p.dialect}」`)
-    .join("")}など、よく使う言い換えと、辞典の${dialect}${wordCount}語も一覧で。${aliasSentenceShort(dialect)}`;
+  // 可変部（方言名・別名文・言い換え例）の長さで125字を超える方言が出る（2026-09-23の監査実測で
+  // 沖縄128字・鳥取126字）。文面を作ってから長い順に末尾を落とす＝どの方言でも125字以内に収まる。
+  // 落とす順は「別名文 → 言い換え例を1組に」。dirLine と辞典語数はSC実測の受け皿なので落とさない。
+  const descBody = (nPairs: number, alias: boolean) =>
+    `${dirLine}${pairs
+      .slice(0, nPairs)
+      .map((p) => `「${p.standard}」→「${p.dialect}」`)
+      .join("")}など、よく使う言い換えと、辞典の${dialect}${wordCount}語も一覧で。${
+      alias ? aliasSentenceShort(dialect) : ""
+    }`;
+  const description =
+    [descBody(2, true), descBody(2, false), descBody(1, false)].find((d) => d.length <= 125) ??
+    descBody(1, false);
   const url = `${BASE}/translate/${slug}`;
   return {
     title,
