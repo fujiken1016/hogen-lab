@@ -38,3 +38,18 @@ python3 cols2.py 868659.zip page 19
 curl -s -A "Mozilla/5.0" "https://lab.ndl.go.jp/dl/api/book/search?searchfield=metaonly&keyword=方言&size=300"
 ```
 ⚠️ `keyword=茨城県 方言` のような県名＋語では 0件になる。**棚を丸ごと取って県名で grep する**。
+
+## ページ画像を見る（第40回・2026-09-23 追加）
+
+**OCRが `〓` で返した字は「資料に無い」ではなく「読めていない」だけ。** 画像は別APIで取れる。
+
+```sh
+# fulltext API とは別ホスト。R + 0埋め10桁のコマ番号
+curl -s -A "Mozilla/5.0" -o p50.jpg \
+  "https://www.dl.ndl.go.jp/api/iiif/868659/R0000000050/full/full/0/default.jpg"
+```
+
+- native は 4000px 前後。**1字あたり約100px しかない**ので、6〜9倍に拡大しても確実に読めるとは限らない
+- 縦組みは `.rotate(-90, expand=True)` で横に倒すと読みやすい。行の切り出しは `cols2.py` が出す **x帯の中心**を使う
+- ⚠️ **OCRのy座標は見出し（大きい字）と語釈（小さい字）で文字ピッチが違う。** 位置合わせは「ページ全体を1枚描いて目で当たりを付ける」のが早い
+- 🔑 **読めても断定しない。** 1字を確定できない解像度なら `unconfirmed` のまま、**消去法の材料**（その語釈を別の行でどう組んでいるか）を note に残す
