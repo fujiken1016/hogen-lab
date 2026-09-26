@@ -39,10 +39,26 @@ const VOICE_SLUGS = new Set(["tosa"]);
 // 方言ごとに1URL。「○○弁 変換」「○○弁 翻訳」は方言ごとに検索され、
 // 変換の中身も方言ごとに全く違う（＝分割の2条件を満たす）。/translate は全方言の索引として残す。
 //
-// generateStaticParams は使わない。Cloudflare Workers（OpenNext）ではSSGした動的ルートのHTMLが
-// インクリメンタルキャッシュ側に入り、キャッシュ未設定のこの環境では404になる（/quiz/[slug] と同じ）。
+// 🔴 2026-09-26: generateStaticParams を「使わない」から「使う」に反転した。
+//   旧方針＝「SSGした動的ルートのHTMLがインクリメンタルキャッシュ側に入り、
+//   キャッシュ未設定のこの環境では404になる」。
+//   → open-next.config.ts に staticAssetsIncrementalCache を設定したので **前提が変わった**。
+//   反転の理由＝Workers Free の CPU上限 10ms に対し、このページのリクエスト時SSRは
+//   cpuTime p50 34ms（2026-09-03 実測）。2026-09-26 にはキャッシュミスが 100% 503
+//   （outcome:"exceededCpu"）になっていた。プリレンダすれば Worker はレンダリングしない。
+//   ⚠️ この1点以外の既存判断（CROSS_SITE_SLUGS / VOICE_SLUGS を広げない等）は変えていない。
 
 type Props = { params: Promise<{ slug: string }> };
+
+/** 変換の収録がある方言ぶんだけビルド時にHTMLを作る（＝本番でレンダリングしない） */
+export function generateStaticParams(): { slug: string }[] {
+  return TRANSLATE_DIALECTS.map((d) => translateSlug(d))
+    .filter((s): s is string => Boolean(s))
+    .map((slug) => ({ slug }));
+}
+
+/** プリレンダしていないslugは404にする（リクエスト時SSRに落とすと10ms CPU上限で503になる） */
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
