@@ -9,6 +9,7 @@ import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence } from "@/lib/dialect_alias";
 import {
   AREA_OF,
+  QUIZ_DIALECTS,
 
   annotatedQuiz,
   dictEntry,
@@ -90,10 +91,15 @@ function BarChart({
 // 方言ごとに1URL。「○○弁検定」という検索クエリで個別に拾えるようにするため、
 // 単一ページ（/quiz）の中で状態を切り替える方式から分割した。/quiz は一覧として残している。
 //
-// generateStaticParams は使わない（＝リクエスト時にサーバーで描画する）。
-// Cloudflare Workers（OpenNext）ではSSGした動的ルートのHTMLはインクリメンタルキャッシュに
-// 入るため、キャッシュ未設定のこの環境では 404 になる（2026-08 実測）。
-// データは全てローカルの静的データなので、既存の /c/[slug] と同じくオンデマンド描画で足りる。
+// 🔴 2026-09-26: generateStaticParams を「使わない」から「使う」に反転した。
+//   旧方針＝「SSGした動的ルートのHTMLはインクリメンタルキャッシュに入るため、
+//   キャッシュ未設定のこの環境では 404 になる（2026-08 実測）」。
+//   → open-next.config.ts に staticAssetsIncrementalCache を設定したので **前提が変わった**。
+//   反転の理由＝Workers Free の CPU上限 10ms に対し、このページのリクエスト時SSRは
+//   cpuTime p50 23ms（2026-09-03 実測）。2026-09-26 にはキャッシュミスが 100% 503
+//   （outcome:"exceededCpu"・12/12 失敗）になり、サイトが暗くなる寸前だった。
+//   ビルド時プリレンダ＝Workerはレンダリングせず ASSETS から読むだけ＝CPUを使わない。
+//   ⚠️ この1点以外の既存判断（/quiz/ を検索の受け皿として生かす＝noindex にしない等）は変えていない。
 //
 // 2026-09-03: このページのHTMLに「方言ごとに違う実データ」を載せた。
 //   それまでの本文は地域名と語数を差し替えただけで、35ページのペア間文字列一致率は 76.8%
@@ -105,6 +111,17 @@ function BarChart({
 //   ⚠️ noindex は選ばない。/quiz/ は検索の受け皿として生かす。
 
 type Props = { params: Promise<{ slug: string }> };
+
+/** 収録がある方言ぶんだけビルド時にHTMLを作る（＝本番でレンダリングしない） */
+export function generateStaticParams(): { slug: string }[] {
+  return QUIZ_DIALECTS.map((d) => quizSlug(d))
+    .filter((s): s is string => Boolean(s))
+    .map((slug) => ({ slug }));
+}
+
+/** プリレンダしていないslugは404にする。
+ *  true（既定）だとリクエスト時SSRに落ちて 10ms CPU上限で 503 を返してしまうため。 */
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

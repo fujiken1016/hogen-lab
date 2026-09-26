@@ -17,6 +17,11 @@
   "kv_namespaces": [
     { "binding": "VOICE", "id": "204296042b4e4b16aae30fbe46c34494" }
   ],
+  // Workers Logs（cpuTime / outcome を後から検索できる）。2026-09-26 の 503 障害で、
+  // `wrangler tail` は **プレビューURL（wrangler versions upload）への流入を拾えない**ことが
+  // 実測で分かったため、昇格前に CPU を測る手段として有効化した。
+  // Free プランの範囲内（200k イベント/日）。個人情報は載らない（URLとステータスのみ）。
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS",
