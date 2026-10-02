@@ -7,6 +7,7 @@ import TranslateTool from "@/components/TranslateTool";
 import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence, aliasSentenceShort } from "@/lib/dialect_alias";
 import { hasReverseDemand, reverseName } from "@/lib/translate_reverse";
+import { convertHead } from "@/lib/translate_synonym";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
 import {
@@ -74,9 +75,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // 両方向をtitleに入れる。実在しなかった方言には付けない（推測で35方言に広げない）。
   const rev = hasReverseDemand(dialect);
   const revName = reverseName(dialect);
+  // 「変換」だけでなく「翻訳」も実測で存在する方言は、SERPで切れない先頭側で両方名乗る
+  // （lib/translate_synonym.ts＝2026-10-01 GSC実測の5方言のみ。勝っている面は触らない）
+  const head = convertHead(dialect);
   const title = rev
-    ? `${dialect}${aliasParen(dialect)} 変換｜${revName}を標準語に変換・標準語を${dialect}に変換（${area}）| 方言ラボ`
-    : `${dialect}${aliasParen(dialect)} 変換｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
+    ? `${dialect}${aliasParen(dialect)} ${head}｜${revName}を標準語に変換・標準語を${dialect}に変換（${area}）| 方言ラボ`
+    : `${dialect}${aliasParen(dialect)} ${head}｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
   // description は検索結果で切れない長さに収める（2026-09-16 週次監査の実測で156〜208字あり、
   // 日本語のスニペットは概ね120字前後で打ち切られていた）。双方向の名乗り（rev）と別名文は
   // どちらもSC実測で拾えていたクエリの受け皿なので残し、言い回しのほうを詰めている。
