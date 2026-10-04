@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import ShareBar from "@/components/ShareBar";
-import { TodayWord, allWords, speak, todayWord } from "@/lib/data";
+import { TodayWord, allWords, epochDay, speak, todayWord } from "@/lib/data";
 import { charLen, maskWord, shareBlock } from "@/lib/share_text";
 import { REGION_OF } from "@/lib/tools";
 import { ToolIntro } from "@/components/ToolIntro";
@@ -32,6 +32,10 @@ function TodayIntro({ total, dialects }: { total: number; dialects: number }) {
         {
           t: "友だちに出題する",
           d: "共有ボタンには、語も意味も伏せた形が用意してあります。出るのは丸の数（＝文字数）とどの地方の言葉かだけなので、受け取った人はここへ答え合わせに来ることになります。",
+        },
+        {
+          t: "続けた日数を見る",
+          d: "カードのすぐ下に「🔥 連続 N日目」が出ます。日付が変わってからこの面を開くと1日ずつ増え、1日でも空くと1日目に戻ります。数えているのはこの端末のブラウザの中だけで、こちらには送られません。別の端末で開くとそちらは別に数えはじめます。",
         },
         {
           t: "全部の語を見る",
@@ -130,6 +134,72 @@ function TodayHero({ today }: { today: TodayWord }) {
   );
 }
 
+const STREAK_KEY = "hogen_today_streak";
+
+type StreakState = { day: number; streak: number; best: number };
+
+/**
+ * 連続来訪日数。端末の localStorage にだけ残る（サーバーへは送らない）。
+ *
+ * 🔴 ここで localStorage が読めない／書けないことは普通に起きる（プライベートウィンドウ・
+ * サイトデータのブロック・サムネイル撮影時）。読み書きは全部 try/catch で包み、
+ * 失敗したら「この面を出さない」だけにする＝日替わりの語そのものは必ず読める。
+ *
+ * 日付の切れ目は `epochDay()`（ローカル年月日をUTC0時として数えた通日）を使う。
+ * 「今日の語」と同じ関数を使うので、語が変わった日に連続日数も進む。
+ */
+function readStreak(today: number): StreakState | null {
+  let prev: StreakState | null = null;
+  try {
+    const raw = window.localStorage.getItem(STREAK_KEY);
+    if (raw) {
+      const o = JSON.parse(raw) as Partial<StreakState>;
+      if (typeof o?.day === "number" && typeof o?.streak === "number") {
+        prev = { day: o.day, streak: o.streak, best: typeof o.best === "number" ? o.best : o.streak };
+      }
+    }
+  } catch {
+    return null; // 読めない端末では記録しない（＝この面は出さない）
+  }
+
+  let next: StreakState;
+  if (!prev) next = { day: today, streak: 1, best: 1 };
+  else if (prev.day === today) next = prev;                                  // 同じ日に何度開いても増えない
+  else if (prev.day === today - 1) next = { day: today, streak: prev.streak + 1, best: Math.max(prev.best, prev.streak + 1) };
+  else if (prev.day > today) next = prev;                                    // 端末の日付が巻き戻った＝触らない
+  else next = { day: today, streak: 1, best: prev.best };                    // 1日でも空いたら1に戻る
+
+  try {
+    window.localStorage.setItem(STREAK_KEY, JSON.stringify(next));
+  } catch {
+    /* 書けなくても表示はできる */
+  }
+  return next;
+}
+
+function StreakRow() {
+  const [st, setSt] = useState<StreakState | null>(null);
+
+  // localStorage は描画後にしか触れない（SSRとの不一致・サーバー実行を避ける）
+  useEffect(() => setSt(readStreak(epochDay())), []);
+
+  if (!st) return null;
+
+  return (
+    <div className="card p-4 text-center">
+      <p className="font-bold">
+        🔥 連続 {st.streak}日目
+        {st.best > st.streak ? <span className="text-sm text-sub">（最長 {st.best}日）</span> : null}
+      </p>
+      <p className="text-sm text-sub mt-1">
+        {st.streak === 1
+          ? "今日から数えはじめました。明日もこの面を開くと2日目になります。"
+          : "1日でも空くと1日目に戻ります。数えているのはこの端末のブラウザの中だけです。"}
+      </p>
+    </div>
+  );
+}
+
 function TodayPage() {
   const [today, setToday] = useState<TodayWord | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -148,6 +218,8 @@ function TodayPage() {
       <h1 className="section-title text-center">📅 今日の方言</h1>
 
       {today ? <TodayHero today={today} /> : <p className="text-center text-sub py-16">読み込み中…</p>}
+
+      <StreakRow />
 
       <div className="flex items-center justify-between">
         <button onClick={() => setShowAll((s) => !s)} className="btn-ghost">

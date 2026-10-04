@@ -544,6 +544,14 @@ export function allWords(): TodayWord[] {
 }
 
 /**
+ * ローカルの年月日をUTCの0時として数えた通日。時差・夏時間で日数がずれない。
+ * 「今日の語」と「連続来訪日数」が同じ日付の切れ目を使うために、ここ1か所に置く。
+ */
+export function epochDay(now: Date = new Date()): number {
+  return Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
+}
+
+/**
  * その日の1語。端末のローカル日付だけで決まる（同じ日なら全員同じ語＝共有文面の前提）。
  *
  * 🔴 2026-09-14：以前は「年内の通算日（1〜366）% 語数」で、語数が3,368あるため
@@ -555,12 +563,11 @@ export function allWords(): TodayWord[] {
 export function todayWord(now: Date = new Date()): TodayWord {
   const words = allWords();
   const n = words.length;
-  // ローカルの年月日をUTCの0時として数える＝時差・夏時間で日数がずれない
-  const epochDay = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
+  const day = epochDay(now);
   const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
   let stride = Math.round(n * 0.6180339887);
   while (gcd(stride, n) !== 1) stride++;
-  return words[(epochDay % n) * stride % n];
+  return words[(day % n) * stride % n];
 }
 
 // ---------- クイズ（検定） ----------
