@@ -7,11 +7,11 @@ const BASE = "https://hogen.mainichi-lab.com";
 export const metadata: Metadata = {
   title: "今日の方言｜日替わりで全国の方言をひとつ覚える | 方言ラボ",
   description:
-    "毎日ひとつ、全国の方言から言葉を紹介します。意味・使い方・どの地域の言葉かをまとめて確認でき、続けるとバッジが集まります。",
+    "毎日ひとつ、全国の方言から言葉を紹介します。意味・例文・どの地域の言葉かをまとめて確認でき、開いた日が続いた日数として残ります。",
   alternates: { canonical: `${BASE}/today` },
   openGraph: {
     title: "今日の方言｜日替わりで全国の方言をひとつ覚える | 方言ラボ",
-    description: "毎日ひとつ、全国の方言から言葉を紹介。意味と使い方つき。",
+    description: "毎日ひとつ、全国の方言から言葉を紹介。意味と例文つき。連続日数が残ります。",
     url: `${BASE}/today`,
     siteName: "方言ラボ",
     locale: "ja_JP",
