@@ -163,3 +163,4 @@ https://hb.afl.rakuten.co.jp/ichiba/{アフィリID}/_RTLink143603?pc={URLエン
 - 2026-09-16｜実数 4／表 4｜差分なし（`data-aff=` の直書きは2件だが、記事側は `PrBox` 経由。`<PrBox` の呼び出し数4＝全4枠／リンク5本と一致）
 - 2026-09-20｜実数 4／表 4｜差分なし（`data-aff=` の直書きは2件だが記事側は `PrBox` 経由。`app/` + `components/` で `<PrBox` の呼び出し数4＝全4枠。⚠️ 前回の点検ログにある `src/` というパスは存在しない＝`app/` と `components/` を見ること）
 - 2026-09-23｜実数 4／表 4｜差分なし（`data-aff=` の直書き grep は0件＝記事側は `PrBox` 経由。`app/` + `components/` の `<PrBox` 呼び出し数4＝全4枠）
+- 2026-09-30｜実数 4／表 4｜差分なし（`data-aff=` の直書き grep は0件＝記事側は `PrBox` 経由。`app/` + `components/` の `<PrBox` 呼び出し数4＝全4枠）

@@ -535,6 +535,23 @@ export const WORDS: Record<string, WordEntry[]> = {
 export type TodayWord = WordEntry & { dialect: string };
 
 // 基本収録＋自動収集分（words_extra）を合わせた、その方言の全語彙
+/**
+ * 辞典データの件数。
+ * 🔴 公開面の本文・description に出す語数は、手打ちせずここから数える。
+ * 2026-09-14：/translate に手打ちの「3,362語」が残り、辞典が増えたあと腐っていた。
+ * 2026-10-08：/dict の本文に同じ型の手打ち（3,368・400・2,968）が残っていたので、ここに寄せた。
+ */
+export const DICT_COUNTS = (() => {
+  const handwritten = Object.values(WORDS).reduce((n, v) => n + v.length, 0);
+  const generated = Object.values(EXTRA_WORDS).reduce((n, v) => n + v.length, 0);
+  return {
+    dialects: DIALECTS.filter((d) => d !== STANDARD).length,
+    handwritten,
+    generated,
+    total: handwritten + generated,
+  };
+})();
+
 export function wordsOf(dialect: string): WordEntry[] {
   return [...(WORDS[dialect] ?? []), ...(EXTRA_WORDS[dialect] ?? [])];
 }
