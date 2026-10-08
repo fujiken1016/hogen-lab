@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DIALECTS, FREE_INPUT_KEY, STANDARD, speak, unlockBadge, safeParseArray, lsSet } from "@/lib/data";
+import { DIALECTS, DICT_COUNTS, FREE_INPUT_KEY, STANDARD, speak, unlockBadge, safeParseArray, lsSet } from "@/lib/data";
 import { PageDates } from "@/components/PageDates";
 import { ToolIntro } from "@/components/ToolIntro";
 
@@ -188,14 +188,14 @@ export default function DictPage() {
           {
             h: "サイト側が持っている辞典データ",
             body: [
-              "このページの投稿とは別に、方言ラボは全体で35方言・3,368語の辞典データを持っています。内訳は手で書いた400語と、資料から集めて自動生成した2,968語です。方言変換・この方言どこの言葉？・方言くらべは、このデータを引いています。",
+              `このページの投稿とは別に、方言ラボは全体で${DICT_COUNTS.dialects}方言・${DICT_COUNTS.total.toLocaleString()}語の辞典データを持っています。内訳は手で書いた${DICT_COUNTS.handwritten.toLocaleString()}語と、資料から集めて自動生成した${DICT_COUNTS.generated.toLocaleString()}語です。方言変換・この方言どこの言葉？・方言くらべは、このデータを引いています。`,
               "「方言」の粒度は県〜都市単位です（津軽弁・神戸弁・飛騨弁など）。8地方に区分しています。",
             ],
           },
           {
             h: "どこまで出典と照合したか",
             body: [
-              "正直に書くと、3,368語の全部に出典を付けられてはいません。データ自体に出典欄を持っていないためです。出典と1語ずつ突き合わせたのは、いまのところ517語です。",
+              `正直に書くと、${DICT_COUNTS.total.toLocaleString()}語の全部に出典を付けられてはいません。データ自体に出典欄を持っていないためです。出典と1語ずつ突き合わせたのは、いまのところ517語です。`,
               "内訳は、方言別ページに出る一般語が200語、方言クイズ検定の出題語が243語、「この方言どこの言葉？」の出題プールが77語で、3語が重なるので実数で517語です。照合に使ったのは、自治体・観光の公式ページ、地方紙、大学の資料、方言辞典などです。",
               "一般語200語の結果は、その方言の語として確認できたものが81語、確認できたが複数の地方でも使うものが65語、出典に合わせて直したものが10語、出典が取れなかったものが44語でした。取れなかった語は辞典には残していますが、「その地方の語だ」と断定する用途には使っていません。",
               "この区別は現実の使い勝手に直結します。「なおす」「ねぶる」「めげる」のように広い範囲で使う語を1つの方言の正解にしてしまうと、実際に使っている人が不正解になるからです。出題プールを出典照合済みのリストに限定しているのは、そのためです。",

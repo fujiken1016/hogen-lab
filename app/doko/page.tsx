@@ -7,7 +7,7 @@ import ShareBar from "@/components/ShareBar";
 import TypeAvatar from "@/components/TypeAvatar";
 import { track } from "@/lib/ga";
 import { marks, shareBlock } from "@/lib/share_text";
-import { DokoQ, REGION_OF, buildDokoQuestions, dokoRank } from "@/lib/tools";
+import { DokoQ, REGION_OF, buildDokoQuestions, dokoPoolDialectCount, dokoRank } from "@/lib/tools";
 import { DOKO_SEEDS } from "@/lib/doko_pool";
 import { typeByDialect } from "@/lib/types";
 import { ToolIntro } from "@/components/ToolIntro";
@@ -16,7 +16,9 @@ import { PageDates } from "@/components/PageDates";
 const TOTAL = 8;
 // 解説文に出す出題プールの実数。プールを足し引きしたら自動で追従する
 const POOL_WORDS = DOKO_SEEDS.length;
-const POOL_DIALECTS = new Set(DOKO_SEEDS.map((s) => s.dialect)).size;
+// 🔴 辞典に在る語だけが出題プールに残るので、DOKO_SEEDS を数えるのではなく
+// 実際のプール（DOKO_SEEDS ∩ 辞典）から数える。全方言数（35）とは別物。
+const POOL_DIALECTS = dokoPoolDialectCount();
 
 type Phase = "intro" | "play" | "result";
 type Log = { q: DokoQ; picked: string; ok: boolean };
@@ -156,7 +158,7 @@ function DokoPage() {
         <div className="text-center space-y-2">
           <h1 className="section-title">🗾 この方言、何弁？</h1>
           <p className="text-sub text-sm leading-relaxed">
-            全国35方言の中から8語を出題。意味を見て「どこの言葉か（何弁か）」を4択で当てるクイズです。
+            全国{POOL_DIALECTS}方言の中から{TOTAL}語を出題。意味を見て「どこの言葉か（何弁か）」を4択で当てるクイズです。
           </p>
         </div>
         <div className="card p-6 space-y-4 text-center">
@@ -167,7 +169,7 @@ function DokoPage() {
             })}
           </div>
           <div className="flex items-center justify-center gap-3 text-sm font-bold text-indigo">
-            <span>✓ 全8問</span>
+            <span>✓ 全{TOTAL}問</span>
             <span>✓ 約1分</span>
             <span>✓ 登録不要</span>
           </div>

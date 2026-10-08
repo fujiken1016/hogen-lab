@@ -535,37 +535,12 @@ export const WORDS: Record<string, WordEntry[]> = {
 export type TodayWord = WordEntry & { dialect: string };
 
 // 基本収録＋自動収集分（words_extra）を合わせた、その方言の全語彙
-/**
- * 辞典データの件数。
- * 🔴 公開面の本文・description に出す語数は、手打ちせずここから数える。
- * 2026-09-14：/translate に手打ちの「3,362語」が残り、辞典が増えたあと腐っていた。
- * 2026-10-08：/dict の本文に同じ型の手打ち（3,368・400・2,968）が残っていたので、ここに寄せた。
- */
-export const DICT_COUNTS = (() => {
-  const handwritten = Object.values(WORDS).reduce((n, v) => n + v.length, 0);
-  const generated = Object.values(EXTRA_WORDS).reduce((n, v) => n + v.length, 0);
-  return {
-    dialects: DIALECTS.filter((d) => d !== STANDARD).length,
-    handwritten,
-    generated,
-    total: handwritten + generated,
-  };
-})();
-
 export function wordsOf(dialect: string): WordEntry[] {
   return [...(WORDS[dialect] ?? []), ...(EXTRA_WORDS[dialect] ?? [])];
 }
 
 export function allWords(): TodayWord[] {
   return Object.keys(WORDS).flatMap((dialect) => wordsOf(dialect).map((w) => ({ ...w, dialect })));
-}
-
-/**
- * ローカルの年月日をUTCの0時として数えた通日。時差・夏時間で日数がずれない。
- * 「今日の語」と「連続来訪日数」が同じ日付の切れ目を使うために、ここ1か所に置く。
- */
-export function epochDay(now: Date = new Date()): number {
-  return Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
 }
 
 /**
@@ -580,11 +555,12 @@ export function epochDay(now: Date = new Date()): number {
 export function todayWord(now: Date = new Date()): TodayWord {
   const words = allWords();
   const n = words.length;
-  const day = epochDay(now);
+  // ローカルの年月日をUTCの0時として数える＝時差・夏時間で日数がずれない
+  const epochDay = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
   const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
   let stride = Math.round(n * 0.6180339887);
   while (gcd(stride, n) !== 1) stride++;
-  return words[(day % n) * stride % n];
+  return words[(epochDay % n) * stride % n];
 }
 
 // ---------- クイズ（検定） ----------

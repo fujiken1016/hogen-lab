@@ -87,6 +87,17 @@ export function dokoPoolStats(): { total: number; byRegion: Record<string, numbe
 }
 
 /**
+ * 出題プールに実際に残っている「方言の数」。
+ * 🔴 公開面の本文・description に出す方言数は、ここから数える（手打ちしない）。
+ * 2026-10-08：/doko は「35方言から8問を出題」と書いていたが、出題プール（DOKO_SEEDS ∩ 辞典）は
+ * 32方言しか持っておらず、大阪弁・福島弁・鳥取弁は一度も出題されない。
+ * 全方言数（REAL_DIALECTS.length）とは別物なので、そちらを流用してはいけない。
+ */
+export function dokoPoolDialectCount(): number {
+  return Object.keys(buildCuratedPool()).length;
+}
+
+/**
  * 「この方言どこの言葉？」の出題を作る。
  * - 出題語は出典照合済みプールのみ
  * - 同じ地方に偏らないよう、1地方あたり最大2問まで
