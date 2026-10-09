@@ -25,13 +25,22 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 function git(args) {
   try {
-    return execFileSync("git", ["-C", ROOT, ...args], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+    // 🔴 TZ を固定する。git の %cs は「コミットした機械のローカル日付」なので、
+    // 母艦が海外（-07:00）にあると JST の 10/09 00:09 のコミットが 10-08 と記録される。
+    // 実測（2026-10-10）＝155コミット中 15件がこの形でズレており、/doko の dateModified が
+    // 1日 古いまま公開されていた。日付は必ず JST で読む（--date=format-local が TZ を見る）。
+    return execFileSync("git", ["-C", ROOT, ...args], {
+      encoding: "utf8",
+      maxBuffer: 64 * 1024 * 1024,
+      env: { ...process.env, TZ: "Asia/Tokyo" },
+    });
   } catch {
     return "";
   }
 }
 
-const TODAY = new Date().toISOString().slice(0, 10);
+// TODAY も JST。toISOString() は UTC なので、母艦が -07:00 だと JST の午前が前日になる。
+const TODAY = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(new Date());
 
 // この仕組み自身（日付の表示・生成）が入れた行。これしか動いていないコミットは
 // 「更新」に数えない。数えないと、日付を入れた日に全ページが同じ日付になって不自然になるうえ、
@@ -48,7 +57,7 @@ function isStampOnly(diff) {
 
 /** そのパス群の中身が実際に変わった最後のコミットの日付 */
 function lastDate(paths) {
-  const log = git(["log", "--format=%H\t%cs", "-n", "40", "--", ...paths]).trim();
+  const log = git(["log", "--date=format-local:%Y-%m-%d", "--format=%H\t%cd", "-n", "40", "--", ...paths]).trim();
   if (!log) return null;
   for (const row of log.split("\n")) {
     const [sha, date] = row.split("\t");
@@ -61,7 +70,7 @@ function lastDate(paths) {
 
 /** そのパス群が最初に追加されたコミットの日付 */
 function firstDate(paths) {
-  const out = git(["log", "--diff-filter=A", "--format=%cs", "--", ...paths]).trim();
+  const out = git(["log", "--diff-filter=A", "--date=format-local:%Y-%m-%d", "--format=%cd", "--", ...paths]).trim();
   if (!out) return null;
   const lines = out.split("\n").filter(Boolean);
   return lines[lines.length - 1];
@@ -69,11 +78,11 @@ function firstDate(paths) {
 
 /** needle を含む行を触ったコミットのうち、最後 / 最初の日付（方言別ページ用） */
 function lastDateMatching(needle, paths) {
-  const out = git(["log", "-1", "--format=%cs", `-G${needle}`, "--", ...paths]).trim();
+  const out = git(["log", "-1", "--date=format-local:%Y-%m-%d", "--format=%cd", `-G${needle}`, "--", ...paths]).trim();
   return out || null;
 }
 function firstDateMatching(needle, paths) {
-  const out = git(["log", "--format=%cs", `-G${needle}`, "--", ...paths]).trim();
+  const out = git(["log", "--date=format-local:%Y-%m-%d", "--format=%cd", `-G${needle}`, "--", ...paths]).trim();
   if (!out) return null;
   const lines = out.split("\n").filter(Boolean);
   return lines[lines.length - 1];
