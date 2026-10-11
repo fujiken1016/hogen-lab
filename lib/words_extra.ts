@@ -120,8 +120,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "いびしい",
-      "meaning": "汚い、見苦しい",
-      "example": "泥だらけでいびしいけぇ、先に風呂へ入りんさい。"
+      "meaning": "気味が悪い、不気味な",
+      "example": "あの虫、いびしいのう、そっちへ行かんといてくれ。"
     },
     {
       "word": "きっぽ",
