@@ -165,3 +165,5 @@ https://hb.afl.rakuten.co.jp/ichiba/{アフィリID}/_RTLink143603?pc={URLエン
 - 2026-09-23｜実数 4／表 4｜差分なし（`data-aff=` の直書き grep は0件＝記事側は `PrBox` 経由。`app/` + `components/` の `<PrBox` 呼び出し数4＝全4枠）
 - 2026-09-30｜実数 4／表 4｜差分なし（`data-aff=` の直書き grep は0件＝記事側は `PrBox` 経由。`app/` + `components/` の `<PrBox` 呼び出し数4＝全4枠）
 - 2026-10-08｜実数 4／表 4｜差分なし（`data-aff=` の直書き grep は0件＝記事側は `PrBox` 経由。`app/` + `components/` の `<PrBox` 呼び出し数4＝全4枠）
+
+- 2026-10-15｜実数 0grep+PrBox4件／表 4｜差分なし（前週と同一）
