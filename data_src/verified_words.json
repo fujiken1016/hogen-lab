@@ -5211,10 +5211,10 @@
     {
       "word": "いめじん",
       "dialect": "鹿児島弁",
-      "status": "unconfirmed",
-      "cycle": 47,
-      "note": "🔴 **語形は一致するが語釈が食い違う**＝本書 p112「**イメジン** はにかみや、イメゴロに同じ。」＝**照れ屋**。辞典は「臆病者」＝**怖がり**。近いが同じではない。🔑 本書は別に p112 で「〜ジン」型の語を多数並べており（タセンポジン・シンブジン・キョクジン 等）、**ジン＝人の造語成分**と分かる。データは変えず未確認。⚠️ なお熊本本 p54 には別語形で「ソ(臆病者)」がある",
-      "src": "野村傳四 著『**肝屬郡方言集**』（柳田國男 編『全國方言集』／中央公論社・昭和19年＝1944年）NDL次世代デジタルライブラリー 資料ID **1126568**（全125ページ・**縦組み／見出しはカタカナ**）。🔴 **NDLの書誌タイトルは「全国方言集」なので書名では引けない。標題紙を読むと『肝屬郡方言集』**＝肝屬（きもつき）郡＝**鹿児島県大隅半島**。読み方＝`python3 scripts/ndl/bulk4.py 1126568.zip 鹿児島弁`（第47回で新設＝cols2の縦組み読み × カナ畳み込み × 帯の先頭＝見出しへの錨。bulk2＝縦組みだがカナを畳まない／bulk3＝カナを畳むが横組み、でこの本はどちらでも読めない）。🔑 **柳田の系列凡例（p13）が2つの判定を縛る**＝①「調査の單位としては一つの島、一つの郡を區域とするのが適當」＋「それが必ずしも**全區域を代表するもので無く**、或はやゝ一部に偏して居るかも知れぬ」＝**肝屬郡での確認は「鹿児島県で使う」の裏取りにはなるが「県全域／薩摩でも使う」の裏取りにはならない**。②「**ちやんと字引にあり東京でも每日聽き、誰でも知つて居るものを竝べ立てるといふことは、むだといふ以上に弊害があります**」＝**標準語と単なる「なまり」（音変化）は意図的に除外されている**ので、**見出しに無いことは「その語が無い」の証拠にならない**（例＝でこん＝大根）。2026-09-30 全文zip取得"
+      "status": "fixed",
+      "cycle": 62,
+      "note": "🔧 語釈を「臆病者」→「はにかみ屋、恥ずかしがり屋」に修正（data_src/words_kyushu.json・例文も差し替え）。JLect 鹿児島：Shy person, bashful person＋第47回『肝屬郡方言集』p112「はにかみや」＝2資料一致 ／【前回まで】🔴 **語形は一致するが語釈が食い違う**＝本書 p112「**イメジン** はにかみや、イメゴロに同じ。」＝**照れ屋**。辞典は「臆病者」＝**怖がり**。近いが同じではない。🔑 本書は別に p112 で「〜ジン」型の語を多数並べており（タセンポジン・シンブジン・キョクジン 等）、**ジン＝人の造語成分**と分かる。データは変えず未確認。⚠️ なお熊本本 p54 には別語形で「ソ(臆病者)」がある",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得） ／ 野村傳四 著『**肝屬郡方言集**』（柳田國男 編『全國方言集』／中央公論社・昭和19年＝1944年）NDL次世代デジタルライブラリー 資料ID **1126568**（全125ページ・**縦組み／見出しはカタカナ**）。🔴 **NDLの書誌タイトルは「全国方言集」なので書名では引けない。標題紙を読むと『肝屬郡方言集』**＝肝屬（きもつき）郡＝**鹿児島県大隅半島**。読み方＝`python3 scripts/ndl/bulk4.py 1126568.zip 鹿児島弁`（第47回で新設＝cols2の縦組み読み × カナ畳み込み × 帯の先頭＝見出しへの錨。bulk2＝縦組みだがカナを畳まない／bulk3＝カナを畳むが横組み、でこの本はどちらでも読めない）。🔑 **柳田の系列凡例（p13）が2つの判定を縛る**＝①「調査の單位としては一つの島、一つの郡を區域とするのが適當」＋「それが必ずしも**全區域を代表するもので無く**、或はやゝ一部に偏して居るかも知れぬ」＝**肝屬郡での確認は「鹿児島県で使う」の裏取りにはなるが「県全域／薩摩でも使う」の裏取りにはならない**。②「**ちやんと字引にあり東京でも每日聽き、誰でも知つて居るものを竝べ立てるといふことは、むだといふ以上に弊害があります**」＝**標準語と単なる「なまり」（音変化）は意図的に除外されている**ので、**見出しに無いことは「その語が無い」の証拠にならない**（例＝でこん＝大根）。2026-09-30 全文zip取得"
     },
     {
       "word": "よんごひんご",
@@ -6133,7 +6133,7 @@
       "dialect": "山口弁",
       "status": "unconfirmed",
       "cycle": 52,
-      "note": "❌ **『華城村誌』(1928) の防府方言篇（p108-118）に0件。**語彙篇に0件（当たりは `いやしい`／`見やしやんせ` と **p92 の俗謠**）。🔑 **この語で本書を二度引かない。**（README 第42回の規律どおり語尾を1〜2字落としても引き直したうえで0件）",
+      "note": "❌ **『華城村誌』(1928) の防府方言篇（p108-118）に0件。**語彙篇に0件（当たりは `いやしい`／`見やしやんせ` と **p92 の俗謠**）。🔑 **この語で本書を二度引かない。**（README 第42回の規律どおり語尾を1〜2字落としても引き直したうえで0件） ／【第62回】JLect 山口：Liar, fibber＝「うそつき」。辞典「ずる、ずるいこと」と近いが一致せず＝未確認維持",
       "src": "『**華城村誌**』（昭和3年＝1928・山口県佐波郡華城村／全121ページ）NDL次世代デジタルライブラリー 資料ID **1033476**。**第52回に初めて開いた。方言篇＝p107（凡例）・p108「防府方言」あ之部 〜 p118「華城村誌大尾」**（p119 は編修正誤表＝判定に使わない）。読み方＝**`python3 seg2.py 1033476.zip \"<正規表現>\" [前後文字数]`**（`@@` 区切りで複数パターン）／**`python3 seg2.py 1033476.zip page N`**。🔴 **`cols2.py` は使えない**＝本書は**縦組み×上下2段組**で、x帯＝1項目の前提が崩れ上段と下段の語が1行に混ざる（`seg2.py` は第52回に `izumo.py` を汎用化して新設したもの）。🔴🔴 **判定を縛るのは著者自身の凡例（p107-108）**＝⑴「本編の目的は華城の方言を輯むるにあれど、**別に村内特有のものなく、少くも防府內は殆同一語なれば、題して防府方言と曰ふ**、以て其使用範圍を明確にしたるも、**大部分は防長兩國共通語たるべき筈なり**」＝**著者が「周防・長門（＝山口県）の共通語」と自己申告している**ので、本書の語は 防府という一点ではなく山口弁の裏として使える。⑵「**輓近の新輸入語の如きは未以て方言と看做すこと能はざるを以て悉く除外せり**」＝新語を自分で排除している＝収録語は古層。⑶「本編語源を擧げ小解を附したるもの殆**余が臆斷**に出づ、惟ふに誤謬多かるべし」＝**【漢字】と語源説は著者の推測なので根拠に数えない。語釈の散文だけを使う**。⑷音韻の癖＝「さ行の濁音→た行の濁音」（釣竿→つりだを／半挿→はんだふ）・「くわ」と「か」を別たず・「りゆう→ぢゆう」「しやう→さう」「きよ→け」。**「此類凡て正音によりて記載せり」＝見出しは正音に直してある**。⚠️ **範囲は旧周防国の防府（佐波郡）**。本書は **伊豫・土佐・安藝・備後・石見・出雲・豐前・筑前・東京・京都・周防大島郡** を他国として名指しで対比する（語彙篇で 伊豫 7件ほか）＝**出雲方言(1916) と同じ『自己申告で非排他が分かる』型の本**。⚠️ **俗謠・歌（p92/p94）と地誌本体（p22-33）は見出し項目ではない**ので、そこだけの一致は ok を支えない（`なんぼ`／`ふく`／`ぶり` をこの線で落とした）。（2026-10-08 取得・第52回に読んだ）"
     },
     {
@@ -7255,6 +7255,190 @@
       "cycle": 55,
       "note": "🔴 語形は当たるが語釈が別義（ずるい／辞典は『（坂などが）急できつい』）。本書は支持材料にならない。",
       "src": "村岡淺夫 編／廣島縣師範學校郷土研究室『廣島縣方言の研究』郷土研究叢書 第一輯（昭和8年＝1933・芸文堂書店／監修 東條操）NDL次世代デジタルライブラリー 資料ID 1209295。第55回に `scripts/ndl/katarun.py` で当て直した。実測＝p50 語彙篇「キブイずるい」（2026-10-03 取得・2026-10-10 第55回に当て直した）"
+    },
+    {
+      "word": "かじる",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：To scratch／Chubu (Shizuoka)＝辞典「ひっかく」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=chubu&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "なば",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：なば【茸】Shiitake mushroom／Kyushu (Oita)＝辞典「きのこ・しいたけ」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kyushu&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "やぜか",
+      "dialect": "長崎弁",
+      "status": "multi",
+      "cycle": 62,
+      "note": "JLect：Annoying, noisy, irritating／Kyushu (Kagoshima, Kumamoto, Nagasaki, Saga)＝九州西部の広域語",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kyushu&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "んだもしたん",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Wow!; No way!／Kyushu (Kagoshima)＝辞典「あらまあ（驚き）」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "ずんばい",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：A lot, many, much／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "だいやめ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：だいやめ【疲い止め】Evening drink／Kyushu (Kagoshima), Ryukyu (Tokunoshima＝鹿児島県内)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "だっきしょ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：だっきしょ【落花生】Peanut／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "まこて",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：まこて【真て】Really, truly／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "やっせんぼ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Coward, wimp／Kyushu (Kagoshima)＝辞典「意気地なし・弱虫」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "おっかん",
+      "dialect": "鹿児島弁",
+      "status": "multi",
+      "cycle": 62,
+      "note": "JLect：Mom, mother／Kyushu (Kagoshima, Miyazaki: Morokata, Miyazaki)＝宮崎でも使う",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "じゃっどん",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：ぢゃっどん・じゃっどん But, however／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "ラーフル",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Chalkboard eraser／Kyushu (Kagoshima), Ryukyu (Tokunoshima)。⚠️ 他県（愛媛・宮崎等）でも聞くとされるが一次資料未確認＝/doko には入れない",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "きばいやんせ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Keep it up; Do your best／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "こんちゃらごあす",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Good day, hello／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "あいがとさげもした",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Thank you／Kyushu (Kagoshima)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kagoshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "あくど",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 62,
+      "note": "JLect：Heel／North (Aomori: Tsugaru, Hokkaido)＝津軽でも使う",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=north&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "きりぶさ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Heel／Shikoku (Kagawa)＝辞典「かかと」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=shikoku&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "おもっしょい",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Interesting, amusing／Shikoku (Tokushima: Awa)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=shikoku&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "つべ",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Buttocks／Shikoku (Tokushima: Awa)＝辞典「お尻」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=shikoku&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "にえる",
+      "dialect": "和歌山弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Bruise／Kansai (Wakayama)＝辞典「打ち身で青あざができる」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=kansai&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "ようたんぼ",
+      "dialect": "鳥取弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Drunkard／Chugoku (Tottori)",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=chugoku&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "せんない",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Bothersome, troublesome／Chugoku (Hiroshima: Iwashijima)。⚠️ 記録地点は尾道市岩子島＝県全域の裏取りではない",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=hiroshima&group=words（2026-10-18 取得）"
+    },
+    {
+      "word": "べと",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 62,
+      "note": "JLect：Mud／Chubu (Nagano)＝辞典「土・泥」と一致",
+      "src": "JLect（Zachary Read）地域一覧 https://www.jlect.com/search.php?r=&l=chubu&group=words（2026-10-18 取得）"
     }
   ]
 }
