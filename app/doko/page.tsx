@@ -187,6 +187,21 @@ function DokoPage() {
           <Link href="/quiz" className="btn-ghost">🏅 方言クイズ検定へ</Link>
           <Link href="/dict" className="btn-ghost">📖 方言辞典を見る</Link>
         </div>
+        {/* 遊び方の動画。自動再生しない（preload=none・controls）。操作より下・説明の直前に置く */}
+        <figure className="mx-auto" style={{ maxWidth: 260 }}>
+          <video
+            controls
+            preload="none"
+            playsInline
+            poster="/video/hogen-doko-quiz/poster.jpg"
+            width={720}
+            height={1280}
+            className="block w-full h-auto rounded-xl border border-line"
+          >
+            <source src="/video/hogen-doko-quiz/hogen-doko-quiz.mp4" type="video/mp4" />
+          </video>
+          <figcaption className="text-sm text-sub mt-2 text-center">遊ぶとこうなります（64秒・音なし）</figcaption>
+        </figure>
         <DokoIntro pool={POOL_WORDS} dialects={POOL_DIALECTS} />
       </div>
     );
