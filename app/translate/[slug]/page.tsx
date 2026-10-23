@@ -8,6 +8,7 @@ import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence, aliasSentenceShort } from "@/lib/dialect_alias";
 import { hasReverseDemand, reverseName } from "@/lib/translate_reverse";
 import { convertHead } from "@/lib/translate_synonym";
+import { DIR_LINE_OVERRIDE, TITLE_OVERRIDE } from "@/lib/translate_title_override";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
 import {
@@ -78,15 +79,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // 「変換」だけでなく「翻訳」も実測で存在する方言は、SERPで切れない先頭側で両方名乗る
   // （lib/translate_synonym.ts＝2026-10-01 GSC実測の5方言のみ。勝っている面は触らない）
   const head = convertHead(dialect);
-  const title = rev
-    ? `${dialect}${aliasParen(dialect)} ${head}｜${revName}を標準語に変換・標準語を${dialect}に変換（${area}）| 方言ラボ`
-    : `${dialect}${aliasParen(dialect)} ${head}｜標準語を${dialect}に変換する（${area}）| 方言ラボ`;
+  const title =
+    TITLE_OVERRIDE[slug]?.(area) ??
+    (rev
+      ? `${dialect}${aliasParen(dialect)} ${head}｜${revName}を標準語に変換・標準語を${dialect}に変換（${area}）| 方言ラボ`
+      : `${dialect}${aliasParen(dialect)} ${head}｜標準語を${dialect}に変換する（${area}）| 方言ラボ`);
   // description は検索結果で切れない長さに収める（2026-09-16 週次監査の実測で156〜208字あり、
   // 日本語のスニペットは概ね120字前後で打ち切られていた）。双方向の名乗り（rev）と別名文は
   // どちらもSC実測で拾えていたクエリの受け皿なので残し、言い回しのほうを詰めている。
-  const dirLine = rev
+  const dirLine = DIR_LINE_OVERRIDE[slug]?.(area) ?? (rev
     ? `${revName}を標準語に、標準語を${dialect}（${area}）に、⇄ で双方向に変換できます。`
-    : `標準語の文を${dialect}（${area}）に変換します。⇄ で${dialect}を標準語に戻すこともできます。`;
+    : `標準語の文を${dialect}（${area}）に変換します。⇄ で${dialect}を標準語に戻すこともできます。`);
   // 可変部（方言名・別名文・言い換え例）の長さで125字を超える方言が出る（2026-09-23の監査実測で
   // 沖縄128字・鳥取126字）。文面を作ってから長い順に末尾を落とす＝どの方言でも125字以内に収まる。
   // 落とす順は「別名文 → 言い換え例を1組に」。dirLine と辞典語数はSC実測の受け皿なので落とさない。
