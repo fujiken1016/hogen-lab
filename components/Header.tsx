@@ -78,7 +78,7 @@ export default function Header() {
 
   return (
     <header className="bg-indigo-deep text-white sticky top-0 z-20 shadow-md border-b-2 border-gold/70">
-      <div className="max-w-5xl mx-auto px-4 py-2 flex items-center gap-2 sm:gap-4">
+      <div className="max-w-5xl mx-auto px-4 py-2 flex flex-wrap items-center gap-x-2 sm:gap-x-4">
         <Link href="/" className="flex min-h-[48px] items-center gap-2 group shrink-0">
           <span className="hanko group-hover:rotate-6 transition-transform">方</span>
           <span className="font-display text-lg sm:text-xl font-bold tracking-widest">
@@ -101,7 +101,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 shrink-0">
+        <div className="ml-auto flex flex-wrap justify-end items-center gap-2">
           <Link
             href="/shindan"
             className="bg-primary-text hover:bg-primary-face-3 text-white text-sm font-bold rounded-full px-3.5 sm:px-4 min-h-[48px] flex items-center shadow-sm active:scale-95 transition-transform"
