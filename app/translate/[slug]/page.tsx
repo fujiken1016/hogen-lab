@@ -36,7 +36,7 @@ const CROSS_SITE_SLUGS = new Set(["tosa", "shizuoka", "niigata"]);
 //    共通テンプレート経由で35面に広げない（AdSense審査中の運用。CROSS_SITE_SLUGS と同じ理由）。
 //    判定日 2026-10-19：声が1件でも届いたか。0件なら shizuoka / niigata へ広げる
 //    （`memory/customer_voice.md` の「2026-09-07 声を取りに行く導線」）。
-const VOICE_SLUGS = new Set(["tosa"]);
+const VOICE_SLUGS = new Set(["tosa", "shizuoka", "niigata"]);
 
 // 方言ごとに1URL。「○○弁 変換」「○○弁 翻訳」は方言ごとに検索され、
 // 変換の中身も方言ごとに全く違う（＝分割の2条件を満たす）。/translate は全方言の索引として残す。
