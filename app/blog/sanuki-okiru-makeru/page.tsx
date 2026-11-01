@@ -67,44 +67,95 @@ export default function Page() {
         方言ラボの<Link href="/translate/sanuki" className="text-primary-text underline underline-offset-2">讃岐弁 変換</Link>
         で、この2語を実際に試しました（2026年11月1日に実行）。
         このツールは、辞典に載っている語の「見出しの形」と一致した部分だけを置き換えます。
-        語尾や活用は変えません。結果は次のとおりです。
+        語尾や活用は変えません。結果を表にまとめます。
       </P>
 
-      <Note title="標準語 → 讃岐弁">
-        「満腹になる」→「おきる」に置き換わる。<br />
-        「満腹になった」→ そのまま（置き換わらない）。<br />
-        「コップの水がこぼれる」→「コップの水がまける」に置き換わる。<br />
-        「こぼれた」→ そのまま（置き換わらない）。
-      </Note>
+      <div className="overflow-x-auto my-5">
+        <table className="w-full min-w-[520px] text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            入れた文と、変換ツールの出力（2026年11月1日・方言ラボ自社実測）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">向き</th>
+              <th scope="col" className="py-2 pr-3 font-bold">入れた文</th>
+              <th scope="col" className="py-2 pr-3 font-bold">出力</th>
+              <th scope="col" className="py-2 font-bold whitespace-nowrap">置き換え</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["標準語→讃岐弁", "満腹になる", "おきる", "あり"],
+              ["標準語→讃岐弁", "満腹になった", "満腹になった", "なし"],
+              ["標準語→讃岐弁", "コップの水がこぼれる", "コップの水がまける", "あり"],
+              ["標準語→讃岐弁", "こぼれた", "こぼれた", "なし"],
+              ["讃岐弁→標準語", "お腹がおきる", "お腹が満腹になる", "あり"],
+              ["讃岐弁→標準語", "お腹がおきた", "お腹がおきた", "なし"],
+              ["讃岐弁→標準語", "お茶がまけるで", "お茶がこぼれるで", "あり"],
+              ["讃岐弁→標準語", "水がまけた／水がまけよる", "そのまま", "なし"],
+            ].map(([dir, input, output, hit]) => (
+              <tr key={dir + input} className="border-b border-line align-top">
+                <td className="py-2 pr-3 whitespace-nowrap">{dir}</td>
+                <td className="py-2 pr-3">{input}</td>
+                <td className="py-2 pr-3">{output}</td>
+                <td className="py-2 whitespace-nowrap">{hit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <Note title="讃岐弁 → 標準語">
-        「お腹がおきる」→「お腹が満腹になる」に置き換わる。<br />
-        「お腹がおきた」→ そのまま（置き換わらない）。<br />
-        「水がまけた」「水がまけよる」→ そのまま（置き換わらない）。<br />
-        「お茶がまけるで」→「お茶がこぼれるで」に置き換わる。
-      </Note>
-
+      <H2>活用した形が、置き換わらない理由</H2>
       <P>
-        つまり、辞典の見出しと同じ形（「おきる」「まける」）なら置き換わり、
+        表のとおり、辞典の見出しと同じ形（「おきる」「まける」）なら置き換わり、
         「おきた」「まけた」「まけよる」のように活用した形は、いまは置き換わりません。
         冒頭の「お腹おきたわ」をそのまま入れても、標準語にはなりません。
-        そのため、変換結果が元の文とまったく同じ場合は、
-        <strong>「訳すところがなかった」のではなく「活用した形で辞典に引っかからなかった」</strong>
-        可能性があります。
       </P>
+      <figure className="my-5">
+        <div className="overflow-x-auto">
+          <svg
+            width="296"
+            height="150"
+            viewBox="0 0 296 150"
+            role="img"
+            aria-label="辞典の見出しの形は置き換わり、活用した形は置き換わらない。例：おきるは置き換わり、おきたは置き換わらない"
+            style={{ display: "block", width: 296, height: "auto" }}
+          >
+            <rect x="1" y="1" width="294" height="64" rx="8" fill="none" stroke="currentColor" strokeOpacity="0.35" />
+            <text x="12" y="26" fontSize="14" fontWeight="700" fill="currentColor">見出しの形</text>
+            <text x="12" y="52" fontSize="16" fill="currentColor">おきる　→　満腹になる</text>
+            <text x="190" y="26" fontSize="14" fill="currentColor">置き換わる</text>
+            <rect x="1" y="85" width="294" height="64" rx="8" fill="none" stroke="currentColor" strokeOpacity="0.35" strokeDasharray="4 3" />
+            <text x="12" y="110" fontSize="14" fontWeight="700" fill="currentColor">活用した形</text>
+            <text x="12" y="136" fontSize="16" fill="currentColor">おきた　→　おきた</text>
+            <text x="190" y="110" fontSize="14" fill="currentColor">置き換わらない</text>
+          </svg>
+        </div>
+        <figcaption className="text-sm text-sub mt-2 leading-[1.8]">
+          図：辞典の見出しと同じ形だけが置き換わる（上の表の「おきる」「おきた」の場合）
+        </figcaption>
+      </figure>
       <P>
-        ここは正直に言うと、ツール側の弱いところです。
+        変換結果が元の文とまったく同じ場合は、
+        <strong>「訳すところがなかった」のではなく「活用した形で辞典に引っかからなかった」</strong>
+        可能性があります。ここはツール側の弱いところです。
         見出しの形に直して入れ直すか、辞典の一覧で語を引けば、意味はたどれます。
       </P>
 
       <H2>出会ったときの読み方</H2>
+      <P>標準語の意味で読んで文がおかしいときは、同じ音の別の語を疑うと、だいたい当たります。</P>
+      <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-1.5">
+        <li>食事の話の中で「おきた」が出たら、満腹のことです。</li>
+        <li>水やお茶、汁物の話で「まける」が出たら、こぼれることです。</li>
+        <li>「まけまけいっぱい」は、器からあふれそうなほど入っている様子です（ウィキペディアの記載）。</li>
+        <li>文が変換されずにそのまま返ってきたら、活用した形かもしれません。見出しの形に直して試します。</li>
+      </ul>
+
+      <H2>まとめ：次にやること</H2>
       <P>
-        食事の話の中で「おきた」が出たら、満腹のことです。
-        水やお茶、汁物の話で「まける」が出たら、こぼれることです。
-        標準語の意味で読んで文がおかしいときは、讃岐弁の同じ音の別の語を疑うと、だいたい当たります。
-      </P>
-      <P>
-        そのほかの語は、意味と例文つきの一覧で引けます。
+        「おきる」は満腹、「まける」はこぼれる。
+        どちらも標準語と同じ音で、変換ツールは見出しの形でしか置き換えません。
+        まずは辞典の一覧で、気になった語を引いてみてください。
       </P>
       <P>
         <Link href="/translate/sanuki" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
