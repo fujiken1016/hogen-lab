@@ -236,6 +236,17 @@ export const ARTICLES: Article[] = [
     date: "2026-08-13",
     readMin: 8,
   },
+  {
+    slug: "sanuki-okiru-makeru",
+    title: "「お腹おきた」は起きたのではない｜讃岐弁の「おきる」「まける」と変換ツールの読み方",
+    description:
+      "讃岐弁の「おきる」は満腹、「まける」はこぼれる。標準語と同じ音で意味が違う2語を、語彙表と用例で確認し、変換ツールで置き換わる形・置き換わらない形も実測しました。",
+    lead: "うどんを食べて「お腹おきた」と言われたら、満腹の合図です。標準語と音が同じで意味が違う讃岐弁を、実際の変換結果と一緒に読みます。",
+    emoji: "🍜",
+    category: "解説",
+    date: "2026-11-01",
+    readMin: 4,
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {

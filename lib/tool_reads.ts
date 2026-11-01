@@ -50,6 +50,10 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
     slug: "media-to-hogen",
     reason: "ドラマやマンガの「龍馬語」がどう作られたか。役割語としての方言の話。",
   },
+  讃岐弁: {
+    slug: "sanuki-okiru-makeru",
+    reason: "「お腹おきた」は満腹、「水がまける」はこぼれる。同じ音で意味が違う2語を、変換結果と一緒に読みます。",
+  },
   大阪弁: {
     slug: "media-to-hogen",
     reason: "テレビの「ニセ関西弁」はなぜ生まれたのか。役割語としての方言の話。",
