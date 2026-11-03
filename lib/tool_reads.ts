@@ -54,6 +54,18 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
     slug: "sanuki-okiru-makeru",
     reason: "「お腹おきた」は満腹、「水がまける」はこぼれる。同じ音で意味が違う2語を、変換結果と一緒に読みます。",
   },
+  静岡弁: {
+    slug: "shizuoka-imani-oeru",
+    reason: "「お茶によばれた」はごちそうになった話。「いまに」「おえる」「さばく」を1910年の辞典と変換結果で読みます。",
+  },
+  山形弁: {
+    slug: "yamagata-udaru-kamasu",
+    reason: "「ゴミをうだる」は捨てること。「おだる」「かます」を古い方言集と変換結果で読みます。",
+  },
+  秋田弁: {
+    slug: "akita-kadaru-tagu",
+    reason: "「遊びさかだる」は仲間に入ること。「たぐる」「きかね」を1929年の方言集と変換結果で読みます。",
+  },
   大阪弁: {
     slug: "media-to-hogen",
     reason: "テレビの「ニセ関西弁」はなぜ生まれたのか。役割語としての方言の話。",
