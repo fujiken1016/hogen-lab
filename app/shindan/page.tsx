@@ -522,7 +522,7 @@ function ShindanPage() {
           >
             <source src="/video/hogen-shindan/hogen-shindan.mp4" type="video/mp4" />
           </video>
-          <figcaption className="text-sm text-sub mt-2 text-center">診断するとこうなります（64秒・音なし）</figcaption>
+          <figcaption className="text-sm text-sub mt-2 text-center">診断の流れ（64秒・音なし）</figcaption>
         </figure>
         <ShindanIntro />
       </div>
