@@ -32,12 +32,12 @@ export default function RootLayout({
     <html lang="ja" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         {/* GA4（mainichi-lab全サイト共通ストリーム） */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XRJ40EFR6C" strategy="afterInteractive" />
+        {/* GA4 host-guard J347: 本番ホスト以外(localhost/pages.dev/プレビュー)では計測を送らない */}
         <Script id="ga4-init" strategy="afterInteractive">{`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XRJ40EFR6C');
+          (function(){var w=window;w.dataLayer=w.dataLayer||[];w.gtag=function(){w.dataLayer.push(arguments);};
+          if(!/(^|\\.)(mainichi-lab|shoubu-lab)\\.com$|^fujiken1016\\.github\\.io$/.test(location.hostname))return;
+          gtag('js',new Date());gtag('config','G-XRJ40EFR6C');
+          var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-XRJ40EFR6C';document.head.appendChild(s);})();
         `}</Script>
         {/* 収益先への離脱クリック計測。2026-09-02 に共通版 `/oc.js` へ一本化した。
             正本＝ ~/Desktop/claude/tools/oc_shared.js（配布先の各リポジトリ直下 or public/ に oc.js としてコピー）。
