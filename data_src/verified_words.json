@@ -8743,6 +8743,238 @@
       "cycle": 80,
       "note": "「別名：オンコ」「オンコの名は，東北・北海道の方言とされる」＝北海道に限らない（東北にも）",
       "src": "北海道立総合研究機構 林産試験場『林産試だより』樹種紹介「イチイ」 https://www.hro.or.jp/upload/49980/1080604.pdf（2026-11-06 PDF取得。別名：オンコ／「オンコの名は，東北・北海道の方言とされる」）"
+    },
+    {
+      "word": "ちゅらかーぎー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p170 curakaagii 名＝美人。美女",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "がんじゅー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p189 gaNzuu 名＝頑丈。強健。丈夫",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ゆんたく",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p290 'juNtaku 名＝おしゃべり",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "わん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p590 'waN 名＝わたし。私（性別・敬語の区別なし）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "わらばー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p591 'warabaa＝子供（'warabi）の卑称。辞典の語釈「子ども」に卑称の含みあり",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ちぶる",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p144 Ciburu 名＝頭。つぶり",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ふらー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p221 huraa 名＝気違い。気のふれた者。また,馬鹿者",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "てーげー",
+      "dialect": "沖縄方言",
+      "status": "multi",
+      "cycle": 81,
+      "note": "p515 teegee 名＝大概。大てい。おおよそ。辞典では鹿児島弁にも収録（てげ系）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "じゅーしー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p607 ZuuSii 名＝炊きこみ飯。釜飯。2.雑炊",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ちゃんぷるー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p142 caNpuruu 名＝豆腐・野菜などの油いため",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "かりゆし",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p311 karijusi 名＝[嘉例吉]めでたいこと。縁起のよいこと",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "あたいめー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p126 ?ataimee 名＝2.あたりまえ。普通",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ぐるくん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p193 gurukuN 名＝魚の名（県魚であることは同書の範囲外）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "さーたー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p452 saataa 名＝砂糖",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "たーりー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p502 taarii 名＝父。おとうさん（士族について。平民は sjuu）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ゆくいん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p288 'jukujuN 自＝休む。p287 'jukui＝休憩。ゆくいん は jukui-N の通俗表記",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ばっぺーた",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p131 baQpeejuN 他＝間違える（ばっぺーた はその過去形）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "あちこーこー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p101 ?aCikookoo 副＝ほやほや。煮えたばかりのさま",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "あじくーたー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p129 ?azikuutaa 名＝こくのあるもの",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "あんまー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p117 ?aNmaa 名＝母。おかあさん（平民について。士族は ?ajaa）。富山弁の同音語は別義",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "かなさんどー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 81,
+      "note": "p306 kanasjaN 形＝かわいい。kanasja sjuN＝かわいがる。愛する",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "てびち",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "p516 tibici→?utibici＝祝いの煮込み料理（肉・豆腐・大根・昆布）。「豚足」とは書いていない＝語釈「豚足」は同書で裏づかない",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "かむん",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "首里形は p307 kanuN（食う。食べる。否定 kamaraN）。かむん の形そのものは同書に無い",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ゆたしく",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "p293 'jutasjaN＝よい。よろしい はあるが、ゆたしく（よろしく）の形・用法は無い",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "がちまやー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "p187 gacimajaa＝餓鬼のような猫。泥棒猫（人の食いしんぼうは gaci）＝辞典の「食いしんぼう」とずれる",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "あがー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "痛い時の語は p? ?aQkaa（あいた）。あがー の形は同書に無い",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ゆいまーる",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "同書に見出しなし（juimaaru 系0件）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ないちゃー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "同書に見出しなし（本土の人は jamatuNcu）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "はいたい",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 81,
+      "note": "同書に見出しなし（はいさい も無し）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
     }
   ]
 }
