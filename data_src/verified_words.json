@@ -8975,6 +8975,246 @@
       "cycle": 81,
       "note": "同書に見出しなし（はいさい も無し）",
       "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "うんじゅ",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p559 ?uNzu 名＝あなた。目上・親しくない同等に礼をもって対する二人称",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "さんしん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p458 saNsiN 名＝沖縄の三味線（沖縄では蛇皮線と言わない）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "そーき",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p494 sooki 名＝あばら（同音の別項に ざる）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "やちむん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p272 'jacimuN 名＝焼き物。磁器・陶器・素焼きの類一切",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "みみがー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p378 mimigaa 名＝耳たぶ。豚肉料理でいう",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ふーちばー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p225 huuCibaa 名＝よもぎ",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ぬちぐすい",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p423 nucigusui 名＝命の薬。転じて非常においしいもの",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ぬち",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p423 nuci 名＝命",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "まやー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p359 majaa 名＝猫",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "まじむん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p365 mazimuN 名＝魔物。化物。精",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "がじゃん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p190 gazaN 名＝蚊",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "じんぶん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p601 ZiNbuN 名＝[存分]知恵。分別。才能",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "なーべーらー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p400 naabeeraa 名＝へちま",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "はごーさん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p200 hagoosaN 形＝きたない。不潔である",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ちび",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p143 Cibi 名＝尻",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "なだ",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p403 nada 名＝涙",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "みんたま",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p380 miNtama 名＝目玉。眼球",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ちょーでー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p166 coodee 名＝兄弟。兄弟姉妹",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ひーじゃー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p235 hwiizaa 名＝やぎ（首里形は hw-）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "あかばなー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p107 ?akabanaa 名＝ぶっそうげ（仏桑華＝ハイビスカス）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "がーじゅー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p187 gaazuu 名＝我の強い者。強情者",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "いりちー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p259 ?iricii 名＝油いため。油でいためた料理",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "うみんちゅ",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p554 ?umiNcuu 名＝漁師。海の人の意（同書は語末長音）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ちむぐりさん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p155 cimugurisjaN 形＝不憫である。気の毒である。かわいそうである",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "まぶやー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p356 mabujaa 名＝mabui（魂）と同じ",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "うちなーぐち",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 82,
+      "note": "p539 ?ucinaaguci 名＝沖縄語",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "とーびらー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 82,
+      "note": "p523 toobiraa 名＝闘魚（赤青の縞の小魚）。辞典の『ゴキブリ』は同書に無い＝首里の古い語義と現代の語義が違う可能性。現代の資料で確かめるまで断定に使わない",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "かふー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 82,
+      "note": "p301 kahuu 名＝家風。辞典の『果報・幸せ』は同書の見出しに無い",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "ひっちー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 82,
+      "note": "p237 hwiQcii 名＝一日。一日中。終日。辞典の『いつも・しょっちゅう』とずれる",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
+    },
+    {
+      "word": "やーるー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 82,
+      "note": "同書は 'jaaduu（p271）＝やもり。やーるー の形は見出しに無い（首里形と別形）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-08 xlsx再取得・見出しローマ字で照合）"
     }
   ]
 }
