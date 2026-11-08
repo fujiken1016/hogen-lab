@@ -101,6 +101,8 @@ const STATIC_ROUTES = {
   "/aishou": ["app/aishou"],
   "/translate": ["app/translate/page.tsx"],
   "/quiz": ["app/quiz/page.tsx"],
+  // sitemap に載っているのに日付が無く、lastmod・JSON-LD・公開/更新日の表示が出ていなかった（2026-11-08 J365）
+  "/quiz/about": ["app/quiz/about"],
   "/doko": ["app/doko", "lib/doko_pool.ts"],
   "/kawaii": ["app/kawaii"],
   "/kurabe": ["app/kurabe"],

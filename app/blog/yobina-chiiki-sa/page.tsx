@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/og";
 import { ArticleShell, H2, H3, P, Note, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog/yobina-chiiki-sa" },
+  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/yobina-chiiki-sa", type: "article" }),
 };
 
 /** 呼び名と地域の対応を並べる（375px でも折り返して崩れない） */

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/og";
 import Link from "next/link";
 import { PageDates } from "@/components/PageDates";
 
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "方言ラボへのお問い合わせ窓口です。方言データの誤りのご指摘、収録語や例文の追加のご要望、掲載内容・取材に関するご連絡は、このページのメールアドレスまでお願いします。",
   alternates: { canonical: "https://hogen.mainichi-lab.com/contact" },
+  ...ogMeta({ title: "お問い合わせ | 方言ラボ", description: "方言ラボへのお問い合わせ窓口です。方言データの誤りのご指摘、収録語や例文の追加のご要望、掲載内容・取材に関するご連絡は、このページのメールアドレスまでお願いします。", path: "/contact" }),
 };
 
 export default function ContactPage() {

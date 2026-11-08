@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/og";
 import Link from "next/link";
 import { ARTICLES } from "@/lib/articles";
 import DialectIndex from "@/components/DialectIndex";
 import { PageDates } from "@/components/PageDates";
 
+const TITLE = "方言の読みもの一覧｜ランキング・地域差・言語学のはなし | 方言ラボ";
+const DESC =
+  "全国の方言をもっと知るための読みもの。かわいい方言ランキング、標準語だと思ってた方言、三大方言の比較、東西の境界線、敬語の地域差、否定形と人称の地域差、発音のちがい、アイヌ語地名、九州方言の区画まで、出典つきで解説します。";
+
 export const metadata: Metadata = {
-  title: "読みもの一覧 | 方言ラボ",
-  description:
-    "全国の方言をもっと知るための読みもの20本。かわいい方言ランキング、標準語だと思ってた方言、三大方言の比較、東西の境界線、敬語の地域差、否定形と人称の地域差、発音のちがい、アイヌ語地名、九州方言の区画まで、出典つきで解説します。",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog" },
+  ...ogMeta({ title: TITLE, description: DESC, path: "/blog" }),
 };
 
 export default function BlogIndex() {

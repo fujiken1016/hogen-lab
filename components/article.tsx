@@ -276,11 +276,26 @@ export function ArticleShell({ article, children }: { article: Article; children
     isAccessibleForFree: true,
   };
 
+  // 画面上のパンくず（方言ラボ › 読みもの › 記事）と同じ階層。最後の要素は現在の記事（J365 で追加）
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "方言ラボ", item: SITE + "/" },
+      { "@type": "ListItem", position: 2, name: "読みもの", item: SITE + "/blog" },
+      { "@type": "ListItem", position: 3, name: article.title, item: SITE + route },
+    ],
+  };
+
   return (
     <article className="max-w-2xl mx-auto">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, "\\u003c") }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }}
       />
       <nav className="text-sm text-sub mb-4 flex items-center gap-1.5 flex-wrap">
         <Link href="/" className="inline-flex min-h-[48px] items-center hover:text-primary-text">

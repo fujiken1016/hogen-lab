@@ -143,6 +143,10 @@
   "published": "2026-08-02",
   "modified": "2026-09-14"
  },
+ "/quiz/about": {
+  "published": "2026-09-14",
+  "modified": "2026-09-14"
+ },
  "/quiz/akita": {
   "published": "2026-08-14",
   "modified": "2026-09-09"
@@ -285,7 +289,7 @@
  },
  "/shindan": {
   "published": "2026-08-02",
-  "modified": "2026-09-21"
+  "modified": "2026-11-06"
  },
  "/today": {
   "published": "2026-08-02",

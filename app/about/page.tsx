@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/og";
 import Link from "next/link";
 import { PageDates } from "@/components/PageDates";
 
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "方言ラボの運営者情報です。全国の方言クイズ・方言変換・方言辞典を運営するフジケン（個人事業主）の連絡先と、サイトの目的、方言データの出典の扱いを記載しています。",
   alternates: { canonical: "https://hogen.mainichi-lab.com/about" },
+  ...ogMeta({ title: "運営者情報 | 方言ラボ", description: "方言ラボの運営者情報です。全国の方言クイズ・方言変換・方言辞典を運営するフジケン（個人事業主）の連絡先と、サイトの目的、方言データの出典の扱いを記載しています。", path: "/about" }),
 };
 
 export default function AboutPage() {

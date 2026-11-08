@@ -21,9 +21,22 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
+// Google の「サイト名」用（検索結果でサイト名を方言ラボと出す）。WebSite は home のみに置く（J365）。
+const WEBSITE_LD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "方言ラボ",
+  url: `${BASE}/`,
+  inLanguage: "ja",
+};
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_LD) }}
+      />
       <HomeClient />
       <PageDates route="/" type="WebPage" name="方言ラボ" />
     </>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/og";
 import Link from "next/link";
 import { PageDates } from "@/components/PageDates";
 
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "方言ラボの免責事項です。掲載する方言情報の正確性、診断・クイズ結果の位置づけ、外部リンク先についての考え方を記載しています。",
   alternates: { canonical: "https://hogen.mainichi-lab.com/disclaimer" },
+  ...ogMeta({ title: "免責事項 | 方言ラボ", description: "方言ラボの免責事項です。掲載する方言情報の正確性、診断・クイズ結果の位置づけ、外部リンク先についての考え方を記載しています。", path: "/disclaimer" }),
 };
 
 export default function DisclaimerPage() {

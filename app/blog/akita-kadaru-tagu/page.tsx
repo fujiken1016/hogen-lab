@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/og";
 import Link from "next/link";
 import { ArticleShell, H2, P, Note, Sources, WordCard } from "@/components/article";
 import { getArticle } from "@/lib/articles";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog/akita-kadaru-tagu" },
+  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/akita-kadaru-tagu", type: "article" }),
 };
 
 export default function Page() {
