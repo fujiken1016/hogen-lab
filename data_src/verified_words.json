@@ -9463,6 +9463,246 @@
       "cycle": 83,
       "note": "同書に moai／muai の見出しなし",
       "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-09 再読・見出しローマ字で照合）"
+    },
+    {
+      "word": "しらんふーなー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "siraNhuunaa＝知らぬふり",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "じーまみー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "ziimaami＝落花生・地豆",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "くーす",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "kuusju＝古酒",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "あんまさん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "?aNmasjaN＝気分が悪い・頭が重い",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ふゆーなー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "hujuu＝物ぐさ・無精（～na Qcu＝無精な人）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "なちかさん",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "naCikasjaN＝悲しい。「懐かしい」の語義は同書に無い",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ちるだい",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "Cirudai＝失望・落胆",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "にーぶやー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "niibujaa＝しょっちゅう眠たがる者",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "まっとーばー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "maQtooba＝まっすぐ",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "やな〜",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "'jana-（接頭）＝悪い・醜い・いやな",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "やまとぅんちゅ",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "'jamatuNcu＝日本本土の人",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ゆしどうふ",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "'jusidoohu＝おぼろ豆腐",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "くゎっちーさびら",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "kwaQcii＝ごちそう。～sjabira＝ごちそうになります",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "あしびなー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "?aSibinaa＝村芝居をする広場",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ぐぶりーさびら",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "guburii＝御無礼。～sjabira＝失礼します",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "でぃきやー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "dikijaa＝できぶつ・秀才",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ちゅーうがなびら",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "?eesaCi の項に cuu'uganabira（こんにちは）",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "あちゃー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "?aca＝あした・あす",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "わじわじー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 84,
+      "note": "'wazijuN 2.腹を立てる。'waziwazii sjooN の用例",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "あぎじゃびよー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "同書は ?akisamijoo（あきさみよー）のみ。agizabijoo の見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "にーにー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "同書の niinii は「ねんね（寝る）」の小児語。兄は jakumii",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "おばー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "同書は haamee・?Nmee 等。obaa の見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ねーねー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "同書の neenee は「内内・ひそかに」",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "うちなーんちゅ",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "?ucinaa（沖縄）はあるが ucinaaNcu の見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ないち",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "しまくとぅば",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "まちぐゎー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "maci（市）はあるが macigwaa の見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "ちむぐくる",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "じょーとー",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "うちあたい",
+      "dialect": "沖縄方言",
+      "status": "unconfirmed",
+      "cycle": 84,
+      "note": "見出しなし",
+      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
     }
   ]
 }
