@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ARTICLES } from "@/lib/articles";
 import DialectIndex from "@/components/DialectIndex";
 import { PageDates } from "@/components/PageDates";
+import { eyeFor } from "@/lib/eye";
 
 const TITLE = "方言の読みもの一覧｜ランキング・地域差・言語学のはなし | 方言ラボ";
 const DESC =
@@ -20,15 +21,24 @@ export default function BlogIndex() {
   return (
     <div className="max-w-2xl mx-auto">
       <header className="text-center mb-8">
-        <div className="text-5xl mb-3" aria-hidden>
-          📖
-        </div>
+        <img
+          src="/eye/column-1280.webp"
+          srcSet="/eye/column-640.webp 640w, /eye/column-1280.webp 1280w"
+          sizes="(min-width: 672px) 672px, 100vw"
+          width={1280}
+          height={720}
+          alt="山のふもとの町並みのイラスト"
+          fetchPriority="high"
+          decoding="async"
+          className="block w-full h-auto aspect-video object-cover rounded-2xl mb-5"
+        />
         <h1 className="font-display text-3xl font-bold tracking-wide">読みもの</h1>
         <p className="text-sm text-sub leading-relaxed mt-3">
           方言のランキング、言語学のはなし、診断の使い方まで。
           <br className="max-sm:hidden" />
           ことばの背景を知ると、診断の結果がもっと面白くなります。
         </p>
+        <p className="text-sm text-sub mt-2">※画像はイメージ（AI生成のイラスト）です</p>
       </header>
 
       <div className="grid gap-3.5">
@@ -36,12 +46,18 @@ export default function BlogIndex() {
           <Link
             key={a.slug}
             href={`/blog/${a.slug}`}
-            className="card p-4 sm:p-5 flex gap-4 hover:-translate-y-0.5 transition-transform"
+            className="card overflow-hidden flex flex-col sm:flex-row hover:-translate-y-0.5 transition-transform"
           >
-            <span className="text-4xl sm:text-5xl shrink-0 leading-none" aria-hidden>
-              {a.emoji}
-            </span>
-            <span className="min-w-0">
+            <img
+              src={eyeFor(a.slug).small}
+              width={640}
+              height={360}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              className="block w-full sm:w-44 h-auto aspect-video sm:aspect-auto sm:self-stretch object-cover shrink-0"
+            />
+            <span className="min-w-0 p-4 sm:p-5">
               <span className="flex items-center gap-2 mb-1.5">
                 <span className="chip bg-indigo/10 text-indigo">{a.category}</span>
                 <span className="text-sm text-sub">約{a.readMin}分</span>

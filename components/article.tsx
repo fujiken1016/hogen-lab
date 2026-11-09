@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { ARTICLES, otherArticles, type Article } from "@/lib/articles";
 import { dialectLinksForArticle } from "@/lib/article_dialects";
 import { SITE, jpDate, pageDates } from "@/lib/page_dates";
+import { eyeFor } from "@/lib/eye";
 
 /** 楽天アフィリエイトID（2026-08-12 取得・全記事共通） */
 const RAKUTEN_ID = "5684fd12.0952a564.5684fd13.520271a6";
@@ -310,10 +311,23 @@ export function ArticleShell({ article, children }: { article: Article; children
       </nav>
 
       <header className="mb-7">
-        <p className="text-sm text-sub mb-3">※本ページはプロモーションが含まれています</p>
-        <div className="text-5xl mb-3" aria-hidden>
-          {article.emoji}
-        </div>
+        <p className="text-sm text-sub mb-3">※本ページはプロモーションが含まれています。画像はイメージ（AI生成のイラスト）です</p>
+        {(() => {
+          const e = eyeFor(article.slug);
+          return (
+            <img
+              src={e.src}
+              srcSet={e.srcSet}
+              sizes="(min-width: 672px) 672px, 100vw"
+              width={1280}
+              height={720}
+              alt={e.alt}
+              fetchPriority="high"
+              decoding="async"
+              className="block w-full h-auto aspect-video object-cover rounded-2xl mb-5"
+            />
+          );
+        })()}
         <h1 className="font-display text-3xl sm:text-3xl font-bold leading-[1.5] tracking-wide">
           {article.title}
         </h1>
@@ -424,11 +438,17 @@ export function ArticleShell({ article, children }: { article: Article; children
             <Link
               key={a.slug}
               href={`/blog/${a.slug}`}
-              className="card p-3.5 flex items-center gap-3 hover:-translate-y-0.5 transition-transform"
+              className="card p-3 flex items-center gap-3.5 hover:-translate-y-0.5 transition-transform"
             >
-              <span className="text-2xl shrink-0" aria-hidden>
-                {a.emoji}
-              </span>
+              <img
+                src={eyeFor(a.slug).small}
+                width={640}
+                height={360}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                className="w-24 sm:w-32 h-auto aspect-video object-cover rounded-xl shrink-0"
+              />
               <span className="min-w-0">
                 <span className="block text-base font-bold leading-snug">{a.title}</span>
                 <span className="block text-sm text-sub mt-1">
