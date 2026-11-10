@@ -8971,10 +8971,10 @@
     {
       "word": "はいたい",
       "dialect": "沖縄方言",
-      "status": "unconfirmed",
-      "cycle": 81,
-      "note": "同書に見出しなし（はいさい も無し）",
-      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。2026-11-07 xlsx取得・見出しローマ字で照合）"
+      "status": "ok",
+      "cycle": 85,
+      "note": "読本 巻末索引「はいたい＝こんにちは（女の人が使う）」・ハンドブック「はいさい（はいたい）」／前回：同書に見出しなし（はいさい も無し）",
+      "src": "沖縄県文化振興課『しまくとぅば読本』小学生用・中学生用（平成27年3月）https://www.pref.okinawa.jp/site/bunka-sports/bunka/documents/simakutuba.html（中南部＝那覇の会話文と巻末の語彙索引。2026-11-11 PDF取得・本文抽出で照合）"
     },
     {
       "word": "うんじゅ",
@@ -9651,10 +9651,10 @@
     {
       "word": "うちなーんちゅ",
       "dialect": "沖縄方言",
-      "status": "unconfirmed",
-      "cycle": 84,
-      "note": "?ucinaa（沖縄）はあるが ucinaaNcu の見出しなし",
-      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+      "status": "ok",
+      "cycle": 85,
+      "note": "ハンドブック「うちなーんちゅや すば じょーぐー…（沖縄の人は、そばが好きです）」／前回：?ucinaa（沖縄）はあるが ucinaaNcu の見出しなし",
+      "src": "沖縄県文化振興課 しまくとぅばハンドブック『語てぃ んーだな しまくとぅば』（那覇市真和志の話者）https://www.pref.okinawa.jp/_res/projects/default_project/_page_/001/011/776/honnbun.pdf（2026-11-11 取得）"
     },
     {
       "word": "ないち",
@@ -9691,10 +9691,10 @@
     {
       "word": "じょーとー",
       "dialect": "沖縄方言",
-      "status": "unconfirmed",
-      "cycle": 84,
-      "note": "見出しなし",
-      "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+      "status": "ok",
+      "cycle": 85,
+      "note": "読本「いーおーつきなりじょーとーらー（良い天気になって良かったね）」＝良い・上等／前回：見出しなし",
+      "src": "沖縄県文化振興課『しまくとぅば読本』小学生用・中学生用（平成27年3月）https://www.pref.okinawa.jp/site/bunka-sports/bunka/documents/simakutuba.html（中南部＝那覇の会話文と巻末の語彙索引。2026-11-11 PDF取得・本文抽出で照合）"
     },
     {
       "word": "うちあたい",
@@ -9703,6 +9703,190 @@
       "cycle": 84,
       "note": "見出しなし",
       "src": "国立国語研究所 資料集5『沖縄語辞典』データ集 https://mmsrv.ninjal.ac.jp/okinawago/okinawa_01.xlsx（首里方言・本文篇14,549項目・CC BY 4.0。第81回取得の xlsx を 2026-11-10 再読・見出しローマ字と語釈本文で照合）"
+    },
+    {
+      "word": "いちゃりばちょーでー",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 85,
+      "note": "ハンドブック「いちゃりばちょーでーやさ（出会えば、もう兄弟同然だよ）」",
+      "src": "沖縄県文化振興課 しまくとぅばハンドブック『語てぃ んーだな しまくとぅば』（那覇市真和志の話者）https://www.pref.okinawa.jp/_res/projects/default_project/_page_/001/011/776/honnbun.pdf（2026-11-11 取得）"
+    },
+    {
+      "word": "うさがみそーれ",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 85,
+      "note": "読本 索引「うさがみそーれー＝食べてください（召し上がれ）」",
+      "src": "沖縄県文化振興課『しまくとぅば読本』小学生用・中学生用（平成27年3月）https://www.pref.okinawa.jp/site/bunka-sports/bunka/documents/simakutuba.html（中南部＝那覇の会話文と巻末の語彙索引。2026-11-11 PDF取得・本文抽出で照合）"
+    },
+    {
+      "word": "ちゃーびらさい",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 85,
+      "note": "読本 索引「ちゃーびらさい＝ごめんください」",
+      "src": "沖縄県文化振興課『しまくとぅば読本』小学生用・中学生用（平成27年3月）https://www.pref.okinawa.jp/site/bunka-sports/bunka/documents/simakutuba.html（中南部＝那覇の会話文と巻末の語彙索引。2026-11-11 PDF取得・本文抽出で照合）"
+    },
+    {
+      "word": "うにげーさびら",
+      "dialect": "沖縄方言",
+      "status": "ok",
+      "cycle": 85,
+      "note": "読本 索引「うにげーさびら＝お願いします」",
+      "src": "沖縄県文化振興課『しまくとぅば読本』小学生用・中学生用（平成27年3月）https://www.pref.okinawa.jp/site/bunka-sports/bunka/documents/simakutuba.html（中南部＝那覇の会話文と巻末の語彙索引。2026-11-11 PDF取得・本文抽出で照合）"
+    },
+    {
+      "word": "あんま",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 85,
+      "note": "「あんま」は長男",
+      "src": "富山県 刊行物所収エッセイ（木内哲三子「感覚の宝庫・人生への教示」）https://www.pref.toyama.jp/documents/11882/214-s6111.pdf（2026-11-11 取得）"
+    },
+    {
+      "word": "ねまる",
+      "dialect": "富山弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "「ねまる」は座る（飛騨弁・東北にも同語）",
+      "src": "富山県 刊行物所収エッセイ（木内哲三子「感覚の宝庫・人生への教示」）https://www.pref.toyama.jp/documents/11882/214-s6111.pdf（2026-11-11 取得）"
+    },
+    {
+      "word": "すかたん",
+      "dialect": "大阪弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "精選版日国「近世前期から使われた上方語」（京都弁にも収録）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/すかたん"
+    },
+    {
+      "word": "あかんたれ",
+      "dialect": "大阪弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "大辞泉「関西地方で、駄目な人、意気地のない人」（神戸弁にも収録）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/あかんたれ"
+    },
+    {
+      "word": "さかい",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 85,
+      "note": "精選版日国「近世上方語…現在では主に関西地方で用いられる」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/さかい"
+    },
+    {
+      "word": "どない",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 85,
+      "note": "大辞泉「（関西地方で）どんな。どのよう」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/どない"
+    },
+    {
+      "word": "どや",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 85,
+      "note": "精選版日国「相手に対する呼びかけ、勧誘を表わす関西方言。どうだ」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/どや"
+    },
+    {
+      "word": "がめつい",
+      "dialect": "大阪弁",
+      "status": "unconfirmed",
+      "cycle": 85,
+      "note": "大辞泉は共通語の見出しで「関西方言をもとにした造語か」＝現在は全国で通じる。方言と断定しない",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/がめつい"
+    },
+    {
+      "word": "えげつない",
+      "dialect": "大阪弁",
+      "status": "unconfirmed",
+      "cycle": 85,
+      "note": "大辞泉は共通語の見出しで「もと関西方言」＝現在は全国で通じる。方言と断定しない",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/えげつない"
+    },
+    {
+      "word": "えげつない",
+      "dialect": "神戸弁",
+      "status": "unconfirmed",
+      "cycle": 85,
+      "note": "大辞泉は共通語の見出しで「もと関西方言」＝現在は全国で通じる",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/えげつない"
+    },
+    {
+      "word": "〜はる",
+      "dialect": "京都弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "精選版日国 助動詞「はる」＝尊敬「多く関西地方で用いる」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/はる"
+    },
+    {
+      "word": "ほたえる",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 85,
+      "note": "大辞泉「近世上方語。ふざける。じゃれる」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/ほたえる"
+    },
+    {
+      "word": "どす",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 85,
+      "note": "精選版日国「京都方言。断定の助動詞の丁寧ないい方」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/どす"
+    },
+    {
+      "word": "いちびる",
+      "dialect": "京都弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "大辞泉「（関西で）調子に乗ってはしゃぎまわる」（神戸弁にも収録）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/いちびる"
+    },
+    {
+      "word": "すかたん",
+      "dialect": "京都弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "精選版日国「近世前期から使われた上方語」（大阪弁にも収録）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/すかたん"
+    },
+    {
+      "word": "いちびる",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "大辞泉「（関西で）調子に乗ってはしゃぎまわる」（京都弁にも収録）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/いちびる"
+    },
+    {
+      "word": "あかんたれ",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "大辞泉「関西地方で、駄目な人…」（大阪弁にも収録）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/あかんたれ"
+    },
+    {
+      "word": "だんない",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "大辞泉「近世上方語。大したことはない。支障ない」（関西一円）",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/だんない"
+    },
+    {
+      "word": "すこい",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 85,
+      "note": "大辞泉「（関西地方などで）ずるい。わるがしこい」",
+      "src": "コトバンク（小学館『デジタル大辞泉』・精選版『日本国語大辞典』）https://kotobank.jp/word/すこい"
     }
   ]
 }
