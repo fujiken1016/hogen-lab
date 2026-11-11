@@ -18,10 +18,15 @@
 export const TITLE_OVERRIDE: Record<string, (area: string) => string> = {
   kagoshima: (area) =>
     `鹿児島弁変換・薩摩弁変換ツール｜標準語⇄鹿児島弁を双方向に変換（${area}）| 方言ラボ`,
+  // 🔴 2026-11-11 J407。根拠＝GSC 28日（観測 2026-11-11）。長崎「長崎弁変換」0/52、伊勢「三重弁 変換」3/248（title では「三重弁」と「変換」が括弧で割れていた）。台帳＝副業/seo_media/リライト台帳.md
+  nagasaki: (area) => `長崎弁変換ツール｜標準語⇄長崎弁を無料で双方向に変換（${area}）| 方言ラボ`,
+  ise: (area) => `三重弁変換・伊勢弁変換ツール｜標準語⇄三重弁（伊勢弁）を無料で双方向に変換（${area}）| 方言ラボ`,
 };
 
 /** description の先頭文を差し替える面（辞典語数・言い換え例は共通ロジックのまま後ろに続く） */
 export const DIR_LINE_OVERRIDE: Record<string, (area: string) => string> = {
   kagoshima: (area) =>
     `鹿児島弁（薩摩弁）を標準語に、標準語を鹿児島弁（${area}）に、⇄ で双方向に変換できる無料ツール。`,
+  nagasaki: (area) => `長崎弁を標準語に、標準語を長崎弁（${area}）に、⇄ で双方向に変換できる無料ツール。`,
+  ise: (area) => `三重弁（伊勢弁）を標準語に、標準語を伊勢弁（${area}）に、⇄ で双方向に変換できる無料ツール。`,
 };
