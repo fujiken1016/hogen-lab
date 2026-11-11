@@ -66,6 +66,21 @@ export function ToolIntro({
 
       {faq && faq.length > 0 && (
         <>
+          {/* 画面に出している Q&A と同じ配列から FAQPage を作る（J437・2026-11-11）。JSON-LD だけに Q&A を足さない */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faq.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              }).replace(/</g, "\\u003c"),
+            }}
+          />
           <h3 className="font-display text-xl font-bold mt-8 mb-3">よくある質問</h3>
           <dl className="space-y-4">
             {faq.map((f, i) => (

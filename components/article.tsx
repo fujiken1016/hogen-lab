@@ -271,7 +271,13 @@ export function ArticleShell({ article, children }: { article: Article; children
     inLanguage: "ja",
     datePublished: published,
     dateModified: modified,
-    author: { "@type": "Person", name: "フジケン", url: SITE + "/about" },
+    author: {
+      "@type": "Person",
+      name: "フジケン",
+      url: SITE + "/about",
+      // 公開プロフィール（本名なし）。AI検索のエンティティ照合用（J437・2026-11-11）
+      sameAs: ["https://note.com/fujiken818", "https://qiita.com/fujiken818", "https://github.com/fujiken1016"],
+    },
     publisher: { "@type": "Organization", name: "方言ラボ", url: SITE + "/" },
     mainEntityOfPage: { "@type": "WebPage", "@id": SITE + route },
     isAccessibleForFree: true,
