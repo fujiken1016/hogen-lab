@@ -61,6 +61,17 @@ export default function ContactPage() {
         </p>
       </section>
       <p className="text-sm text-sub">
+        このサイトを作っている「毎日ラボ」では、Webサービス・学習ツールの制作や、AI業務自動化の相談もお引き受けしています。内容と料金の目安は、毎日ラボのお問い合わせページに載せています。
+      </p>
+      <p>
+        <a
+          href="https://mainichi-lab.com/contact?utm_source=hogen.mainichi-lab.com&utm_medium=contact_footer&utm_campaign=sales_entry"
+          className="inline-flex min-h-[48px] items-center text-sm text-primary-text underline"
+        >
+          制作・自動化のご依頼（料金の目安）
+        </a>
+      </p>
+      <p className="text-sm text-sub">
         いただいた個人情報の取り扱いについてはプライバシーポリシーをご確認ください。
       </p>
       <p>
