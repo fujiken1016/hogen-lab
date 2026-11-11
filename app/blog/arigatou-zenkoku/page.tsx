@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
+import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, WordCard, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -24,6 +25,10 @@ export default function Page() {
       <P>
         ところが語源をたどっていくと、それぞれがちゃんと理屈で説明できます。
         しかも全国の「ありがとう」は、おおまかに3つの型に分けられます。この記事では代表的な5つを、由来ごとに整理していきます。
+      </P>
+
+      <P>
+        もっと実際の言い回しで見たいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/izumo" className="text-primary-text underline underline-offset-2">出雲弁 変換</Link>に標準語の文を入れると、それぞれの地域の言い方に置き換えて見られます。
       </P>
 
       <H2>そもそも「ありがとう」の語源は「めったにない」</H2>

@@ -26,6 +26,10 @@ export default function Page() {
         その代表が「じゃん」です。東京の若者ことばの顔をしていますが、出身は東京ではありません。
       </P>
 
+      <P>
+        「じゃん」が生まれた静岡の言い回しは、方言ラボの<Link href="/translate/shizuoka" className="text-primary-text underline underline-offset-2">静岡弁 変換</Link>などで、地域の言い回しと並べて見られます。
+      </P>
+
       <H2>「新方言」という考え方</H2>
       <P>
         方言学者の井上史雄は、こうした現象をとらえるために

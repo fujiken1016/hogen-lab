@@ -27,6 +27,10 @@ export default function Page() {
         敬意の表し方が、共通語とは別の場所に置かれているという話です。順に見ていきます。
       </P>
 
+      <P>
+        京都の敬語を実際の文で見たいときは、方言ラボの<Link href="/translate/kyoto" className="text-primary-text underline underline-offset-2">京都弁 変換</Link>が参考になります。
+      </P>
+
       <H2>まず、敬語の形が地域でどれだけ違うか</H2>
       <P>
         共通語の尊敬語「書かれる」にあたる形を、各地の方言から拾ってみます。

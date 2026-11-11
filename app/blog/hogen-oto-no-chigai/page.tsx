@@ -27,6 +27,10 @@ export default function Page() {
         <strong>方言の正体のかなりの部分は、語彙ではなく発音</strong>にあります。
       </P>
 
+      <P>
+        音の違いを文でたしかめたい人は、方言ラボの<Link href="/translate/tsugaru" className="text-primary-text underline underline-offset-2">津軽弁 変換</Link>や<Link href="/translate/kagoshima" className="text-primary-text underline underline-offset-2">鹿児島弁 変換</Link>で、標準語の文が各地の言い方にどう変わるか見られます。
+      </P>
+
       <H2>まず「音声」と「音韻」を分ける</H2>
       <P>
         発音の話をするときは、2つの層を分けると一気に見通しがよくなります。

@@ -28,6 +28,10 @@ export default function Page() {
         「〜へん」だったり「〜ん」だったりします。
       </P>
 
+      <P>
+        「行かない」を実際に置き換えてみたい人は、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/hakata" className="text-primary-text underline underline-offset-2">博多弁 変換</Link>で、否定形がどう変わるか試せます。
+      </P>
+
       <H2>大きな線は「ない」と「ん」</H2>
       <P>
         いちばん太い境目は、<strong>東の「ない」と西の「ん」</strong>です。

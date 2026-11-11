@@ -28,6 +28,10 @@ export default function Page() {
         方言の現在を考えるうえで、この歴史は避けて通れません。
       </P>
 
+      <P>
+        いま沖縄の言葉がどう話されているかは、方言ラボの<Link href="/translate/okinawa" className="text-primary-text underline underline-offset-2">沖縄方言 変換</Link>で、標準語の文を置き換えて見られます。
+      </P>
+
       <H2>方言札とは何だったのか</H2>
       <P>
         方言札は、標準語の使用を徹底させるため、

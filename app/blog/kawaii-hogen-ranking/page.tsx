@@ -34,6 +34,11 @@ export default function Page() {
         <strong>③マネしやすさ</strong>：聞いてすぐ口に出せるか。使いたくなる言葉ほど「かわいい」と記憶されます。
       </Note>
 
+      <Note title="2026年版・先に結論（TOP5）">
+        1位 博多弁／2位 京都弁／3位 沖縄方言／4位 秋田弁／5位 仙台弁・南部弁ほか（東北）。
+        6位以降は金沢弁・土佐弁・出雲弁・神戸弁・鹿児島弁の順です（編集部の順位・2026年8月公開）。理由と例文は下のランキングで読めます。
+      </Note>
+
       <div className="my-6 rounded-2xl seigaiha border border-indigo/25 p-5 text-center">
         <p className="font-display text-lg font-bold mb-1.5">あなたの1位は、どの方言？</p>
         <p className="text-sm text-sub leading-[1.8] mb-3 max-w-md mx-auto">

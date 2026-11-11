@@ -9,6 +9,7 @@ import { aliasParen, aliasSentence, aliasSentenceShort } from "@/lib/dialect_ali
 import { hasReverseDemand, reverseName } from "@/lib/translate_reverse";
 import { convertHead } from "@/lib/translate_synonym";
 import { DIR_LINE_OVERRIDE, TITLE_OVERRIDE } from "@/lib/translate_title_override";
+import { ANSWER_SECTIONS, type AnswerSection } from "@/lib/translate_answer_sections";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
 import {
@@ -113,6 +114,45 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/** J376：検索語に直接答える節（lib/translate_answer_sections.ts に載っている面だけ） */
+function AnswerCard({ sec }: { sec: AnswerSection }) {
+  return (
+    <section className="card p-5 space-y-3">
+      <h2 className="font-bold text-2xl">{sec.heading}</h2>
+      {sec.paragraphs.map((t) => (
+        <p key={t} className="text-sm leading-relaxed">{t}</p>
+      ))}
+      {sec.compare && (
+        <div className="space-y-1.5">
+          <p className="text-sm font-bold">{sec.compare.label}</p>
+          <ul className="grid sm:grid-cols-3 gap-2">
+            {sec.compare.rows.map((r) => (
+              <li key={r.area} className="bg-paper border border-line rounded-xl px-3 py-2 text-sm">
+                <span className="text-sub">{r.area}</span>
+                <span className="text-sub mx-1.5">→</span>
+                <b className="text-primary-text break-words">{r.text}</b>
+                {r.href && (
+                  <Link href={r.href} className="mt-1 flex min-h-[48px] items-center text-sm font-bold text-primary-text hover:underline">
+                    {r.area}の変換ツールへ
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {sec.bullets && (
+        <ul className="list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          {sec.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+      )}
+      {sec.note && <p className="text-sm text-sub leading-relaxed">{sec.note}</p>}
+    </section>
+  );
+}
+
 export default async function TranslateDialectPage({ params }: Props) {
   const { slug } = await params;
   const dialect = translateDialectOf(slug);
@@ -168,7 +208,11 @@ export default async function TranslateDialectPage({ params }: Props) {
         </a>
       </div>
 
+      {ANSWER_SECTIONS[slug]?.position === "top" && <AnswerCard sec={ANSWER_SECTIONS[slug]} />}
+
       <TranslateTool dialect={dialect} slug={slug} quizSlug={qSlug ?? undefined} voice={VOICE_SLUGS.has(slug)} />
+
+      {ANSWER_SECTIONS[slug]?.position === "after" && <AnswerCard sec={ANSWER_SECTIONS[slug]} />}
 
       {/* 逆方向（方言→標準語）のクエリが実測で実在した方言だけ、その言葉でページ内に説明を置く。
           機能は最初からあるのに「順方向のツール」としか書いていなかったので気づかれていなかった。

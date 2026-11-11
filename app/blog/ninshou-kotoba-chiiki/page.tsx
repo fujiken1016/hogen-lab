@@ -27,6 +27,10 @@ export default function Page() {
         たぶん少なくないはずです。
       </P>
 
+      <P>
+        「自分」「おら」「わし」などを実際の文で見たいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/hiroshima" className="text-primary-text underline underline-offset-2">広島弁 変換</Link>が使えます。
+      </P>
+
       <H2>一人称の地図——ざっくりした見取り図</H2>
       <P>
         まず全体像から。細かい例外はいくらでもありますが、
