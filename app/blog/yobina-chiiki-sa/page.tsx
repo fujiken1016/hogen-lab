@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
+import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -175,6 +176,10 @@ export default function Page() {
       <P>
         身のまわりには、まだ検証されていない呼び名の地域差がたくさんあります。
         自分の言い方が地図のどこにあるのか、まずは診断で見当をつけてみてください。
+      </P>
+
+      <P>
+        ものもらいを「めばちこ」と呼ぶ関西や、今川焼きを「おやき」と呼ぶ北海道のように、呼び名の違う土地の言い回しを文でたしかめたいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/hokkaido" className="text-primary-text underline underline-offset-2">北海道弁 変換</Link>に標準語の文を入れてみてください。
       </P>
 
       <ShindanCta

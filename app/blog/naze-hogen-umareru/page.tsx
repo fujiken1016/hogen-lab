@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
+import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, PrBox, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -92,6 +93,10 @@ export default function Page() {
         存在は東で「いる」、西で「おる」。進行形は東で「〜ている」、西で「〜とる」。
         これらの境界線がおおむね同じ場所を通るため、日本語は東西で大きく二分されると説明されます。
         名古屋のあたりが「東でも西でもない」独特の響きを持つのは、ちょうどこの境目に位置しているからです。
+      </P>
+
+      <P>
+        旧藩の境で分かれる津軽弁、古い語彙が残る京都弁、東西の境目にある名古屋弁。この記事に出てきた地域の言い回しは、方言ラボの<Link href="/translate/tsugaru" className="text-primary-text underline underline-offset-2">津軽弁 変換</Link>・<Link href="/translate/kyoto" className="text-primary-text underline underline-offset-2">京都弁 変換</Link>・<Link href="/translate/nagoya" className="text-primary-text underline underline-offset-2">名古屋弁 変換</Link>で、文として見比べられます。
       </P>
 
       <PrBox

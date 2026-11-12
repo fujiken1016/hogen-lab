@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
+import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, ShindanCta, WordCard } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -169,6 +170,10 @@ export default function Page() {
         言葉が通じなかった経験を「恥ずかしい」と感じる必要はありません。「いずい」も「うるかす」も、
         標準語より正確に状態を言い当てています。むしろ、標準語のほうが表現を持っていないだけ、という場面は珍しくありません。
       </Note>
+
+      <P>
+        「こわい」の北海道、「なおす」の京都、「いずい」の仙台など、紹介した言葉の土地の言い回しを文でたしかめたいときは、方言ラボの<Link href="/translate/hokkaido" className="text-primary-text underline underline-offset-2">北海道弁 変換</Link>・<Link href="/translate/kyoto" className="text-primary-text underline underline-offset-2">京都弁 変換</Link>・<Link href="/translate/sendai" className="text-primary-text underline underline-offset-2">仙台弁 変換</Link>に標準語の文を入れてみてください。
+      </P>
 
       <ShindanCta
         title="あなたが無自覚に使っているのは、何弁？"

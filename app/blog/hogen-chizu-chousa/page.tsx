@@ -178,6 +178,10 @@ export default function Page() {
         祖父母の世代がどんな言い方をしていたかが、そのまま見つかるはずです。
       </P>
 
+      <P>
+        地図で目に留まった地域の言い回しを、実際の文で見てみたいときは、方言ラボの<Link href="/translate" className="text-primary-text underline underline-offset-2">方言変換の一覧</Link>から地域を選んで、標準語の文を入れてみてください。
+      </P>
+
       <ShindanCta
         title="いまのあなたの言葉は、どの土地寄り？"
         body="言葉づかい6問・性格4問の全10問。全国35体のご当地キャラから、あなたの言語感覚に近い相棒を判定します。"

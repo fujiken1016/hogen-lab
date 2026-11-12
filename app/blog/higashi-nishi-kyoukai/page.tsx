@@ -129,6 +129,10 @@ export default function Page() {
         きれいな切り替わりは起きません。
       </Note>
 
+      <P>
+        境目にある静岡県の言い回しと、西側の代表である関西の言い回しを並べて見たいときは、方言ラボの<Link href="/translate/shizuoka" className="text-primary-text underline underline-offset-2">静岡弁 変換</Link>と<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>に同じ標準語の文を入れて、置き換わり方を比べてみてください。
+      </P>
+
       <H2>なぜ、そこに集まったのか</H2>
       <P>
         理由については、いくつかの説が挙げられます。

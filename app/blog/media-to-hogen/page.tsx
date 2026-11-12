@@ -161,6 +161,10 @@ export default function Page() {
         実際にその土地で話されている言葉は、もっと細かく、地味で、多様です。
       </P>
 
+      <P>
+        「関西弁っぽい」「薩摩弁っぽい」といったイメージと、実際の言い回しを見比べたいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/kagoshima" className="text-primary-text underline underline-offset-2">鹿児島弁 変換</Link>に標準語の文を入れてみてください。
+      </P>
+
       <H2>まとめ</H2>
       <P>
         メディアは方言を全国に運び、同時に方言をキャラの記号に変えました。

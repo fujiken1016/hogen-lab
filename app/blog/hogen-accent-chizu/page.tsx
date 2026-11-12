@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
+import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -130,6 +131,10 @@ export default function Page() {
         九州西南部や琉球には、型が2種類しかない「二型アクセント」が分布します。
         長崎県南部、鹿児島県の大部分などが該当します。
         東京式（下げ核の位置の数だけ型がある）に比べると、語のパターンが極端に少ない体系です。
+      </P>
+
+      <P>
+        京阪式の関西や、一型・二型アクセントの九州南部の言葉を文でたしかめたいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/kagoshima" className="text-primary-text underline underline-offset-2">鹿児島弁 変換</Link>が使えます。ただし変換されるのは言い回しで、音の高さそのものは文字では再現できません。
       </P>
 
       <H2>この分布、どこかで見た形をしている</H2>
