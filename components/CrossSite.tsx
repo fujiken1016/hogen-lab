@@ -22,11 +22,13 @@
  *    （`~/Desktop/claude/memory/deferred_until_adsense.md` に起票済み）。
  */
 export default function CrossSite({ content }: { content: string }) {
-  // 2026-09-17: 送り先をポータルトップ→受注窓口へ変更（推奨台帳 2026-09-06 行）。
-  // ポータルトップ止まりでは受注に繋がらない。無料ツールを自社事業の入口にする。
-  const href =
-    "https://mainichi-lab.com/contact?utm_source=hogen&utm_medium=inline&utm_campaign=cross_2026q3&utm_content=" +
-    content;
+  // 2026-09-17: 送り先を受注窓口へ変更（推奨台帳 2026-09-06 行）。
+  // 2026-11-12(J446): ボタン文言は「ツール一覧」なのに /contact へ飛んでいたずれを解消。
+  //   ボタン＝文言どおりポータルトップ（/）。受注の入口は消さず、文言を合わせた別リンクで残す。
+  const utm = (medium: string) =>
+    "?utm_source=hogen&utm_medium=" + medium + "&utm_campaign=cross_2026q3&utm_content=" + content;
+  const portalHref = "https://mainichi-lab.com/" + utm("inline");
+  const orderHref = "https://mainichi-lab.com/contact" + utm("inline_order");
 
   return (
     <section className="card p-5 space-y-3">
@@ -36,12 +38,17 @@ export default function CrossSite({ content }: { content: string }) {
         同じように登録不要・無料で使える学習ツールを他にも公開しています。
       </p>
       <a
-        href={href}
+        href={portalHref}
         data-cross="CROSS_PORTAL"
         className="btn-ghost w-full text-sm"
       >
         毎日ラボのツール一覧を見る →
       </a>
+      <p className="text-xs text-sub text-center">
+        <a href={orderHref} data-cross="CROSS_ORDER" className="underline">
+          制作・自動化のご依頼（料金の目安）
+        </a>
+      </p>
     </section>
   );
 }
