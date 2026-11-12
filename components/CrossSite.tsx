@@ -45,7 +45,7 @@ export default function CrossSite({ content }: { content: string }) {
         毎日ラボのツール一覧を見る →
       </a>
       <p className="text-xs text-sub text-center">
-        <a href={orderHref} data-cross="CROSS_ORDER" className="underline">
+        <a href={orderHref} data-cross="CROSS_ORDER" className="inline-block py-3 underline">
           制作・自動化のご依頼（料金の目安）
         </a>
       </p>
