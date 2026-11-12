@@ -120,8 +120,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "いびしい",
-      "meaning": "気味が悪い、不気味な",
-      "example": "あの虫、いびしいのう、そっちへ行かんといてくれ。"
+      "meaning": "汚い、見苦しい",
+      "example": "泥だらけでいびしいけぇ、先に風呂へ入りんさい。"
     },
     {
       "word": "きっぽ",
@@ -5104,8 +5104,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "かっぱがす",
-      "meaning": "めくる・はがす",
-      "example": "かさぶた、かっぱがすんでないよ。"
+      "meaning": "（勢いよく）ひっくり返してこぼす",
+      "example": "味噌汁かっぱがして、床びしょびしょだわ。"
     },
     {
       "word": "きかない",
@@ -5139,8 +5139,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "こっこ",
-      "meaning": "魚の卵・動物の子",
-      "example": "うちの犬にこっこが生まれたんだわ。"
+      "meaning": "魚の卵（たらこ・すじこなど）",
+      "example": "この鮭、こっこ入ってたから醤油漬けにするべ。"
     },
     {
       "word": "ゴミステーション",
@@ -8757,8 +8757,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "いっぺこっぺ",
-      "meaning": "たくさん",
-      "example": "今年は芋のいっぺこっぺ採れたど。"
+      "meaning": "あちこち、ほうぼう",
+      "example": "鍵をいっぺこっぺ探したどん、見つからんじゃった。"
     },
     {
       "word": "てそか",
@@ -8862,8 +8862,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "いめじん",
-      "meaning": "臆病者",
-      "example": "あん人はいめじんじゃっで夜道は歩かん。"
+      "meaning": "はにかみ屋、恥ずかしがり屋",
+      "example": "あん子はいめじんじゃっで、人前じゃよう話さん。"
     },
     {
       "word": "きばいやんせ",

@@ -10130,19 +10130,251 @@
     },
     {
       "word": "ねまる",
-      "dialect": "長崎弁",
-      "status": "multi",
-      "cycle": 87,
-      "note": "J449（2026-11-12）。長崎市公式こどもページのテーマ「ぬっか」「かずむ」「ねまる」（更新日2025年7月15日）の本文イラストで、食べ物が腐る・傷むことを「ねまる」、腐りかけていることを「ねまっとる」と説明＝辞典の「（食べ物が）腐る」と一致。検定の出題（lib/verified_quiz_words.ts）は先に Wikipedia＋坂口1998の例文で照合済み、今回 自治体の一次情報で補強。⚠️ 本辞典は南部・新潟・富山・飛騨では「座る」、博多では「腐る」で収録＝同じ語形で意味が分かれる語（/doko の出題には使わない）",
-      "src": "長崎市公式サイト 広報広聴課「テーマ「ぬっか」「かずむ」「ねまる」」（イラストで学ぶ『長崎弁』）https://www.city.nagasaki.lg.jp/site/kodomo/60729.html ・本文イラスト https://www.city.nagasaki.lg.jp/contents/img/ben_10nukka.jpg（2026-11-12 取得・目視で全文確認）"
-    },
-    {
-      "word": "ねまる",
       "dialect": "博多弁",
       "status": "multi",
       "cycle": 87,
       "note": "J449（2026-11-12）。Wikipedia「博多弁」語彙節に「ねまる {ラ行五段} …腐る。」＝辞典の「（食べ物が）腐る」と一致。⚠️ 出典は百科事典の語彙表1点のみ（自治体・方言集では未確認＝福岡市公式「使うてみんしゃい！博多弁」は第86回の時点で名前解決できず）。status は multi だが根拠は弱い＝次に福岡側の一次資料を当てる宿題。長崎弁にも同義で収録（長崎は自治体で確認済み）、他4方言では「座る」",
       "src": "Wikipedia「博多弁」語彙節（action=raw で wikitext 取得・2026-11-12）"
+    },
+    {
+      "word": "はんかくさい",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「鈍臭い、愚かだ」。金沢弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "めんこい",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「可愛い」。仙台弁・南部弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "いずい",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事の用例「めっぱができていずい」。仙台弁・南部弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "なんも",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「どちらいか（どういたしまして）…なんもとほぼ同じ意味合い」。秋田弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "あめる",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「あめる（腐る）」。新潟弁・南部弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "おがる",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「草・歯などが、生える/成長する」。秋田弁・茨城弁・南部弁にも収録（和歌山弁の同形語は別義）",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "はく",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「『手袋をはく』と表現する」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "いたましい",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「いたましい（もったいない）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "がさい",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「がさい、がっちゃい（できが悪い、程度の低い）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "ざんぎ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「ザンギ（鶏の唐揚げ）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "あやつける",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「格好つけたがる…主に函館」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "もちょこい",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「もちょこい（くすぐったい）主に道南」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "だべ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「だべ、だべさ（だろう）」。本州でも使うと注記あり",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "ぼっこ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「比較的短い棒」（広島弁・福島弁の同形語は別義）",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "みったくない",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「みっともない、不細工だ」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "けっぱる",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「頑張る…ほぼ北海道全域」。津軽弁・南部弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "あっぺこっぺ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「あっぺ（さかさま、逆）あっぺこっぺとも」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "おっちゃんこ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「座る、正座」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "かっちゃく",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「引っかく」。茨城弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "かっぱがす",
+      "dialect": "北海道弁",
+      "status": "fixed",
+      "cycle": 88,
+      "note": "語釈「めくる・はがす」→「（勢いよく）ひっくり返してこぼす」に修正し例文も差し替え。同記事「かっぱがす、かっぱがえす（勢いよくこぼす）まかすの更にひどい感じ」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "きかない",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「やんちゃ、強欲、強情」。東北でも使うと注記",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "サビオ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「絆創膏…元は商品名」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "つっぺ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「つっぺ-かる／鼻にティッシュ等を詰める事を『つっぺ-する』」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "たくらんけ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「愚か者」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "こっこ",
+      "dialect": "北海道弁",
+      "status": "fixed",
+      "cycle": 88,
+      "note": "語釈「魚の卵・動物の子」→「魚の卵（たらこ・すじこなど）」に修正し例文（犬の子）も差し替え。同記事「魚卵…哺乳類や、その他動物にはあまり使わない。基本魚限定」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "ちょっきり",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「ぴったり/ちょうど/きっかり」。仙台弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "たんげ",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「たんげ→ものすごく」",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "さしね",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「さしね→うるさい」",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "さんび",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 88,
+      "note": "同記事「さんび→寒い」",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "なげる",
+      "dialect": "津軽弁",
+      "status": "multi",
+      "cycle": 88,
+      "note": "同記事「なげる→捨てる」。北海道弁・秋田弁・南部弁にも収録",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-13 取得）"
     }
   ]
 }
