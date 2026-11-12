@@ -89,6 +89,24 @@ export default function AboutPage() {
         </p>
       </section>
       <section className="space-y-2">
+        <h2 className="text-2xl font-bold">方言データの作り方と直し方</h2>
+        <p>
+          辞典は35方言ぶんの語を、手書きの語と、方言ごとの語彙リスト（データファイル）から機械的に生成した語で構成しています。
+          生成のたびに表記の重複（ひらがなとカタカナの違いなど）を検査しており、これを入れる前には同じ語が二重に載る不具合がありました。
+        </p>
+        <p>
+          出題や診断に使う語は、辞典サイト・自治体や観光協会の公開資料・地方紙・大学の資料などの出典と1語ずつ照合しています。
+          照合の結果、複数の地方で使われると分かった語は、一つの地方の語として出題するのをやめます。
+          例えば「なまら」は、北海道の新方言として知られる一方、新潟でも使われることが方言学者の著述で確認できたため、
+          「北海道弁だけの語」としての出題から外し、検定では複数地方の語として扱っています。
+        </p>
+        <p>
+          出典が取れない語は、辞典に残しても断定には使いません。確認の方法と件数は
+          <Link href="/disclaimer" className="text-primary-text hover:underline">免責事項</Link>に書いています。
+          誤りを見つけたら<Link href="/contact" className="text-primary-text hover:underline">お問い合わせ</Link>からお知らせください。
+        </p>
+      </section>
+      <section className="space-y-2">
         <h2 className="text-2xl font-bold">広告について</h2>
         <p>
           当サイトは、第三者配信の広告およびアフィリエイトプログラムを利用しています。
