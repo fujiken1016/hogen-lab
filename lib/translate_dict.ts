@@ -17,6 +17,7 @@ import {
   STANDARD,
   wordsOf,
 } from "./data.ts";
+import { PROTECTED_PHRASES } from "./translate_protect.ts";
 
 /** 置き換え1件の記録（どこが・何に・何を根拠に変わったか） */
 export type Hit = {
@@ -83,6 +84,8 @@ const STOP_GLOSS = new Set([
   "様子",
   "状態",
   "感じ",
+  // 「いち・にの・さん（掛け声）」から出る語。敬称の「さん」（お母さん・奥さん）に当たって壊れる
+  "さん",
 ]);
 
 const MIN_KEY = 2;
@@ -243,6 +246,15 @@ function suggestionsFrom(idx: Map<string, IndexEntry>, n: number) {
   return out;
 }
 
+/** text の i 文字目から始まる保護語句のうち、いちばん長いもの（無ければ null） */
+function protectedAt(text: string, i: number): string | null {
+  let best: string | null = null;
+  for (const p of PROTECTED_PHRASES) {
+    if (text.startsWith(p, i) && (!best || p.length > best.length)) best = p;
+  }
+  return best;
+}
+
 /**
  * 本体。最長一致で左から走査し、辞典に載っている語だけを置き換える。
  * 置き換えた位置は飛ばすので、置換結果に再度置換がかかることはない。
@@ -271,6 +283,17 @@ export function convert(text: string, from: string, to: string): ConvertResult {
       if (entry) {
         matched = { key: sub, entry };
         break;
+      }
+    }
+    // 標準語から変換するとき、語・慣用句の一部だけが当たって意味が壊れるのを防ぐ。
+    // その方言の辞典に「その語句ぜんぶ」の見出しが無いなら、分けずにそのまま残す。
+    if (from === STANDARD) {
+      const p = protectedAt(text, i);
+      if (p && (!matched || matched.key.length < p.length)) {
+        buffer += p;
+        plain += p;
+        i += p.length;
+        continue;
       }
     }
     if (matched) {
