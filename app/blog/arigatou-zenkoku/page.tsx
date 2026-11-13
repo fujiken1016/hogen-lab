@@ -31,6 +31,10 @@ export default function Page() {
         もっと実際の言い回しで見たいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/izumo" className="text-primary-text underline underline-offset-2">出雲弁 変換</Link>に標準語の文を入れると、それぞれの地域の言い方に置き換えて見られます。
       </P>
 
+      <Note title="先に結論です">
+        全国の「ありがとう」は、おおまかに3つの型に分けられます。「おおきに」「だんだん」「もっけだ」のように字面から感謝の意味が読み取れない語も、語源をたどるとそれぞれ理屈で説明できます。標準語の「ありがとう」自体、もとは「有り難し（めったにない）」で、感謝ではなく珍しさを表す語でした。
+      </Note>
+
       <H2>そもそも「ありがとう」の語源は「めったにない」</H2>
       <P>
         本題に入る前に、標準語の「ありがとう」を確認しておきます。これは形容詞
