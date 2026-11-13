@@ -10375,6 +10375,222 @@
       "cycle": 88,
       "note": "同記事「なげる→捨てる」。北海道弁・秋田弁・南部弁にも収録",
       "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-13 取得）"
+    },
+    {
+      "word": "わや",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「わや（わいや）…手がつけられないほど酷い、めちゃくちゃだ」。神戸弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "がっちゃき",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「がっちゃき（痔）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "とうきび",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「とうきび（とうもろこし）非常に一般的な呼び名」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "よしかかる",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「よしかかる（よっかかる）（寄りかかる）」。富山弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "おやき",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「おやき（今川焼き、大判焼き）北海道全域…長野県のおやきとは全く関係ない」。信州弁の同形語は別物",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "汽車",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「きしゃ（汽車、気車）（列車）JRの列車のこと」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "なんぼ",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「なんぼ（幾ら）…西日本と東北地方でも聞かれる」。山口弁・神戸弁・仙台弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "おだつ",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「おだつ（調子に乗った行動をする）」。伊勢弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "かすべ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「かすべ（エイ）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "ないち",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「ないち（本州方面のこと）沖縄など琉球では…内地（本土）」。沖縄方言にも収録（指す範囲が異なる）",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "やむ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「やむ（痛い/痛む）…東北地方でも」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "あきあじ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「あきあじ（秋に収獲される鮭）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "がす",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「わやガス（霧）」の項で霧＝ガス",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "がんび",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「がんび（白樺の木またはその皮）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "ごしょいも",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「ごしょいも（五升芋）（ジャガイモ）」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "こまい",
+      "dialect": "北海道弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「こまい（細かい、小さい）」。山口弁・神戸弁にも収録",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "たいした",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「大して」を「たいした」とも言い、肯定表現を続ける（「大した怖い」）",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "ぶすいろ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「ぶすいろ（内出血している皮膚の色）主に函館」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "ほっちゃれ",
+      "dialect": "北海道弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「ほっちゃれ（産卵、遡上を終え、弱った鮭）「気の抜けた者」にも」",
+      "src": "Wikipedia「北海道方言」（https://ja.wikipedia.org/wiki/北海道方言）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "かちゃくちゃね",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「かちゃくちゃね→いらいらする」（散らかる義は かちゃましい の項）",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "どんだんず",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「どんだんず～→どないやねん」",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "んだびょん",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「んだびょん→そう思うよ」",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "ほんずなし",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「ほんずなし→勘違い、学がない、愚か者」",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "ゆさ",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「どさ」「ゆさ」→どこに行くの／風呂に",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "つけらっと",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「つけらっと→ちゃっかりと」。辞典の「素知らぬ顔で」とは語釈の幅に差（明確な誤りではないため修正なし）",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "わんか",
+      "dialect": "津軽弁",
+      "status": "ok",
+      "cycle": 89,
+      "note": "同記事「もわんか→もう少し」（わんか＝少し）",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "うるがす",
+      "dialect": "津軽弁",
+      "status": "multi",
+      "cycle": 89,
+      "note": "同記事「うるがす→水に浸してふやかす」。南部弁・福島弁にも収録",
+      "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
     }
   ]
 }
