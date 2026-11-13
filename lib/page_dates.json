@@ -5,7 +5,7 @@
  },
  "/about": {
   "published": "2026-08-02",
-  "modified": "2026-11-08"
+  "modified": "2026-11-12"
  },
  "/aishou": {
   "published": "2026-08-02",
@@ -25,67 +25,75 @@
  },
  "/blog/arigatou-zenkoku": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
+ },
+ "/blog/chousi-ni-noru-hogen": {
+  "published": "2026-11-11",
+  "modified": "2026-11-12"
  },
  "/blog/higashi-nishi-kyoukai": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/hitei-kei-chiiki": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/hogen-accent-chizu": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/hogen-chizu-chousa": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/hogen-fuda-kiki": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/hogen-keigo-chiiki": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/hogen-oto-no-chigai": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/hyoujungo-dato-omotteta": {
   "published": "2026-08-12",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/jan-shin-hogen": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/kawaii-hogen-ranking": {
   "published": "2026-08-12",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/kyushu-hogen-gradation": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/media-to-hogen": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/naze-hogen-umareru": {
   "published": "2026-08-12",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/blog/ninshou-kotoba-chiiki": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-11"
  },
  "/blog/okinawa-ryukyu-kotoba": {
   "published": "2026-08-13",
   "modified": "2026-11-08"
+ },
+ "/blog/onaji-kotoba-imi-chigau": {
+  "published": "2026-11-11",
+  "modified": "2026-11-12"
  },
  "/blog/sanuki-okiru-makeru": {
   "published": "2026-11-01",
@@ -101,7 +109,11 @@
  },
  "/blog/tohoku-kansai-hakata": {
   "published": "2026-08-12",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
+ },
+ "/blog/tottemo-hogen-henkan": {
+  "published": "2026-11-11",
+  "modified": "2026-11-11"
  },
  "/blog/yamagata-udaru-kamasu": {
   "published": "2026-11-04",
@@ -109,11 +121,11 @@
  },
  "/blog/yobina-chiiki-sa": {
   "published": "2026-08-13",
-  "modified": "2026-11-08"
+  "modified": "2026-11-13"
  },
  "/contact": {
   "published": "2026-08-02",
-  "modified": "2026-11-09"
+  "modified": "2026-11-11"
  },
  "/dict": {
   "published": "2026-08-02",
@@ -121,7 +133,7 @@
  },
  "/disclaimer": {
   "published": "2026-08-02",
-  "modified": "2026-11-08"
+  "modified": "2026-11-12"
  },
  "/doko": {
   "published": "2026-08-14",
@@ -185,7 +197,7 @@
  },
  "/quiz/iwate": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-11-12"
  },
  "/quiz/iyo": {
   "published": "2026-08-14",
@@ -337,7 +349,7 @@
  },
  "/translate/iwate": {
   "published": "2026-08-14",
-  "modified": "2026-09-09"
+  "modified": "2026-11-12"
  },
  "/translate/iyo": {
   "published": "2026-08-14",
