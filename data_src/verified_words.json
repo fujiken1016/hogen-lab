@@ -10591,6 +10591,294 @@
       "cycle": 89,
       "note": "同記事「うるがす→水に浸してふやかす」。南部弁・福島弁にも収録",
       "src": "Wikipedia「津軽弁」（https://ja.wikipedia.org/wiki/津軽弁）語彙節の wikitext（action=raw・2026-11-14 取得）"
+    },
+    {
+      "word": "あめさん",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「あめさん＝飴。女性語。『お』は付けない」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おあげさん",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おあげさん＝油揚げ」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おいた",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おいた＝カマボコ」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おーさん",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おーさん＝托鉢僧」（「おーのぼーさん」「おーやはん」とも）",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おかちょー",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おかちょー＝蚊帳」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おかぼ",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おかぼ＝カボチャ」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おせな",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おせな＝背中。幼児語、女性語」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おしたじ",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おしたじ・むらさき＝醤油」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "むらさき",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "同記事「おしたじ、むらさき＝醤油。『むらさき』は特に飲食店などで使う」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おちゃやのばんとー",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おちゃやの ばんとー＝テントウムシ。戦前によく使われた」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おっさん",
+      "dialect": "京都弁",
+      "status": "multi",
+      "cycle": 90,
+      "note": "同記事「おっさん＝和尚。『おじさん』はおっさん」。『おじさん』の意の『おっさん』は全国語＝和尚の義が京都側",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おつむ",
+      "dialect": "京都弁",
+      "status": "multi",
+      "cycle": 90,
+      "note": "「おつむ＝頭。御所言葉だが、一般でも児童や婦人が使う」。幼児語として全国で使う",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おねもじ",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おねもじ＝ネギ」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "およなが",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「およなが＝夜食」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "およね",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「およね＝米」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "かにここ",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「かにここ＝赤子の初便または臨終の人の便。ぎりぎり、やっとこさという意味の副詞でもある」。平成元年度時点で60代の京都市民でも分からない人が多い＝古い語",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "ざんない",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「ざんない＝だらしない。くだらない。贈り物で謙遜して『えらいざんないもんどすけど』」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "いけのはたのずいき",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「池の端の芋茎＝『いけず』のシャレ言葉。女の子が意地悪された時に茶化して言い返す」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "いりまへんか",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「いりまへんか＝入り用ではありませんか。白川女が花を売り歩く際に言った」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おくたぶれさんどした",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「祇園花街の仕事帰りの挨拶。現在は『おつかれさんどした』」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おことーさんどす",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「年末・正月準備が忙しい時の挨拶。現在は祇園花街で12月13日の事始めに芸妓が言う」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おしずかに",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「食事を勧める際の『ごゆっくり』／送り出す際の『何事もないように』」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "おせんすになる",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「縁談がほぼまとまること。結納前に扇子の交換をするしきたり」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "かんにんえ",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「かんにんえ＝ごめんね。女性語」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "どこいきどす",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「どこいきどす＝出かける近所の人に掛ける挨拶。『どこいきや』とも」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "どなたさんもおさきどす",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「お先に失礼いたします。医院の待合室などで帰る際に待つ人に掛ける挨拶」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "はしじかどすけど",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「端近なところですが。奥へ招くほどでない客に縁先で座布団を勧める際」",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）語彙節の wikitext（action=raw・2026-11-15 取得。同節は堀井・井之口『京ことば辞典』(1992)を出典に挙げる）"
+    },
+    {
+      "word": "ぼんぼん",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「ぼんぼん＝男の子一般を呼ぶ言葉（坊ん坊ん）。他家の息子を雇人や外の人が呼ぶ」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "いとさん",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「いとさん＝女の子一般を呼ぶ言葉。上をあねいとさん・中をなかいとさん・下をこいとさん」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "こいさん",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「末の娘（こいとさん）の略。『こいさん』」（いとさんの下の子の呼び名）。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "ごりょんさん",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「ごりょんさん＝御寮人様。当主の妻」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "おやだんさん",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おやだんさん＝当主の父（隠居した先代）」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "おえさん",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おえさん＝御家様。元の御寮人さんが格上げされた呼び名」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "おなごし",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おなごし・おなごっさん＝女中（女子衆）」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "おとこし",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「おとこし・おとこっさん＝下男（男衆）」。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "だいじない",
+      "dialect": "大阪弁",
+      "status": "ok",
+      "cycle": 90,
+      "note": "「ダイジナイ＝かまわない、別条ない（大事ない）」。丁寧には『だいじょごあへん』。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
     }
   ]
 }
