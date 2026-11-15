@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
 import Link from "next/link";
-import { ArticleShell, H2, P, Note, PrBox, RankItem, ShindanCta } from "@/components/article";
+import { ArticleShell, H2, P, Note, PrBox, RankItem, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 import CrossSite from "@/components/CrossSite";
 
@@ -27,7 +27,7 @@ export default function Page() {
       </P>
 
       <Note title="ランキングの3基準">
-        <strong>①音のまるさ</strong>：破裂音（カ行・タ行）より、鼻音・母音の多い音は柔らかく聞こえます。
+        <strong>①音のまるさ</strong>：破裂音（カ行・タ行）より、鼻音・母音の多い音のほうが柔らかく聞こえる、という編集部の感覚です（音声学で測ったものではありません）。
         <br />
         <strong>②語尾の余韻</strong>：文末が言い切りで終わらず、少し伸びたり上がったりするか。
         <br />
@@ -205,11 +205,59 @@ export default function Page() {
         方言がかわいく聞こえるのは、そのこぼれた部分に惹かれているからかもしれません。
       </P>
 
+      <H2>他の調査と、辞典で見比べる</H2>
+      <P>
+        この記事の順位は編集部の基準で、投票調査ではありません。
+        参考に、他の調査の結果を2026年11月16日に開いて確かめました。
+        macaroniの読者投票（2025年8月7〜22日・204票）は、博多弁79票が1位、北海道弁24票が2位、広島弁20票が3位でした。
+        All Aboutニュース編集部の調査（2025年11月6〜7日・全国10〜70代の男女250人）では、福岡県93票が1位、京都府47票が2位です。
+        ねとらぼ調査隊の「方言がすてきだと思う都道府県」（2021年・1,243票）も、1位が福岡県、2位が京都府でした（こちらは「かわいい」ではなく「すてき」です）。
+        3件とも1位は福岡（博多弁）で、この記事の1位と同じです。2位は、京都が2件、北海道弁が1件でした。
+      </P>
+      <P>
+        方言ラボの辞典（35方言3,368語）で、意味に「かわいい」「かわいらしい」を含む語（「かわいそう」「かわいがる」は除く）を数えると、23語・16方言でした（2026年11月16日・自社集計）。
+        意味が「かわいい」そのものの語を持つのは、北海道弁・津軽弁・南部弁・秋田弁・仙台弁・山形弁・福島弁の7方言（「めんこい」の仲間）に、
+        静岡弁「けっこい」、長崎弁「みじょか」、鹿児島弁「むぞか」を加えた10方言で、東北・北海道に集中しています。
+        京都弁には、辞典に「かわいい」にあたる語がありません。博多弁は「あいらしか」（かわいらしい）の1語だけです。
+        上位の京都弁と博多弁を、語彙ではなく語尾の余韻で選んだ理由のひとつです。
+      </P>
+      <P>
+        順位に入った方言を文で試したいときは、
+        <Link href="/translate/hakata" className="text-primary-text underline underline-offset-2">博多弁 変換</Link>・
+        <Link href="/translate/kyoto" className="text-primary-text underline underline-offset-2">京都弁 変換</Link>・
+        <Link href="/translate/okinawa" className="text-primary-text underline underline-offset-2">沖縄方言 変換</Link>・
+        <Link href="/translate/akita" className="text-primary-text underline underline-offset-2">秋田弁 変換</Link>・
+        <Link href="/translate/kagoshima" className="text-primary-text underline underline-offset-2">鹿児島弁 変換</Link>に標準語の文を入れてみてください。
+        変換されるのは辞典に載っている語で、語尾は変わりません。
+      </P>
+
       <CrossSite content="blog_kawaii-hogen-ranking" />
 
       <ShindanCta
         title="あなたの言葉に近いのは、どの方言？"
         body="10問・約2分の診断で、全国のご当地キャラからあなたの相棒が決まります。上位に入った方言が出るかどうか、試してみてください。"
+      />
+
+      <Sources
+        items={[
+          {
+            label: "macaroni「かわいい方言ランキング」読者投票（2025年8月7〜22日・204票）",
+            url: "https://macaro-ni.jp/157609",
+          },
+          {
+            label: "All About ニュース「各都道府県の方言に関するアンケート」（2025年11月6〜7日・250人）",
+            url: "https://news.allabout.co.jp/articles/o/104339/",
+          },
+          {
+            label: "ねとらぼ調査隊「方言がすてきだと思う都道府県」（2021年3月9〜22日・1,243票）",
+            url: "https://nlab.itmedia.co.jp/research/articles/192385/",
+          },
+          {
+            label: "方言ラボ 辞典（35方言3,368語・意味に「かわいい」「かわいらしい」を含む語を自社集計・2026年11月16日時点）",
+            url: "https://hogen.mainichi-lab.com/dict",
+          },
+          { label: "ランキングの順位と3基準は編集部の判断。語例は各種方言辞典の記述による" },
+        ]}
       />
     </ArticleShell>
   );

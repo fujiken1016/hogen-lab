@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
+import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, WordCard, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
@@ -159,6 +160,12 @@ export default function Page() {
         日琉語族のなかでもっとも母音の数が少ないとされています。
         「沖縄のことば」という一語で片づけるには、南西諸島はあまりに多様です。
       </Note>
+
+      <P>
+        ここで挙げた語を実際の文で見たいときは、
+        <Link href="/translate/okinawa" className="text-primary-text underline underline-offset-2">沖縄方言 変換</Link>に標準語の文を入れてみてください。
+        変換されるのは辞典に載っている語で、語尾や活用は標準語のまま残ります。
+      </P>
 
       <H2>まとめ</H2>
       <P>

@@ -86,10 +86,10 @@ export default function Page() {
         <strong>語源が確定していない地名はかなりあります</strong>。
       </P>
       <P>
-        たとえば旭川は、市の公式なアイヌ語地名表示板では
-        「チュㇰ ペッ」という形で示されています。
-        一方で、忠別川の「チュㇷ゚ペッ（日の・川）」に由来するという説明も広く知られています。
-        <strong>どちらか一方が正解、と言い切れる状態ではありません</strong>。
+        たとえば旭川市内を流れる忠別川は、市のアイヌ語地名表示板で
+        「チゥ ペッ」（1番）と「チュㇰ ペッ」（36番）という2通りの形で示されています。
+        「チュㇷ゚ペッ（日の・川）」に由来するという説明も知られており、
+        <strong>表記も由来も、どれか一つが正解と言い切れる状態ではありません</strong>。
       </P>
       <P>
         札幌についても、「サッ・ポロ・ペッ（乾いた・大きい・川）」とする説と、
@@ -108,7 +108,7 @@ export default function Page() {
       <H3>表示板という取り組み</H3>
       <P>
         旭川市は2003年から、市内にアイヌ語地名の表示板を設置しています。
-        設置数は40基を超え、神居古潭（カムィ コタン）、
+        設置数は42基（2026年11月16日に市の公式ページで確認）で、神居古潭（カムィ コタン）、
         近文（チカプニ）、石狩川（イシカラ）などが示されています。
         地名の由来を、現地に立てて残していく方法です。
       </P>
@@ -162,6 +162,12 @@ export default function Page() {
         <Link href="/blog/hogen-fuda-kiki" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
           → 方言札と危機言語の記事
         </Link>
+      </P>
+
+      <P>
+        地名ではなく北海道の日常の言い回しを見たいときは、
+        <Link href="/translate/hokkaido" className="text-primary-text underline underline-offset-2">北海道弁 変換</Link>に標準語の文を入れると、
+        辞典に載っている語に置き換わるところを確かめられます。
       </P>
 
       <H2>まとめ</H2>

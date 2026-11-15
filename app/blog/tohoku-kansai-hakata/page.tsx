@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
-import { ArticleShell, H2, H3, P, Note, PrBox, ShindanCta } from "@/components/article";
+import Link from "next/link";
+import { ArticleShell, H2, H3, P, Note, PrBox, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
 const article = getArticle("tohoku-kansai-hakata")!;
@@ -136,9 +137,11 @@ export default function Page() {
       </P>
       <H3>文法の特徴</H3>
       <P>
-        博多弁の面白さは、語尾が<strong>情報の種類を示す</strong>ところにあります。
-        「〜ばい」は相手が知らないことを新しく伝えるとき、「〜たい」はすでに前提を共有していることを念押しするとき。
-        「雨が降っとうばい（降ってるよ、知らないでしょ）」と「そうたい（そうだよ、言ったでしょ）」の違いです。
+        博多弁の面白さは、文末の語尾で<strong>話し手の構え方が変わる</strong>ところにあります。
+        「〜ばい」は事実をそのまま差し出す言い方、「〜たい」は納得や念押しをともなう言い方、と説明されることが多い組み合わせです。
+        「雨が降っとうばい（降ってるよ）」と「そうたい（そうなんだよ）」のような違いです。
+        ただし使い分けの説明は話者や研究者によって揺れがあり、きれいに割り切れる規則があるわけではありません。
+        「〜たい」は福岡県内でも使う地域が限られる、という指摘もあります。
         理由は「〜けん」、疑問は「〜と？」で表します。
       </P>
       <H3>語彙の特徴</H3>
@@ -177,7 +180,7 @@ export default function Page() {
       <P>
         並べてみると、違いは単語の置き換えだけではないことがわかります。
         東北は助詞と語尾を削って短くまとめ、関西は語尾を伸ばして情感を足し、
-        博多は語尾で情報の性質を指定する。<strong>それぞれ別の設計思想で動いている言語体系</strong>だと考えると、
+        博多は語尾で伝え方の色を変える。<strong>それぞれ別の設計思想で動いている言語体系</strong>だと考えると、
         方言の見え方が変わってきます。
       </P>
 
@@ -187,9 +190,31 @@ export default function Page() {
         なぜこれほど多様な体系が生まれたのかは、別記事「方言はなぜ生まれるのか」で解説しています。
       </Note>
 
+      <P>
+        3つの方言の文を、方言ラボの変換ツールで試すこともできます。
+        <Link href="/translate/tsugaru" className="text-primary-text underline underline-offset-2">津軽弁 変換</Link>・
+        <Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>・
+        <Link href="/translate/hakata" className="text-primary-text underline underline-offset-2">博多弁 変換</Link>に同じ標準語の文を入れると、
+        辞典に載っている語が置き換わるところを見比べられます（語尾や活用までは変わりません）。
+      </P>
+
       <ShindanCta
         title="あなたの言葉づかいは、どの体系に近い？"
         body="10問の診断で、全国のご当地キャラからあなたの相棒を判定します。育った土地とは違う方言が出ることも珍しくありません。"
+      />
+
+      <Sources
+        items={[
+          {
+            label: "ことば研究館（国立国語研究所）「日本語には方言がいくつありますか」（方言の区画と、東北・近畿・九州などの大きなまとまりの考え方）",
+            url: "https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-139/",
+          },
+          {
+            label: "ウィキペディア日本語版「日本語の方言のアクセント」（京阪式・東京式・無アクセントの分布の概観）",
+            url: "https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E6%96%B9%E8%A8%80%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%B3%E3%83%88",
+          },
+          { label: "各方言の語尾・語彙は各種方言辞典の記述による。「ばい」「たい」の使い分けは話者による揺れがあり、本記事では代表的な説明を紹介するにとどめた" },
+        ]}
       />
     </ArticleShell>
   );

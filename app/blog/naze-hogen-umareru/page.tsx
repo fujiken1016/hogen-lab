@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ogMeta } from "@/lib/og";
 import Link from "next/link";
-import { ArticleShell, H2, H3, P, Note, PrBox, ShindanCta } from "@/components/article";
+import { ArticleShell, H2, H3, P, Note, PrBox, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
 
 const article = getArticle("naze-hogen-umareru")!;
@@ -30,7 +30,7 @@ export default function Page() {
       <P>
         まず押さえておきたいのは、言葉は誰かが崩さなくても勝手に変わっていくということです。
         平安時代の日本語と現代の日本語は、単語も発音も文法も別物といっていいほど違います。
-        「ら抜き言葉」を嘆く声は今も昔もありますが、同じことは千年前から繰り返されてきました。
+        「ら抜き言葉」を嘆く声は今もありますが、言葉が時代とともに変わること自体は、平安時代から続いてきたことです。
       </P>
       <P>
         変化そのものは自然な現象です。問題は、<strong>その変化が全国同時には起こらない</strong>こと。
@@ -39,7 +39,7 @@ export default function Page() {
 
       <H2>理由①：伝わるのに時間がかかる — 方言周圏論</H2>
       <P>
-        民俗学者の柳田國男が1930年に発表した『蝸牛考』は、この考え方を有名にした本です。
+        民俗学者の柳田國男が1927年に雑誌で連載し、1930年に本として刊行した『蝸牛考』は、この考え方を有名にした本です。
         全国のカタツムリの呼び名を集めてみたところ、京都を中心とした同心円状に分布していることがわかりました。
         京都周辺では「デデムシ」、その外側に「マイマイ」、さらに外に「カタツムリ」、
         そして東北や九州の端では「ツブリ」「ナメクジ」といった古い形が残っていたのです。
@@ -152,9 +152,33 @@ export default function Page() {
         まずは自分の言葉がどのあたりに位置するのか、診断で確かめてみてください。
       </P>
 
+      <P>
+        東西の線の位置と、「いる／おる」「ない／ん」など項目ごとの違いは、
+        <Link href="/blog/higashi-nishi-kyoukai" className="text-primary-text underline underline-offset-2">東西境界線の記事</Link>で、
+        国立国語研究所の全国地図をもとにくわしく扱っています。
+      </P>
+
       <ShindanCta
         title="あなたの日本語は、どの土地の年輪？"
         body="言葉づかい6問・性格4問。全国のご当地キャラから、あなたの言語感覚に近い相棒を判定します。"
+      />
+
+      <Sources
+        items={[
+          {
+            label: "ウィキペディア日本語版「蝸牛考」（初出1927年『人類学雑誌』・刀江書院版1930年・呼称の分布順の整理）",
+            url: "https://ja.wikipedia.org/wiki/%E8%9D%B8%E7%89%9B%E8%80%83",
+          },
+          {
+            label: "和樂web（小学館）の蝸牛考・方言周圏論の解説記事（柳田が分布を同心円で表したことの説明）",
+            url: "https://intojapanwaraku.com/rock/culture-rock/148290/",
+          },
+          {
+            label: "ことば研究館（国立国語研究所）「日本語には方言がいくつありますか」（方言の区画と、境界線は目安であること）",
+            url: "https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-139/",
+          },
+          { label: "藩の境と言葉の境の関係、「たいぎい」の語源などは各種方言辞典・国語辞典の記述による（本記事では断定していない）" },
+        ]}
       />
     </ArticleShell>
   );
