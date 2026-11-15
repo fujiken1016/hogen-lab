@@ -102,7 +102,36 @@ export default function Page() {
       </P>
       <P>
         <strong>アイヌ語／八丈語／奄美語／国頭（くにがみ）語／沖縄語／宮古語／八重山語／与那国語</strong>。
-        このうちアイヌ語は、もっとも危機の度合いが高い区分に分類されています。
+        危機の度合いは、文化庁のページでは次の3段階に分けて示されています（2026年11月16日に確認）。
+      </P>
+      <div className="overflow-x-auto my-5">
+        <table className="w-full min-w-[420px] text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            ユネスコ「消滅の危機にある言語」（2009年2月発表）の日本の8言語と危機の度合い（文化庁ページの表記）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">危機の度合い</th>
+              <th scope="col" className="py-2 font-bold">言語</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["極めて深刻（最も高い区分）", "アイヌ語"],
+              ["重大な危機", "八重山語・与那国語"],
+              ["危険", "八丈語・奄美語・国頭語・沖縄語・宮古語"],
+            ].map(([lv, langs]) => (
+              <tr key={lv} className="border-b border-line align-top">
+                <td className="py-2 pr-3 whitespace-nowrap">{lv}</td>
+                <td className="py-2 min-w-[12em]">{langs}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <P>
+        同じ文化庁のページによると、ユネスコは「言語」と「方言」を区別せず、すべて「言語」として扱っています。
+        各言語の話者数や世代別の数字は、この記事では確かめていません。
       </P>
       <Note title="「方言」ではなく「言語」として数えられた">
         奄美から与那国までの各語は、日本では長く「方言」として扱われてきました。

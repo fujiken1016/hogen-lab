@@ -95,6 +95,37 @@ export default function Page() {
         標準語より情報量が多い文法を持っている、と言えます。
       </P>
 
+      <H3>5項目を1枚にまとめると</H3>
+      <div className="overflow-x-auto my-5">
+        <table className="w-full min-w-[520px] text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            東西で入れ替わる言い方の早見表（本文の5項目。国立国語研究所の全国地図で扱われた項目の例）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">項目</th>
+              <th scope="col" className="py-2 pr-3 font-bold">東日本側</th>
+              <th scope="col" className="py-2 font-bold">西日本側</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["存在の動詞", "いる", "おる（おらん・おるで）"],
+              ["打ち消し", "〜ない", "〜ん（関西の〜へんも同系統とされる）"],
+              ["断定", "〜だ", "〜じゃ（中国・四国・九州）／〜や（近畿）"],
+              ["形容詞の連用形", "高く", "高う（たこう）"],
+              ["進行", "〜てる", "〜とる（一部は〜よる／〜とるを使い分ける）"],
+            ].map(([c0, c1, c2]) => (
+              <tr key={c0} className="border-b border-line align-top">
+                <td className="py-2 pr-3 whitespace-nowrap font-bold">{c0}</td>
+                <td className="py-2 pr-3 min-w-[10em]">{c1}</td>
+                <td className="py-2 min-w-[12em]">{c2}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <H2>アクセントの境界とは、位置がずれる</H2>
       <P>
         ここが面白いところです。文法の東西境界は糸魚川‐浜名湖線あたりに集まりますが、

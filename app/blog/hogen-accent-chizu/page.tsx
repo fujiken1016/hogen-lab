@@ -141,6 +141,41 @@ export default function Page() {
         京阪式の関西や、一型・二型アクセントの九州南部の言葉を文でたしかめたいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/kagoshima" className="text-primary-text underline underline-offset-2">鹿児島弁 変換</Link>が使えます。ただし変換されるのは言い回しで、音の高さそのものは文字では再現できません。
       </P>
 
+      <H3>5つの型を1枚にまとめると</H3>
+      <div className="overflow-x-auto my-5">
+        <table className="w-full min-w-[520px] text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            日本語のアクセントの型と、おもな分布（ウィキペディア「日本語の方言のアクセント」の記述をもとに整理）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">型</th>
+              <th scope="col" className="py-2 pr-3 font-bold">おもな分布</th>
+              <th scope="col" className="py-2 font-bold">区別のしかた</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["東京式", "北海道・東北北部・関東西部・甲信越・東海・中国・九州北東部など。標準語もこの型", "どこで下がるか（下げ核）だけで区別する"],
+              ["京阪式", "近畿の大部分・四国の大半など", "下がる位置に加えて、語の始まりが高いか低いかでも区別する"],
+              ["二型", "九州西南部（長崎県南部・鹿児島県の大部分など）、琉球", "拍の数が増えても型は2種類"],
+              ["一型", "宮崎県都城市・小林市、鹿児島県志布志市など", "最後の音節を高く言う型ひとつだけ"],
+              ["無アクセント", "東北南部・関東北東部・八丈島・九州中部など", "高低で単語を区別しない（箸も橋も端も同じ）"],
+            ].map(([t, area, how]) => (
+              <tr key={t} className="border-b border-line align-top">
+                <td className="py-2 pr-3 whitespace-nowrap font-bold">{t}</td>
+                <td className="py-2 pr-3 min-w-[14em]">{area}</td>
+                <td className="py-2 min-w-[12em]">{how}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <P>
+        この記事の本文では一型と二型をひとつにまとめて「4系統」と数えましたが、表では別々に並べています。
+        型の数は、どうまとめるかで変わります。
+      </P>
+
       <H2>この分布、どこかで見た形をしている</H2>
       <P>
         並べ直すと、面白い順序が浮かび上がります。

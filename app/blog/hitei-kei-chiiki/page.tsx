@@ -148,6 +148,37 @@ export default function Page() {
         </Link>
       </P>
 
+      <div className="overflow-x-auto my-5">
+        <table className="w-full min-w-[520px] text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            否定形の地域差の早見表（本文で取り上げた形。使われる範囲は目安で、世代や県内でも違う）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">形</th>
+              <th scope="col" className="py-2 pr-3 font-bold">おもな地域</th>
+              <th scope="col" className="py-2 font-bold">ひとこと</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["〜ない", "東日本を中心に広く", "標準語と同じ。「ぬ」より新しい形と説明される"],
+              ["〜ねぇ", "東北・関東", "「ない」の変化形。ふつうの形として使われてきた"],
+              ["〜ん", "西日本・九州", "「ぬ」から続く形とされる。九州は基本的に「ん」"],
+              ["〜へん", "関西", "「〜はせぬ」が縮まったという説があるが、決着はしていない"],
+              ["〜せん", "中部〜西日本の一部", "「行きゃせん」のように「〜はせぬ」系が短くなった形"],
+              ["〜やん", "大阪の若年層。和歌山・三重・奈良南部の老年層", "周辺部にあった形が中心に入った、と説明される"],
+            ].map(([c0, c1, c2]) => (
+              <tr key={c0} className="border-b border-line align-top">
+                <td className="py-2 pr-3 whitespace-nowrap font-bold">{c0}</td>
+                <td className="py-2 pr-3 min-w-[12em]">{c1}</td>
+                <td className="py-2 min-w-[14em]">{c2}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <H2>まとめ</H2>
       <P>
         否定形は、語彙のように「知っているかどうか」ではなく、

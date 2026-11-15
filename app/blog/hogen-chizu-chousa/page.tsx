@@ -29,7 +29,7 @@ export default function Page() {
       </P>
 
       <Note title="先に結論です">
-        方言の分布図の多くは、国立国語研究所の全国調査にたどり着きます。『日本言語地図』は1957〜1965年に全国約2,400地点で行った臨地調査（主に語彙）、『方言文法全国地図』は全国807地点・文法267項目の調査です。対象者の条件（高年層の男性が中心など）を知ると、「うちの県、これ違うんだけど」と感じる理由が見えてきます。
+        方言の分布図の多くは、国立国語研究所の全国調査にたどり着きます。『日本言語地図』は1957〜1965年に全国約2,400地点で行った臨地調査（主に語彙）、『方言文法全国地図』は全国807地点・文法267項目の調査です。対象者の条件（1903年以前に生まれた、その土地から動いていない人など）を知ると、「うちの県、これ違うんだけど」と感じる理由が見えてきます。
       </Note>
 
       <H2>『日本言語地図』——全国約2,400地点を歩いた調査</H2>
@@ -82,6 +82,36 @@ export default function Page() {
         </Link>
       </P>
 
+      <div className="overflow-x-auto my-5">
+        <table className="w-full min-w-[520px] text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            2つの全国調査を並べると（国立国語研究所の公開情報による。「—」はこの記事で確認していない項目）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">項目</th>
+              <th scope="col" className="py-2 pr-3 font-bold">『日本言語地図』</th>
+              <th scope="col" className="py-2 font-bold">『方言文法全国地図』</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["調べたもの", "主に語彙（全300図）", "文法・表現法（267項目）"],
+              ["地点数", "全国約2,400地点", "全国807地点"],
+              ["調査", "1957〜1965年（概要ページは1964年まで）", "—"],
+              ["刊行", "1966〜1974年（全6集）", "1989〜2006年（全6集）"],
+              ["話者", "1903年以前生まれ・各地点1名の男性（概要ページ）", "—"],
+            ].map(([c0, c1, c2]) => (
+              <tr key={c0} className="border-b border-line align-top">
+                <td className="py-2 pr-3 whitespace-nowrap font-bold">{c0}</td>
+                <td className="py-2 pr-3 min-w-[12em]">{c1}</td>
+                <td className="py-2 min-w-[12em]">{c2}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <H2>誰に聞いたのか——ここが最重要</H2>
       <P>
         分布図を読むときにいちばん大事なのが、調査対象者の条件です。
@@ -99,9 +129,10 @@ export default function Page() {
 
       <H3>その結果、何が起きるか</H3>
       <P>
-        『日本言語地図』の調査対象者は、明治から大正生まれの世代が中心です。
+        『日本言語地図』の話者は、国立国語研究所の概要ページによると<strong>1903年（明治36年）以前に生まれた各地点1名の男性</strong>です。
+        ことば研究館の解説では、調査時点で65歳以上で、その場所から移動していない人から聞き取った、と説明されています。
         つまりあの地図が写しているのは、
-        <strong>おおよそ100年前後前に身についた言葉</strong>ということになります。
+        <strong>100年以上前に身についた言葉</strong>ということになります。
       </P>
       <P>
         だから「うちの県、これ違うんだけど」は、当然なのです。
@@ -193,6 +224,10 @@ export default function Page() {
 
       <Sources
         items={[
+          {
+            label: "国立国語研究所「日本言語地図(1966-1974年)」概要ページ（調査は1957〜1964年・全国2,400地点・1903年以前生まれの各地点1名の男性。ことば研究館の解説は調査年を1957〜1965年、話者を調査時点で65歳以上と表記しており、年の書き方が資料で分かれる）",
+            url: "https://www2.ninjal.ac.jp/hogen/outline/laj/laj_index.html",
+          },
           {
             label: "国立国語研究所『日本言語地図』（1957〜1965年に全国約2,400地点で実施した臨地調査、1966〜1974年刊）",
             url: "https://www2.ninjal.ac.jp/past-publications/publication/catalogue/laj_map/",
