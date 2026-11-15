@@ -486,7 +486,7 @@ function ShindanPage() {
         <div className="space-y-3">
           <p className="text-gold font-bold tracking-widest text-sm">HOGEN TYPE SHINDAN</p>
           <h1 className="text-4xl font-bold leading-snug">
-            あなたの言葉は、
+            <span className="whitespace-nowrap">あなたの</span><span className="whitespace-nowrap">言葉は、</span>
             <br />
             何弁？
           </h1>
@@ -498,7 +498,7 @@ function ShindanPage() {
         </div>
         <div className="flex flex-col items-center gap-3">
           <button onClick={start} className="btn-primary cta-glow text-lg px-10 py-4">
-            診断をはじめる（約2分）
+            <span>診断をはじめる<span className="whitespace-nowrap">（約2分）</span></span>
           </button>
           <p className="text-sm text-sub">全10問・245通り以上・登録不要・無料</p>
         </div>

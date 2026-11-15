@@ -167,16 +167,11 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
   }
 
   // → 方言（to）
+  // 標準語のひとこと（定型句）→ 方言の言い方 は、ここ（文の途中でも当たる索引）には入れない。
+  // 定型句の値は「あ〜、こわいわ〜」「久しぶりだべさ！」のように強調語・語尾・感嘆符まで含む“ひとこと丸ごと”なので、
+  // 文の途中で当てると「久しぶりだべさ！に会えてうれしい」「ありがとね〜ございます」と壊れる（2026-11-15 J519 実測：
+  // 日常文12本×36方言で 432 件中 417 件が文中の定型句置換）。入力が丸ごとそのひとことのときだけ wholeIndexFor で当てる。
   const toPhrases = phraseMap(to);
-  for (const q of SHINDAN_QUESTIONS) {
-    const d = toPhrases[q.key];
-    if (!d) continue;
-    const s = stdPhrases[q.key] ?? q.key;
-    addKey(map, s, { target: d, meaning: `「${s}」にあたる言い方`, example: "", origin: "定型句", dict: to, alts: [] });
-    if (s !== q.key) {
-      addKey(map, q.key, { target: d, meaning: `「${q.key}」にあたる言い方`, example: "", origin: "定型句", dict: to, alts: [] });
-    }
-  }
 
   // 標準語の見出し → to の方言語
   const byGloss = new Map<string, IndexEntry>();
@@ -221,6 +216,61 @@ function buildIndex(from: string, to: string): Map<string, IndexEntry> {
 
 const CACHE = new Map<string, Map<string, IndexEntry>>();
 
+/** 入力が丸ごと「標準語のひとこと」だったときだけ使う索引（標準語の言い方 → to の方言の言い方） */
+const WHOLE_CACHE = new Map<string, Map<string, IndexEntry>>();
+
+function wholeIndexFor(to: string): Map<string, IndexEntry> {
+  let map = WHOLE_CACHE.get(to);
+  if (map) return map;
+  map = new Map<string, IndexEntry>();
+  const stdPhrases = phraseMap(STANDARD);
+  const toPhrases = phraseMap(to);
+  for (const q of SHINDAN_QUESTIONS) {
+    const d = toPhrases[q.key];
+    if (!d) continue;
+    const s = stdPhrases[q.key] ?? q.key;
+    for (const k of new Set([s, q.key, trimTail(s).core, trimTail(q.key).core])) {
+      if (k && !map.has(k)) {
+        map.set(k, { target: d, meaning: `「${s}」にあたる言い方`, example: "", origin: "定型句", dict: to, alts: [] });
+      }
+    }
+  }
+  WHOLE_CACHE.set(to, map);
+  return map;
+}
+
+const HIRA_RE = /[ぁ-ゖー]/;
+const KANA_RE = /[ぁ-ゖァ-ヺー]/;
+
+/**
+ * 文の途中でも当ててよい定型句（その方言の言い方が「語ひとつ」に収まっているものだけ）。
+ * 除外＝強調語や語尾まで含むもの（伸ばし記号・感嘆符・読点を含む／元の語をそのまま含む／元より2字以上長い）。
+ * 当てる位置も、前後がひらがなで続いていない（「ありがとう|ございます」「久しぶり|に」は当てない）ときだけ。
+ */
+const SOFT_CACHE = new Map<string, [string, IndexEntry][]>();
+function softPhrases(to: string): [string, IndexEntry][] {
+  let list = SOFT_CACHE.get(to);
+  if (list) return list;
+  list = [];
+  for (const [k, e] of wholeIndexFor(to)) {
+    if (k.length < MIN_KEY) continue;
+    const t = e.target;
+    if (/[〜～！!？?、。ー]/.test(t) || /[〜～！!？?、。]/.test(k)) continue;
+    if (t.includes(k) || t.length > k.length + 1) continue;
+    list.push([k, e]);
+  }
+  list.sort((a, b) => b[0].length - a[0].length);
+  SOFT_CACHE.set(to, list);
+  return list;
+}
+
+/** 文末の句読点・感嘆符・伸ばし記号と前後の空白を分ける（「ありがとう。」→ core「ありがとう」＋ tail「。」） */
+function trimTail(text: string): { core: string; tail: string } {
+  const t = text.trim();
+  const m = t.match(/^([\s\S]*?)([。．.、,！!？?〜～\s]*)$/);
+  return { core: m ? m[1] : t, tail: m ? m[2] : "" };
+}
+
 function indexFor(from: string, to: string): Map<string, IndexEntry> {
   const key = `${from}→${to}`;
   let idx = CACHE.get(key);
@@ -261,6 +311,19 @@ function protectedAt(text: string, i: number): string | null {
  */
 export function convert(text: string, from: string, to: string): ConvertResult {
   const idx = indexFor(from, to);
+
+  // 入力が丸ごと「ありがとう」「疲れた」のような標準語のひとことなら、その方言の言い方をそのまま返す
+  if (to !== STANDARD) {
+    const { core, tail } = trimTail(text);
+    const whole = core ? wholeIndexFor(to).get(core) : undefined;
+    if (whole && !idx.has(core)) {
+      const hit: Hit = { source: core, ...whole };
+      const rest = /[。！!？?〜～]$/.test(whole.target) ? "" : tail;
+      const segments: Segment[] = [{ text: whole.target, hit }];
+      if (rest) segments.push({ text: rest });
+      return { output: whole.target + rest, segments, hits: [hit], suggestions: [] };
+    }
+  }
   const segments: Segment[] = [];
   const hits: Hit[] = [];
   let plain = "";
@@ -273,6 +336,8 @@ export function convert(text: string, from: string, to: string): ConvertResult {
     }
   };
 
+  const soft = to !== STANDARD ? softPhrases(to) : [];
+
   let i = 0;
   while (i < text.length) {
     let matched: { key: string; entry: IndexEntry } | null = null;
@@ -283,6 +348,15 @@ export function convert(text: string, from: string, to: string): ConvertResult {
       if (entry) {
         matched = { key: sub, entry };
         break;
+      }
+    }
+    // 辞典に無いときだけ、文の途中でも安全な定型句（「ありがとう。」→「おおきに。」の型）を当てる
+    if (!matched) {
+      for (const [k, entry] of soft) {
+        if (text.startsWith(k, i) && !KANA_RE.test(text[i - 1] ?? "") && !HIRA_RE.test(text[i + k.length] ?? "")) {
+          matched = { key: k, entry };
+          break;
+        }
       }
     }
     // 標準語から変換するとき、語・慣用句の一部だけが当たって意味が壊れるのを防ぐ。

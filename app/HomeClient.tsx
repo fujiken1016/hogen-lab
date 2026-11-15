@@ -241,11 +241,11 @@ export default function HomeClient() {
 
       {/* キャラ図鑑 */}
       <section id="zukan" className="space-y-4 relative">
-        <div className="section-head">
+        <div className="section-head flex-wrap">
           <span className="hanko-sq">図</span>
           <div>
             <span className="sub">CHARACTER ZUKAN</span>
-            <h2 className="ttl">方言キャラ図鑑 — 全{TYPES.length}体</h2>
+            <h2 className="ttl">方言キャラ図鑑<span className="whitespace-nowrap"> — 全{TYPES.length}体</span></h2>
           </div>
           <Link href="/shindan" className="ml-auto inline-flex min-h-[48px] items-center text-sm text-primary-text font-bold hover:underline shrink-0">
             自分のキャラを調べる →
@@ -265,7 +265,7 @@ export default function HomeClient() {
                 <div className="flex justify-center">
                   <TypeAvatar type={t} size={92} bg />
                 </div>
-                <div className="text-sm font-bold text-primary-text leading-tight mt-1 truncate">
+                <div className="text-sm font-bold text-primary-text leading-tight mt-1 line-clamp-2 min-h-[2.5em] [word-break:auto-phrase]">
                   {MASCOT_NAMES[t.slug]}
                 </div>
                 <div className="text-sm text-sub">{t.dialect}</div>
@@ -305,7 +305,7 @@ export default function HomeClient() {
       </section>
 
       {/* 機能 ＋ 今日の方言 */}
-      <section className="grid lg:grid-cols-[1.2fr_1fr] gap-4 items-start relative">
+      <section className="grid lg:grid-cols-[1.2fr_1fr] gap-4 items-start relative [&>*]:min-w-0">
         <Cloud className="w-20 -top-8 right-[6%] cloud-drift opacity-60 max-sm:hidden" />
         <div className="space-y-3">
           <div className="section-head">
@@ -315,16 +315,16 @@ export default function HomeClient() {
               <h2 className="ttl">あそびかた</h2>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {FEATURES.map((f, i) => (
               <Link
                 key={f.href}
                 href={f.href}
-                className="!rounded-xl border border-line shadow-[0_2px_10px_rgba(34,48,63,0.07)] p-3.5 flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all"
+                className="min-w-0 !rounded-xl border border-line shadow-[0_2px_10px_rgba(34,48,63,0.07)] p-3.5 flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all"
                 style={{ background: ["#FFF3F0", "#EFF6F1", "#FFF8E6", "#F0F4FA", "#F6F0FA", "#FFF1F6"][i % 6] }}
               >
                 <span className="text-3xl shrink-0">{f.emoji}</span>
-                <span>
+                <span className="min-w-0">
                   <span className="font-bold text-sm block">{f.title}</span>
                   <span className="text-sm text-sub">{f.desc}</span>
                 </span>

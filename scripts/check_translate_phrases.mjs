@@ -62,6 +62,31 @@ for (const d of DIALECTS) {
     if (r.hits.length && r.output !== g && !(r.hits.length === 1 && r.hits[0].source === g)) { partial++; phrases.add(g); }
   }
 }
+// E 回帰（J519・2026-11-15）: 文の途中で「ひとこと丸ごと」の定型句が差し込まれない
+//   例＝「久しぶりに会えて」→「久しぶりだべさ！に会えて」、「ありがとうございます」→「ありがとね〜ございます」
+const E_SENTENCES = ["とても疲れたので、早く家に帰りたい。ありがとう。", "今日は本当に寒いね。", "久しぶりに会えてうれしい。",
+  "このラーメンはとてもおいしい。", "ありがとうございます。", "疲れたけど楽しかった。", "寒いね、早く帰ろう。",
+  "おいでよ、一緒に遊ぼう。", "そんなことしたらダメだよ。", "じゃあね、また明日。", "本当にありがとう。助かった。"];
+let eCases = 0;
+for (const d of DIALECTS) {
+  for (const t of E_SENTENCES) {
+    eCases++;
+    const r = convert(t, STANDARD, d);
+    for (const h of r.hits) {
+      if (h.origin !== "定型句") continue;
+      if (/[〜～！!？?、]/.test(h.target) || h.target.includes(h.source) || h.target.length > h.source.length + 1) {
+        fail(`E ${d} 「${t}」→「${r.output}」（定型句「${h.source}→${h.target}」が文中に入った）`);
+      }
+    }
+  }
+}
+// 入力が丸ごとひとことなら、従来どおりその方言の言い方を返す
+for (const d of DIALECTS) {
+  if (d === STANDARD) continue;
+  const r = convert("ありがとう", STANDARD, d);
+  if (!r.hits.length) fail(`E ${d} 「ありがとう」単体が変換されない`);
+}
+console.log(`E 文中の定型句 ${E_SENTENCES.length} 文 × 方言 ${DIALECTS.length} = ${eCases} 通りを検査`);
 console.log(`B 保護語句 ${PROTECTED_PHRASES.length} × 方言 ${DIALECTS.length} = ${bCases} 通りを検査`);
 console.log(`D 参考: 辞典の複合語 ${all.size} × ${DIALECTS.length} 方言のうち、語句の一部だけが置き換わった組 ${partial} 件（語句 ${phrases.size} 種）`);
 console.log(ng === 0 ? "OK 0 件" : `NG ${ng} 件`);
