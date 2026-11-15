@@ -83,7 +83,7 @@ export default function Page() {
       </P>
 
       <div className="overflow-x-auto my-5">
-        <table className="w-full min-w-[520px] text-sm border-collapse">
+        <table className="w-full text-sm border-collapse">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             2つの全国調査を並べると（国立国語研究所の公開情報による。「—」はこの記事で確認していない項目）
           </caption>
@@ -104,8 +104,8 @@ export default function Page() {
             ].map(([c0, c1, c2]) => (
               <tr key={c0} className="border-b border-line align-top">
                 <td className="py-2 pr-3 whitespace-nowrap font-bold">{c0}</td>
-                <td className="py-2 pr-3 min-w-[12em]">{c1}</td>
-                <td className="py-2 min-w-[12em]">{c2}</td>
+                <td className="py-2 pr-3 break-words">{c1}</td>
+                <td className="py-2 break-words">{c2}</td>
               </tr>
             ))}
           </tbody>

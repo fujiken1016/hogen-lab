@@ -143,7 +143,7 @@ export default function Page() {
 
       <H3>5つの型を1枚にまとめると</H3>
       <div className="overflow-x-auto my-5">
-        <table className="w-full min-w-[520px] text-sm border-collapse">
+        <table className="w-full text-sm border-collapse">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             日本語のアクセントの型と、おもな分布（ウィキペディア「日本語の方言のアクセント」の記述をもとに整理）
           </caption>
@@ -164,8 +164,8 @@ export default function Page() {
             ].map(([t, area, how]) => (
               <tr key={t} className="border-b border-line align-top">
                 <td className="py-2 pr-3 whitespace-nowrap font-bold">{t}</td>
-                <td className="py-2 pr-3 min-w-[14em]">{area}</td>
-                <td className="py-2 min-w-[12em]">{how}</td>
+                <td className="py-2 pr-3 break-words">{area}</td>
+                <td className="py-2 break-words">{how}</td>
               </tr>
             ))}
           </tbody>

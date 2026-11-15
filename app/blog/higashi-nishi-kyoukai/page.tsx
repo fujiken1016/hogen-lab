@@ -97,7 +97,7 @@ export default function Page() {
 
       <H3>5項目を1枚にまとめると</H3>
       <div className="overflow-x-auto my-5">
-        <table className="w-full min-w-[520px] text-sm border-collapse">
+        <table className="w-full text-sm border-collapse">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             東西で入れ替わる言い方の早見表（本文の5項目。国立国語研究所の全国地図で扱われた項目の例）
           </caption>
@@ -118,8 +118,8 @@ export default function Page() {
             ].map(([c0, c1, c2]) => (
               <tr key={c0} className="border-b border-line align-top">
                 <td className="py-2 pr-3 whitespace-nowrap font-bold">{c0}</td>
-                <td className="py-2 pr-3 min-w-[10em]">{c1}</td>
-                <td className="py-2 min-w-[12em]">{c2}</td>
+                <td className="py-2 pr-3 break-words">{c1}</td>
+                <td className="py-2 break-words">{c2}</td>
               </tr>
             ))}
           </tbody>

@@ -105,7 +105,7 @@ export default function Page() {
         危機の度合いは、文化庁のページでは次の3段階に分けて示されています（2026年11月16日に確認）。
       </P>
       <div className="overflow-x-auto my-5">
-        <table className="w-full min-w-[420px] text-sm border-collapse">
+        <table className="w-full text-sm border-collapse">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             ユネスコ「消滅の危機にある言語」（2009年2月発表）の日本の8言語と危機の度合い（文化庁ページの表記）
           </caption>
@@ -123,7 +123,7 @@ export default function Page() {
             ].map(([lv, langs]) => (
               <tr key={lv} className="border-b border-line align-top">
                 <td className="py-2 pr-3 whitespace-nowrap">{lv}</td>
-                <td className="py-2 min-w-[12em]">{langs}</td>
+                <td className="py-2 break-words">{langs}</td>
               </tr>
             ))}
           </tbody>

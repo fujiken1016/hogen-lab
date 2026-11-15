@@ -151,7 +151,7 @@ export default function Page() {
         「きのどくな」は、富山弁・金沢弁にあり、飛騨弁にも「きのどく」として載っています。
       </P>
       <div className="overflow-x-auto my-5">
-        <table className="w-full min-w-[480px] text-sm border-collapse">
+        <table className="w-full text-sm border-collapse">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             辞典で意味に「ありがとう」「感謝」を含む語（方言ラボ辞典・2026年11月16日時点・自社集計）
           </caption>
@@ -181,7 +181,7 @@ export default function Page() {
             ].map(([d, w]) => (
               <tr key={d} className="border-b border-line align-top">
                 <td className="py-2 pr-3 whitespace-nowrap">{d}</td>
-                <td className="py-2 min-w-[16em]">{w}</td>
+                <td className="py-2 break-words">{w}</td>
               </tr>
             ))}
           </tbody>
