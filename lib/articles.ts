@@ -313,6 +313,17 @@ export const ARTICLES: Article[] = [
     date: "2026-11-11",
     readMin: 6,
   },
+  {
+    slug: "hogen-henkan-kawaranai",
+    title: "方言変換で文が変わらないのはなぜ？日常の12文を35方言で変換して数えた",
+    description:
+      "日常の12文を標準語から35方言へ変換した420通りのうち、約70%は入力と同じ文でした。変わりやすい語・変わらない語と、語尾や活用が直らない限界を、実測で示します。",
+    lead: "「ありがとう」だけ入れると変わるのに、文にすると変わらない。方言変換が動かない理由を、420通りの結果で確かめました。",
+    emoji: "🔤",
+    category: "解説",
+    date: "2026-11-16",
+    readMin: 6,
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
