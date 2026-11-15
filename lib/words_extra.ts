@@ -4872,8 +4872,8 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "ぶいぶい",
-      "meaning": "コガネムシ、カナブン",
-      "example": "網戸にぶいぶいがくっついとるよ。"
+      "meaning": "グミ（植物）",
+      "example": "裏庭のぶいぶいが赤うなっとるけぇ、食べてみんさい。"
     },
     {
       "word": "ええがに",

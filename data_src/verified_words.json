@@ -10879,6 +10879,286 @@
       "cycle": 90,
       "note": "「ダイジナイ＝かまわない、別条ない（大事ない）」。丁寧には『だいじょごあへん』。船場（大阪市中心部の商家）の言葉＝今は日常語ではなく歴史的語彙",
       "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）船場言葉節の wikitext（action=raw・2026-11-15 取得。前田勇『大阪弁』(1977)・香村(1976)を出典に挙げる）"
+    },
+    {
+      "word": "しんさい",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "用例「ぴしゃっとしんさいや」＝ちゃんとしてください。〜しなさいの形",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "きんさい",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "用例「うちかたきんさい」＝私の家に来なさい",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "なんなら",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「どしたんなら！（どうしたって言うんだ）」「なんなんなら！（何なのですか）」＝怒り・驚きの『〜なら』",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "よかる",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「寄りかかるの意」",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "わやくそ",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「わやくそ・わやくちゃ＝『わや』よりさらにめちゃくちゃな様子」。『わや』は北海道・関西でも使うが、わやくそ・わやくちゃの形は広島の項",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "おんどりゃ",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「おどりゃー・おんどりゃー＝お前」",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "がんぼう",
+      "dialect": "広島弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「がんぼう・がんぼ・がんぼたれ＝腕白小僧」",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "ぶいぶい",
+      "dialect": "広島弁",
+      "status": "fixed",
+      "cycle": 91,
+      "note": "旧語釈「コガネムシ、カナブン」は誤り。同記事は「ブイブイ＝グミ（植物）」、コガネムシ類の総称は「ブンブン」と別項。語釈と例文をグミに差し替え",
+      "src": "Wikipedia「広島弁」（https://ja.wikipedia.org/wiki/広島弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "おひめさん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "ものもらい（麦粒腫）",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "しきる",
+      "dialect": "熊本弁",
+      "status": "multi",
+      "cycle": 91,
+      "note": "「〜きる・しきる＝〜できる」。記事に「熊本に限らず九州地方で使用」とある",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "なんさま",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「なんさま・なんさん＝とにかく・なにしろ」",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "にくじ",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "意地悪。意地悪をする人・性格の悪い人も指す（辞典の『わざと』の語義は記事に無い）",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "ひともじ",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "わけぎ・小ねぎ。郷土料理『一文字のぐるぐる』",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "まうごつ",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "『まうごつ・まっご』＝とても。地域・人でバリエーションが多い",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "がめる",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "盗む・ネコババ。主に北部で使い、南部ではほとんど使われない",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "くらす",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「くらす・くらわす＝叩く・殴る・ぶつ」（博多弁側は別に登録済み）",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "〜にゃん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「〜にゃん・〜なん＝〜しなければならない」（英語のMust相当の助動詞）",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "やおいかん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「難しい・くたびれる・骨が折れる・簡単には出来ない」",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "わさもん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "早生者＝新しいもの好きな人",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "むしゃんよか",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "かっこいい。『武者ぶりが良い』から。主に外見・見栄えの良さ",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "いひゅうもん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "異風者＝変わった（ことをする）人・個性や我の強い人",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "あくしゃうつ",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "困る・頭に来る・むかつく。むかつく意で使われることが多い（辞典の『ほとほと困り果てる』は幅が狭い）",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "しこる",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "かっこつける・威張る・気取る",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "あんじゃもん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "兄、お兄さん、兄貴分",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "あからん",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "「わからん」の地域変種（地域によって『あからん』）。辞典の『だめだ』の語義は記事で確認できず、語義の幅に注意",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）語彙節の wikitext（action=raw・2026-11-16 取得）"
+    },
+    {
+      "word": "うっとこ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "『うちのところ』から転じ、妻が夫を他者に呼ぶ語（松本1983）",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "もむない",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "もみない／もむない＝味がしない・まずい",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "けったいな",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "けったい＝妙・変",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "ごっつ",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 91,
+      "note": "播州の用例「ごっつおとろしかった」。大阪など関西でも広く使う",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "せんどぶり",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "久しぶり",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "つれ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "用例「わしとつれと行てった」＝友達",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "ぴりぴり",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 91,
+      "note": "雨がぽつぽつ・ちょっと。丹波方言と共通",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "こーへん",
+      "dialect": "神戸弁",
+      "status": "multi",
+      "cycle": 91,
+      "note": "若者は地域を問わず「こーへん」が主流（都染2006）。関西全般の形",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "じゅるい",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "ぬかるんでいる",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "おせらしい",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 91,
+      "note": "おとなっぽい",
+      "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
     }
   ]
 }
