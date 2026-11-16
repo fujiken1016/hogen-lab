@@ -11159,6 +11159,342 @@
       "cycle": 91,
       "note": "おとなっぽい",
       "src": "Wikipedia「播州弁」（https://ja.wikipedia.org/wiki/播州弁）語彙節の wikitext（action=raw・2026-11-16 取得。都染直也『播磨ことば学入門』(2006)を引く）"
+    },
+    {
+      "word": "うったて",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "書道の起筆（最初に筆を下ろす部分）→物事の最初",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おどりゃー",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "「われ/わりゃ」をガラ悪くした言い方＝おまえ",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "やっちもねー",
+      "dialect": "岡山弁",
+      "status": "multi",
+      "cycle": 92,
+      "note": "くだらない・つまらない。同記事も西日本一帯で使う語法と注記",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おえりゃーせん",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "いけない・だめ・手に負えない",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ほとびる",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "ふやける。同記事は美作地方では使われないと注記",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "いごいごする",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "うろちょろする・手悪さする。美作では使われない",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "チャラ書き",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "走り書き・殴り書き（同記事は「ちゃら書き」）",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "はっとうじ",
+      "dialect": "岡山弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "カメムシ（同記事「はとおじ・ハットウジ」。美作で使う）",
+      "src": "Wikipedia「岡山弁」（https://ja.wikipedia.org/wiki/岡山弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "いろう",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "触る（同記事「いらう・いろうとも言う」）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "きなる",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "気取る・格好つける",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "せんない",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "仕方がない・面倒くさい・つらい",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ぬくめる",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "温める",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "すいばり",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "木材・竹材のささくれが刺さるトゲ（産経2022-07-24を引く）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "やぶれる",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "壊れる",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "かろう",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "背負う（かろう・かるう）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "くじゅうくる",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "同記事の語釈は「叱る」。辞典の「ぶつぶつ文句を言う」は記事に無い幅",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "たっける",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "叫ぶ・大声を出す",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "うちんく",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "「く＝家」（友達んく）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おとっちゃま",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "臆病者",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "しゃんしゃん",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "手際よく・てきぱき・元気よく",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ぴっぴ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "同記事は「おぴっぴ＝うどん（幼児語）」",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おもっしょい",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "面白い",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "うまげな",
+      "dialect": "讃岐弁",
+      "status": "fixed",
+      "cycle": 92,
+      "note": "「素敵な」（同記事）に合わせ『上手そうな、立派な』→『素敵な、立派な』",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ほんだらな",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "さようなら・それじゃあ",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おんかれる",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "怒られる（おんかれる・おっかれる）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ちみきる",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "爪の先くらいでつねる",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "はがい",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "はがゆい・むかつく",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おかっこ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "おかっこまり＝正座の略",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "じゅじゅむ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "にじむ",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "めんめ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "めいめい・自分で",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "こんこ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "たくあん",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "どくれる",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "ふくれる・不満げにする",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "はじかい",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "ちくちく・むずむずする様子",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "しよい",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "やりやすい・しやすい",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "すかん",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "好かない・嫌い",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ねぶる",
+      "dialect": "讃岐弁",
+      "status": "multi",
+      "cycle": 92,
+      "note": "舐める。同記事も古語の保存と注記＝全国的",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "ねき",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "側・近く",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "さいさい",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "たびたび・よく",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "めぐ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "壊す（もう1義は両替）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "おじゅっさん",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "お坊さん",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "あかい",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "暖色の・明るい",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "かく",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 92,
+      "note": "同記事は「かつぐ」（古語の保存）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
     }
   ]
 }

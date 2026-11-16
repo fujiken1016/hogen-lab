@@ -547,7 +547,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "うまげな",
-      "meaning": "上手そうな、立派な",
+      "meaning": "素敵な、立派な",
       "example": "うまげにできとるなあ。"
     },
     {
