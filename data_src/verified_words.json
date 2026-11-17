@@ -11495,6 +11495,206 @@
       "cycle": 92,
       "note": "同記事は「かつぐ」（古語の保存）",
       "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）語彙節の wikitext（action=raw・2026-11-17 取得）"
+    },
+    {
+      "word": "きなしに",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「無意識に、なにげなく」（北信・東信・中信）",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "つもい",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「きつい」の意。用例「この靴つもい」",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "とびっくら",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「かけっこ」の意",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "くれる",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「（物を）あげる」「花に水をくれる」（全県）",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "まえで",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「手前・前方」（全県）",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "いっさら",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「全然・まったく」",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "こすい",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「ずるいにはこすいを使う」",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "いかまいか",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「いこまいか・いかまいか」（誘い）",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "いかず",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「…ずか」勧誘表現（北信・東信・中信）",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "えらい",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事は「大変だ・難儀だ」（東信・中信・南信）。辞典の「疲れた」は記事に無い幅だが明確な誤りではない",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "するしない",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「…しない？（するしない？）＝…しよう」",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "よばれる",
+      "dialect": "信州弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事は「よばる＝招待する」の受身形。辞典の「ごちそうになる」は招待される意の延長（幅差）",
+      "src": "Wikipedia「長野県方言」語彙節（https://ja.wikipedia.org/wiki/長野県方言）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "ほんに",
+      "dialect": "鳥取弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「本当に」",
+      "src": "Wikipedia「因州弁」語彙表（https://ja.wikipedia.org/wiki/因州弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "ばんなりまして",
+      "dialect": "鳥取弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「こんばんは」",
+      "src": "Wikipedia「因州弁」語彙表（https://ja.wikipedia.org/wiki/因州弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "あっとろし",
+      "dialect": "鳥取弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「ああ恐ろしい、ああびっくりした」（因幡の記事。県全体かは未確認）",
+      "src": "Wikipedia「因州弁」語彙表（https://ja.wikipedia.org/wiki/因州弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "まがる",
+      "dialect": "伊予弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「触る（触れる）」",
+      "src": "Wikipedia「伊予弁」（https://ja.wikipedia.org/wiki/伊予弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "つむ",
+      "dialect": "伊予弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「〜を切る」（髪・爪）",
+      "src": "Wikipedia「伊予弁」（https://ja.wikipedia.org/wiki/伊予弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "ほーなん",
+      "dialect": "伊予弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「そうなの」",
+      "src": "Wikipedia「伊予弁」（https://ja.wikipedia.org/wiki/伊予弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "とりのこ用紙",
+      "dialect": "伊予弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「模造紙」（記事は独自研究テンプレート付き＝弱い出典）",
+      "src": "Wikipedia「伊予弁」（https://ja.wikipedia.org/wiki/伊予弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "かまえる",
+      "dialect": "土佐弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「準備する」",
+      "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "おんちゃん",
+      "dialect": "土佐弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「おじさん」",
+      "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "ばんば",
+      "dialect": "土佐弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「ばばあ」＝おばあさん",
+      "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "じんま",
+      "dialect": "土佐弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「じじい」＝おじいさん",
+      "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "ひーとい",
+      "dialect": "土佐弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事「一日（古語ひとひの転訛）」。辞典の「一日中」は記事に無い幅",
+      "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "おらんく",
+      "dialect": "土佐弁",
+      "status": "ok",
+      "cycle": 93,
+      "note": "記事の用例「おらんくの池」＝私の家",
+      "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
     }
   ]
 }
