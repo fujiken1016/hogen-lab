@@ -11695,6 +11695,262 @@
       "cycle": 93,
       "note": "記事の用例「おらんくの池」＝私の家",
       "src": "Wikipedia「土佐弁」（https://ja.wikipedia.org/wiki/土佐弁）の wikitext（action=raw・2026-11-18 取得）"
+    },
+    {
+      "word": "しかぶる",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「子供が排泄を失敗すること。特に小用」",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "びきたん",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「蛙」",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "きのどきい",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「気の毒だ→きのどきい」",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "まん",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「運（まんがいい）」",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "さっちゃ",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「強いて・無理に・わざと」＝辞典の「わざわざ」は幅差。日田を除く大分県全域",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "なしか",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「なんでだ？」",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "しねっと",
+      "dialect": "大分弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「表裏が激しい」。辞典の「陰湿」は記事に無い幅",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "てれんぱれん",
+      "dialect": "大分弁",
+      "status": "multi",
+      "cycle": 94,
+      "note": "記事「だらだらしている様子。竹田方面。他地域でも類似の言い方がある」",
+      "src": "Wikipedia「大分弁」（https://ja.wikipedia.org/wiki/大分弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "おかべ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「豆腐。女房言葉の生き残り。昔は上方でも使った」",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "よかにせ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事 ニセ＝若い青年、「よかにせ」と形容表現と併用",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "かんまーす",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「かんまーす・かんまわす＝掻き回す」",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "しみじみ",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「しっかり・ちゃんと」",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "ひやす",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「（水に）ひたす」",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "どどめいろ",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「濃い紫色。プール後の唇の色。全域ではない」＝辞典の幅差",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "ぬるっこい",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「温い」",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "かつける",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「人のせいにする。転嫁する」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "かんぷら",
+      "dialect": "福島弁",
+      "status": "multi",
+      "cycle": 94,
+      "note": "記事「じゃがいも（県）。栃木県北部でも使用」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "ばっち",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「末っ子（県）」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "もごせ",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「むごたらしい、可哀想」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "あやまった",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「困った、まいった」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "わげ",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「私の家（自宅）」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "うるがす",
+      "dialect": "福島弁",
+      "status": "multi",
+      "cycle": 94,
+      "note": "記事「（水に）つける（北）」＝北海道・南部でも使う",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "らいさま",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「雷（県）」",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "おばんです",
+      "dialect": "福島弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「こんばんは（県）」＝標準語に近い挨拶",
+      "src": "Wikipedia「福島県方言」（https://ja.wikipedia.org/wiki/福島県方言）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "いぬ",
+      "dialect": "阿波弁",
+      "status": "multi",
+      "cycle": 94,
+      "note": "記事「帰る」。西日本に広く分布",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "うちんく",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「私の家＝うちんく」",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "おまはん",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「あなた」",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "おげった",
+      "dialect": "阿波弁",
+      "status": "unconfirmed",
+      "cycle": 94,
+      "note": "記事は「おげった（おげっちょ）…ウソ」＝辞典の「嘘つき」と語釈差。記事は独自研究テンプレ付き（弱い出典）。辞典は修正せず断定に使わない",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "うっとい",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「鬱陶しい」",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "おせ",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「おとな、成人」",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "わい",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事「私、僕」",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "じゃーこん",
+      "dialect": "長崎弁",
+      "status": "ok",
+      "cycle": 94,
+      "note": "記事の連母音融合の例「大根→じゃーこん」",
+      "src": "Wikipedia「長崎弁」（https://ja.wikipedia.org/wiki/長崎弁）の wikitext（action=raw・2026-11-19 取得）"
     }
   ]
 }
