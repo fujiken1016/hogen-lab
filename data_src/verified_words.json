@@ -11951,6 +11951,222 @@
       "cycle": 94,
       "note": "記事の連母音融合の例「大根→じゃーこん」",
       "src": "Wikipedia「長崎弁」（https://ja.wikipedia.org/wiki/長崎弁）の wikitext（action=raw・2026-11-19 取得）"
+    },
+    {
+      "word": "がめる",
+      "dialect": "秋田弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "語彙表「ガメル＝くすねる。盗む。取って独り占めにする」",
+      "src": "Wikipedia「秋田弁」（https://ja.wikipedia.org/wiki/秋田弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "ねふて",
+      "dialect": "秋田弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "語彙表「ネフテ＝眠い」",
+      "src": "Wikipedia「秋田弁」（https://ja.wikipedia.org/wiki/秋田弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "ひずね",
+      "dialect": "秋田弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "語彙表「ヒズネ＝辛い。苦しい」（辞典の「疲れた」は幅差）",
+      "src": "Wikipedia「秋田弁」（https://ja.wikipedia.org/wiki/秋田弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "おばんです",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「おばんです・おばんでがす＝夕方以降の挨拶」",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "しずね",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「落ち着きのない様子・うるさい」",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "けさいん",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し語・例文「入れてけさいん＝ください」",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "あっぺとっぺ",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「でたらめ」（辞典の「ちぐはぐ」は幅差）",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "かつける",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「失敗や嘘を他人のせいにする」",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "おっぴさん",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「曽祖父・曾祖母」",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "おみょうにち",
+      "dialect": "仙台弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「またあした、さようなら（フォーマル）」",
+      "src": "Wikipedia「仙台弁」（https://ja.wikipedia.org/wiki/仙台弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "しかも",
+      "dialect": "新潟弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「（ある基準を超えて）かなり」",
+      "src": "Wikipedia「新潟弁」（https://ja.wikipedia.org/wiki/新潟弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "こちょがしい",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「くすぐったい」",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "でかいと",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「たくさん」",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "まいけ",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「勧誘の助動詞（〜しよう）」。東海東山方言にも似た用法あり",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "やわやわ",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「ゆっくり」",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "かちゃかちゃ",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「めちゃくちゃな状態」（辞典の「散らかった」は幅差）",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "ちんちんかく",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "記事の表記は「おちんちんかく＝正座する」",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "ばやく",
+      "dialect": "富山弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「わやく、ばやく＝ぐちゃぐちゃ・整理されていない」",
+      "src": "Wikipedia「富山弁」（https://ja.wikipedia.org/wiki/富山弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "おんぼらーと",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "記事「ゆったりと存分に」（辞典の「のんびりと穏やかに」は語釈差・修正せず）",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "きんかんなまなま",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "見出し「路面が踏み固められ凍りつるつる」",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "げん",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "文末詞「が→げー→げん」の変化形",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "たった",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "「たった／たっだ」＝とても（同義語として記載）",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "だらぶち",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "「愛情を込めて だらぶち」＝ばか。山陰のだらずと同根",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "おゆるっしゅ",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "「おゆるっしゅ＝よろしく」",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "がいや",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "終助詞の後ろに付けて強調",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "じー",
+      "dialect": "金沢弁",
+      "status": "ok",
+      "cycle": 95,
+      "note": "文末詞「じ（ー）」＝〜ね（賞賛・ねぎらい等）",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "つるつるいっぱい",
+      "dialect": "金沢弁",
+      "status": "multi",
+      "cycle": 95,
+      "note": "記事「富山県や福井県でも使う」",
+      "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
     }
   ]
 }
