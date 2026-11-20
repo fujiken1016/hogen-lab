@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import Link from "next/link";
 import TypeAvatar from "@/components/TypeAvatar";
 import { REGIONS } from "@/lib/data";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/quiz` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/quiz`, siteName: "方言ラボ", locale: "ja_JP", type: "website" },
+  openGraph: { images: OG_IMAGES, title: TITLE, description: DESC, url: `${BASE}/quiz`, siteName: "方言ラボ", locale: "ja_JP", type: "website" },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC },
 };
 

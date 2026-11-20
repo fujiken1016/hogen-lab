@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import Link from "next/link";
 import { PageDates } from "@/components/PageDates";
 import { wordsOf } from "@/lib/data";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/quiz/about` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/quiz/about`, siteName: "方言ラボ", locale: "ja_JP", type: "article" },
+  openGraph: { images: OG_IMAGES, title: TITLE, description: DESC, url: `${BASE}/quiz/about`, siteName: "方言ラボ", locale: "ja_JP", type: "article" },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC },
 };
 

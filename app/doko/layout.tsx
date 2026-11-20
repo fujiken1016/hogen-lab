@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import type { ReactNode } from "react";
 import { dokoPoolDialectCount } from "@/lib/tools";
 
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: "https://hogen.mainichi-lab.com/doko" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: TITLE,
     description: DESC,
     url: "https://hogen.mainichi-lab.com/doko",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import type { ReactNode } from "react";
 
 const TITLE = "かわいい方言トーナメント｜好きな方言を7回タップで決める | 方言ラボ";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: "https://hogen.mainichi-lab.com/kawaii" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: TITLE,
     description: DESC,
     url: "https://hogen.mainichi-lab.com/kawaii",

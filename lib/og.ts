@@ -10,7 +10,8 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://hogen.mainichi-lab.com";
-export const OG_IMAGE: string | null = null;
+export const OG_IMAGE: string | null = "/og-hogen.jpg";
+export const OG_IMAGES = [{ url: `${SITE_URL}/og-hogen.jpg`, width: 1024, height: 538, alt: "方言ラボ" }];
 
 export function ogMeta({
   title,
@@ -23,7 +24,7 @@ export function ogMeta({
   path: string;
   type?: "website" | "article";
 }): Pick<Metadata, "openGraph" | "twitter"> {
-  const images = OG_IMAGE ? [{ url: `${SITE_URL}${OG_IMAGE}`, width: 1200, height: 630 }] : undefined;
+  const images = OG_IMAGE ? OG_IMAGES : undefined;
   return {
     openGraph: {
       title,

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 
 // このページは "use client" のため page.tsx から metadata を export できない。
 // Next.js の作法どおり、ルート単位の layout でメタデータを持たせる。
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "毎日ひとつ、全国の方言から言葉を紹介します。意味・例文・どの地域の言葉かをまとめて確認でき、開いた日が続いた日数として残ります。",
   alternates: { canonical: `${BASE}/today` },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: "今日の方言｜日替わりで全国の方言をひとつ覚える | 方言ラボ",
     description: "毎日ひとつ、全国の方言から言葉を紹介。意味と例文つき。連続日数が残ります。",
     url: `${BASE}/today`,

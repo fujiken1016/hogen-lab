@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import type { ReactNode } from "react";
 
 const TITLE = "全国方言くらべ｜「ありがとう」「疲れた」は全国35方言でどう言う？ | 方言ラボ";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: "https://hogen.mainichi-lab.com/kurabe" },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: TITLE,
     description: DESC,
     url: "https://hogen.mainichi-lab.com/kurabe",

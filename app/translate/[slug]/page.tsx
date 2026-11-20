@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CrossSite from "@/components/CrossSite";
@@ -109,7 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, siteName: "方言ラボ", locale: "ja_JP", type: "website" },
+    openGraph: { images: OG_IMAGES, title, description, url, siteName: "方言ラボ", locale: "ja_JP", type: "website" },
     twitter: { card: "summary_large_image", title, description },
   };
 }

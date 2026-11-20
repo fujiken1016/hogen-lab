@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 
 // このページは "use client" のため page.tsx から metadata を export できない。
 // Next.js の作法どおり、ルート単位の layout でメタデータを持たせる。
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "地元で使う言い回しを、意味と例文つきで登録して、自分だけの方言辞書を育てられます。投稿はこの端末のブラウザの中だけに保存され、サーバーには送られません。登録不要。",
   alternates: { canonical: `${BASE}/dict` },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: "みんなの方言辞書｜地元の言い回しを投稿して集める | 方言ラボ",
     description: "地元の言い回しを登録して、自分の方言辞書を育てる。",
     url: `${BASE}/dict`,

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGES } from "@/lib/og";
 import Link from "next/link";
 import TranslateTool from "@/components/TranslateTool";
 import {
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   title: INDEX_TITLE,
   description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換・翻訳します。⇄ で向きを変えれば方言を標準語に変換することもできます。大阪弁・博多弁・津軽弁など方言同士の変換も可能。方言ごとの変換ページでは収録語の一覧（意味・例文つき）も見られます。`,
   alternates: { canonical: `${BASE}/translate` },
-  openGraph: {
+  openGraph: { images: OG_IMAGES,
     title: INDEX_TITLE,
     description: `入力した文を全${TRANSLATE_DIALECTS.length}方言に変換。⇄ で方言を標準語に変換することもできます。`,
     url: `${BASE}/translate`,
