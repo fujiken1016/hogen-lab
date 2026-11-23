@@ -7963,18 +7963,18 @@
     {
       "word": "ちょびちょび",
       "dialect": "静岡弁",
-      "status": "unconfirmed",
-      "cycle": 73,
-      "note": "p84「ちょびちょびする 句 リコウブル 利口ぶる」＝辞典「ふざけて落ち着かない様子」と語釈がずれる",
-      "src": "静岡県師範学校・静岡県女子師範学校 共編『静岡県方言辞典』（吉見書店、1910）。NDL次世代デジタルライブラリー 資料ID 992062 https://lab.ndl.go.jp/dl/book/992062（2026-10-29 全文zip・bulk2.py/cols2.py で照合）"
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「ちょびちょびする＝ちょっかいを出す・要らぬ世話をする」／（第73回の記録：status=unconfirmed／p84「ちょびちょびする 句 リコウブル 利口ぶる」＝辞典「ふざけて落ち着かない様子」と語釈がずれる）",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）／【前回までの出典】静岡県師範学校・静岡県女子師範学校 共編『静岡県方言辞典』（吉見書店、1910）。NDL次世代デジタルライブラリー 資料ID 992062 https://lab.ndl.go.jp/dl/book/992062（2026-10-29 全文zip・bulk2.py/cols2.py で照合）"
     },
     {
       "word": "がんこ",
       "dialect": "静岡弁",
-      "status": "unconfirmed",
-      "cycle": 73,
-      "note": "p42「がんこ 名 ジャウブ 丈夫「この兒はがんこである」」＝辞典「すごく・とても」（程度副詞）と別義",
-      "src": "静岡県師範学校・静岡県女子師範学校 共編『静岡県方言辞典』（吉見書店、1910）。NDL次世代デジタルライブラリー 資料ID 992062 https://lab.ndl.go.jp/dl/book/992062（2026-10-29 全文zip・bulk2.py/cols2.py で照合）"
+      "status": "ok",
+      "cycle": 96,
+      "note": "とても、すごく（形容動詞に同形語あり）／（第73回の記録：status=unconfirmed／p42「がんこ 名 ジャウブ 丈夫「この兒はがんこである」」＝辞典「すごく・とても」（程度副詞）と別義）",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）／【前回までの出典】静岡県師範学校・静岡県女子師範学校 共編『静岡県方言辞典』（吉見書店、1910）。NDL次世代デジタルライブラリー 資料ID 992062 https://lab.ndl.go.jp/dl/book/992062（2026-10-29 全文zip・bulk2.py/cols2.py で照合）"
     },
     {
       "word": "こすい",
@@ -7987,10 +7987,10 @@
     {
       "word": "えーかん",
       "dialect": "静岡弁",
-      "status": "unconfirmed",
-      "cycle": 73,
-      "note": "p26「えーかん 副 タイガイ「その事はえーかんにしておけ」」＝いい加減・ほどほど。辞典「かなり、だいぶ」と別義",
-      "src": "静岡県師範学校・静岡県女子師範学校 共編『静岡県方言辞典』（吉見書店、1910）。NDL次世代デジタルライブラリー 資料ID 992062 https://lab.ndl.go.jp/dl/book/992062（2026-10-29 全文zip・bulk2.py/cols2.py で照合）"
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「たくさん、多く／いい加減に」＝辞典の「かなり、だいぶ」は幅差／（第73回の記録：status=unconfirmed／p26「えーかん 副 タイガイ「その事はえーかんにしておけ」」＝いい加減・ほどほど。辞典「かなり、だいぶ」と別義）",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）／【前回までの出典】静岡県師範学校・静岡県女子師範学校 共編『静岡県方言辞典』（吉見書店、1910）。NDL次世代デジタルライブラリー 資料ID 992062 https://lab.ndl.go.jp/dl/book/992062（2026-10-29 全文zip・bulk2.py/cols2.py で照合）"
     },
     {
       "word": "うら",
@@ -8227,18 +8227,18 @@
     {
       "word": "てそか",
       "dialect": "鹿児島弁",
-      "status": "unconfirmed",
-      "cycle": 76,
-      "note": "p66「てそか てせニ同ジ」・「てせ＝クルシ 苦」＝同書の語釈は「苦しい」で、辞典「面倒くさい」とずれる。推測で直さない",
-      "src": "鹿児島県教育会 編『鹿児島方言集』（1906）。NDL次世代デジタルライブラリー 資料ID 992476 https://lab.ndl.go.jp/dl/book/992476（2026-11-01 全文zip・cols2.py／bulk2.py で照合。五十音の部ごとの 方言／普通語／漢字 対照表）"
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「テソカ/テセ＝大儀だ。疲れて面倒だ」【語彙例の節】／（第76回の記録：status=unconfirmed／p66「てそか てせニ同ジ」・「てせ＝クルシ 苦」＝同書の語釈は「苦しい」で、辞典「面倒くさい」とずれる。推測で直さない）",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）／【前回までの出典】鹿児島県教育会 編『鹿児島方言集』（1906）。NDL次世代デジタルライブラリー 資料ID 992476 https://lab.ndl.go.jp/dl/book/992476（2026-11-01 全文zip・cols2.py／bulk2.py で照合。五十音の部ごとの 方言／普通語／漢字 対照表）"
     },
     {
       "word": "こけけ",
       "dialect": "鹿児島弁",
-      "status": "unconfirmed",
-      "cycle": 76,
-      "note": "p116「こけ＝此處ヘ」のみ。「け＝来い」と複合した こけけ の形は同書に無い",
-      "src": "鹿児島県教育会 編『鹿児島方言集』（1906）。NDL次世代デジタルライブラリー 資料ID 992476 https://lab.ndl.go.jp/dl/book/992476（2026-11-01 全文zip・cols2.py／bulk2.py で照合。五十音の部ごとの 方言／普通語／漢字 対照表）"
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事は「此処に来い」「買いに来い」の2義（目下に使う）＝辞典の「ここへおいで」は前者【語彙例の節】／（第76回の記録：status=unconfirmed／p116「こけ＝此處ヘ」のみ。「け＝来い」と複合した こけけ の形は同書に無い）",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）／【前回までの出典】鹿児島県教育会 編『鹿児島方言集』（1906）。NDL次世代デジタルライブラリー 資料ID 992476 https://lab.ndl.go.jp/dl/book/992476（2026-11-01 全文zip・cols2.py／bulk2.py で照合。五十音の部ごとの 方言／普通語／漢字 対照表）"
     },
     {
       "word": "あが",
@@ -12167,6 +12167,494 @@
       "cycle": 95,
       "note": "記事「富山県や福井県でも使う」",
       "src": "Wikipedia「金沢弁」（https://ja.wikipedia.org/wiki/金沢弁）の wikitext（action=raw・2026-11-20 取得）"
+    },
+    {
+      "word": "おだっくい",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "お調子者",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "とんじゃかない",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "頓着しない・構わない・気にしない",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "はぜる",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "はじける・破裂する",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "しょろしょろ",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "のろのろ",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "うちっち",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "私の家",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ぐれる",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「ひねる」＝辞典の「捻挫する」は幅差",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "のっくむ",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "飲み込む",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "いきれる",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "蒸し暑く感ずる",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "おそんガい",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「おそがい・おそんがい＝恐ろしい」",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "こずむ",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "沈殿する",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ちんぶりかく",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "すねる・ごねる",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ばった",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「ばつ・ばっとく＝座席などを確保する」の過去形",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ぶそくる",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "ふてくされる",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "みガましー",
+      "dialect": "静岡弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「みがましい＝ちゃんとしている」",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "たこる",
+      "dialect": "静岡弁",
+      "status": "multi",
+      "cycle": 96,
+      "note": "サボる。記事「神奈川県西部地区でも通用する」",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ずない",
+      "dialect": "静岡弁",
+      "status": "unconfirmed",
+      "cycle": 96,
+      "note": "記事は「ずない・ずねぁ＝力強い」＝辞典の「大きい」と語釈が違う。辞典は修正せず断定表示・出題に使わない",
+      "src": "Wikipedia「静岡弁」（https://ja.wikipedia.org/wiki/静岡弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "いらう",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "触る（いらう・いろう）",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "かいだるい",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "記事は「疲れた」＝辞典の「だるい、けだるい」は幅差",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "さらぴん",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "新品",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "おいない",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "いらっしゃい（おいない・おいないさ）",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ちみぎる",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "つねる",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ごんた",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "わんぱくな子供",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "とごる",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "沈殿する",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "こそばい",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "くすぐったい",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "つる",
+      "dialect": "伊勢弁",
+      "status": "ok",
+      "cycle": 96,
+      "note": "運ぶ（例：机つって＝机運んで）",
+      "src": "Wikipedia「伊勢弁」（https://ja.wikipedia.org/wiki/伊勢弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "さっち",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「さっちが・しゃっちが＝必ず。いちいち」",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "よかよか",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "いい、いい→よか、よか",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "つまらん",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「駄目だ（不許可）」＝辞典の「してはいけない、だめだ」と一致。「くだらない」の意味もある",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "こまめる",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "両替で金銭を細かくする",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "こえる",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "太る",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "うんにゃ",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "いいや（否定）",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "そげん",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "そんなに・そんなふうに",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "おいしゃん",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "伯父さん・叔父さん・小父さん",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "どんべ",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "最下位",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "うてあう",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "相手にする・関わり合う",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ぐぜる",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "駄々をこねる",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "しょんなか",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事の対訳例「仕方ないだろうよ→しょんなかろうもん」",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "いっちゃん",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "一番・もっとも",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "〜ごたる",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「ごたー(る)＝〜のようだ」",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "〜ばい",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「強調の〜ばい・〜たいは福岡の若者世代では廃れている」＝語の存在は確認",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "〜たい",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "同上（〜ばいと同じ記述）。「〜ちゃん」に置き換わりつつあるとの記述あり",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "へこ",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "ふんどし（記事に山笠の締め込みの記述なし＝幅差）",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "がと",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "〜の分（例：300円がと買うて来んしゃい）",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ずんだれる",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "だらしない",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "なして",
+      "dialect": "博多弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "なぜ、どうして",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "なおす",
+      "dialect": "博多弁",
+      "status": "multi",
+      "cycle": 97,
+      "note": "記事は「片付ける。仕舞う」。同じ語は関西・中国・九州で広く使うことが第1回監査（doko 除外）で確認済み",
+      "src": "Wikipedia「博多弁」（https://ja.wikipedia.org/wiki/博多弁）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "だれる",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "疲れる（ダレル）【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "あったらしか",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "もったいない（古語「あたらし」）【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "じゃっど",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「ジャッド/ジャライ＝そうだ（同意）」【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "うっかた",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "女房（家方の訛り）【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "かしわ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "鶏肉（語彙例に収録。記事に他地域の記述なし）【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "きんごきんご",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "ピカピカ【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ずんだれ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「（服装などが）だらしない。ずり落ちている」＝辞典の「だらしない人」は幅差【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "のさる",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「夢がかなう。金持ちになる。目立つ」＝辞典の「運が向く・恵まれる」は幅差【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "のんかた",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "酒の飲み会【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "びっきょ",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "蛙【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "ひんだり",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "だるい。つかれた【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "むしくれば",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "虫歯【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "おもさま",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "思い切り【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "いっすかん",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "記事「気に入らない。一つも好かない」＝辞典の「大嫌い」は幅差【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "かごんま",
+      "dialect": "鹿児島弁",
+      "status": "ok",
+      "cycle": 97,
+      "note": "鹿児島【語彙例の節】",
+      "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
     }
   ]
 }
