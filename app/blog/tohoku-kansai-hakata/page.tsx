@@ -187,6 +187,12 @@ export default function Page() {
         方言の見え方が変わってきます。
       </P>
 
+      <P>
+        東北の中の違いを見たい場合は、
+        <Link href="/blog/fukushima-kowai-tsukareta" className="text-primary-text underline underline-offset-2">福島県の3地方・10区画を扱った記事</Link>
+        があります。「こわい」が疲れた、の意味になる例も載せています。
+      </P>
+
       <Note title="「方言＝くずれた標準語」ではない">
         3つを比べてわかるとおり、方言には固有の文法規則があります。
         規則があるからこそ、地元の人どうしなら細かいニュアンスまで通じ合える。

@@ -279,6 +279,11 @@ export default function Page() {
         </Link>
       </P>
 
+      <P>
+        <Link href="/blog/mie-ise-ben-chigai" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 三重弁と伊勢弁は同じ？（北三重・南三重の区画と「〜とる」「〜に」）
+        </Link>
+      </P>
       <Note title="確かめたこと、確かめられていないこと">
         <ul className="list-disc pl-5 space-y-1.5">
           <li>

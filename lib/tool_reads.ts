@@ -66,6 +66,22 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
     slug: "akita-kadaru-tagu",
     reason: "「遊びさかだる」は仲間に入ること。「たぐる」「きかね」を1929年の方言集と変換結果で読みます。",
   },
+  長崎弁: {
+    slug: "nagasaki-reibun-bunmatsu",
+    reason: "辞典の例文103文を文末で数えました。「ばい」「たい」「とよ」と、変換ツールが直せない語尾の限界。",
+  },
+  岡山弁: {
+    slug: "okayama-bizen-bitchu-mimasaka",
+    reason: "備前・備中・美作で言葉は違うのか。辞典の語のうち、美作では使わないとされる語を数えました。",
+  },
+  伊勢弁: {
+    slug: "mie-ise-ben-chigai",
+    reason: "三重弁と伊勢弁は同じか。北三重・南三重の区画と、「〜とる」「〜に」の例文を数えました。",
+  },
+  福島弁: {
+    slug: "fukushima-kowai-tsukareta",
+    reason: "「こわい」は疲れた、の意味。福島県の3地方・10区画と、「〜べ」「〜っぺ」を変換結果と一緒に読みます。",
+  },
   大阪弁: {
     slug: "media-to-hogen",
     reason: "テレビの「ニセ関西弁」はなぜ生まれたのか。役割語としての方言の話。",

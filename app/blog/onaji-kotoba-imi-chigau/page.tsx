@@ -255,6 +255,11 @@ export default function Page() {
         </Link>
       </P>
 
+      <P>
+        <Link href="/blog/fukushima-kowai-tsukareta" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 福島弁の「こわい」は怖いではなく疲れた（会津・中通り・浜通りの区画つき）
+        </Link>
+      </P>
       <Note title="確かめたこと、確かめられていないこと">
         <ul className="list-disc pl-5 space-y-1.5">
           <li>確かめたこと：辞典の収録語数と、重なっている語の数（2026年11月11日・自社集計）。</li>

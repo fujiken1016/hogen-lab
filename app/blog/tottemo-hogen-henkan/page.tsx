@@ -286,6 +286,16 @@ export default function Page() {
         </Link>
       </P>
 
+      <P>
+        <Link href="/blog/nagasaki-reibun-bunmatsu" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 長崎弁の例文103文を文末で数えた（「ばい」「たい」と変換の限界）
+        </Link>
+      </P>
+      <P>
+        <Link href="/blog/okayama-bizen-bitchu-mimasaka" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 岡山弁は備前・備中・美作で違う？（「ぼっけー」「でーれー」の使われ方）
+        </Link>
+      </P>
       <Note title="確かめたこと、確かめられていないこと">
         <ul className="list-disc pl-5 space-y-1.5">
           <li>確かめたこと：2026年11月11日に、変換ツールへ入力して置き換わった方言と置き換え先を数えたこと。</li>

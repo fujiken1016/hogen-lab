@@ -191,6 +191,12 @@ export default function Page() {
         置き換わる語を見比べることもできます（変換されるのは語で、アクセントは再現されません）。
       </P>
 
+      <P>
+        肥筑のうち長崎県の言葉は、
+        <Link href="/blog/nagasaki-reibun-bunmatsu" className="text-primary-text underline underline-offset-2">長崎弁の例文を文末で数えた記事</Link>
+        で、「ばい」「たい」の数を確かめています。
+      </P>
+
       <ShindanCta
         title="あなたの言葉は、九州のどのあたり？"
         body="言葉づかい6問・性格4問の全10問。全国35体のご当地キャラから、あなたの言語感覚に近い相棒を判定します。"

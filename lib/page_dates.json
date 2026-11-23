@@ -1,7 +1,7 @@
 {
  "/": {
   "published": "2026-07-04",
-  "modified": "2026-11-15"
+  "modified": "2026-11-20"
  },
  "/about": {
   "published": "2026-08-02",
@@ -9,7 +9,7 @@
  },
  "/aishou": {
   "published": "2026-08-02",
-  "modified": "2026-09-14"
+  "modified": "2026-11-20"
  },
  "/blog": {
   "published": "2026-08-12",
@@ -31,9 +31,13 @@
   "published": "2026-11-11",
   "modified": "2026-11-12"
  },
+ "/blog/fukushima-kowai-tsukareta": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
+ },
  "/blog/higashi-nishi-kyoukai": {
   "published": "2026-08-13",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/hitei-kei-chiiki": {
   "published": "2026-08-13",
@@ -57,7 +61,7 @@
  },
  "/blog/hogen-keigo-chiiki": {
   "published": "2026-08-13",
-  "modified": "2026-11-11"
+  "modified": "2026-11-23"
  },
  "/blog/hogen-oto-no-chigai": {
   "published": "2026-08-13",
@@ -83,6 +87,14 @@
   "published": "2026-08-13",
   "modified": "2026-11-13"
  },
+ "/blog/mie-ise-ben-chigai": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
+ },
+ "/blog/nagasaki-reibun-bunmatsu": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
+ },
  "/blog/naze-hogen-umareru": {
   "published": "2026-08-12",
   "modified": "2026-11-16"
@@ -90,6 +102,10 @@
  "/blog/ninshou-kotoba-chiiki": {
   "published": "2026-08-13",
   "modified": "2026-11-16"
+ },
+ "/blog/okayama-bizen-bitchu-mimasaka": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
  },
  "/blog/okinawa-ryukyu-kotoba": {
   "published": "2026-08-13",
@@ -113,7 +129,7 @@
  },
  "/blog/tohoku-kansai-hakata": {
   "published": "2026-08-12",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/tottemo-hogen-henkan": {
   "published": "2026-11-11",
@@ -133,7 +149,7 @@
  },
  "/dict": {
   "published": "2026-08-02",
-  "modified": "2026-10-08"
+  "modified": "2026-11-20"
  },
  "/disclaimer": {
   "published": "2026-08-02",
@@ -141,15 +157,15 @@
  },
  "/doko": {
   "published": "2026-08-14",
-  "modified": "2026-10-18"
+  "modified": "2026-11-20"
  },
  "/kawaii": {
   "published": "2026-08-14",
-  "modified": "2026-09-14"
+  "modified": "2026-11-20"
  },
  "/kurabe": {
   "published": "2026-08-14",
-  "modified": "2026-09-14"
+  "modified": "2026-11-20"
  },
  "/privacy": {
   "published": "2026-08-02",
@@ -157,11 +173,11 @@
  },
  "/quiz": {
   "published": "2026-08-02",
-  "modified": "2026-09-14"
+  "modified": "2026-11-20"
  },
  "/quiz/about": {
   "published": "2026-09-14",
-  "modified": "2026-09-14"
+  "modified": "2026-11-20"
  },
  "/quiz/akita": {
   "published": "2026-08-14",
@@ -305,15 +321,15 @@
  },
  "/shindan": {
   "published": "2026-08-02",
-  "modified": "2026-11-15"
+  "modified": "2026-11-20"
  },
  "/today": {
   "published": "2026-08-02",
-  "modified": "2026-10-08"
+  "modified": "2026-11-20"
  },
  "/translate": {
   "published": "2026-08-02",
-  "modified": "2026-09-21"
+  "modified": "2026-11-20"
  },
  "/translate/akita": {
   "published": "2026-08-14",

@@ -350,6 +350,16 @@ export default function Page() {
         </Link>
       </P>
 
+      <P>
+        <Link href="/blog/nagasaki-reibun-bunmatsu" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 長崎弁の文末の「ばい」「たい」は変換で直る？（例文103文の実測）
+        </Link>
+      </P>
+      <P>
+        <Link href="/blog/fukushima-kowai-tsukareta" className="inline-flex min-h-[48px] items-center text-sm font-bold text-primary-text underline underline-offset-2">
+          → 福島弁の「こわい」は疲れた（変換結果が読み違えられる例）
+        </Link>
+      </P>
       <Note title="確かめたこと、確かめられていないこと">
         <ul className="list-disc pl-5 space-y-1.5">
           <li>確かめたこと：2026年11月16日に、12文と17語を標準語から35方言へ変換し、置き換わった方言の数を数えたこと。12文は筆者が選んだ日常の文で、無作為に選んだものではありません。</li>
