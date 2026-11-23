@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog/mie-ise-ben-chigai" },
-  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/mie-ise-ben-chigai", type: "article" }),
+  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/mie-ise-ben-chigai", type: "article", image: { path: "/og/blog-mie-ise-ben-chigai.jpg", alt: "三重と伊勢の方言は同じ？" } }),
 };
 
 const LINK = "text-primary-text underline underline-offset-2";

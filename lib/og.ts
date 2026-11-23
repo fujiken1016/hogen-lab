@@ -18,13 +18,20 @@ export function ogMeta({
   description,
   path,
   type = "website",
+  image,
 }: {
   title: string;
   description: string;
   path: string;
   type?: "website" | "article";
+  /** 記事ごとの個別OGP（public/ 配下のパス・1200x630）。省略時は共通画像（2026-11-23 J618）。 */
+  image?: { path: string; alt: string };
 }): Pick<Metadata, "openGraph" | "twitter"> {
-  const images = OG_IMAGE ? OG_IMAGES : undefined;
+  const images = image
+    ? [{ url: `${SITE_URL}${image.path}`, width: 1200, height: 630, alt: image.alt }]
+    : OG_IMAGE
+      ? OG_IMAGES
+      : undefined;
   return {
     openGraph: {
       title,

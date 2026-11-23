@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog/fukushima-kowai-tsukareta" },
-  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/fukushima-kowai-tsukareta", type: "article" }),
+  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/fukushima-kowai-tsukareta", type: "article", image: { path: "/og/blog-fukushima-kowai-tsukareta.jpg", alt: "福島弁のこわいは疲れた" } }),
 };
 
 const LINK = "text-primary-text underline underline-offset-2";

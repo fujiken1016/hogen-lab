@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog/okayama-bizen-bitchu-mimasaka" },
-  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/okayama-bizen-bitchu-mimasaka", type: "article" }),
+  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/okayama-bizen-bitchu-mimasaka", type: "article", image: { path: "/og/blog-okayama-bizen-bitchu-mimasaka.jpg", alt: "岡山弁は3地域で違う" } }),
 };
 
 const LINK = "text-primary-text underline underline-offset-2";

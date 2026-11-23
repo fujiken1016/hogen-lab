@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: `${article.title} | 方言ラボ`,
   description: article.description,
   alternates: { canonical: "https://hogen.mainichi-lab.com/blog/nagasaki-reibun-bunmatsu" },
-  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/nagasaki-reibun-bunmatsu", type: "article" }),
+  ...ogMeta({ title: `${article.title} | 方言ラボ`, description: article.description, path: "/blog/nagasaki-reibun-bunmatsu", type: "article", image: { path: "/og/blog-nagasaki-reibun-bunmatsu.jpg", alt: "長崎弁の例文103文を数えた" } }),
 };
 
 const LINK = "text-primary-text underline underline-offset-2";
