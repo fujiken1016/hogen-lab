@@ -78,6 +78,9 @@ export default function Page() {
         さらに、語の中ほどのカ行・タ行が濁る傾向があり、「柿（かき）」が「かぎ」に近く聞こえます。
         方言だから発音が乱れているのではなく、<strong>これはこれで規則的な音の体系</strong>です。
       </P>
+      <P>
+        東北弁の音のこもりを、母音の無声化・四つ仮名・中舌母音といった仕組みから整理した記事は、<Link href="/blog/hogen-oto-no-chigai" className="text-primary-text underline underline-offset-2">なまりの正体は「音」にある</Link>です。
+      </P>
       <H3>文法の特徴</H3>
       <P>
         方向を表す助詞に「さ」を使うのが目印です。「東京さ行ぐ（東京へ行く）」のように、標準語の「へ」「に」を1音でまかないます。

@@ -56,6 +56,9 @@ export default function Page() {
         国立国語研究所の『日本言語地図』『方言文法全国地図』で扱われた項目のうち、
         東西で対立するものを並べてみます。左が東日本側、右が西日本側の代表的な形です。
       </P>
+      <P>
+        『日本言語地図』がいつ・どこで・どんな方法で集められたデータなのかは、<Link href="/blog/hogen-chizu-chousa" className="text-primary-text underline underline-offset-2">方言の地図は、どうやって作られたのか</Link>にまとめています。
+      </P>
 
       <H3>① 存在の動詞：いる／おる</H3>
       <P>
