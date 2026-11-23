@@ -120,23 +120,23 @@ export default function Page() {
       </P>
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse max-md:block">
-          <caption className="text-left text-sm text-sub leading-relaxed pb-2 max-md:block">
+        <table className="w-full text-sm border-collapse block">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2 block">
             進行・完了の言い方（Wikipedia「三重弁」の表より抜粋・2026年11月23日取得）
           </caption>
-          <thead className="max-md:sr-only">
+          <thead className="sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold">方言区画</th>
               <th scope="col" className="py-2 pr-3 font-bold">進行</th>
               <th scope="col" className="py-2 font-bold">完了</th>
             </tr>
           </thead>
-          <tbody className="max-md:block">
+          <tbody className="block">
             {ASPECT.map(([a, b, c]) => (
-              <tr key={a} className="border-b border-line align-top max-md:block max-md:py-2">
-                <td data-l="方言区画" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{a}</td>
-                <td data-l="進行" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{b}</td>
-                <td data-l="完了" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{c}</td>
+              <tr key={a} className="border-b border-line align-top block py-2">
+                <td data-l="方言区画" className="block pr-0 py-0.5 font-bold whitespace-normal">{a}</td>
+                <td data-l="進行" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{b}</td>
+                <td data-l="完了" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{c}</td>
               </tr>
             ))}
           </tbody>
@@ -231,23 +231,23 @@ export default function Page() {
       </P>
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse max-md:block">
-          <caption className="text-left text-sm text-sub leading-relaxed pb-2 max-md:block">
+        <table className="w-full text-sm border-collapse block">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2 block">
             入れた文と、変換ツールの出力（2026年11月23日・方言ラボ自社実測）
           </caption>
-          <thead className="max-md:sr-only">
+          <thead className="sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold">向き</th>
               <th scope="col" className="py-2 pr-3 font-bold">入れた文</th>
               <th scope="col" className="py-2 font-bold">出力</th>
             </tr>
           </thead>
-          <tbody className="max-md:block">
+          <tbody className="block">
             {TESTS.map(([d, i, o]) => (
-              <tr key={d + i} className="border-b border-line align-top max-md:block max-md:py-2">
-                <td data-l="向き" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{d}</td>
-                <td data-l="入れた文" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{i}</td>
-                <td data-l="出力" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{o}</td>
+              <tr key={d + i} className="border-b border-line align-top block py-2">
+                <td data-l="向き" className="block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
               </tr>
             ))}
           </tbody>
