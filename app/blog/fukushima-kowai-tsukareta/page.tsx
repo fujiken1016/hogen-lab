@@ -106,23 +106,23 @@ export default function Page() {
       />
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse">
+        <table className="w-full text-sm border-collapse max-md:block">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             福島県の方言の10区画（Wikipedia「福島弁」・菅野宏の区画案）
           </caption>
-          <thead>
+          <thead className="max-md:sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">地方</th>
               <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">区画数</th>
               <th scope="col" className="py-2 font-bold">区画名</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="max-md:block">
             {KUKAKU.map(([g, n, names]) => (
-              <tr key={g} className="border-b border-line align-top">
-                <td className="py-2 pr-3 whitespace-nowrap">{g}</td>
-                <td className="py-2 pr-3 whitespace-nowrap">{n}</td>
-                <td className="py-2">{names}</td>
+              <tr key={g} className="border-b border-line align-top max-md:block max-md:py-2">
+                <td data-l="地方" className="py-2 pr-3 whitespace-nowrap max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{g}</td>
+                <td data-l="区画数" className="py-2 pr-3 whitespace-nowrap max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{n}</td>
+                <td data-l="区画名" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{names}</td>
               </tr>
             ))}
           </tbody>
@@ -177,23 +177,23 @@ export default function Page() {
       </P>
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse">
+        <table className="w-full text-sm border-collapse max-md:block">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             辞典の福島弁で、使用地域のタグがあった12語（Wikipedia「福島弁」語彙の節・2026年11月23日取得）
           </caption>
-          <thead>
+          <thead className="max-md:sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold">語</th>
               <th scope="col" className="py-2 pr-3 font-bold">辞典の意味</th>
               <th scope="col" className="py-2 font-bold">Wikipedia の使用地域</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="max-md:block">
             {TAGGED.map(([w, m, a]) => (
-              <tr key={w} className="border-b border-line align-top">
-                <td className="py-2 pr-3 whitespace-nowrap">{w}</td>
-                <td className="py-2 pr-3">{m}</td>
-                <td className="py-2">{a}</td>
+              <tr key={w} className="border-b border-line align-top max-md:block max-md:py-2">
+                <td data-l="語" className="py-2 pr-3 whitespace-nowrap max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{w}</td>
+                <td data-l="辞典の意味" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{m}</td>
+                <td data-l="Wikipedia の使用地域" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{a}</td>
               </tr>
             ))}
           </tbody>
@@ -241,23 +241,23 @@ export default function Page() {
       </P>
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse">
+        <table className="w-full text-sm border-collapse max-md:block">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             入れた文と、変換ツールの出力（2026年11月23日・方言ラボ自社実測）
           </caption>
-          <thead>
+          <thead className="max-md:sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold">向き</th>
               <th scope="col" className="py-2 pr-3 font-bold">入れた文</th>
               <th scope="col" className="py-2 font-bold">出力</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="max-md:block">
             {TESTS.map(([d, i, o]) => (
-              <tr key={d + i} className="border-b border-line align-top">
-                <td className="py-2 pr-3">{d}</td>
-                <td className="py-2 pr-3">{i}</td>
-                <td className="py-2">{o}</td>
+              <tr key={d + i} className="border-b border-line align-top max-md:block max-md:py-2">
+                <td data-l="向き" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{o}</td>
               </tr>
             ))}
           </tbody>

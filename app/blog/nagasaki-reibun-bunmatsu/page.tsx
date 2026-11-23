@@ -103,23 +103,23 @@ export default function Page() {
       />
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse">
+        <table className="w-full text-sm border-collapse max-md:block">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             形ごとの文数と、辞典にある例文（2026年11月23日・自社集計）
           </caption>
-          <thead>
+          <thead className="max-md:sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold">形</th>
               <th scope="col" className="py-2 pr-3 font-bold whitespace-nowrap">文数</th>
               <th scope="col" className="py-2 font-bold">辞典の例文</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="max-md:block">
             {FORMS.map(([f, n, e]) => (
-              <tr key={f} className="border-b border-line align-top">
-                <td className="py-2 pr-3">{f}</td>
-                <td className="py-2 pr-3 whitespace-nowrap">{n}文</td>
-                <td className="py-2">{e}</td>
+              <tr key={f} className="border-b border-line align-top max-md:block max-md:py-2">
+                <td data-l="形" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{f}</td>
+                <td data-l="文数" className="py-2 pr-3 whitespace-nowrap max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{n}文</td>
+                <td data-l="辞典の例文" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{e}</td>
               </tr>
             ))}
           </tbody>
@@ -211,11 +211,11 @@ export default function Page() {
       </P>
 
       <figure className="overflow-x-auto my-5">
-        <table className="w-full text-sm border-collapse">
+        <table className="w-full text-sm border-collapse max-md:block">
           <caption className="text-left text-sm text-sub leading-relaxed pb-2">
             入れた文と、変換ツールの出力（2026年11月23日・方言ラボ自社実測）
           </caption>
-          <thead>
+          <thead className="max-md:sr-only">
             <tr className="border-b border-line text-left align-bottom">
               <th scope="col" className="py-2 pr-3 font-bold">向き</th>
               <th scope="col" className="py-2 pr-3 font-bold">入れた文</th>
@@ -223,13 +223,13 @@ export default function Page() {
               <th scope="col" className="py-2 font-bold">置き換え</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="max-md:block">
             {TESTS.map(([d, i, o, h]) => (
-              <tr key={d + i} className="border-b border-line align-top">
-                <td className="py-2 pr-3">{d}</td>
-                <td className="py-2 pr-3">{i}</td>
-                <td className="py-2 pr-3">{o}</td>
-                <td className="py-2">{h}</td>
+              <tr key={d + i} className="border-b border-line align-top max-md:block max-md:py-2">
+                <td data-l="向き" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:font-bold max-md:whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="py-2 pr-3 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{o}</td>
+                <td data-l="置き換え" className="py-2 max-md:block max-md:pr-0 max-md:py-0.5 max-md:before:block max-md:before:text-[13px] max-md:before:text-sub max-md:before:content-[attr(data-l)]">{h}</td>
               </tr>
             ))}
           </tbody>
