@@ -120,9 +120,9 @@ export default function Page() {
           <tbody className="block">
             {KUKAKU.map(([g, n, names]) => (
               <tr key={g} className="border-b border-line align-top block py-2">
-                <td data-l="地方" className="block pr-0 py-0.5 font-bold whitespace-normal">{g}</td>
-                <td data-l="区画数" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{n}</td>
-                <td data-l="区画名" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{names}</td>
+                <td data-l="地方" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{g}</td>
+                <td data-l="区画数" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{n}</td>
+                <td data-l="区画名" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{names}</td>
               </tr>
             ))}
           </tbody>
@@ -191,9 +191,9 @@ export default function Page() {
           <tbody className="block">
             {TAGGED.map(([w, m, a]) => (
               <tr key={w} className="border-b border-line align-top block py-2">
-                <td data-l="語" className="block pr-0 py-0.5 font-bold whitespace-normal">{w}</td>
-                <td data-l="辞典の意味" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{m}</td>
-                <td data-l="Wikipedia の使用地域" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{a}</td>
+                <td data-l="語" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{w}</td>
+                <td data-l="辞典の意味" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{m}</td>
+                <td data-l="Wikipedia の使用地域" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{a}</td>
               </tr>
             ))}
           </tbody>
@@ -255,9 +255,9 @@ export default function Page() {
           <tbody className="block">
             {TESTS.map(([d, i, o]) => (
               <tr key={d + i} className="border-b border-line align-top block py-2">
-                <td data-l="向き" className="block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
-                <td data-l="入れた文" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
-                <td data-l="出力" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
+                <td data-l="向き" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
               </tr>
             ))}
           </tbody>

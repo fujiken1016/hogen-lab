@@ -134,9 +134,9 @@ export default function Page() {
           <tbody className="block">
             {ASPECT.map(([a, b, c]) => (
               <tr key={a} className="border-b border-line align-top block py-2">
-                <td data-l="方言区画" className="block pr-0 py-0.5 font-bold whitespace-normal">{a}</td>
-                <td data-l="進行" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{b}</td>
-                <td data-l="完了" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{c}</td>
+                <td data-l="方言区画" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{a}</td>
+                <td data-l="進行" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{b}</td>
+                <td data-l="完了" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{c}</td>
               </tr>
             ))}
           </tbody>
@@ -245,9 +245,9 @@ export default function Page() {
           <tbody className="block">
             {TESTS.map(([d, i, o]) => (
               <tr key={d + i} className="border-b border-line align-top block py-2">
-                <td data-l="向き" className="block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
-                <td data-l="入れた文" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
-                <td data-l="出力" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
+                <td data-l="向き" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
               </tr>
             ))}
           </tbody>

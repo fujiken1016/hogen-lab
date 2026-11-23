@@ -117,9 +117,9 @@ export default function Page() {
           <tbody className="block">
             {FORMS.map(([f, n, e]) => (
               <tr key={f} className="border-b border-line align-top block py-2">
-                <td data-l="形" className="block pr-0 py-0.5 font-bold whitespace-normal">{f}</td>
-                <td data-l="文数" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{n}文</td>
-                <td data-l="辞典の例文" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{e}</td>
+                <td data-l="形" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{f}</td>
+                <td data-l="文数" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{n}文</td>
+                <td data-l="辞典の例文" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{e}</td>
               </tr>
             ))}
           </tbody>
@@ -226,10 +226,10 @@ export default function Page() {
           <tbody className="block">
             {TESTS.map(([d, i, o, h]) => (
               <tr key={d + i} className="border-b border-line align-top block py-2">
-                <td data-l="向き" className="block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
-                <td data-l="入れた文" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
-                <td data-l="出力" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
-                <td data-l="置き換え" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{h}</td>
+                <td data-l="向き" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
+                <td data-l="置き換え" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{h}</td>
               </tr>
             ))}
           </tbody>

@@ -148,9 +148,9 @@ export default function Page() {
           <tbody className="block">
             {MIMASAKA.map(([w, m, n]) => (
               <tr key={w} className="border-b border-line align-top block py-2">
-                <td data-l="語" className="block pr-0 py-0.5 font-bold whitespace-normal">{w}</td>
-                <td data-l="辞典の意味" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{m}</td>
-                <td data-l="Wikipedia の注記" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{n}</td>
+                <td data-l="語" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{w}</td>
+                <td data-l="辞典の意味" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{m}</td>
+                <td data-l="Wikipedia の注記" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{n}</td>
               </tr>
             ))}
           </tbody>
@@ -210,8 +210,8 @@ export default function Page() {
           <tbody className="block">
             {MEIREI.map(([k, v]) => (
               <tr key={k} className="border-b border-line align-top block py-2">
-                <td data-l="旧国" className="block pr-0 py-0.5 font-bold whitespace-normal">{k}</td>
-                <td data-l="言い方" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{v}</td>
+                <td data-l="旧国" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{k}</td>
+                <td data-l="言い方" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{v}</td>
               </tr>
             ))}
           </tbody>
@@ -277,9 +277,9 @@ export default function Page() {
           <tbody className="block">
             {TESTS.map(([d, i, o]) => (
               <tr key={d + i} className="border-b border-line align-top block py-2">
-                <td data-l="向き" className="block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
-                <td data-l="入れた文" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
-                <td data-l="出力" className="block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
+                <td data-l="向き" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 font-bold whitespace-normal">{d}</td>
+                <td data-l="入れた文" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{i}</td>
+                <td data-l="出力" className="[word-break:auto-phrase] [text-wrap:balance] block pr-0 py-0.5 before:block before:text-[13px] before:text-sub before:content-[attr(data-l)]">{o}</td>
               </tr>
             ))}
           </tbody>
