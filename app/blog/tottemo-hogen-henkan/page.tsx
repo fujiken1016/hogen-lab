@@ -254,6 +254,7 @@ export default function Page() {
         置き換わらなかった7方言には、「とても」に近い語がありました。
         たとえば伊予弁には「おんまく」（めいっぱい・すごく）と「がいに」（ものすごく）が載っています。
         ただし語釈が「すごく」「ものすごく」なので、「とても」とは一致しませんでした。
+        伊予弁の語尾や出典は、<Link href="/blog/iyo-ben-zonamoshi" className="text-primary-text underline underline-offset-2">伊予弁の「ぞなもし」の記事</Link>で数えています。
       </P>
       <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-1.5">
         <li>置き換わらなかったら、「すごく」「ものすごく」に言い換えて入れ直す。</li>

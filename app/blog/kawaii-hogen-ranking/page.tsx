@@ -75,6 +75,7 @@ export default function Page() {
         京都弁の魅力は、敬語なのに堅くならないところ。「〜はる」は目上にも身内にも、ときには猫にまで使われる、
         距離のとり方が絶妙な言い回しです。「おおきに」「かんにん」「はんなり」と、
         母音が長めに響く語彙が多いのも、やわらかさの理由。ゆっくり話す人ほど京都弁は似合います。
+        「どす」「はる」が今も使われているかは、<Link href="/blog/kyoto-kotoba-dosu-haru" className="text-primary-text underline underline-offset-2">京言葉の記事</Link>で調査の数字と辞典の例文を並べました。
       </RankItem>
 
       <RankItem

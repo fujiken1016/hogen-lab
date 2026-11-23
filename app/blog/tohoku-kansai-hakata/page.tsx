@@ -109,6 +109,7 @@ export default function Page() {
         過去の否定は「行かへんかった」となります。京都で発達した「〜はる」は敬語というより
         親しみを込めた距離の調整装置で、身内にも使われます。神戸では「〜している」が「〜しとう」、
         進行中は「〜しよう」と、状態と進行を文法で区別します。
+        辞典の例文でこの区別を数えた結果は、<Link href="/blog/kobe-ben-osaka-chigai" className="text-primary-text underline underline-offset-2">神戸弁と大阪弁の違いの記事</Link>にあります。
       </P>
       <H3>語彙の特徴</H3>
       <P>

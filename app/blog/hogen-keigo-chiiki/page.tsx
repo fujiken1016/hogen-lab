@@ -28,7 +28,7 @@ export default function Page() {
       </P>
 
       <P>
-        京都の敬語を実際の文で見たいときは、方言ラボの<Link href="/translate/kyoto" className="text-primary-text underline underline-offset-2">京都弁 変換</Link>が参考になります。
+        京都の敬語を実際の文で見たいときは、方言ラボの<Link href="/translate/kyoto" className="text-primary-text underline underline-offset-2">京都弁 変換</Link>が参考になります。「どす」「はる」が今どれだけ使われているかは、<Link href="/blog/kyoto-kotoba-dosu-haru" className="text-primary-text underline underline-offset-2">京言葉の「どす」「はる」を調査と例文で数えた記事</Link>に書きました。
       </P>
       <P>
         敬語のほかに、自分や相手を何と呼ぶかにも地域差があります。一人称・二人称の地域差は、<Link href="/blog/ninshou-kotoba-chiiki" className="text-primary-text underline underline-offset-2">「わし」「おら」「うち」はどこの言葉か</Link>で見ています。

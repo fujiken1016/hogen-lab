@@ -183,6 +183,10 @@ export default function Page() {
         この分野ではいちばん役に立ちます。
       </P>
 
+      <P>
+        地名ではなく、ふだんの言葉としての北海道弁（東北・北陸との重なり、「なまら」の使われ方）は、<Link href="/blog/hokkaido-ben-touhoku-hokuriku" className="text-primary-text underline underline-offset-2">北海道弁は東北と北陸の言葉？辞典84語を数えた記事</Link>にあります。
+      </P>
+
       <ShindanCta
         title="あなたの言葉は、どの土地のことば？"
         body="言葉づかい6問・性格4問の全10問。全国35体のご当地キャラから、あなたの言語感覚に近い相棒を判定します。"

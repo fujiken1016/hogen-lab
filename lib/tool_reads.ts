@@ -43,8 +43,20 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
     reason: "うちなーぐちは「方言」なのか。母音の対応法則と琉球諸語の入門。",
   },
   北海道弁: {
-    slug: "ainugo-chimei",
-    reason: "「〜内」「〜別」が多い理由。北海道の地名の多くはアイヌ語に漢字を当てたものです。",
+    slug: "hokkaido-ben-touhoku-hokuriku",
+    reason: "辞典の北海道弁84語を、東北・北陸の方言と照らして数えました。「なまら」の使われ方と、文末の「べ」「しょ」も。",
+  },
+  神戸弁: {
+    slug: "kobe-ben-osaka-chigai",
+    reason: "神戸は「〜よう」と「〜とう」を言い分けます。辞典の例文を、大阪弁と並べて数えました。",
+  },
+  京都弁: {
+    slug: "kyoto-kotoba-dosu-haru",
+    reason: "「どす」を使うのは80代の約半数、10代の半数は聞いたこともない。「はる」と合わせて例文で数えました。",
+  },
+  伊予弁: {
+    slug: "iyo-ben-zonamoshi",
+    reason: "「ぞなもし」は今も使われるのか。辞典の例文99文の語尾と、東予・中予・南予の言い方の違いを読みます。",
   },
   土佐弁: {
     slug: "media-to-hogen",
@@ -85,6 +97,14 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
   大阪弁: {
     slug: "media-to-hogen",
     reason: "テレビの「ニセ関西弁」はなぜ生まれたのか。役割語としての方言の話。",
+  },
+};
+
+/** 2本目も方言固有の記事を出したい方言（1本目は DIALECT_SPECIFIC）。 */
+const SPECIFIC_SECOND: Record<string, { slug: string; reason: string }> = {
+  北海道弁: {
+    slug: "ainugo-chimei",
+    reason: "「〜内」「〜別」が多い理由。北海道の地名の多くはアイヌ語に漢字を当てたものです。",
   },
 };
 
@@ -132,6 +152,8 @@ export function readsFor(dialect: string): ToolRead[] {
 
   const specific = DIALECT_SPECIFIC[dialect];
   if (specific) push(specific.slug, specific.reason);
+  const second = SPECIFIC_SECOND[dialect];
+  if (second) push(second.slug, second.reason);
 
   const rank = KAWAII_RANK[dialect];
   if (rank) {

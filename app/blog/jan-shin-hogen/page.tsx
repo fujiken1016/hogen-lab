@@ -163,7 +163,7 @@ export default function Page() {
       </P>
       <P>
         「めっちゃ」が関西から全国に広がったのも、
-        「なまら」を北海道以外の人が知っているのも、この経路によるものです。
+        「なまら」を北海道以外の人が知っているのも、この経路によるものです（「なまら」の使われ方は<Link href="/blog/hokkaido-ben-touhoku-hokuriku" className="text-primary-text underline underline-offset-2">北海道弁の記事</Link>で確かめました）。
         一方で井上史雄は、進学や就職で都市に出た人が地元に戻る
         <strong>Uターン</strong>も新方言の広がりに関わると論じています。
         人が運ぶ経路と、電波が運ぶ経路が、いまは並走しています。
