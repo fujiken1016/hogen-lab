@@ -121,7 +121,7 @@ export default function Page() {
 
       <figure className="overflow-x-auto my-5">
         <table className="w-full text-sm border-collapse max-md:block">
-          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2 max-md:block">
             進行・完了の言い方（Wikipedia「三重弁」の表より抜粋・2026年11月23日取得）
           </caption>
           <thead className="max-md:sr-only">
@@ -232,7 +232,7 @@ export default function Page() {
 
       <figure className="overflow-x-auto my-5">
         <table className="w-full text-sm border-collapse max-md:block">
-          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2 max-md:block">
             入れた文と、変換ツールの出力（2026年11月23日・方言ラボ自社実測）
           </caption>
           <thead className="max-md:sr-only">
