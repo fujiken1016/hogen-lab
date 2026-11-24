@@ -206,6 +206,7 @@ export default function Page() {
         <Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>・
         <Link href="/translate/hakata" className="text-primary-text underline underline-offset-2">博多弁 変換</Link>に同じ標準語の文を入れると、
         辞典に載っている語が置き換わるところを見比べられます（語尾や活用までは変わりません）。
+        東北の6方言を1回でまとめて見比べるなら、<Link href="/translate/tohoku" className="text-primary-text underline underline-offset-2">東北弁 変換</Link>が便利です。
       </P>
 
       <ShindanCta

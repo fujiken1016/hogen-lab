@@ -419,6 +419,10 @@
   "published": "2026-08-14",
   "modified": "2026-10-09"
  },
+ "/translate/kyushu": {
+  "published": "2026-11-24",
+  "modified": "2026-11-24"
+ },
  "/translate/nagasaki": {
   "published": "2026-08-14",
   "modified": "2026-09-09"
@@ -458,6 +462,10 @@
  "/translate/shizuoka": {
   "published": "2026-08-14",
   "modified": "2026-09-09"
+ },
+ "/translate/tohoku": {
+  "published": "2026-11-24",
+  "modified": "2026-11-24"
  },
  "/translate/tosa": {
   "published": "2026-08-14",

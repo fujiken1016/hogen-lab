@@ -64,6 +64,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   });
 
+  // 地方まとめの変換（J671・2026-11-24 新設）。「東北弁 変換」「九州弁 変換」の受け皿。
+  for (const r of ["tohoku", "kyushu"]) {
+    translates.push({
+      url: `${BASE}/translate/${r}`,
+      lastModified: lastmod(`/translate/${r}`),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    });
+  }
+
   // キャラ個別ページ（/c/[slug]）は noindex にしたため sitemap には載せない。
   // → app/c/[slug]/layout.tsx の metadata.robots を参照。
   return [...staticPages, ...articles, ...quizzes, ...translates];

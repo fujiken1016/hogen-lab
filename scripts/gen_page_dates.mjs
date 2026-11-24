@@ -100,6 +100,9 @@ const STATIC_ROUTES = {
   "/blog": ["app/blog/page.tsx"],
   "/aishou": ["app/aishou"],
   "/translate": ["app/translate/page.tsx"],
+  // 地方まとめの変換ページ（J671・2026-11-24）。共通部品とその設定ファイルの履歴も更新日に数える
+  "/translate/tohoku": ["app/translate/tohoku", "components/RegionTranslatePage.tsx", "components/RegionTranslateTool.tsx", "lib/translate_region.ts"],
+  "/translate/kyushu": ["app/translate/kyushu", "components/RegionTranslatePage.tsx", "components/RegionTranslateTool.tsx", "lib/translate_region.ts"],
   "/quiz": ["app/quiz/page.tsx"],
   // sitemap に載っているのに日付が無く、lastmod・JSON-LD・公開/更新日の表示が出ていなかった（2026-11-08 J365）
   "/quiz/about": ["app/quiz/about"],

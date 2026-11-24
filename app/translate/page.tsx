@@ -12,6 +12,7 @@ import {
 import { SHINDAN_QUESTIONS, wordsOf } from "@/lib/data";
 import { ToolIntro } from "@/components/ToolIntro";
 import { PageDates } from "@/components/PageDates";
+import { REGIONS_PAGE } from "@/lib/translate_region";
 
 const BASE = "https://hogen.mainichi-lab.com";
 
@@ -83,6 +84,20 @@ export default function TranslatePage() {
             </div>
           </div>
         ))}
+      </section>
+
+      {/* J671（2026-11-24）：地方でまとめて変換する面（東北弁・九州弁）への入口。「東北弁 変換」「九州弁 変換」の受け皿 */}
+      <section className="card p-4 space-y-2">
+        <h2 className="text-xl font-bold text-sub">地方でまとめて変換する</h2>
+        <p className="text-sm text-sub leading-relaxed">1つの文を、その地方の方言すべてに同時に変換して並べます。</p>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/translate/tohoku" className="btn-secondary text-sm min-h-[48px] inline-flex items-center">
+            東北弁 変換（{REGIONS_PAGE.tohoku.dialects.length}方言）
+          </Link>
+          <Link href="/translate/kyushu" className="btn-secondary text-sm min-h-[48px] inline-flex items-center">
+            九州弁 変換（{REGIONS_PAGE.kyushu.dialects.length}方言）
+          </Link>
+        </div>
       </section>
 
       {/* J669（2026-11-24）：宮崎弁は辞典35方言の外に置いた独立1面（資料で意味が確認できた語だけ）。一覧からの入口 */}

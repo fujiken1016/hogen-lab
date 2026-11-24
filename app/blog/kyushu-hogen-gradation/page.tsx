@@ -189,6 +189,7 @@ export default function Page() {
         肥筑の代表として<Link href="/translate/hakata" className="text-primary-text underline underline-offset-2">博多弁 変換</Link>、
         薩隅の代表として<Link href="/translate/kagoshima" className="text-primary-text underline underline-offset-2">鹿児島弁 変換</Link>に同じ標準語の文を入れて、
         置き換わる語を見比べることもできます（変換されるのは語で、アクセントは再現されません）。
+        九州の6方言を1回でまとめて見比べるなら、<Link href="/translate/kyushu" className="text-primary-text underline underline-offset-2">九州弁 変換</Link>が便利です。
       </P>
 
       <P>
