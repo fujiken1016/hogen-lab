@@ -12831,6 +12831,286 @@
       "cycle": 98,
       "note": "記事は「実際には『もうかりまっか』を用いる大阪商人は殆どいない」＝実在の挨拶とは言えない。辞典は修正せず断定表示・出題に使わない",
       "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "あばさかる",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "ふざけている（辞典「調子に乗ってはしゃぐ」は幅差）",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "しんだい",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "だるい（精神的な倦怠感）",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "つまえる",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "片付ける",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "おぶける",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "驚く",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "かいい",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "かゆい",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "べっちょない",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "大丈夫",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "ばんげ",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "夕方",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "はさかる",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "挟まる",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "はめる",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "入れる（仲間に入れて）",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "たおる",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "曲がる",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "ちっか",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "竹輪",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "さっきない",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "つい先ほど",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "きゃっきゃがくる",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "いらいらする・腹が立つ",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "めいぼ",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "ものもらい",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "くだける",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "壊れる",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "おかっこまり",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "正座",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "おじみそ",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "怖がり・弱虫",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "ほなけんど",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "そうだけど（ほなけん＝だから／ほなけんど〜と続ける）",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "〜つかい",
+      "dialect": "阿波弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "〜して下さい（近縁者に多用）",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "へらこい",
+      "dialect": "阿波弁",
+      "status": "multi",
+      "cycle": 99,
+      "note": "ずる賢い。記事に「讃岐弁と同じ」とある",
+      "src": "Wikipedia「阿波弁」（https://ja.wikipedia.org/wiki/阿波弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "さら",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "新しいもの・新品（記事「西日本ではよく見られる」）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "ごじゃ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "無茶苦茶（ごじゃはげ）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "いぬ",
+      "dialect": "讃岐弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "帰る（古語の保存）",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "おらぶ",
+      "dialect": "讃岐弁",
+      "status": "multi",
+      "cycle": 99,
+      "note": "叫ぶ。山口弁の記事にも「おらぶ」あり",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "ようけ",
+      "dialect": "讃岐弁",
+      "status": "multi",
+      "cycle": 99,
+      "note": "たくさん（記事は「よっけ（ようけ）」）。西日本に広い",
+      "src": "Wikipedia「讃岐弁」（https://ja.wikipedia.org/wiki/讃岐弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "しろしー",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "うるさい（記事は「しろしい」）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "みやすい",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "容易だ・簡単（記事は「見易い」ではないと注記）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "えっと",
+      "dialect": "山口弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "たくさん（記事は「えっと・よーけ」）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "おらぶ",
+      "dialect": "山口弁",
+      "status": "multi",
+      "cycle": 99,
+      "note": "叫ぶ・大声を出す（讃岐弁の記事にも「おらぶ」あり）",
+      "src": "Wikipedia「山口弁」（https://ja.wikipedia.org/wiki/山口弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "わえ",
+      "dialect": "和歌山弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "一人称（僕・俺・我）。記事は「わい・わえ」",
+      "src": "Wikipedia「紀州弁」（https://ja.wikipedia.org/wiki/紀州弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "じてこ",
+      "dialect": "和歌山弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "自転車",
+      "src": "Wikipedia「紀州弁」（https://ja.wikipedia.org/wiki/紀州弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "とごる",
+      "dialect": "和歌山弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "沈殿する",
+      "src": "Wikipedia「紀州弁」（https://ja.wikipedia.org/wiki/紀州弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "やにこー",
+      "dialect": "和歌山弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "とても（記事は「やにこい」・西牟婁地方）",
+      "src": "Wikipedia「紀州弁」（https://ja.wikipedia.org/wiki/紀州弁）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "はばかりさん",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "ご苦労さん（少し世話になった時）",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）の wikitext（action=raw・2026-11-25 取得）"
+    },
+    {
+      "word": "ごめんやす",
+      "dialect": "京都弁",
+      "status": "ok",
+      "cycle": 99,
+      "note": "ごめんなさい・ごめんください",
+      "src": "Wikipedia「京言葉」（https://ja.wikipedia.org/wiki/京言葉）の wikitext（action=raw・2026-11-25 取得）"
     }
   ]
 }
