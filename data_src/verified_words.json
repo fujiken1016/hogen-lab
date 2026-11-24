@@ -12655,6 +12655,182 @@
       "cycle": 97,
       "note": "鹿児島【語彙例の節】",
       "src": "Wikipedia「薩隅方言」（https://ja.wikipedia.org/wiki/薩隅方言）の wikitext（action=raw・2026-11-23 取得）"
+    },
+    {
+      "word": "おっかく",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "折る",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "おっぺす",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "記事「へこます・押しつぶす」＝辞典「押す」は幅差・全域ではない",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "しもげる",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "寒さで野菜が傷む",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "しゃで",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "弟",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "まるぐ",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "束ねる",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "みぐせー",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "見苦しい",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "はー",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "もう（記事の(1)）",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "こきたねー",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "記事「こきたね＝小汚い」",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "なめっこい",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "滑らか",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "じゃんぼ",
+      "dialect": "茨城弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "葬式",
+      "src": "Wikipedia「茨城弁」（https://ja.wikipedia.org/wiki/茨城弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "どべ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "びり・最下位",
+      "src": "Wikipedia「神戸弁」（https://ja.wikipedia.org/wiki/神戸弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "ポンヤ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "仲間はずれ",
+      "src": "Wikipedia「神戸弁」（https://ja.wikipedia.org/wiki/神戸弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "荒ゴミ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "記事「燃えないゴミ」＝辞典の「粗大ごみ」は幅差",
+      "src": "Wikipedia「神戸弁」（https://ja.wikipedia.org/wiki/神戸弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "エンバ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "あいにく",
+      "src": "Wikipedia「神戸弁」（https://ja.wikipedia.org/wiki/神戸弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "アトサシ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "記事「一つの布団に前後から寝る」",
+      "src": "Wikipedia「神戸弁」（https://ja.wikipedia.org/wiki/神戸弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "バラケツ",
+      "dialect": "神戸弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "不良",
+      "src": "Wikipedia「神戸弁」（https://ja.wikipedia.org/wiki/神戸弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "おみゃー",
+      "dialect": "名古屋弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "お前（語彙表）",
+      "src": "Wikipedia「名古屋弁」（https://ja.wikipedia.org/wiki/名古屋弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "ごぶれいします",
+      "dialect": "名古屋弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "記事「ごぶれい＝失礼」・名古屋弁では現役",
+      "src": "Wikipedia「名古屋弁」（https://ja.wikipedia.org/wiki/名古屋弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "うつくしか",
+      "dialect": "熊本弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "きれい",
+      "src": "Wikipedia「熊本弁」（https://ja.wikipedia.org/wiki/熊本弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "やわう",
+      "dialect": "飛騨弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "準備する",
+      "src": "Wikipedia「飛騨弁」（https://ja.wikipedia.org/wiki/飛騨弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "かぎをかう",
+      "dialect": "飛騨弁",
+      "status": "ok",
+      "cycle": 98,
+      "note": "鍵をかける",
+      "src": "Wikipedia「飛騨弁」（https://ja.wikipedia.org/wiki/飛騨弁）の wikitext（action=raw・2026-11-24 取得）"
+    },
+    {
+      "word": "もうかりまっか",
+      "dialect": "大阪弁",
+      "status": "unconfirmed",
+      "cycle": 98,
+      "note": "記事は「実際には『もうかりまっか』を用いる大阪商人は殆どいない」＝実在の挨拶とは言えない。辞典は修正せず断定表示・出題に使わない",
+      "src": "Wikipedia「大阪弁」（https://ja.wikipedia.org/wiki/大阪弁）の wikitext（action=raw・2026-11-24 取得）"
     }
   ]
 }
