@@ -17,7 +17,7 @@
  },
  "/blog/ainugo-chimei": {
   "published": "2026-08-13",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/akita-kadaru-tagu": {
   "published": "2026-11-04",
@@ -25,11 +25,11 @@
  },
  "/blog/arigatou-zenkoku": {
   "published": "2026-08-13",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/chousi-ni-noru-hogen": {
   "published": "2026-11-11",
-  "modified": "2026-11-12"
+  "modified": "2026-11-23"
  },
  "/blog/fukushima-kowai-tsukareta": {
   "published": "2026-11-23",
@@ -57,7 +57,7 @@
  },
  "/blog/hogen-henkan-kawaranai": {
   "published": "2026-11-16",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/hogen-keigo-chiiki": {
   "published": "2026-08-13",
@@ -67,21 +67,37 @@
   "published": "2026-08-13",
   "modified": "2026-11-16"
  },
+ "/blog/hokkaido-ben-touhoku-hokuriku": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
+ },
  "/blog/hyoujungo-dato-omotteta": {
   "published": "2026-08-12",
   "modified": "2026-11-16"
  },
+ "/blog/iyo-ben-zonamoshi": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
+ },
  "/blog/jan-shin-hogen": {
   "published": "2026-08-13",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/kawaii-hogen-ranking": {
   "published": "2026-08-12",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
+ },
+ "/blog/kobe-ben-osaka-chigai": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
+ },
+ "/blog/kyoto-kotoba-dosu-haru": {
+  "published": "2026-11-23",
+  "modified": "2026-11-23"
  },
  "/blog/kyushu-hogen-gradation": {
   "published": "2026-08-13",
-  "modified": "2026-11-16"
+  "modified": "2026-11-23"
  },
  "/blog/media-to-hogen": {
   "published": "2026-08-13",
@@ -113,7 +129,7 @@
  },
  "/blog/onaji-kotoba-imi-chigau": {
   "published": "2026-11-11",
-  "modified": "2026-11-12"
+  "modified": "2026-11-23"
  },
  "/blog/sanuki-okiru-makeru": {
   "published": "2026-11-01",
@@ -133,7 +149,7 @@
  },
  "/blog/tottemo-hogen-henkan": {
   "published": "2026-11-11",
-  "modified": "2026-11-11"
+  "modified": "2026-11-23"
  },
  "/blog/yamagata-udaru-kamasu": {
   "published": "2026-11-04",
@@ -329,7 +345,7 @@
  },
  "/translate": {
   "published": "2026-08-02",
-  "modified": "2026-11-20"
+  "modified": "2026-11-24"
  },
  "/translate/akita": {
   "published": "2026-08-14",

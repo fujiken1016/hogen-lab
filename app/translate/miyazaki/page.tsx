@@ -71,7 +71,7 @@ export default function MiyazakiTranslatePage() {
         <Link href="/translate" className="inline-flex min-h-[48px] items-center justify-center text-sm font-bold text-primary-text hover:underline">
           ← 方言変換の一覧
         </Link>
-        <h1 className="section-title">🗣️ 宮崎弁変換（標準語 ⇄ 宮崎弁）</h1>
+        <h1 className="section-title">🗣️ 宮崎弁変換</h1>
         <p className="text-sub text-sm leading-relaxed">
           <b>標準語 ⇄ 宮崎弁</b> の<b>両方向</b>に変換できます。標準語の文を入れれば宮崎県のことば「宮崎弁」に、
           「⇄ 逆向き」を押せば<b>宮崎弁を標準語に</b>変換します（宮崎弁の翻訳としても使えます）。
@@ -228,7 +228,7 @@ export default function MiyazakiTranslatePage() {
             <li key={s.key} className="break-words">
               <b>{s.key}</b>　{s.label}
               <br />
-              <a href={s.url} className="text-primary-text underline break-all" rel="noopener">
+              <a href={s.url} className="text-primary-text underline break-all inline-flex min-h-[48px] items-center" rel="noopener">
                 {s.url}
               </a>
             </li>
