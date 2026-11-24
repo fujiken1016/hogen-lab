@@ -9,7 +9,7 @@ import { DIALECT_NOTES, wordsOf } from "@/lib/data";
 import { aliasParen, aliasSentence, aliasSentenceShort } from "@/lib/dialect_alias";
 import { hasReverseDemand, reverseName } from "@/lib/translate_reverse";
 import { convertHead } from "@/lib/translate_synonym";
-import { DIR_LINE_OVERRIDE, TITLE_OVERRIDE } from "@/lib/translate_title_override";
+import { DIR_LINE_OVERRIDE, H1_OVERRIDE, TITLE_OVERRIDE } from "@/lib/translate_title_override";
 import { ANSWER_SECTIONS, type AnswerSection } from "@/lib/translate_answer_sections";
 import { quizSlug } from "@/lib/quiz_meta";
 import { REGION_OF } from "@/lib/tools";
@@ -190,7 +190,7 @@ export default async function TranslateDialectPage({ params }: Props) {
         <Link href="/translate" className="inline-flex min-h-[48px] items-center justify-center text-sm font-bold text-primary-text hover:underline">
           ← 方言変換（全{TRANSLATE_DIALECTS.length}方言）の一覧
         </Link>
-        <h1 className="section-title">🗣️ {dialect} 変換</h1>
+        <h1 className="section-title">🗣️ {H1_OVERRIDE[slug] ?? `${dialect} 変換`}</h1>
         <p className="text-sub text-sm leading-relaxed">
           <b>標準語 ⇄ {dialect}</b> の<b>両方向</b>に変換できます。
           標準語の文を入れれば{area}のことば「{dialect}」に、
