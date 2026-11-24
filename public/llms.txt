@@ -1,0 +1,31 @@
+# 方言ラボ
+
+> 標準語を全35方言に変換する方言変換ツールと、方言タイプ診断・相性診断・方言クイズ・方言の読みものをまとめた無料サイトです。辞典（35方言・3,368語、2026年11月11日時点・自社集計）に収録された語を置き換える方式で、辞典にない語はそのまま残ります。運営は「フジケン（個人事業主）」。最終確認日 2026-11-24。
+
+## 主なページ
+
+- [方言変換・方言翻訳](https://hogen.mainichi-lab.com/translate): 標準語⇄方言を双方向に変換。方言同士の変換も可能
+- [方言ごとの変換ページ（例: 大阪弁）](https://hogen.mainichi-lab.com/translate/kansai): よく使う言い換えと収録語の一覧（意味・例文つき）
+- [方言タイプ診断](https://hogen.mainichi-lab.com/shindan)
+- [方言クイズ](https://hogen.mainichi-lab.com/quiz)
+- [どこの方言？](https://hogen.mainichi-lab.com/doko)
+- [読みもの（ブログ）](https://hogen.mainichi-lab.com/blog)
+
+## よくある質問と短い答え
+
+Q. 標準語を方言に変換できる無料ツールはありますか。
+A. あります。入力した文を全35方言に変換でき、向きを変えれば方言を標準語にも変換できます。登録不要です。根拠ページ: https://hogen.mainichi-lab.com/translate
+
+Q. 方言同士の変換はできますか。
+A. できます。標準語の意味を経由して置き換えるため、両方の辞典に載っている語だけが変換されます。根拠ページ: https://hogen.mainichi-lab.com/translate
+
+Q. 変換の仕組みと限界は。
+A. 辞典に登録された語の置き換え方式です。辞典にない語はそのまま残り、語尾や活用の細かなニュアンスまでは再現しません。根拠ページ: https://hogen.mainichi-lab.com/translate
+
+Q. 辞典にはいくつの方言と語が入っていますか。
+A. 35方言・3,368語です（2026年11月11日時点・自社集計）。根拠ページ: https://hogen.mainichi-lab.com/translate
+
+## 運営・連絡先
+
+- 運営: フジケン（個人事業主）
+- 連絡先: https://hogen.mainichi-lab.com/contact
