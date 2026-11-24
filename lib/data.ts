@@ -1,4 +1,5 @@
 import { EXTRA_WORDS } from "./words_extra.ts";
+import { MIYAZAKI_DIALECT, MIYAZAKI_WORDS } from "./miyazaki.ts";
 
 // 方言アプリの静的データ（v3: 14方言。外部ソース横断調査で2ソース以上確認済みの表現のみ採用）
 // 新しい方言の追加手順: DIALECTS に名前を足し、WORDS / QUIZZES / SHINDAN_PHRASES / DIALECT_NOTES と lib/types.ts の TYPES に同名で追加する
@@ -553,6 +554,8 @@ export const DICT_COUNTS = (() => {
 })();
 
 export function wordsOf(dialect: string): WordEntry[] {
+  // 宮崎弁は DIALECTS に入れない独立1面（/translate/miyazaki）。語は lib/miyazaki.ts に分けてある。
+  if (dialect === MIYAZAKI_DIALECT) return MIYAZAKI_WORDS;
   return [...(WORDS[dialect] ?? []), ...(EXTRA_WORDS[dialect] ?? [])];
 }
 

@@ -85,6 +85,17 @@ export default function TranslatePage() {
         ))}
       </section>
 
+      {/* J669（2026-11-24）：宮崎弁は辞典35方言の外に置いた独立1面（資料で意味が確認できた語だけ）。一覧からの入口 */}
+      <section className="card p-4 space-y-2">
+        <h2 className="text-xl font-bold text-sub">宮崎弁（資料で確認できた語だけの変換ページ）</h2>
+        <Link
+          href="/translate/miyazaki"
+          className="btn-secondary text-sm min-h-[48px] inline-flex items-center"
+        >
+          宮崎弁 変換
+        </Link>
+      </section>
+
       <div className="flex flex-wrap justify-center gap-2 text-sm">
         <Link href="/quiz" className="btn-ghost">🏅 方言クイズ検定</Link>
         <Link href="/kurabe" className="btn-ghost">🔤 全国方言くらべ</Link>

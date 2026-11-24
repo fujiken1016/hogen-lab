@@ -56,6 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // 宮崎弁（J669・2026-11-24 新設）。DIALECTS に入れない独立1面なので TRANSLATE_DIALECTS には出ない＝ここで足す。
+  translates.push({
+    url: `${BASE}/translate/miyazaki`,
+    lastModified: lastmod("/translate/miyazaki"),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  });
+
   // キャラ個別ページ（/c/[slug]）は noindex にしたため sitemap には載せない。
   // → app/c/[slug]/layout.tsx の metadata.robots を参照。
   return [...staticPages, ...articles, ...quizzes, ...translates];
