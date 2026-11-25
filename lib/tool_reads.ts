@@ -58,6 +58,22 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
     slug: "iyo-ben-zonamoshi",
     reason: "「ぞなもし」は今も使われるのか。辞典の例文99文の語尾と、東予・中予・南予の言い方の違いを読みます。",
   },
+  名古屋弁: {
+    slug: "nagoya-ben-gaya-gane-namo",
+    reason: "「がや」「がね」は下町言葉、「なも」は上町言葉。辞典の例文85文の語尾を数え、尾張北部・瀬戸・知多との違いも読みます。",
+  },
+  茨城弁: {
+    slug: "ibaraki-ben-tohoku-kanto",
+    reason: "東北方言か、関東方言か。学者の説を並べ、「〜っぺ」の例文と、辞典の語が東北の方言とどれだけ重なるかを数えました。",
+  },
+  仙台弁: {
+    slug: "sendai-ben-ccha-dakara",
+    reason: "「だから」は同意の言葉。「〜っちゃ」「べ」「けろ」の例文と、宮城県内の4区分を読みます。",
+  },
+  新潟弁: {
+    slug: "niigata-ben-te-rate-suke",
+    reason: "例文100文のうち47文が「て」で終わる。「すけ」の語源と、新潟県内の方言区分も読みます。",
+  },
   土佐弁: {
     slug: "media-to-hogen",
     reason: "ドラマやマンガの「龍馬語」がどう作られたか。役割語としての方言の話。",

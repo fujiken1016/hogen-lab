@@ -75,6 +75,10 @@
   "published": "2026-08-12",
   "modified": "2026-11-16"
  },
+ "/blog/ibaraki-ben-tohoku-kanto": {
+  "published": "2026-11-25",
+  "modified": "2026-11-25"
+ },
  "/blog/iyo-ben-zonamoshi": {
   "published": "2026-11-23",
   "modified": "2026-11-23"
@@ -97,7 +101,7 @@
  },
  "/blog/kyushu-hogen-gradation": {
   "published": "2026-08-13",
-  "modified": "2026-11-23"
+  "modified": "2026-11-24"
  },
  "/blog/media-to-hogen": {
   "published": "2026-08-13",
@@ -111,9 +115,17 @@
   "published": "2026-11-23",
   "modified": "2026-11-23"
  },
+ "/blog/nagoya-ben-gaya-gane-namo": {
+  "published": "2026-11-25",
+  "modified": "2026-11-25"
+ },
  "/blog/naze-hogen-umareru": {
   "published": "2026-08-12",
   "modified": "2026-11-16"
+ },
+ "/blog/niigata-ben-te-rate-suke": {
+  "published": "2026-11-25",
+  "modified": "2026-11-25"
  },
  "/blog/ninshou-kotoba-chiiki": {
   "published": "2026-08-13",
@@ -135,6 +147,10 @@
   "published": "2026-11-01",
   "modified": "2026-11-08"
  },
+ "/blog/sendai-ben-ccha-dakara": {
+  "published": "2026-11-25",
+  "modified": "2026-11-25"
+ },
  "/blog/shindan-guide": {
   "published": "2026-08-12",
   "modified": "2026-11-16"
@@ -145,7 +161,7 @@
  },
  "/blog/tohoku-kansai-hakata": {
   "published": "2026-08-12",
-  "modified": "2026-11-23"
+  "modified": "2026-11-24"
  },
  "/blog/tottemo-hogen-henkan": {
   "published": "2026-11-11",

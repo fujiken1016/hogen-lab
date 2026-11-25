@@ -159,6 +159,9 @@ export default function Page() {
         静岡県も、西部（遠州）は名古屋方面と共通する特徴を持ち、
         東部（伊豆・駿河）は関東寄りになります。
         岐阜県も飛騨と美濃で様子が違います。
+        愛知県の名古屋弁は、アクセントは東京式で文法は関西的と言われます。
+        語尾を数えた結果は、<Link href="/blog/nagoya-ben-gaya-gane-namo" className="text-primary-text underline underline-offset-2">名古屋弁の記事</Link>にあります。
+        新潟県の中の方言の分かれ方は、<Link href="/blog/niigata-ben-te-rate-suke" className="text-primary-text underline underline-offset-2">新潟弁の記事</Link>で扱っています。
       </P>
       <Note title="線ではなく「帯」">
         地図に引くと1本の線に見えますが、現地では

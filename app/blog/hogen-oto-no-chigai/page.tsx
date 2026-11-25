@@ -61,6 +61,7 @@ export default function Page() {
         その中身は主にこの区別の合流と、イ・ウが口の真ん中寄りで発音される中舌母音です。
         こうした特徴は東北だけでなく、新潟北部や南北海道、
         茨城・栃木・千葉北部の一部にも広がっているとされます。
+        茨城弁と仙台弁の音の特徴を並べた表は、<Link href="/blog/ibaraki-ben-tohoku-kanto" className="text-primary-text underline underline-offset-2">茨城弁の記事</Link>にあります。
         なお「寒いから口を開けないため」といった説明を見かけることがありますが、
         <strong>これは俗説として扱われることが多く</strong>、
         方言学では音の歴史的な変化として説明するのが一般的です。

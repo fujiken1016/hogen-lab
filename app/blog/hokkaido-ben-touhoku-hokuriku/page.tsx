@@ -152,6 +152,7 @@ export default function Page() {
         同じ意味の使われ方は、
         <Link href="/blog/fukushima-kowai-tsukareta" className={LINK}>福島弁の「こわい」を扱った記事</Link>
         で詳しく書きました。
+        東北の方言との重なりは、<Link href="/blog/ibaraki-ben-tohoku-kanto" className={LINK}>茨城弁</Link>・<Link href="/blog/sendai-ben-ccha-dakara" className={LINK}>仙台弁</Link>・<Link href="/blog/niigata-ben-te-rate-suke" className={LINK}>新潟弁</Link>でも数えています。
       </P>
       <P>
         一方、半数を超える54語は、辞典の他のどの方言にも載っていません。

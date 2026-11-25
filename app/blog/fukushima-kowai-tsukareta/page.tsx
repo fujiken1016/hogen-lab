@@ -160,6 +160,13 @@ export default function Page() {
         </li>
       </ul>
       <P>
+        同じ「べ」「っぺ」と「さ」は、茨城弁・仙台弁にもあります。
+        <Link href="/blog/ibaraki-ben-tohoku-kanto" className={LINK}>茨城弁の「〜っぺ」を数えた記事</Link>
+        と
+        <Link href="/blog/sendai-ben-ccha-dakara" className={LINK}>仙台弁の「〜っちゃ」「べ」を数えた記事</Link>
+        で、辞典の例文での数を載せています。
+      </P>
+      <P>
         文化庁のページには、「相手を誘う・確認するときに『べー』を使う」という説明もあります（例：「そうでしょう」が「んだべー」）。
         ただし、このページには会津・中通り・浜通りの違いや、「っぺ」の説明はありません。
         地域差の話は、Wikipedia の記述に頼っている部分です。

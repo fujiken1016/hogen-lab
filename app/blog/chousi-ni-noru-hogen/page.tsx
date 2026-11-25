@@ -163,6 +163,7 @@ export default function Page() {
       <P>
         伊勢弁の「おだつ」は、三重県だけの言葉ではありません。
         「三重弁」と調べて出てきた語が、実は北海道や仙台でも載っている、ということです。
+        仙台弁のほうの語尾や「だから」の使われ方は、<Link href="/blog/sendai-ben-ccha-dakara" className={LINK}>仙台弁の「〜っちゃ」を数えた記事</Link>にあります。
       </P>
 
       <H2 id="s3">「いちびる」「いきる」は関西のどこ？</H2>
