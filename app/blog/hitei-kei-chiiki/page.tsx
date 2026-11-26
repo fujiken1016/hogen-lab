@@ -32,6 +32,21 @@ export default function Page() {
         「行かない」を実際に置き換えてみたい人は、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/hakata" className="text-primary-text underline underline-offset-2">博多弁 変換</Link>で、否定形がどう変わるか試せます。
       </P>
 
+      <H2>「行かん」の意味は？ 紛らわしい「いかん」との違い</H2>
+      <P>
+        「行かん」は、「行かない」にあたる西日本・九州の言い方です。意味は打ち消しで、
+        「行かぬ」が縮まった形と説明されます（次の節でくわしく扱います）。
+      </P>
+      <P>
+        同じ音の「いかん」には、別の意味もあります。博多弁辞典（博多弁推進会）は「いかん」を二つ立てていて、
+        一つは〔行くの打消〕の「行かない」、もう一つは「いけない・だめ」です。
+        「それはいかん」の「いかん」は行くの否定ではなく、別の語として載っています。
+      </P>
+      <P>
+        もう一つ、古文の「いざ行かん」の「ん」は打消ではなく、「行こう」という意志を表す古い助動詞「む」です。
+        現代の方言の「行かん」（行かない）とは別物なので、文脈で見分けます。
+      </P>
+
       <H2>大きな線は「ない」と「ん」</H2>
       <P>
         いちばん太い境目は、<strong>東の「ない」と西の「ん」</strong>です。
@@ -213,6 +228,10 @@ export default function Page() {
             label:
               "ことば研究館（国立国語研究所）「研究成果の紹介：『方言文法全国地図』第4集 表現法編I」（否定表現16項目・全55面）",
             url: "https://kotoba.ninjal.ac.jp/mado/01/01-06/",
+          },
+          {
+            label: "Weblio辞書「行かん」（博多弁辞典・博多弁推進会の見出し「いかん①」「いかん②」）2026年11月26日取得",
+            url: "https://www.weblio.jp/content/行かん",
           },
           {
             label:
