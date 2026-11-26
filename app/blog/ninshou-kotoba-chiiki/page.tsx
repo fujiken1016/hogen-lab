@@ -3,6 +3,8 @@ import { ogMeta } from "@/lib/og";
 import Link from "next/link";
 import { ArticleShell, H2, H3, P, Note, WordCard, Sources, ShindanCta } from "@/components/article";
 import { getArticle } from "@/lib/articles";
+import { BarFig } from "@/components/BarFig";
+import { StepFig, CompareFig } from "@/components/ArticleFigs";
 
 const article = getArticle("ninshou-kotoba-chiiki")!;
 
@@ -31,11 +33,62 @@ export default function Page() {
         「自分」「おら」「わし」などを実際の文で見たいときは、方言ラボの<Link href="/translate/kansai" className="text-primary-text underline underline-offset-2">大阪弁 変換</Link>や<Link href="/translate/hiroshima" className="text-primary-text underline underline-offset-2">広島弁 変換</Link>が使えます。
       </P>
 
+      <Note title="この記事の要点（本文の内容をまとめたもの）">
+        <ul className="list-disc pl-5 space-y-1.5">
+          <li>自分を指す言葉（一人称）は、地域差がはっきり出る</li>
+          <li>「オレ」を男女とも使うという注記が、辞典類には7県にある</li>
+          <li>山形県東田川郡の中学生調査（1989年）では、同性の友人に対する「オレ」は男子95.7%・女子20.2%</li>
+          <li>関西の「自分」は、目の前の相手を指す二人称</li>
+          <li>人称は地域だけでなく、相手・場面・年齢でも切り替わる</li>
+        </ul>
+      </Note>
+
       <H2>一人称の地図——ざっくりした見取り図</H2>
       <P>
         まず全体像から。細かい例外はいくらでもありますが、
         大づかみには次のような傾向が知られています。
       </P>
+
+      <div className="overflow-x-auto my-5">
+        <table className="w-full text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            一人称の見取り図（下のカードの内容をまとめた表）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold">語</th>
+              <th scope="col" className="py-2 pr-3 font-bold">主な地域</th>
+              <th scope="col" className="py-2 pr-3 font-bold">ひとこと</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">おら／おれ</td>
+                <td className="py-2 pr-3">東日本（東北〜関東・甲信越）</td>
+                <td className="py-2 pr-3">「おれ」の変化した形とされる</td>
+              </tr>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">わし</td>
+                <td className="py-2 pr-3">中国・四国・近畿ほか（西日本に多い）</td>
+                <td className="py-2 pr-3">年配男性のイメージが強い</td>
+              </tr>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">うち</td>
+                <td className="py-2 pr-3">近畿・中国・四国ほか</td>
+                <td className="py-2 pr-3">女性の自称として広く使われる</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-sm text-sub leading-relaxed -mt-2 mb-5">※分布は大づかみの傾向で、例外は多くあります。</p>
+      <CompareFig
+        cols={[
+          { head: "東日本に多い", items: ["おら", "おれ"] },
+          { head: "西日本に多い", items: ["わし", "うち"] },
+        ]}
+        ariaLabel="一人称の見取り図。東日本に多いのはおら・おれ、西日本に多いのはわし・うち。"
+        caption="図：一人称の大づかみな傾向（※概念図。地図ではなく、例外も多い）"
+      />
 
       <WordCard
         word="おら／おれ"
@@ -90,6 +143,30 @@ export default function Page() {
         東北や、首都圏を除く関東に多い傾向だとされます。
       </P>
 
+      <div className="overflow-x-auto my-5">
+        <table className="w-full text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            「オレ」の注記（方言辞典類の記述・ことば研究館の紹介による）
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold">注記</th>
+              <th scope="col" className="py-2 pr-3 font-bold">見られる都県</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">男女とも使う</td>
+                <td className="py-2 pr-3">岩手・秋田・茨城・群馬・神奈川・静岡・奈良</td>
+              </tr>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">主として男性が使用</td>
+                <td className="py-2 pr-3">青森・栃木・東京（奥多摩）</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
       <H3>共通語が「男女差」を持ち込んだ</H3>
       <P>
         同じ記事で紹介されている山形県東田川郡の1989年の調査が、
@@ -98,6 +175,18 @@ export default function Page() {
         <strong>男子95.7%に対して女子20.2%</strong>。
         異性の同級生に対しては男子96.3%、女子14.6%でした。
       </P>
+      <BarFig
+        items={[
+          { label: "同性の友人に対して・男子", value: 95.7 },
+          { label: "同性の友人に対して・女子", value: 20.2 },
+          { label: "異性の同級生に対して・男子", value: 96.3 },
+          { label: "異性の同級生に対して・女子", value: 14.6 },
+        ]}
+        max={100}
+        unit="%"
+        ariaLabel="山形県東田川郡の中学生調査（1989年）で、オレを使う割合。同性の友人に対して男子95.7%・女子20.2%、異性の同級生に対して男子96.3%・女子14.6%。"
+        caption="「オレ」を使う割合（山形県東田川郡・中学生・1989年調査。ことば研究館の紹介による）"
+      />
       <P>
         年配層では「オレ」に男女差がほとんどなかったと推測されるのに、
         若い世代で差が開いている。
@@ -131,6 +220,15 @@ export default function Page() {
         それがのちに相手を指す語として使われるようになり、
         現在では関西などで<strong>けんか腰の呼びかけ</strong>として残っています。
       </P>
+      <StepFig
+        steps={[
+          { title: "古く", sub: "「われ」「おのれ」は自分を指す語" },
+          { title: "のち", sub: "相手を指す語として使われるようになる" },
+          { title: "現在", sub: "関西などでけんか腰の呼びかけに残る" },
+        ]}
+        ariaLabel="われ・おのれの変化。古くは自分を指す語、のちに相手を指す語、現在は関西などでけんか腰の呼びかけとして残る。"
+        caption="図：「われ」「おのれ」の意味の移り変わり（※概念図）"
+      />
       <P>
         こうした入れ替わりは、
         <strong>丁寧に使われていた語がだんだん敬意を失い、別の語に置き換わっていく</strong>という説明で語られることが多い現象です
@@ -141,30 +239,70 @@ export default function Page() {
       </P>
 
       <H2>地域ごとの二人称、いくつか</H2>
+      <div className="overflow-x-auto my-5">
+        <table className="w-full text-sm border-collapse">
+          <caption className="text-left text-sm text-sub leading-relaxed pb-2">
+            地域ごとの二人称の例
+          </caption>
+          <thead>
+            <tr className="border-b border-line text-left align-bottom">
+              <th scope="col" className="py-2 pr-3 font-bold">語</th>
+              <th scope="col" className="py-2 pr-3 font-bold">地域</th>
+              <th scope="col" className="py-2 pr-3 font-bold">ニュアンス</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">おまん</td>
+                <td className="py-2 pr-3">土佐（高知）ほか</td>
+                <td className="py-2 pr-3">「おまえさん」系の語。乱暴さは薄く、ふつうの呼びかけ</td>
+              </tr>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">おめ／おめえ</td>
+                <td className="py-2 pr-3">東日本（東北・関東に広く分布）</td>
+                <td className="py-2 pr-3">「おまえ」の変化形</td>
+              </tr>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">あんた</td>
+                <td className="py-2 pr-3">全国</td>
+                <td className="py-2 pr-3">「あなた」の縮まった形。地域によって親しみの語にも見下しの語にもなる</td>
+              </tr>
+              <tr className="border-b border-line align-top">
+                <td className="py-2 pr-3 font-bold whitespace-nowrap">自分</td>
+                <td className="py-2 pr-3">関西</td>
+                <td className="py-2 pr-3">目の前の相手を指す。同年代か目下向きで、目上には使いにくい</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
       <P>
-        <strong>おまん（土佐ほか）</strong>——「おまえさん」系の語で、
-        高知などで使われてきました。乱暴さは薄く、ふつうの呼びかけです。
-      </P>
-      <P>
-        <strong>おめ／おめえ（東日本）</strong>——「おまえ」の変化形。
-        東北・関東に広く分布します。
-      </P>
-      <P>
-        <strong>あんた（全国）</strong>——「あなた」の縮まった形。
-        地域によって、親しみの語にも見下しの語にもなります。
-        方言そのものというより、<strong>地域ごとに温度差がある語</strong>と考えたほうが正確です。
+        「あんた」は、方言そのものというより、<strong>地域ごとに温度差がある語</strong>と考えたほうが正確です。
       </P>
 
       <H2>人称は「地域」だけで決まらない</H2>
       <P>
         ここまで地域差を並べてきましたが、
         最後に大事な注意を一つ。人称の選び方は、地域だけで決まりません。
-        <strong>相手が誰か、その場が公的か私的か、自分が何歳か</strong>——
-        こうした条件のほうが強く効くこともあります。
+        次のような条件のほうが強く効くこともあります。
       </P>
+      <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-1.5">
+        <li><strong>相手が誰か</strong></li>
+        <li><strong>その場が公的か私的か</strong></li>
+        <li><strong>自分が何歳か</strong></li>
+      </ul>
       <P>
-        同じ人が、職場では「わたし」、地元の友達には「おれ」、
-        親には「おら」と切り替える。
+        同じ人が、場面によってこう切り替えます。
+      </P>
+      <CompareFig
+        cols={[
+          { head: "職場", items: ["わたし"] },
+          { head: "地元の友達", items: ["おれ"] },
+          { head: "親", items: ["おら"] },
+        ]}
+        ariaLabel="同じ人が場面で一人称を切り替える例。職場ではわたし、地元の友達にはおれ、親にはおら。"
+        caption="図：同じ人が場面で切り替える一人称の例（※概念図）"
+      />
+      <P>
         方言の人称は、地図の上に固定された点ではなく、
         <strong>その人が持っている引き出しの一つ</strong>です。
         分布図はあくまで「よく使われる形」の記録として読むのが安全です。
