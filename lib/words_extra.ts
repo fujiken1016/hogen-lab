@@ -13100,7 +13100,7 @@ export const EXTRA_WORDS: Record<string, WordEntry[]> = {
     },
     {
       "word": "なも",
-      "meaning": "丁寧で上品な語尾",
+      "meaning": "〜ですよ（丁寧で上品な語尾）",
       "example": "今日はええお天気だなも。"
     },
     {
