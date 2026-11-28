@@ -289,6 +289,10 @@ export default function Page() {
         </Link>
       </P>
 
+      <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-2">
+        <li>北陸の富山弁の文末は、<Link href="/blog/toyama-ben-cha-nene-bayaku" className="text-primary-text underline underline-offset-2">富山弁の「ちゃ」を数えた記事</Link>で読めます。</li>
+      </ul>
+
       <Note title="確かめたこと、確かめられていないこと">
         <ul className="list-disc pl-5 space-y-1.5">
           <li>

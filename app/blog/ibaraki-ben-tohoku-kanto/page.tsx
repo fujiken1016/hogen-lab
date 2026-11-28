@@ -349,6 +349,10 @@ export default function Page() {
         </Link>
       </P>
 
+      <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-2">
+        <li>東北の津軽弁の文末は、<Link href="/blog/tsugaru-ben-hande-ja" className="text-primary-text underline underline-offset-2">津軽弁の「〜じゃ」「〜はんで」を数えた記事</Link>で読めます。</li>
+      </ul>
+
       <P>この記事の数字は、出どころで3つに分かれます。</P>
       <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-2">
         <li>学者による区分、音と語尾の特徴、語彙の説明：Wikipedia「茨城弁」「仙台弁」の記述です。引用元の原典は確認していません。</li>

@@ -278,6 +278,11 @@ export default function Page() {
       <P>
         「あんた」は、方言そのものというより、<strong>地域ごとに温度差がある語</strong>と考えたほうが正確です。
       </P>
+      <P>
+        広島の「われ」「おどれ」「おんどりゃ」を辞典の例文で並べて確かめた話は、
+        <Link href="/blog/hiroshima-ben-ware-odore-ninshou" className="text-primary-text underline underline-offset-2">広島弁の二人称を数えた記事</Link>
+        にあります。
+      </P>
 
       <H2>人称は「地域」だけで決まらない</H2>
       <P>

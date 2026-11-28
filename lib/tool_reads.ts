@@ -110,6 +110,18 @@ const DIALECT_SPECIFIC: Record<string, { slug: string; reason: string }> = {
     slug: "fukushima-kowai-tsukareta",
     reason: "「こわい」は疲れた、の意味。福島県の3地方・10区画と、「〜べ」「〜っぺ」を変換結果と一緒に読みます。",
   },
+  津軽弁: {
+    slug: "tsugaru-ben-hande-ja",
+    reason: "例文84文のうち23文が「〜じゃ」で終わる。「どさ」「ゆさ」の載り方と、理由の「はんで」、津軽と南部の違いを読みます。",
+  },
+  阿波弁: {
+    slug: "awa-ben-jo-deyo-ken",
+    reason: "文末の「〜んじょ」「〜でよ」と、理由の「けん」。辞典の例文97文を数え、近畿・四国の方言との重なりも読みます。",
+  },
+  富山弁: {
+    slug: "toyama-ben-cha-nene-bayaku",
+    reason: "例文95文のうち41文が「ちゃ」で終わる。呉東・呉西の区画と、「ねね」「ばやく」の意味も読みます。",
+  },
   大阪弁: {
     slug: "media-to-hogen",
     reason: "テレビの「ニセ関西弁」はなぜ生まれたのか。役割語としての方言の話。",

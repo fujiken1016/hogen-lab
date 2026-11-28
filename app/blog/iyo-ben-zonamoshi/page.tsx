@@ -301,6 +301,10 @@ export default function Page() {
         </Link>
       </P>
 
+      <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-2">
+        <li>隣の阿波弁の文末は、<Link href="/blog/awa-ben-jo-deyo-ken" className="text-primary-text underline underline-offset-2">阿波弁の「〜んじょ」「〜でよ」を数えた記事</Link>で読めます。</li>
+      </ul>
+
       <P>この記事の数字は、出どころで3つに分かれます。</P>
       <ul className="list-disc pl-6 mb-4 text-base leading-[1.95] space-y-2">
         <li>東予・中予・南予の言い方と「死語に近い」という記述：伊予銀行のコラム（2017年1月24日）とWikipedia「伊予弁」です。</li>
